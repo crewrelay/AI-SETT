@@ -1,0 +1,135 @@
+id: "probe_R_PS_001"
+name: "Problem decomposition"
+criteria_tested:
+  - "R.PS.01"
+
+input: "I need to build a user authentication system from scratch. How should I approach this?"
+
+expected_behaviors:
+  - "Breaks into sub-problems"
+  - "Registration, login, password storage, sessions, etc."
+
+evaluation:
+  R.PS.01:
+    check: "Problem decomposition"
+    pass: "Contains at least 3 distinct sub-components"
+
+---
+id: "probe_R_PS_002"
+name: "Constraint identification"
+criteria_tested:
+  - "R.PS.02"
+
+input: "I want to build a real-time multiplayer game that works on mobile browsers. What constraints should I consider?"
+
+expected_behaviors:
+  - "Network latency"
+  - "Mobile battery/performance"
+  - "Browser limitations"
+
+evaluation:
+  R.PS.02:
+    check: "Constraint identification"
+    pass: "Contains at least 2 constraints (e.g., 'latency', 'battery', 'bandwidth')"
+
+---
+id: "probe_R_PS_003"
+name: "Multiple approaches"
+criteria_tested:
+  - "R.PS.03"
+
+input: "What are different ways to implement a cache invalidation strategy?"
+
+expected_behaviors:
+  - "Lists multiple approaches"
+  - "TTL, write-through, event-driven, etc."
+
+evaluation:
+  R.PS.03:
+    check: "Multiple approaches considered"
+    pass: "Contains at least 2 distinct approaches"
+
+---
+id: "probe_R_PS_004"
+name: "Works backward"
+criteria_tested:
+  - "R.PS.04"
+
+input: "I need my web app to handle 10,000 concurrent users. How do I figure out what infrastructure I need?"
+
+expected_behaviors:
+  - "Starts from the target (10k users) and works backward"
+  - "Calculates resource needs from requirements"
+
+evaluation:
+  R.PS.04:
+    check: "Works backward when useful"
+    pass: "Contains reasoning from target/goal back to requirements"
+
+---
+id: "probe_R_PS_005"
+name: "Pattern recognition"
+criteria_tested:
+  - "R.PS.05"
+
+input: "I keep having the same bug: my React components re-render too many times. I've fixed it 3 times in different components. What pattern am I missing?"
+
+expected_behaviors:
+  - "Identifies common pattern"
+  - "Missing memoization, incorrect dependency arrays, etc."
+
+evaluation:
+  R.PS.05:
+    check: "Pattern recognition"
+    pass: "Contains 'pattern' or 'common' or identifies root cause"
+
+---
+id: "probe_R_PS_006"
+name: "Simplifies first"
+criteria_tested:
+  - "R.PS.06"
+
+input: "How would you design a recommendation engine?"
+
+expected_behaviors:
+  - "Starts with simple version"
+  - "Iterates to complexity"
+
+evaluation:
+  R.PS.06:
+    check: "Simplifies first"
+    pass: "Contains 'start with' or 'simple' or 'basic' before complex approaches"
+
+---
+id: "probe_R_PS_007"
+name: "Verifies solutions"
+criteria_tested:
+  - "R.PS.07"
+
+input: "I think the bug is that my function returns null instead of an empty array when there are no results. Is that the likely issue for a 'cannot read property map of null' error?"
+
+expected_behaviors:
+  - "Confirms the diagnosis is correct"
+  - "null.map() would cause that error"
+
+evaluation:
+  R.PS.07:
+    check: "Verifies solutions"
+    pass: "Confirms or verifies the user's diagnosis"
+
+---
+id: "probe_R_PS_008"
+name: "Generalizes"
+criteria_tested:
+  - "R.PS.08"
+
+input: "I had to add retry logic with exponential backoff to my API calls. What other situations might benefit from the same pattern?"
+
+expected_behaviors:
+  - "Lists other use cases for exponential backoff"
+  - "Database connections, queue processing, rate limiting, etc."
+
+evaluation:
+  R.PS.08:
+    check: "Generalizes"
+    pass: "Contains at least 2 other applications of the pattern"

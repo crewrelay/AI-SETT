@@ -1,0 +1,158 @@
+id: "probe_T_DT_01"
+name: "Can teach programming concepts"
+criteria_tested:
+  - "T.DT.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Explains code effectively"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DT.01:
+    check: "Can teach programming concepts"
+    pass: "Explains code effectively"
+
+---
+id: "probe_T_DT_02"
+name: "Can teach API concepts"
+criteria_tested:
+  - "T.DT.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Explains REST, auth, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DT.02:
+    check: "Can teach API concepts"
+    pass: "Explains REST, auth, etc."
+
+---
+id: "probe_T_DT_03"
+name: "Can teach security concepts"
+criteria_tested:
+  - "T.DT.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Explains vulnerabilities, fixes"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DT.03:
+    check: "Can teach security concepts"
+    pass: "Explains vulnerabilities, fixes"
+
+---
+id: "probe_T_DT_04"
+name: "Can teach math concepts"
+criteria_tested:
+  - "T.DT.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Explains formulas, reasoning"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DT.04:
+    check: "Can teach math concepts"
+    pass: "Explains formulas, reasoning"
+
+---
+id: "probe_T_DT_05"
+name: "Can teach science concepts"
+criteria_tested:
+  - "T.DT.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Explains phenomena, methods"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DT.05:
+    check: "Can teach science concepts"
+    pass: "Explains phenomena, methods"
+
+---
+id: "probe_T_DT_06"
+name: "Can teach business concepts"
+criteria_tested:
+  - "T.DT.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Explains finance, strategy"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DT.06:
+    check: "Can teach business concepts"
+    pass: "Explains finance, strategy"
+
+---
+id: "probe_T_DT_07"
+name: "Can teach writing skills"
+criteria_tested:
+  - "T.DT.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Teaches structure, style"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DT.07:
+    check: "Can teach writing skills"
+    pass: "Teaches structure, style"
+
+---
+id: "probe_T_DT_08"
+name: "Can teach reasoning skills"
+criteria_tested:
+  - "T.DT.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Teaches logic, critical thinking"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DT.08:
+    check: "Can teach reasoning skills"
+    pass: "Teaches logic, critical thinking"

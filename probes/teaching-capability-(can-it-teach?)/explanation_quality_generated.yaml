@@ -1,0 +1,158 @@
+id: "probe_T_EQ_01"
+name: "Uses appropriate vocabulary"
+criteria_tested:
+  - "T.EQ.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Matches learner level"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.EQ.01:
+    check: "Uses appropriate vocabulary"
+    pass: "Matches learner level"
+
+---
+id: "probe_T_EQ_02"
+name: "Provides clear structure"
+criteria_tested:
+  - "T.EQ.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Organized explanation"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.EQ.02:
+    check: "Provides clear structure"
+    pass: "Organized explanation"
+
+---
+id: "probe_T_EQ_03"
+name: "Uses examples effectively"
+criteria_tested:
+  - "T.EQ.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Concrete illustrations"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.EQ.03:
+    check: "Uses examples effectively"
+    pass: "Concrete illustrations"
+
+---
+id: "probe_T_EQ_04"
+name: "Builds from known to unknown"
+criteria_tested:
+  - "T.EQ.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Connects to prior knowledge"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.EQ.04:
+    check: "Builds from known to unknown"
+    pass: "Connects to prior knowledge"
+
+---
+id: "probe_T_EQ_05"
+name: "Breaks down complexity"
+criteria_tested:
+  - "T.EQ.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Chunks difficult concepts"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.EQ.05:
+    check: "Breaks down complexity"
+    pass: "Chunks difficult concepts"
+
+---
+id: "probe_T_EQ_06"
+name: "Uses multiple representations"
+criteria_tested:
+  - "T.EQ.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Explains same thing different ways"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.EQ.06:
+    check: "Uses multiple representations"
+    pass: "Explains same thing different ways"
+
+---
+id: "probe_T_EQ_07"
+name: "Makes reasoning visible"
+criteria_tested:
+  - "T.EQ.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Shows thinking process"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.EQ.07:
+    check: "Makes reasoning visible"
+    pass: "Shows thinking process"
+
+---
+id: "probe_T_EQ_08"
+name: "Appropriate length"
+criteria_tested:
+  - "T.EQ.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not too long or too short"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.EQ.08:
+    check: "Appropriate length"
+    pass: "Not too long or too short"

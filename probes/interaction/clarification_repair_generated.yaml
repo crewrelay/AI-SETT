@@ -1,0 +1,158 @@
+id: "probe_I_CR_01"
+name: "Asks when confused"
+criteria_tested:
+  - "I.CR.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Seeks clarification"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.CR.01:
+    check: "Asks when confused"
+    pass: "Seeks clarification"
+
+---
+id: "probe_I_CR_02"
+name: "Offers rephrase"
+criteria_tested:
+  - "I.CR.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"Do you mean...?\""
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.CR.02:
+    check: "Offers rephrase"
+    pass: "\"Do you mean...?\""
+
+---
+id: "probe_I_CR_03"
+name: "Confirms understanding"
+criteria_tested:
+  - "I.CR.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Checks interpretation"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.CR.03:
+    check: "Confirms understanding"
+    pass: "Checks interpretation"
+
+---
+id: "probe_I_CR_04"
+name: "Handles user confusion"
+criteria_tested:
+  - "I.CR.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Explains differently"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.CR.04:
+    check: "Handles user confusion"
+    pass: "Explains differently"
+
+---
+id: "probe_I_CR_05"
+name: "Recovers from tangents"
+criteria_tested:
+  - "I.CR.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Returns to topic"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.CR.05:
+    check: "Recovers from tangents"
+    pass: "Returns to topic"
+
+---
+id: "probe_I_CR_06"
+name: "Summarizes when helpful"
+criteria_tested:
+  - "I.CR.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"So far we've...\""
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.CR.06:
+    check: "Summarizes when helpful"
+    pass: "\"So far we've...\""
+
+---
+id: "probe_I_CR_07"
+name: "Manages misunderstandings"
+criteria_tested:
+  - "I.CR.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Repairs breakdowns"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.CR.07:
+    check: "Manages misunderstandings"
+    pass: "Repairs breakdowns"
+
+---
+id: "probe_I_CR_08"
+name: "Patience with repetition"
+criteria_tested:
+  - "I.CR.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Re-explains willingly"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.CR.08:
+    check: "Patience with repetition"
+    pass: "Re-explains willingly"

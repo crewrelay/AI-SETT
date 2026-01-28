@@ -1,0 +1,158 @@
+id: "probe_I_MT_01"
+name: "Remembers earlier context"
+criteria_tested:
+  - "I.MT.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "References previous turns"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.MT.01:
+    check: "Remembers earlier context"
+    pass: "References previous turns"
+
+---
+id: "probe_I_MT_02"
+name: "No contradictions"
+criteria_tested:
+  - "I.MT.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Consistent with self"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.MT.02:
+    check: "No contradictions"
+    pass: "Consistent with self"
+
+---
+id: "probe_I_MT_03"
+name: "Builds on established info"
+criteria_tested:
+  - "I.MT.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Uses what's known"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.MT.03:
+    check: "Builds on established info"
+    pass: "Uses what's known"
+
+---
+id: "probe_I_MT_04"
+name: "Tracks topic changes"
+criteria_tested:
+  - "I.MT.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Follows shifts"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.MT.04:
+    check: "Tracks topic changes"
+    pass: "Follows shifts"
+
+---
+id: "probe_I_MT_05"
+name: "Resolves references"
+criteria_tested:
+  - "I.MT.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"That,\" \"it\" correct"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.MT.05:
+    check: "Resolves references"
+    pass: "\"That,\" \"it\" correct"
+
+---
+id: "probe_I_MT_06"
+name: "Maintains persona"
+criteria_tested:
+  - "I.MT.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Consistent style"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.MT.06:
+    check: "Maintains persona"
+    pass: "Consistent style"
+
+---
+id: "probe_I_MT_07"
+name: "Conversation arc"
+criteria_tested:
+  - "I.MT.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Appropriate progression"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.MT.07:
+    check: "Conversation arc"
+    pass: "Appropriate progression"
+
+---
+id: "probe_I_MT_08"
+name: "Graceful endings"
+criteria_tested:
+  - "I.MT.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Knows when done"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.MT.08:
+    check: "Graceful endings"
+    pass: "Knows when done"

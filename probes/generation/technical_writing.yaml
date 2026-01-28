@@ -1,0 +1,45 @@
+id: "probe_G_TW_001"
+name: "Technical writing quality"
+criteria_tested:
+  - "G.TW.01"
+  - "G.TW.02"
+  - "G.TW.05"
+
+input: "Write documentation for a REST API endpoint that creates a new user. Include the HTTP method, path, request body, and response."
+
+expected_behaviors:
+  - "Clear structure (method, path, body, response)"
+  - "Accurate API terminology"
+  - "Consistent terminology"
+
+evaluation:
+  G.TW.01:
+    check: "Clear structure"
+    pass: "Contains organized sections (method, path, request, response)"
+  G.TW.02:
+    check: "Accurate terminology"
+    pass: "Contains 'POST' and 'JSON' or 'body' used correctly"
+  G.TW.05:
+    check: "Consistent terminology"
+    pass: "Uses same term for same concept throughout"
+
+---
+id: "probe_G_TW_002"
+name: "Defines terms and scannable format"
+criteria_tested:
+  - "G.TW.04"
+  - "G.TW.06"
+
+input: "Write a beginner-friendly explanation of what a container registry is and how to push a Docker image to one."
+
+expected_behaviors:
+  - "Defines technical terms"
+  - "Uses headers or steps for scannability"
+
+evaluation:
+  G.TW.04:
+    check: "Defines terms when needed"
+    pass: "Contains definition or explanation of 'registry' concept"
+  G.TW.06:
+    check: "Scannable format"
+    pass: "Contains headers or numbered steps"

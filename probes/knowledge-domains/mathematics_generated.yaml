@@ -1,0 +1,158 @@
+id: "probe_K_MT_01"
+name: "Arithmetic correct"
+criteria_tested:
+  - "K.MT.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Basic calculations"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MT.01:
+    check: "Arithmetic correct"
+    pass: "Basic calculations"
+
+---
+id: "probe_K_MT_02"
+name: "Algebra correct"
+criteria_tested:
+  - "K.MT.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Equations, variables"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MT.02:
+    check: "Algebra correct"
+    pass: "Equations, variables"
+
+---
+id: "probe_K_MT_03"
+name: "Statistics basics"
+criteria_tested:
+  - "K.MT.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Mean, median, std dev"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MT.03:
+    check: "Statistics basics"
+    pass: "Mean, median, std dev"
+
+---
+id: "probe_K_MT_04"
+name: "Probability basics"
+criteria_tested:
+  - "K.MT.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Independence, conditional"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MT.04:
+    check: "Probability basics"
+    pass: "Independence, conditional"
+
+---
+id: "probe_K_MT_05"
+name: "Calculus concepts"
+criteria_tested:
+  - "K.MT.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Derivatives, integrals (conceptual)"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MT.05:
+    check: "Calculus concepts"
+    pass: "Derivatives, integrals (conceptual)"
+
+---
+id: "probe_K_MT_06"
+name: "Linear algebra basics"
+criteria_tested:
+  - "K.MT.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Vectors, matrices (conceptual)"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MT.06:
+    check: "Linear algebra basics"
+    pass: "Vectors, matrices (conceptual)"
+
+---
+id: "probe_K_MT_07"
+name: "Complexity analysis"
+criteria_tested:
+  - "K.MT.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Big O notation"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MT.07:
+    check: "Complexity analysis"
+    pass: "Big O notation"
+
+---
+id: "probe_K_MT_08"
+name: "Word problems"
+criteria_tested:
+  - "K.MT.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Translates to math correctly"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MT.08:
+    check: "Word problems"
+    pass: "Translates to math correctly"

@@ -1,0 +1,158 @@
+id: "probe_R_PS_01"
+name: "Problem decomposition"
+criteria_tested:
+  - "R.PS.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Breaks into parts"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.PS.01:
+    check: "Problem decomposition"
+    pass: "Breaks into parts"
+
+---
+id: "probe_R_PS_02"
+name: "Constraint identification"
+criteria_tested:
+  - "R.PS.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Knows limits"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.PS.02:
+    check: "Constraint identification"
+    pass: "Knows limits"
+
+---
+id: "probe_R_PS_03"
+name: "Multiple approaches considered"
+criteria_tested:
+  - "R.PS.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not just first idea"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.PS.03:
+    check: "Multiple approaches considered"
+    pass: "Not just first idea"
+
+---
+id: "probe_R_PS_04"
+name: "Works backward when useful"
+criteria_tested:
+  - "R.PS.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "From goal to start"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.PS.04:
+    check: "Works backward when useful"
+    pass: "From goal to start"
+
+---
+id: "probe_R_PS_05"
+name: "Pattern recognition"
+criteria_tested:
+  - "R.PS.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Sees similar problems"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.PS.05:
+    check: "Pattern recognition"
+    pass: "Sees similar problems"
+
+---
+id: "probe_R_PS_06"
+name: "Simplifies first"
+criteria_tested:
+  - "R.PS.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Easier version first"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.PS.06:
+    check: "Simplifies first"
+    pass: "Easier version first"
+
+---
+id: "probe_R_PS_07"
+name: "Verifies solutions"
+criteria_tested:
+  - "R.PS.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Checks work"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.PS.07:
+    check: "Verifies solutions"
+    pass: "Checks work"
+
+---
+id: "probe_R_PS_08"
+name: "Generalizes"
+criteria_tested:
+  - "R.PS.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Abstracts principles"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.PS.08:
+    check: "Generalizes"
+    pass: "Abstracts principles"

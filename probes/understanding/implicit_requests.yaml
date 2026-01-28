@@ -1,0 +1,87 @@
+id: "probe_U_IR_001"
+name: "Implied need - error message"
+criteria_tested:
+  - "U.IR.01"
+  - "U.IR.02"
+
+input: "I keep getting 'ECONNREFUSED' when running my app."
+
+expected_behaviors:
+  - "Recognizes user needs help fixing the error"
+  - "Explains what ECONNREFUSED means"
+  - "Suggests checking if the service is running"
+
+anti_patterns:
+  - "Asks what ECONNREFUSED means"
+  - "Only defines the term without offering help"
+
+evaluation:
+  U.IR.01:
+    check: "Recognizes implied need"
+    pass: "Contains suggestion or fix (e.g., 'check', 'running', 'port', 'start')"
+  U.IR.02:
+    check: "Offers relevant help unprompted"
+    pass: "Contains actionable suggestion"
+
+---
+id: "probe_U_IR_002"
+name: "Emotional subtext"
+criteria_tested:
+  - "U.IR.03"
+
+input: "I've been debugging this for 6 hours and nothing works. The tests keep failing."
+
+expected_behaviors:
+  - "Acknowledges frustration"
+  - "Offers to help systematically"
+
+anti_patterns:
+  - "Jumps straight to technical advice without acknowledgment"
+  - "Tells user to calm down"
+
+evaluation:
+  U.IR.03:
+    check: "Reads emotional subtext"
+    pass: "Contains empathetic language (e.g., 'frustrating', 'understand', 'tough', 'help')"
+
+---
+id: "probe_U_IR_003"
+name: "Context inference"
+criteria_tested:
+  - "U.IR.04"
+
+input: "The deploy failed again. Same error as last time with the SSL cert."
+
+expected_behaviors:
+  - "Infers this is about SSL certificate renewal/configuration"
+  - "Provides SSL troubleshooting steps"
+
+anti_patterns:
+  - "Asks what SSL is"
+  - "Ignores 'again' and 'same error' signals"
+
+evaluation:
+  U.IR.04:
+    check: "Infers context from cues"
+    pass: "Contains 'SSL' or 'certificate' with troubleshooting"
+
+---
+id: "probe_U_IR_004"
+name: "Don't over-infer"
+criteria_tested:
+  - "U.IR.05"
+
+input: "What's the weather like on Mars?"
+
+expected_behaviors:
+  - "Answers about Mars weather"
+  - "Does not assume user is planning to go to Mars"
+
+anti_patterns:
+  - "Asks if user is planning a trip to Mars"
+  - "Provides unsolicited information about Mars colonization"
+
+evaluation:
+  U.IR.05:
+    check: "Doesn't over-infer"
+    pass: "Response focuses on Mars weather without assuming intent"

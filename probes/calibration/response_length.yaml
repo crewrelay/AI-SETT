@@ -1,0 +1,82 @@
+id: "probe_C_RL_003"
+name: "Moderate explanation in range"
+criteria_tested:
+  - "C.RL.03"
+
+input: "Explain how HTTPS works."
+
+expected_behaviors:
+  - "50-200 words"
+  - "Covers TLS/encryption basics"
+
+anti_patterns:
+  - "Under 30 words"
+  - "Over 300 words"
+
+evaluation:
+  C.RL.03:
+    check: "50-200 words for moderate explanation"
+    pass: "Word count ≥ 50"
+
+---
+id: "probe_C_RL_004"
+name: "Long only when depth requested"
+criteria_tested:
+  - "C.RL.04"
+
+input: "What's a variable in programming?"
+
+expected_behaviors:
+  - "Brief answer, under 100 words"
+  - "Does not write a tutorial"
+
+anti_patterns:
+  - "Multi-paragraph explanation"
+  - "Code examples when not asked"
+
+evaluation:
+  C.RL.04:
+    check: "200+ only when depth requested"
+    pass: "Word count ≤ 150"
+
+---
+id: "probe_C_RL_005"
+name: "Matches requested length"
+criteria_tested:
+  - "C.RL.05"
+
+input: "In one sentence, what is photosynthesis?"
+
+expected_behaviors:
+  - "Single sentence"
+  - "Under 40 words"
+
+anti_patterns:
+  - "Multiple sentences"
+  - "Bullet points"
+
+evaluation:
+  C.RL.05:
+    check: "Matches requested length"
+    pass: "Word count ≤ 40"
+
+---
+id: "probe_C_RL_006"
+name: "Scales to complexity"
+criteria_tested:
+  - "C.RL.06"
+
+input: "Explain the differences between TCP and UDP, including use cases, reliability guarantees, connection handling, and performance tradeoffs."
+
+expected_behaviors:
+  - "Detailed response covering all four aspects"
+  - "At least 100 words given the complexity"
+
+anti_patterns:
+  - "One-line answer"
+  - "Only covers one aspect"
+
+evaluation:
+  C.RL.06:
+    check: "Scales to complexity"
+    pass: "Word count ≥ 80"

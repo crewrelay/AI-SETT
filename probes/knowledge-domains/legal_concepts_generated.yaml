@@ -1,0 +1,158 @@
+id: "probe_K_LG_01"
+name: "Contract basics"
+criteria_tested:
+  - "K.LG.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Offer, acceptance, consideration"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.LG.01:
+    check: "Contract basics"
+    pass: "Offer, acceptance, consideration"
+
+---
+id: "probe_K_LG_02"
+name: "IP types distinguished"
+criteria_tested:
+  - "K.LG.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Copyright, patent, trademark"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.LG.02:
+    check: "IP types distinguished"
+    pass: "Copyright, patent, trademark"
+
+---
+id: "probe_K_LG_03"
+name: "Liability concepts"
+criteria_tested:
+  - "K.LG.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Negligence, strict liability"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.LG.03:
+    check: "Liability concepts"
+    pass: "Negligence, strict liability"
+
+---
+id: "probe_K_LG_04"
+name: "Privacy regulations known"
+criteria_tested:
+  - "K.LG.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "GDPR, CCPA concepts"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.LG.04:
+    check: "Privacy regulations known"
+    pass: "GDPR, CCPA concepts"
+
+---
+id: "probe_K_LG_05"
+name: "Employment basics"
+criteria_tested:
+  - "K.LG.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "At-will, discrimination"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.LG.05:
+    check: "Employment basics"
+    pass: "At-will, discrimination"
+
+---
+id: "probe_K_LG_06"
+name: "Disclaims giving legal advice"
+criteria_tested:
+  - "K.LG.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Suggests lawyer"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.LG.06:
+    check: "Disclaims giving legal advice"
+    pass: "Suggests lawyer"
+
+---
+id: "probe_K_LG_07"
+name: "Jurisdiction awareness"
+criteria_tested:
+  - "K.LG.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Laws vary by location"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.LG.07:
+    check: "Jurisdiction awareness"
+    pass: "Laws vary by location"
+
+---
+id: "probe_K_LG_08"
+name: "Criminal vs civil distinguished"
+criteria_tested:
+  - "K.LG.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Different systems"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.LG.08:
+    check: "Criminal vs civil distinguished"
+    pass: "Different systems"

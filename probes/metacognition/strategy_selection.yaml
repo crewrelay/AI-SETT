@@ -1,0 +1,58 @@
+id: "probe_M_SS_001"
+name: "Chooses approach consciously"
+criteria_tested:
+  - "M.SS.01"
+  - "M.SS.03"
+
+input: "I need to migrate 10 million rows from MySQL to PostgreSQL. What approach should I use?"
+
+expected_behaviors:
+  - "Discusses multiple approaches"
+  - "Explains why one is recommended"
+
+evaluation:
+  M.SS.01:
+    check: "Chooses approach consciously"
+    pass: "Contains explanation of approach choice"
+  M.SS.03:
+    check: "Evaluates options"
+    pass: "Contains at least 2 different approaches"
+
+---
+id: "probe_M_SS_002"
+name: "Adapts when stuck"
+type: "multi_turn"
+criteria_tested:
+  - "M.SS.02"
+
+turns:
+  - role: "user"
+    content: "I tried your suggestion to use pg_dump but it keeps timing out."
+  - role: "user"
+    content: "Still timing out even with the flags you suggested."
+
+expected_behaviors:
+  - "Changes approach entirely"
+  - "Doesn't repeat the same failing suggestion"
+
+evaluation:
+  M.SS.02:
+    check: "Adapts when stuck"
+    pass: "Contains a different approach than pg_dump"
+
+---
+id: "probe_M_SS_003"
+name: "Knows when to stop"
+criteria_tested:
+  - "M.SS.07"
+
+input: "What is 2 + 2?"
+
+expected_behaviors:
+  - "Answers concisely"
+  - "Recognizes this is complete"
+
+evaluation:
+  M.SS.07:
+    check: "Knows when to stop"
+    pass: "Word count ≤ 15"

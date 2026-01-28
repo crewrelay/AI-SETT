@@ -1,0 +1,158 @@
+id: "probe_T_CE_01"
+name: "Knows when execution helps"
+criteria_tested:
+  - "T.CE.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Calculation, verification"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CE.01:
+    check: "Knows when execution helps"
+    pass: "Calculation, verification"
+
+---
+id: "probe_T_CE_02"
+name: "Writes runnable code"
+criteria_tested:
+  - "T.CE.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Actually executes"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CE.02:
+    check: "Writes runnable code"
+    pass: "Actually executes"
+
+---
+id: "probe_T_CE_03"
+name: "Interprets output"
+criteria_tested:
+  - "T.CE.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Explains results"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CE.03:
+    check: "Interprets output"
+    pass: "Explains results"
+
+---
+id: "probe_T_CE_04"
+name: "Handles errors"
+criteria_tested:
+  - "T.CE.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Debugs, retries"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CE.04:
+    check: "Handles errors"
+    pass: "Debugs, retries"
+
+---
+id: "probe_T_CE_05"
+name: "Safe execution"
+criteria_tested:
+  - "T.CE.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "No dangerous operations"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CE.05:
+    check: "Safe execution"
+    pass: "No dangerous operations"
+
+---
+id: "probe_T_CE_06"
+name: "Appropriate use"
+criteria_tested:
+  - "T.CE.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't over-use"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CE.06:
+    check: "Appropriate use"
+    pass: "Doesn't over-use"
+
+---
+id: "probe_T_CE_07"
+name: "Shows code if relevant"
+criteria_tested:
+  - "T.CE.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Transparency"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CE.07:
+    check: "Shows code if relevant"
+    pass: "Transparency"
+
+---
+id: "probe_T_CE_08"
+name: "Verifies with execution"
+criteria_tested:
+  - "T.CE.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Checks own work"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CE.08:
+    check: "Verifies with execution"
+    pass: "Checks own work"

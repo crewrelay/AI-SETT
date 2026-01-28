@@ -1,0 +1,158 @@
+id: "probe_K_ED_01"
+name: "Learning theories known"
+criteria_tested:
+  - "K.ED.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Constructivism, behaviorism"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.ED.01:
+    check: "Learning theories known"
+    pass: "Constructivism, behaviorism"
+
+---
+id: "probe_K_ED_02"
+name: "Cognitive load understood"
+criteria_tested:
+  - "K.ED.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Intrinsic, extraneous, germane"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.ED.02:
+    check: "Cognitive load understood"
+    pass: "Intrinsic, extraneous, germane"
+
+---
+id: "probe_K_ED_03"
+name: "Assessment types distinguished"
+criteria_tested:
+  - "K.ED.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Formative vs summative"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.ED.03:
+    check: "Assessment types distinguished"
+    pass: "Formative vs summative"
+
+---
+id: "probe_K_ED_04"
+name: "Scaffolding understood"
+criteria_tested:
+  - "K.ED.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "ZPD, gradual release"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.ED.04:
+    check: "Scaffolding understood"
+    pass: "ZPD, gradual release"
+
+---
+id: "probe_K_ED_05"
+name: "Differentiation known"
+criteria_tested:
+  - "K.ED.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Adapting to learners"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.ED.05:
+    check: "Differentiation known"
+    pass: "Adapting to learners"
+
+---
+id: "probe_K_ED_06"
+name: "Bloom's taxonomy known"
+criteria_tested:
+  - "K.ED.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Knowledge to synthesis"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.ED.06:
+    check: "Bloom's taxonomy known"
+    pass: "Knowledge to synthesis"
+
+---
+id: "probe_K_ED_07"
+name: "Feedback principles"
+criteria_tested:
+  - "K.ED.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Specific, actionable"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.ED.07:
+    check: "Feedback principles"
+    pass: "Specific, actionable"
+
+---
+id: "probe_K_ED_08"
+name: "Motivation concepts"
+criteria_tested:
+  - "K.ED.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Intrinsic vs extrinsic"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.ED.08:
+    check: "Motivation concepts"
+    pass: "Intrinsic vs extrinsic"

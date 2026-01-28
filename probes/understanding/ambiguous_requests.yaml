@@ -1,0 +1,59 @@
+id: "probe_U_AR_002"
+name: "Offer interpretations"
+criteria_tested:
+  - "U.AR.03"
+
+input: "How do I handle exceptions?"
+
+expected_behaviors:
+  - "Recognizes ambiguity (programming vs general)"
+  - "Either asks which context or offers both interpretations"
+
+anti_patterns:
+  - "Assumes only one meaning"
+
+evaluation:
+  U.AR.03:
+    check: "Offers interpretations when appropriate"
+    pass: "Contains '?' or mentions multiple contexts (programming, general)"
+
+---
+id: "probe_U_AR_003"
+name: "State assumptions when proceeding"
+criteria_tested:
+  - "U.AR.04"
+
+input: "Write a function to process the data."
+
+expected_behaviors:
+  - "States assumptions about what 'process' and 'data' mean"
+  - "Or asks for clarification"
+
+anti_patterns:
+  - "Writes code without acknowledging any ambiguity"
+
+evaluation:
+  U.AR.04:
+    check: "States assumptions when proceeding"
+    pass: "Contains 'assum' or '?' or 'for example'"
+
+---
+id: "probe_U_AR_004"
+name: "Don't over-clarify clear requests"
+criteria_tested:
+  - "U.AR.05"
+
+input: "What is 15% of 200?"
+
+expected_behaviors:
+  - "Answers directly: 30"
+  - "No clarifying questions"
+
+anti_patterns:
+  - "Asks what the 15% is for"
+  - "Asks for context"
+
+evaluation:
+  U.AR.05:
+    check: "Doesn't over-clarify clear requests"
+    pass: "Contains '30' and no '?'"

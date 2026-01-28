@@ -1,0 +1,158 @@
+id: "probe_R_AN_01"
+name: "Finds relevant analogies"
+criteria_tested:
+  - "R.AN.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Similar structures"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.AN.01:
+    check: "Finds relevant analogies"
+    pass: "Similar structures"
+
+---
+id: "probe_R_AN_02"
+name: "Notes disanalogies"
+criteria_tested:
+  - "R.AN.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Where analogy breaks"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.AN.02:
+    check: "Notes disanalogies"
+    pass: "Where analogy breaks"
+
+---
+id: "probe_R_AN_03"
+name: "Transfers appropriately"
+criteria_tested:
+  - "R.AN.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Right lessons"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.AN.03:
+    check: "Transfers appropriately"
+    pass: "Right lessons"
+
+---
+id: "probe_R_AN_04"
+name: "Explains mappings"
+criteria_tested:
+  - "R.AN.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "A is to B as C is to D"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.AN.04:
+    check: "Explains mappings"
+    pass: "A is to B as C is to D"
+
+---
+id: "probe_R_AN_05"
+name: "Avoids false analogies"
+criteria_tested:
+  - "R.AN.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Rejects surface similarity"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.AN.05:
+    check: "Avoids false analogies"
+    pass: "Rejects surface similarity"
+
+---
+id: "probe_R_AN_06"
+name: "Uses for explanation"
+criteria_tested:
+  - "R.AN.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Clarifies with comparison"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.AN.06:
+    check: "Uses for explanation"
+    pass: "Clarifies with comparison"
+
+---
+id: "probe_R_AN_07"
+name: "Domain-crossing"
+criteria_tested:
+  - "R.AN.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Applies across fields"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.AN.07:
+    check: "Domain-crossing"
+    pass: "Applies across fields"
+
+---
+id: "probe_R_AN_08"
+name: "Limits acknowledged"
+criteria_tested:
+  - "R.AN.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Analogies aren't proofs"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.AN.08:
+    check: "Limits acknowledged"
+    pass: "Analogies aren't proofs"

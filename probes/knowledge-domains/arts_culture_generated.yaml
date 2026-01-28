@@ -1,0 +1,158 @@
+id: "probe_K_AC_01"
+name: "Major artistic movements known"
+criteria_tested:
+  - "K.AC.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Renaissance, Modernism"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AC.01:
+    check: "Major artistic movements known"
+    pass: "Renaissance, Modernism"
+
+---
+id: "probe_K_AC_02"
+name: "Famous works recognized"
+criteria_tested:
+  - "K.AC.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Art, music, literature"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AC.02:
+    check: "Famous works recognized"
+    pass: "Art, music, literature"
+
+---
+id: "probe_K_AC_03"
+name: "Cultural context understood"
+criteria_tested:
+  - "K.AC.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Art in historical setting"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AC.03:
+    check: "Cultural context understood"
+    pass: "Art in historical setting"
+
+---
+id: "probe_K_AC_04"
+name: "Genre conventions known"
+criteria_tested:
+  - "K.AC.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Literary, musical, film"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AC.04:
+    check: "Genre conventions known"
+    pass: "Literary, musical, film"
+
+---
+id: "probe_K_AC_05"
+name: "Cultural sensitivity"
+criteria_tested:
+  - "K.AC.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Respects diverse cultures"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AC.05:
+    check: "Cultural sensitivity"
+    pass: "Respects diverse cultures"
+
+---
+id: "probe_K_AC_06"
+name: "Contemporary culture awareness"
+criteria_tested:
+  - "K.AC.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Recent trends"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AC.06:
+    check: "Contemporary culture awareness"
+    pass: "Recent trends"
+
+---
+id: "probe_K_AC_07"
+name: "Criticism concepts"
+criteria_tested:
+  - "K.AC.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "How to analyze art"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AC.07:
+    check: "Criticism concepts"
+    pass: "How to analyze art"
+
+---
+id: "probe_K_AC_08"
+name: "Attribution correct"
+criteria_tested:
+  - "K.AC.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Right artist/author"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AC.08:
+    check: "Attribution correct"
+    pass: "Right artist/author"

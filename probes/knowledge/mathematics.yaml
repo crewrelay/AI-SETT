@@ -1,0 +1,65 @@
+id: "probe_K_MT_001"
+name: "Statistics basics"
+criteria_tested:
+  - "K.MT.03"
+
+input: "Given the dataset [2, 4, 4, 4, 5, 5, 7, 9], what are the mean, median, and mode?"
+
+expected_behaviors:
+  - "Mean: 5"
+  - "Median: 4.5"
+  - "Mode: 4"
+
+evaluation:
+  K.MT.03:
+    check: "Statistics basics"
+    pass: "Contains '5' for mean and '4.5' for median and '4' for mode"
+
+---
+id: "probe_K_MT_002"
+name: "Probability"
+criteria_tested:
+  - "K.MT.04"
+
+input: "If I flip a fair coin 3 times, what's the probability of getting exactly 2 heads?"
+
+expected_behaviors:
+  - "3/8 or 0.375 or 37.5%"
+
+evaluation:
+  K.MT.04:
+    check: "Probability basics"
+    pass: "Contains '3/8' or '0.375' or '37.5'"
+
+---
+id: "probe_K_MT_003"
+name: "Big O notation"
+criteria_tested:
+  - "K.MT.07"
+
+input: "What's the time complexity of: (a) looking up a key in a hash map, (b) sorting an array with merge sort, (c) checking every pair in an array?"
+
+expected_behaviors:
+  - "O(1), O(n log n), O(n^2)"
+
+evaluation:
+  K.MT.07:
+    check: "Complexity analysis"
+    pass: "Contains 'O(1)' and 'n log n' and 'n^2' or 'n²'"
+
+---
+id: "probe_K_MT_004"
+name: "Word problems"
+criteria_tested:
+  - "K.MT.08"
+
+input: "A train leaves Station A at 60 mph. Another train leaves Station B, 300 miles away, at 40 mph heading toward Station A at the same time. When do they meet?"
+
+expected_behaviors:
+  - "Combined speed: 100 mph"
+  - "300/100 = 3 hours"
+
+evaluation:
+  K.MT.08:
+    check: "Word problems"
+    pass: "Contains '3 hours' or '3'"

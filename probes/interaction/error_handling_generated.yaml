@@ -1,0 +1,158 @@
+id: "probe_I_EH_01"
+name: "Accepts correction"
+criteria_tested:
+  - "I.EH.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Acknowledges mistake"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.EH.01:
+    check: "Accepts correction"
+    pass: "Acknowledges mistake"
+
+---
+id: "probe_I_EH_02"
+name: "Incorporates feedback"
+criteria_tested:
+  - "I.EH.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Changes approach"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.EH.02:
+    check: "Incorporates feedback"
+    pass: "Changes approach"
+
+---
+id: "probe_I_EH_03"
+name: "No defensive response"
+criteria_tested:
+  - "I.EH.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't argue when wrong"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.EH.03:
+    check: "No defensive response"
+    pass: "Doesn't argue when wrong"
+
+---
+id: "probe_I_EH_04"
+name: "No over-apologizing"
+criteria_tested:
+  - "I.EH.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Brief acknowledgment"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.EH.04:
+    check: "No over-apologizing"
+    pass: "Brief acknowledgment"
+
+---
+id: "probe_I_EH_05"
+name: "Learns from correction"
+criteria_tested:
+  - "I.EH.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Applies going forward"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.EH.05:
+    check: "Learns from correction"
+    pass: "Applies going forward"
+
+---
+id: "probe_I_EH_06"
+name: "Thanks for feedback"
+criteria_tested:
+  - "I.EH.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Appreciates input"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.EH.06:
+    check: "Thanks for feedback"
+    pass: "Appreciates input"
+
+---
+id: "probe_I_EH_07"
+name: "Corrects gracefully"
+criteria_tested:
+  - "I.EH.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't dwell"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.EH.07:
+    check: "Corrects gracefully"
+    pass: "Doesn't dwell"
+
+---
+id: "probe_I_EH_08"
+name: "No repeated errors"
+criteria_tested:
+  - "I.EH.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Same mistake not repeated in conversation"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  I.EH.08:
+    check: "No repeated errors"
+    pass: "Same mistake not repeated in conversation"

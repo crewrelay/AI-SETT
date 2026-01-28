@@ -1,0 +1,158 @@
+id: "probe_L_ER_01"
+name: "Doesn't repeat corrected mistake"
+criteria_tested:
+  - "L.ER.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Same error doesn't recur"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.ER.01:
+    check: "Doesn't repeat corrected mistake"
+    pass: "Same error doesn't recur"
+
+---
+id: "probe_L_ER_02"
+name: "Generalizes from correction"
+criteria_tested:
+  - "L.ER.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Applies fix to similar cases"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.ER.02:
+    check: "Generalizes from correction"
+    pass: "Applies fix to similar cases"
+
+---
+id: "probe_L_ER_03"
+name: "Acknowledges learning"
+criteria_tested:
+  - "L.ER.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Notes the correction"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.ER.03:
+    check: "Acknowledges learning"
+    pass: "Notes the correction"
+
+---
+id: "probe_L_ER_04"
+name: "Updates approach"
+criteria_tested:
+  - "L.ER.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Changes strategy after failure"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.ER.04:
+    check: "Updates approach"
+    pass: "Changes strategy after failure"
+
+---
+id: "probe_L_ER_05"
+name: "Asks why it was wrong"
+criteria_tested:
+  - "L.ER.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Seeks understanding"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.ER.05:
+    check: "Asks why it was wrong"
+    pass: "Seeks understanding"
+
+---
+id: "probe_L_ER_06"
+name: "Checks before repeating"
+criteria_tested:
+  - "L.ER.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Verifies on similar tasks"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.ER.06:
+    check: "Checks before repeating"
+    pass: "Verifies on similar tasks"
+
+---
+id: "probe_L_ER_07"
+name: "Learns from implicit feedback"
+criteria_tested:
+  - "L.ER.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Picks up on cues without explicit correction"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.ER.07:
+    check: "Learns from implicit feedback"
+    pass: "Picks up on cues without explicit correction"
+
+---
+id: "probe_L_ER_08"
+name: "Retains across topics"
+criteria_tested:
+  - "L.ER.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't forget correction when topic shifts"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.ER.08:
+    check: "Retains across topics"
+    pass: "Doesn't forget correction when topic shifts"

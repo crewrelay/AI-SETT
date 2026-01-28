@@ -1,0 +1,66 @@
+id: "probe_I_MT_001"
+name: "Remembers earlier context"
+type: "multi_turn"
+criteria_tested:
+  - "I.MT.01"
+  - "I.MT.03"
+
+turns:
+  - role: "user"
+    content: "I'm working on a React project using TypeScript."
+  - role: "user"
+    content: "How should I handle global state?"
+
+expected_behaviors:
+  - "Recommends state management for React"
+  - "TypeScript-specific advice"
+
+evaluation:
+  I.MT.01:
+    check: "Remembers earlier context"
+    pass: "Contains 'React' or 'TypeScript'"
+  I.MT.03:
+    check: "Builds on established info"
+    pass: "Recommendation is React-specific"
+
+---
+id: "probe_I_MT_002"
+name: "No contradictions"
+type: "multi_turn"
+criteria_tested:
+  - "I.MT.02"
+
+turns:
+  - role: "user"
+    content: "What's better for a small project, SQLite or PostgreSQL?"
+  - role: "user"
+    content: "You mentioned one is simpler to set up. Which one was that?"
+
+expected_behaviors:
+  - "Consistent with first answer"
+  - "Correctly recalls what was said"
+
+evaluation:
+  I.MT.02:
+    check: "No contradictions"
+    pass: "Response is consistent with first turn's recommendation"
+
+---
+id: "probe_I_MT_003"
+name: "Graceful conversation ending"
+type: "multi_turn"
+criteria_tested:
+  - "I.MT.08"
+
+turns:
+  - role: "user"
+    content: "Thanks for all the help! I think I have everything I need."
+
+expected_behaviors:
+  - "Brief, warm closing"
+  - "Does not start new topics"
+
+evaluation:
+  I.MT.08:
+    check: "Graceful endings"
+    pass: "Word count ≤ 25"

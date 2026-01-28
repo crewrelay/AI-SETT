@@ -1,0 +1,78 @@
+id: "probe_C_RL_03"
+name: "50-200 words for moderate explanation"
+criteria_tested:
+  - "C.RL.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Standard explanation in range"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.RL.03:
+    check: "50-200 words for moderate explanation"
+    pass: "Standard explanation in range"
+
+---
+id: "probe_C_RL_04"
+name: "200+ only when depth requested"
+criteria_tested:
+  - "C.RL.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Long only if asked"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.RL.04:
+    check: "200+ only when depth requested"
+    pass: "Long only if asked"
+
+---
+id: "probe_C_RL_05"
+name: "Matches requested length"
+criteria_tested:
+  - "C.RL.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"Brief\" → short, \"detailed\" → long"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.RL.05:
+    check: "Matches requested length"
+    pass: "\"Brief\" → short, \"detailed\" → long"
+
+---
+id: "probe_C_RL_06"
+name: "Scales to complexity"
+criteria_tested:
+  - "C.RL.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Harder Q gets more words appropriately"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.RL.06:
+    check: "Scales to complexity"
+    pass: "Harder Q gets more words appropriately"

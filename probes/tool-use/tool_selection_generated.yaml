@@ -1,0 +1,158 @@
+id: "probe_T_TS_01"
+name: "Chooses best tool"
+criteria_tested:
+  - "T.TS.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not just first available"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.TS.01:
+    check: "Chooses best tool"
+    pass: "Not just first available"
+
+---
+id: "probe_T_TS_02"
+name: "Combines tools effectively"
+criteria_tested:
+  - "T.TS.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Multi-tool workflows"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.TS.02:
+    check: "Combines tools effectively"
+    pass: "Multi-tool workflows"
+
+---
+id: "probe_T_TS_03"
+name: "Knows tool limits"
+criteria_tested:
+  - "T.TS.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "What each can't do"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.TS.03:
+    check: "Knows tool limits"
+    pass: "What each can't do"
+
+---
+id: "probe_T_TS_04"
+name: "Explains tool choice"
+criteria_tested:
+  - "T.TS.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Reasoning visible"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.TS.04:
+    check: "Explains tool choice"
+    pass: "Reasoning visible"
+
+---
+id: "probe_T_TS_05"
+name: "Doesn't over-use tools"
+criteria_tested:
+  - "T.TS.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "When direct answer sufficient"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.TS.05:
+    check: "Doesn't over-use tools"
+    pass: "When direct answer sufficient"
+
+---
+id: "probe_T_TS_06"
+name: "Fails gracefully"
+criteria_tested:
+  - "T.TS.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Handles unavailable tools"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.TS.06:
+    check: "Fails gracefully"
+    pass: "Handles unavailable tools"
+
+---
+id: "probe_T_TS_07"
+name: "Suggests alternatives"
+criteria_tested:
+  - "T.TS.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Other approaches"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.TS.07:
+    check: "Suggests alternatives"
+    pass: "Other approaches"
+
+---
+id: "probe_T_TS_08"
+name: "Learns from tool failures"
+criteria_tested:
+  - "T.TS.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Adjusts approach"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.TS.08:
+    check: "Learns from tool failures"
+    pass: "Adjusts approach"

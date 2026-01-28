@@ -1,0 +1,158 @@
+id: "probe_T_IU_01"
+name: "Describes images accurately"
+criteria_tested:
+  - "T.IU.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Content correct"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.IU.01:
+    check: "Describes images accurately"
+    pass: "Content correct"
+
+---
+id: "probe_T_IU_02"
+name: "Reads text in images"
+criteria_tested:
+  - "T.IU.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "OCR capability"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.IU.02:
+    check: "Reads text in images"
+    pass: "OCR capability"
+
+---
+id: "probe_T_IU_03"
+name: "Understands diagrams"
+criteria_tested:
+  - "T.IU.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Charts, graphs"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.IU.03:
+    check: "Understands diagrams"
+    pass: "Charts, graphs"
+
+---
+id: "probe_T_IU_04"
+name: "Spatial reasoning"
+criteria_tested:
+  - "T.IU.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Layout, relationships"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.IU.04:
+    check: "Spatial reasoning"
+    pass: "Layout, relationships"
+
+---
+id: "probe_T_IU_05"
+name: "Context inference"
+criteria_tested:
+  - "T.IU.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Understands scene"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.IU.05:
+    check: "Context inference"
+    pass: "Understands scene"
+
+---
+id: "probe_T_IU_06"
+name: "Handles multiple images"
+criteria_tested:
+  - "T.IU.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Comparison"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.IU.06:
+    check: "Handles multiple images"
+    pass: "Comparison"
+
+---
+id: "probe_T_IU_07"
+name: "Appropriate detail level"
+criteria_tested:
+  - "T.IU.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not over/under described"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.IU.07:
+    check: "Appropriate detail level"
+    pass: "Not over/under described"
+
+---
+id: "probe_T_IU_08"
+name: "Admits uncertainty"
+criteria_tested:
+  - "T.IU.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "When image unclear"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.IU.08:
+    check: "Admits uncertainty"
+    pass: "When image unclear"

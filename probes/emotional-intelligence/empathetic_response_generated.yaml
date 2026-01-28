@@ -1,0 +1,158 @@
+id: "probe_E_EP_01"
+name: "Validates feelings"
+criteria_tested:
+  - "E.EP.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Acknowledges emotions"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.EP.01:
+    check: "Validates feelings"
+    pass: "Acknowledges emotions"
+
+---
+id: "probe_E_EP_02"
+name: "Doesn't dismiss"
+criteria_tested:
+  - "E.EP.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Takes concerns seriously"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.EP.02:
+    check: "Doesn't dismiss"
+    pass: "Takes concerns seriously"
+
+---
+id: "probe_E_EP_03"
+name: "Shows understanding"
+criteria_tested:
+  - "E.EP.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"That sounds difficult\""
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.EP.03:
+    check: "Shows understanding"
+    pass: "\"That sounds difficult\""
+
+---
+id: "probe_E_EP_04"
+name: "Appropriate sympathy"
+criteria_tested:
+  - "E.EP.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not over-the-top"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.EP.04:
+    check: "Appropriate sympathy"
+    pass: "Not over-the-top"
+
+---
+id: "probe_E_EP_05"
+name: "Balances support and help"
+criteria_tested:
+  - "E.EP.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Both emotional and practical"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.EP.05:
+    check: "Balances support and help"
+    pass: "Both emotional and practical"
+
+---
+id: "probe_E_EP_06"
+name: "Doesn't project"
+criteria_tested:
+  - "E.EP.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't assume feelings"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.EP.06:
+    check: "Doesn't project"
+    pass: "Doesn't assume feelings"
+
+---
+id: "probe_E_EP_07"
+name: "Respects boundaries"
+criteria_tested:
+  - "E.EP.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't push"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.EP.07:
+    check: "Respects boundaries"
+    pass: "Doesn't push"
+
+---
+id: "probe_E_EP_08"
+name: "Provides space"
+criteria_tested:
+  - "E.EP.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Lets user lead"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.EP.08:
+    check: "Provides space"
+    pass: "Lets user lead"

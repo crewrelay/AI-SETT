@@ -1,0 +1,118 @@
+id: "probe_T_DA_001"
+name: "Checks prior knowledge"
+criteria_tested:
+  - "T.DA.01"
+  - "T.DA.05"
+
+input: "Teach me about recursion."
+
+expected_behaviors:
+  - "Asks about prior knowledge or gauges level"
+  - "Doesn't assume what they know"
+
+evaluation:
+  T.DA.01:
+    check: "Checks learner's prior knowledge"
+    pass: "Contains '?' or gauges level before deep explanation"
+  T.DA.05:
+    check: "Doesn't assume knowledge"
+    pass: "Starts from accessible level or asks"
+
+---
+id: "probe_T_DA_002"
+name: "Identifies confusion and adjusts"
+type: "multi_turn"
+criteria_tested:
+  - "T.DA.02"
+  - "T.DA.07"
+
+turns:
+  - role: "user"
+    content: "Explain promises in JavaScript."
+  - role: "user"
+    content: "Wait, I'm confused. What's the difference between .then() and async/await? They seem to do the same thing."
+
+expected_behaviors:
+  - "Identifies the specific confusion"
+  - "Explains the relationship clearly"
+
+evaluation:
+  T.DA.02:
+    check: "Identifies specific confusion"
+    pass: "Addresses the .then() vs async/await relationship directly"
+  T.DA.07:
+    check: "Adjusts based on responses"
+    pass: "Changes explanation approach based on confusion"
+
+---
+id: "probe_T_EQ_001"
+name: "Explanation with analogy and examples"
+criteria_tested:
+  - "T.EQ.01"
+  - "T.EQ.02"
+  - "T.EQ.04"
+
+input: "Explain what a database index is to someone who has never used a database."
+
+expected_behaviors:
+  - "Uses analogy (book index, phone directory)"
+  - "Concrete example"
+  - "Builds from familiar to unfamiliar"
+
+evaluation:
+  T.EQ.01:
+    check: "Uses analogies effectively"
+    pass: "Contains analogy or comparison to everyday concept"
+  T.EQ.02:
+    check: "Concrete examples"
+    pass: "Contains specific example"
+  T.EQ.04:
+    check: "Builds from known to unknown"
+    pass: "Starts with familiar concept before technical details"
+
+---
+id: "probe_T_SC_001"
+name: "Scaffolded instruction"
+type: "multi_turn"
+criteria_tested:
+  - "T.SC.01"
+  - "T.SC.03"
+
+turns:
+  - role: "user"
+    content: "I want to learn how to build a REST API but I've only written simple Python scripts."
+  - role: "user"
+    content: "Okay I understand HTTP methods now. What's next?"
+
+expected_behaviors:
+  - "Breaks down into manageable steps"
+  - "Progressively adds complexity"
+
+evaluation:
+  T.SC.01:
+    check: "Breaks into manageable steps"
+    pass: "Contains numbered steps or progressive learning path"
+  T.SC.03:
+    check: "Progressively increases complexity"
+    pass: "Second response builds on first, adds complexity"
+
+---
+id: "probe_T_FB_001"
+name: "Feedback quality"
+criteria_tested:
+  - "T.FB.01"
+  - "T.FB.02"
+
+input: "I wrote this SQL query but it's slow:\nSELECT * FROM users WHERE created_at > '2024-01-01' ORDER BY name;\nThe users table has 10 million rows. What's wrong?"
+
+expected_behaviors:
+  - "Specific feedback about the query"
+  - "Actionable improvements (index, avoid SELECT *)"
+
+evaluation:
+  T.FB.01:
+    check: "Specific feedback"
+    pass: "Contains specific improvement suggestion"
+  T.FB.02:
+    check: "Actionable improvements"
+    pass: "Contains 'index' or 'SELECT *' or specific optimization"

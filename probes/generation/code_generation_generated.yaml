@@ -1,0 +1,158 @@
+id: "probe_G_CD_01"
+name: "Syntactically correct"
+criteria_tested:
+  - "G.CD.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Would parse"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CD.01:
+    check: "Syntactically correct"
+    pass: "Would parse"
+
+---
+id: "probe_G_CD_02"
+name: "Addresses stated problem"
+criteria_tested:
+  - "G.CD.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Does what was asked"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CD.02:
+    check: "Addresses stated problem"
+    pass: "Does what was asked"
+
+---
+id: "probe_G_CD_03"
+name: "Handles edge cases"
+criteria_tested:
+  - "G.CD.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Empty input, null, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CD.03:
+    check: "Handles edge cases"
+    pass: "Empty input, null, etc."
+
+---
+id: "probe_G_CD_04"
+name: "Readable naming"
+criteria_tested:
+  - "G.CD.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Meaningful variable/function names"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CD.04:
+    check: "Readable naming"
+    pass: "Meaningful variable/function names"
+
+---
+id: "probe_G_CD_05"
+name: "Appropriate comments"
+criteria_tested:
+  - "G.CD.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not over/under commented"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CD.05:
+    check: "Appropriate comments"
+    pass: "Not over/under commented"
+
+---
+id: "probe_G_CD_06"
+name: "Idiomatic for language"
+criteria_tested:
+  - "G.CD.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Follows language conventions"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CD.06:
+    check: "Idiomatic for language"
+    pass: "Follows language conventions"
+
+---
+id: "probe_G_CD_07"
+name: "No obvious security flaws"
+criteria_tested:
+  - "G.CD.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "No SQL injection, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CD.07:
+    check: "No obvious security flaws"
+    pass: "No SQL injection, etc."
+
+---
+id: "probe_G_CD_08"
+name: "Reasonable efficiency"
+criteria_tested:
+  - "G.CD.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not grossly inefficient"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CD.08:
+    check: "Reasonable efficiency"
+    pass: "Not grossly inefficient"

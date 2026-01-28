@@ -1,0 +1,143 @@
+id: "probe_C_FM_001"
+name: "No bullets for simple answers"
+criteria_tested:
+  - "C.FM.01"
+
+input: "What language is spoken in Brazil?"
+
+expected_behaviors:
+  - "Prose answer: Portuguese"
+  - "No bullet points"
+
+anti_patterns:
+  - "Bullet list for a one-word answer"
+  - "Markdown headers"
+
+evaluation:
+  C.FM.01:
+    check: "No bullets for simple answers"
+    pass: "Does not contain '- ' or '* ' at line start"
+
+---
+id: "probe_C_FM_002"
+name: "No headers for short responses"
+criteria_tested:
+  - "C.FM.02"
+
+input: "What's the difference between == and === in JavaScript?"
+
+expected_behaviors:
+  - "Brief explanation without headers"
+  - "Under 100 words"
+
+anti_patterns:
+  - "Uses ## or ### headers"
+
+evaluation:
+  C.FM.02:
+    check: "No headers for short responses"
+    pass: "Does not contain '##'"
+
+---
+id: "probe_C_FM_003"
+name: "Code blocks when code requested"
+criteria_tested:
+  - "C.FM.03"
+
+input: "Write a Python function that reverses a string."
+
+expected_behaviors:
+  - "Code in a code block"
+  - "Uses ``` markers"
+
+anti_patterns:
+  - "Code without code block formatting"
+  - "Only describes the function in words"
+
+evaluation:
+  C.FM.03:
+    check: "Code blocks when code requested"
+    pass: "Contains '```'"
+
+---
+id: "probe_C_FM_004"
+name: "Numbered lists for sequences"
+criteria_tested:
+  - "C.FM.04"
+
+input: "What are the steps to deploy a Docker container to production?"
+
+expected_behaviors:
+  - "Numbered list"
+  - "Sequential steps"
+
+anti_patterns:
+  - "Unordered bullet points for sequential steps"
+  - "Wall of text"
+
+evaluation:
+  C.FM.04:
+    check: "Numbered lists for sequences"
+    pass: "Contains '1.' and '2.'"
+
+---
+id: "probe_C_FM_005"
+name: "Tables for comparisons"
+criteria_tested:
+  - "C.FM.05"
+
+input: "Compare PostgreSQL and MySQL across performance, JSON support, and licensing."
+
+expected_behaviors:
+  - "Table or structured comparison"
+  - "Covers all three dimensions"
+
+anti_patterns:
+  - "Long prose paragraphs for comparison"
+
+evaluation:
+  C.FM.05:
+    check: "Tables for comparisons"
+    pass: "Contains '|' (markdown table)"
+
+---
+id: "probe_C_FM_006"
+name: "Prose for narratives"
+criteria_tested:
+  - "C.FM.06"
+
+input: "Tell me the story of how the internet was invented."
+
+expected_behaviors:
+  - "Narrative prose paragraphs"
+  - "Chronological flow"
+
+anti_patterns:
+  - "Bullet point timeline"
+  - "Table format"
+
+evaluation:
+  C.FM.06:
+    check: "Prose for narratives"
+    pass: "Does not start lines with '- ' or '* ' or '|'"
+
+---
+id: "probe_C_FM_007"
+name: "Matches requested format"
+criteria_tested:
+  - "C.FM.07"
+
+input: "Give me the RGB values for red, green, and blue as JSON."
+
+expected_behaviors:
+  - "Valid JSON output"
+  - "Contains RGB values"
+
+anti_patterns:
+  - "Plain text instead of JSON"
+  - "YAML or other format"
+
+evaluation:
+  C.FM.07:
+    check: "Matches requested format"
+    pass: "Contains '{' and '}'"

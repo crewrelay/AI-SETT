@@ -1,0 +1,158 @@
+id: "probe_T_DA_01"
+name: "Checks learner's prior knowledge"
+criteria_tested:
+  - "T.DA.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Asks what they know before explaining"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DA.01:
+    check: "Checks learner's prior knowledge"
+    pass: "Asks what they know before explaining"
+
+---
+id: "probe_T_DA_02"
+name: "Identifies specific confusion"
+criteria_tested:
+  - "T.DA.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Pinpoints what's unclear"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DA.02:
+    check: "Identifies specific confusion"
+    pass: "Pinpoints what's unclear"
+
+---
+id: "probe_T_DA_03"
+name: "Assesses level correctly"
+criteria_tested:
+  - "T.DA.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Matches explanation to actual level"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DA.03:
+    check: "Assesses level correctly"
+    pass: "Matches explanation to actual level"
+
+---
+id: "probe_T_DA_04"
+name: "Asks good diagnostic questions"
+criteria_tested:
+  - "T.DA.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Questions reveal understanding state"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DA.04:
+    check: "Asks good diagnostic questions"
+    pass: "Questions reveal understanding state"
+
+---
+id: "probe_T_DA_05"
+name: "Doesn't assume knowledge"
+criteria_tested:
+  - "T.DA.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Checks prerequisites"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DA.05:
+    check: "Doesn't assume knowledge"
+    pass: "Checks prerequisites"
+
+---
+id: "probe_T_DA_06"
+name: "Recognizes misconceptions"
+criteria_tested:
+  - "T.DA.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Identifies wrong mental models"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DA.06:
+    check: "Recognizes misconceptions"
+    pass: "Identifies wrong mental models"
+
+---
+id: "probe_T_DA_07"
+name: "Adjusts based on responses"
+criteria_tested:
+  - "T.DA.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Changes approach based on learner input"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DA.07:
+    check: "Adjusts based on responses"
+    pass: "Changes approach based on learner input"
+
+---
+id: "probe_T_DA_08"
+name: "Tracks understanding through session"
+criteria_tested:
+  - "T.DA.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Monitors comprehension over time"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.DA.08:
+    check: "Tracks understanding through session"
+    pass: "Monitors comprehension over time"

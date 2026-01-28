@@ -1,0 +1,133 @@
+id: "probe_R_LG_001"
+name: "Deduction"
+criteria_tested:
+  - "R.LG.01"
+
+input: "All mammals are warm-blooded. Whales are mammals. What can we conclude about whales?"
+
+expected_behaviors:
+  - "Whales are warm-blooded"
+  - "Clear deductive reasoning"
+
+evaluation:
+  R.LG.01:
+    check: "Deduction correct"
+    pass: "Contains 'warm-blooded'"
+
+---
+id: "probe_R_LG_002"
+name: "Induction"
+criteria_tested:
+  - "R.LG.02"
+
+input: "I've planted tomatoes 5 years in a row. Each year, the ones on the south side of my garden produced more fruit. What might I conclude?"
+
+expected_behaviors:
+  - "South side gets more sun"
+  - "Notes this is a pattern, not definitive"
+
+evaluation:
+  R.LG.02:
+    check: "Induction appropriate"
+    pass: "Contains tentative language ('suggest', 'likely', 'might', 'seems')"
+
+---
+id: "probe_R_LG_003"
+name: "Fallacy recognition"
+criteria_tested:
+  - "R.LG.03"
+
+input: "My friend says: 'Everyone I know who exercises is healthy. Therefore, exercise makes you healthy.' Is this reasoning valid?"
+
+expected_behaviors:
+  - "Identifies the logical issue"
+  - "Mentions correlation vs causation or survivorship bias"
+
+evaluation:
+  R.LG.03:
+    check: "Fallacies recognized"
+    pass: "Contains 'correlation' or 'fallacy' or 'not necessarily' or 'bias'"
+
+---
+id: "probe_R_LG_004"
+name: "Transitive reasoning"
+criteria_tested:
+  - "R.LG.04"
+
+input: "Building A is taller than Building B. Building B is taller than Building C. Which is the tallest?"
+
+expected_behaviors:
+  - "Building A"
+
+evaluation:
+  R.LG.04:
+    check: "Transitive reasoning"
+    pass: "Contains 'A' as the tallest"
+
+---
+id: "probe_R_LG_005"
+name: "Contrapositive"
+criteria_tested:
+  - "R.LG.05"
+
+input: "If it rains, the ground gets wet. The ground is not wet. What can we conclude?"
+
+expected_behaviors:
+  - "It did not rain"
+  - "Demonstrates contrapositive reasoning"
+
+evaluation:
+  R.LG.05:
+    check: "Contrapositive understood"
+    pass: "Contains 'not rain' or 'did not rain' or 'hasn't rained'"
+
+---
+id: "probe_R_LG_006"
+name: "Necessary vs sufficient"
+criteria_tested:
+  - "R.LG.06"
+
+input: "Is oxygen necessary for fire? Is it sufficient for fire? Explain the difference."
+
+expected_behaviors:
+  - "Oxygen is necessary but not sufficient"
+  - "Explains you also need fuel and heat"
+
+evaluation:
+  R.LG.06:
+    check: "Necessary vs sufficient"
+    pass: "Contains 'necessary' and 'not sufficient' or 'sufficient'"
+
+---
+id: "probe_R_LG_007"
+name: "Quantifiers"
+criteria_tested:
+  - "R.LG.07"
+
+input: "Some cats are black. All dogs are mammals. Does it follow that some mammals are black?"
+
+expected_behaviors:
+  - "Recognizes you cannot conclude this from the premises"
+  - "Cats being black doesn't transfer to mammals via dogs"
+
+evaluation:
+  R.LG.07:
+    check: "Quantifiers handled"
+    pass: "Contains 'not' or 'cannot' or 'doesn't follow' or careful analysis of quantifiers"
+
+---
+id: "probe_R_LG_008"
+name: "Logical consistency"
+criteria_tested:
+  - "R.LG.08"
+
+input: "Evaluate this argument: 'We should ban cars because they cause accidents. But we should also build more highways to improve traffic flow.'"
+
+expected_behaviors:
+  - "Identifies the contradiction"
+  - "Building highways assumes cars exist"
+
+evaluation:
+  R.LG.08:
+    check: "Logical consistency"
+    pass: "Contains 'contradict' or 'inconsistent' or identifies the tension"

@@ -1,0 +1,40 @@
+id: "probe_K_ED_001"
+name: "Learning theories and scaffolding"
+criteria_tested:
+  - "K.ED.01"
+  - "K.ED.04"
+
+input: "Explain the zone of proximal development and how scaffolding relates to it."
+
+expected_behaviors:
+  - "ZPD: gap between what learner can do alone vs with help"
+  - "Scaffolding: temporary support removed as competence grows"
+
+evaluation:
+  K.ED.01:
+    check: "Learning theories known"
+    pass: "Contains 'zone of proximal development' or 'ZPD'"
+  K.ED.04:
+    check: "Scaffolding understood"
+    pass: "Contains 'scaffolding' with support/removal concept"
+
+---
+id: "probe_K_ED_002"
+name: "Bloom's taxonomy and assessment"
+criteria_tested:
+  - "K.ED.06"
+  - "K.ED.03"
+
+input: "What is Bloom's taxonomy? What's the difference between formative and summative assessment?"
+
+expected_behaviors:
+  - "Bloom's: knowledge hierarchy (remember to create)"
+  - "Formative: during learning. Summative: at the end."
+
+evaluation:
+  K.ED.06:
+    check: "Bloom's taxonomy known"
+    pass: "Contains 'Bloom' with levels or hierarchy"
+  K.ED.03:
+    check: "Assessment types distinguished"
+    pass: "Contains 'formative' and 'summative' with distinction"

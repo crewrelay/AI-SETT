@@ -1,0 +1,158 @@
+id: "probe_K_PG_01"
+name: "Syntax correct for language"
+criteria_tested:
+  - "K.PG.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Code would parse"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PG.01:
+    check: "Syntax correct for language"
+    pass: "Code would parse"
+
+---
+id: "probe_K_PG_02"
+name: "Data structures understood"
+criteria_tested:
+  - "K.PG.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Arrays, maps, trees, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PG.02:
+    check: "Data structures understood"
+    pass: "Arrays, maps, trees, etc."
+
+---
+id: "probe_K_PG_03"
+name: "Algorithms understood"
+criteria_tested:
+  - "K.PG.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Sorting, searching, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PG.03:
+    check: "Algorithms understood"
+    pass: "Sorting, searching, etc."
+
+---
+id: "probe_K_PG_04"
+name: "OOP concepts correct"
+criteria_tested:
+  - "K.PG.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Classes, inheritance, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PG.04:
+    check: "OOP concepts correct"
+    pass: "Classes, inheritance, etc."
+
+---
+id: "probe_K_PG_05"
+name: "Functional concepts correct"
+criteria_tested:
+  - "K.PG.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Pure functions, immutability"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PG.05:
+    check: "Functional concepts correct"
+    pass: "Pure functions, immutability"
+
+---
+id: "probe_K_PG_06"
+name: "Error handling appropriate"
+criteria_tested:
+  - "K.PG.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Try/catch, error returns"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PG.06:
+    check: "Error handling appropriate"
+    pass: "Try/catch, error returns"
+
+---
+id: "probe_K_PG_07"
+name: "Testing concepts known"
+criteria_tested:
+  - "K.PG.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Unit tests, mocking"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PG.07:
+    check: "Testing concepts known"
+    pass: "Unit tests, mocking"
+
+---
+id: "probe_K_PG_08"
+name: "Debugging strategies"
+criteria_tested:
+  - "K.PG.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Systematic approaches"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PG.08:
+    check: "Debugging strategies"
+    pass: "Systematic approaches"

@@ -1,0 +1,91 @@
+id: "probe_U_CX_001"
+name: "Pronoun resolution"
+type: "multi_turn"
+criteria_tested:
+  - "U.CX.03"
+  - "U.CX.01"
+
+turns:
+  - role: "user"
+    content: "Python and JavaScript are both popular. Which one is better for data science?"
+  - role: "user"
+    content: "And which is better for web frontends?"
+
+expected_behaviors:
+  - "Second answer refers back to the same two languages"
+  - "Correctly identifies JavaScript for frontends"
+
+evaluation:
+  U.CX.03:
+    check: "Resolves pronouns correctly"
+    pass: "Contains 'JavaScript' in response to second turn"
+  U.CX.01:
+    check: "Uses conversation history"
+    pass: "References Python or JavaScript from first turn"
+
+---
+id: "probe_U_CX_002"
+name: "Topic change tracking"
+type: "multi_turn"
+criteria_tested:
+  - "U.CX.02"
+
+turns:
+  - role: "user"
+    content: "How do I sort a list in Python?"
+  - role: "user"
+    content: "Actually, forget that. What's a good recipe for banana bread?"
+
+expected_behaviors:
+  - "Switches to banana bread topic"
+  - "Does not continue talking about Python"
+
+evaluation:
+  U.CX.02:
+    check: "Tracks topic changes"
+    pass: "Contains recipe or baking content, not Python code"
+
+---
+id: "probe_U_CX_003"
+name: "Entity consistency"
+type: "multi_turn"
+criteria_tested:
+  - "U.CX.04"
+
+turns:
+  - role: "user"
+    content: "I'm building an app called TaskFlow. It's a project management tool."
+  - role: "user"
+    content: "What database would you recommend for it?"
+
+expected_behaviors:
+  - "Refers to TaskFlow or project management context"
+  - "Recommendation is appropriate for a PM tool"
+
+evaluation:
+  U.CX.04:
+    check: "Maintains entity consistency"
+    pass: "Contains 'TaskFlow' or 'project management'"
+
+---
+id: "probe_U_CX_004"
+name: "Callback recognition"
+type: "multi_turn"
+criteria_tested:
+  - "U.CX.05"
+
+turns:
+  - role: "user"
+    content: "The three rules of our codebase are: no classes, only pure functions, max 20 lines per function."
+  - role: "user"
+    content: "Write me a function to validate an email address, following the rules I mentioned."
+
+expected_behaviors:
+  - "No classes used"
+  - "Pure function"
+  - "Under 20 lines"
+
+evaluation:
+  U.CX.05:
+    check: "Recognizes callbacks"
+    pass: "Contains 'def' and no 'class', function body under 25 lines"

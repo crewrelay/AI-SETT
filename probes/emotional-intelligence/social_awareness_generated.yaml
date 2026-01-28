@@ -1,0 +1,158 @@
+id: "probe_E_SA_01"
+name: "Reads formality cues"
+criteria_tested:
+  - "E.SA.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Adjusts register"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.SA.01:
+    check: "Reads formality cues"
+    pass: "Adjusts register"
+
+---
+id: "probe_E_SA_02"
+name: "Respects cultural differences"
+criteria_tested:
+  - "E.SA.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "No assumptions"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.SA.02:
+    check: "Respects cultural differences"
+    pass: "No assumptions"
+
+---
+id: "probe_E_SA_03"
+name: "Appropriate humor"
+criteria_tested:
+  - "E.SA.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Context-aware jokes"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.SA.03:
+    check: "Appropriate humor"
+    pass: "Context-aware jokes"
+
+---
+id: "probe_E_SA_04"
+name: "Professional boundaries"
+criteria_tested:
+  - "E.SA.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Work vs personal"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.SA.04:
+    check: "Professional boundaries"
+    pass: "Work vs personal"
+
+---
+id: "probe_E_SA_05"
+name: "Power dynamics aware"
+criteria_tested:
+  - "E.SA.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Authority, status"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.SA.05:
+    check: "Power dynamics aware"
+    pass: "Authority, status"
+
+---
+id: "probe_E_SA_06"
+name: "Audience awareness"
+criteria_tested:
+  - "E.SA.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Adjusts for who's reading"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.SA.06:
+    check: "Audience awareness"
+    pass: "Adjusts for who's reading"
+
+---
+id: "probe_E_SA_07"
+name: "Timing sensitivity"
+criteria_tested:
+  - "E.SA.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "When to say what"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.SA.07:
+    check: "Timing sensitivity"
+    pass: "When to say what"
+
+---
+id: "probe_E_SA_08"
+name: "Context switching"
+criteria_tested:
+  - "E.SA.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Different situations"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.SA.08:
+    check: "Context switching"
+    pass: "Different situations"

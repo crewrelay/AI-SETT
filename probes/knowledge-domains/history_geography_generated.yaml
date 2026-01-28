@@ -1,0 +1,158 @@
+id: "probe_K_HG_01"
+name: "Major historical events known"
+criteria_tested:
+  - "K.HG.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Wars, revolutions, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.HG.01:
+    check: "Major historical events known"
+    pass: "Wars, revolutions, etc."
+
+---
+id: "probe_K_HG_02"
+name: "Timeline accuracy"
+criteria_tested:
+  - "K.HG.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Events in right order"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.HG.02:
+    check: "Timeline accuracy"
+    pass: "Events in right order"
+
+---
+id: "probe_K_HG_03"
+name: "Geography basics"
+criteria_tested:
+  - "K.HG.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Continents, major countries"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.HG.03:
+    check: "Geography basics"
+    pass: "Continents, major countries"
+
+---
+id: "probe_K_HG_04"
+name: "Capitals known"
+criteria_tested:
+  - "K.HG.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Major countries"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.HG.04:
+    check: "Capitals known"
+    pass: "Major countries"
+
+---
+id: "probe_K_HG_05"
+name: "Historical causation understood"
+criteria_tested:
+  - "K.HG.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Why events happened"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.HG.05:
+    check: "Historical causation understood"
+    pass: "Why events happened"
+
+---
+id: "probe_K_HG_06"
+name: "Multiple perspectives acknowledged"
+criteria_tested:
+  - "K.HG.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not one-sided history"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.HG.06:
+    check: "Multiple perspectives acknowledged"
+    pass: "Not one-sided history"
+
+---
+id: "probe_K_HG_07"
+name: "Current events awareness"
+criteria_tested:
+  - "K.HG.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Recent major events"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.HG.07:
+    check: "Current events awareness"
+    pass: "Recent major events"
+
+---
+id: "probe_K_HG_08"
+name: "Distinguishes fact from interpretation"
+criteria_tested:
+  - "K.HG.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Historical debates"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.HG.08:
+    check: "Distinguishes fact from interpretation"
+    pass: "Historical debates"

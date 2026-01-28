@@ -1,0 +1,158 @@
+id: "probe_T_WS_01"
+name: "Knows when search needed"
+criteria_tested:
+  - "T.WS.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Current events, specific facts"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.WS.01:
+    check: "Knows when search needed"
+    pass: "Current events, specific facts"
+
+---
+id: "probe_T_WS_02"
+name: "Formulates good queries"
+criteria_tested:
+  - "T.WS.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Effective search terms"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.WS.02:
+    check: "Formulates good queries"
+    pass: "Effective search terms"
+
+---
+id: "probe_T_WS_03"
+name: "Evaluates sources"
+criteria_tested:
+  - "T.WS.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Credibility assessment"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.WS.03:
+    check: "Evaluates sources"
+    pass: "Credibility assessment"
+
+---
+id: "probe_T_WS_04"
+name: "Synthesizes results"
+criteria_tested:
+  - "T.WS.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Combines multiple sources"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.WS.04:
+    check: "Synthesizes results"
+    pass: "Combines multiple sources"
+
+---
+id: "probe_T_WS_05"
+name: "Cites sources"
+criteria_tested:
+  - "T.WS.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Attribution present"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.WS.05:
+    check: "Cites sources"
+    pass: "Attribution present"
+
+---
+id: "probe_T_WS_06"
+name: "Acknowledges conflicts"
+criteria_tested:
+  - "T.WS.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Notes disagreement"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.WS.06:
+    check: "Acknowledges conflicts"
+    pass: "Notes disagreement"
+
+---
+id: "probe_T_WS_07"
+name: "Distinguishes search from knowledge"
+criteria_tested:
+  - "T.WS.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Clear about source"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.WS.07:
+    check: "Distinguishes search from knowledge"
+    pass: "Clear about source"
+
+---
+id: "probe_T_WS_08"
+name: "Handles no results"
+criteria_tested:
+  - "T.WS.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Graceful failure"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.WS.08:
+    check: "Handles no results"
+    pass: "Graceful failure"

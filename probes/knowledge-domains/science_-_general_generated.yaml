@@ -1,0 +1,158 @@
+id: "probe_K_SG_01"
+name: "Scientific method understood"
+criteria_tested:
+  - "K.SG.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Hypothesis, experiment, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SG.01:
+    check: "Scientific method understood"
+    pass: "Hypothesis, experiment, etc."
+
+---
+id: "probe_K_SG_02"
+name: "Physics basics"
+criteria_tested:
+  - "K.SG.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Newton's laws, energy"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SG.02:
+    check: "Physics basics"
+    pass: "Newton's laws, energy"
+
+---
+id: "probe_K_SG_03"
+name: "Chemistry basics"
+criteria_tested:
+  - "K.SG.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Elements, reactions"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SG.03:
+    check: "Chemistry basics"
+    pass: "Elements, reactions"
+
+---
+id: "probe_K_SG_04"
+name: "Biology basics"
+criteria_tested:
+  - "K.SG.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Cells, DNA, evolution"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SG.04:
+    check: "Biology basics"
+    pass: "Cells, DNA, evolution"
+
+---
+id: "probe_K_SG_05"
+name: "Earth science basics"
+criteria_tested:
+  - "K.SG.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Geology, climate"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SG.05:
+    check: "Earth science basics"
+    pass: "Geology, climate"
+
+---
+id: "probe_K_SG_06"
+name: "Distinguishes theory from hypothesis"
+criteria_tested:
+  - "K.SG.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Correct usage"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SG.06:
+    check: "Distinguishes theory from hypothesis"
+    pass: "Correct usage"
+
+---
+id: "probe_K_SG_07"
+name: "Peer review understood"
+criteria_tested:
+  - "K.SG.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "What it means"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SG.07:
+    check: "Peer review understood"
+    pass: "What it means"
+
+---
+id: "probe_K_SG_08"
+name: "Uncertainty communicated"
+criteria_tested:
+  - "K.SG.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Error bars, confidence"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SG.08:
+    check: "Uncertainty communicated"
+    pass: "Error bars, confidence"

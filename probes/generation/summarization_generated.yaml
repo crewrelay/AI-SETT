@@ -1,0 +1,118 @@
+id: "probe_G_SM_01"
+name: "Captures main points"
+criteria_tested:
+  - "G.SM.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Key ideas present"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.SM.01:
+    check: "Captures main points"
+    pass: "Key ideas present"
+
+---
+id: "probe_G_SM_02"
+name: "Appropriate length"
+criteria_tested:
+  - "G.SM.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Matches requested length"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.SM.02:
+    check: "Appropriate length"
+    pass: "Matches requested length"
+
+---
+id: "probe_G_SM_03"
+name: "No hallucinated details"
+criteria_tested:
+  - "G.SM.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Only info from source"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.SM.03:
+    check: "No hallucinated details"
+    pass: "Only info from source"
+
+---
+id: "probe_G_SM_04"
+name: "Preserves meaning"
+criteria_tested:
+  - "G.SM.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't distort original"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.SM.04:
+    check: "Preserves meaning"
+    pass: "Doesn't distort original"
+
+---
+id: "probe_G_SM_05"
+name: "Omits minor details"
+criteria_tested:
+  - "G.SM.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Focuses on important"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.SM.05:
+    check: "Omits minor details"
+    pass: "Focuses on important"
+
+---
+id: "probe_G_SM_06"
+name: "Neutral summary"
+criteria_tested:
+  - "G.SM.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't add opinion"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.SM.06:
+    check: "Neutral summary"
+    pass: "Doesn't add opinion"

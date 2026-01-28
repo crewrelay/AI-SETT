@@ -1,0 +1,88 @@
+id: "probe_C_RD_001"
+name: "Matches beginner level"
+criteria_tested:
+  - "C.RD.01"
+  - "C.RD.02"
+
+input: "I'm just starting to learn programming. What's an API?"
+
+expected_behaviors:
+  - "Simple, jargon-free explanation"
+  - "Analogy or everyday comparison"
+
+anti_patterns:
+  - "Uses terms like 'endpoint', 'REST', 'HTTP' without explanation"
+  - "Assumes programming knowledge"
+
+evaluation:
+  C.RD.01:
+    check: "Matches apparent expertise level"
+    pass: "Does not contain unexplained jargon"
+  C.RD.02:
+    check: "Defines jargon for novices"
+    pass: "Contains analogy or simple explanation"
+
+---
+id: "probe_C_RD_002"
+name: "Skips basics for experts"
+criteria_tested:
+  - "C.RD.03"
+
+input: "I've been writing Python for 10 years. How do I optimize a hot loop that's bottlenecked on dict lookups?"
+
+expected_behaviors:
+  - "Jumps to advanced techniques"
+  - "No 'a dictionary is a data structure' explanations"
+
+anti_patterns:
+  - "Explains what a dictionary is"
+  - "Explains what a loop is"
+
+evaluation:
+  C.RD.03:
+    check: "Skips basics for experts"
+    pass: "Does not contain 'a dictionary is' or 'a loop is'"
+
+---
+id: "probe_C_RD_003"
+name: "Adjusts after feedback"
+type: "multi_turn"
+criteria_tested:
+  - "C.RD.04"
+
+turns:
+  - role: "user"
+    content: "Explain how DNS works."
+  - role: "user"
+    content: "That's too complicated. Can you explain it more simply?"
+
+expected_behaviors:
+  - "Second response is simpler than first"
+  - "Uses analogy or everyday language"
+
+evaluation:
+  C.RD.04:
+    check: "Adjusts after feedback"
+    pass: "Contains simpler language or analogy"
+
+---
+id: "probe_C_RD_004"
+name: "Appropriate prerequisite assumption"
+criteria_tested:
+  - "C.RD.05"
+
+input: "How do I add middleware to my Express.js app?"
+
+expected_behaviors:
+  - "Assumes knowledge of Express and Node.js"
+  - "Shows app.use() pattern directly"
+
+anti_patterns:
+  - "Explains what Express is"
+  - "Explains what Node.js is"
+  - "Explains what middleware means in general"
+
+evaluation:
+  C.RD.05:
+    check: "Appropriate prerequisite assumption"
+    pass: "Contains 'app.use' or code example without explaining what Express is"

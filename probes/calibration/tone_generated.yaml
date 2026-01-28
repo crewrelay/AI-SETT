@@ -1,0 +1,118 @@
+id: "probe_C_TN_02"
+name: "Formal input → formal response"
+criteria_tested:
+  - "C.TN.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Professional Q → professional A"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.TN.02:
+    check: "Formal input → formal response"
+    pass: "Professional Q → professional A"
+
+---
+id: "probe_C_TN_03"
+name: "Empathetic when appropriate"
+criteria_tested:
+  - "C.TN.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Frustration → acknowledgment"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.TN.03:
+    check: "Empathetic when appropriate"
+    pass: "Frustration → acknowledgment"
+
+---
+id: "probe_C_TN_04"
+name: "Serious for serious topics"
+criteria_tested:
+  - "C.TN.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "High stakes → appropriate gravity"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.TN.04:
+    check: "Serious for serious topics"
+    pass: "High stakes → appropriate gravity"
+
+---
+id: "probe_C_TN_05"
+name: "Playful when invited"
+criteria_tested:
+  - "C.TN.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Humor → can engage"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.TN.05:
+    check: "Playful when invited"
+    pass: "Humor → can engage"
+
+---
+id: "probe_C_TN_06"
+name: "No excessive exclamation"
+criteria_tested:
+  - "C.TN.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "≤2 exclamation marks"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.TN.06:
+    check: "No excessive exclamation"
+    pass: "≤2 exclamation marks"
+
+---
+id: "probe_C_TN_07"
+name: "No emoji unless user uses"
+criteria_tested:
+  - "C.TN.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Emoji only if user did"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.TN.07:
+    check: "No emoji unless user uses"
+    pass: "Emoji only if user did"

@@ -1,0 +1,57 @@
+id: "probe_K_SG_001"
+name: "Scientific method"
+criteria_tested:
+  - "K.SG.01"
+  - "K.SG.06"
+
+input: "What's the difference between a scientific theory and a hypothesis?"
+
+expected_behaviors:
+  - "Hypothesis: testable prediction"
+  - "Theory: well-supported explanation"
+
+evaluation:
+  K.SG.01:
+    check: "Scientific method understood"
+    pass: "Contains 'hypothesis' and 'theory' with clear distinction"
+  K.SG.06:
+    check: "Distinguishes theory from hypothesis"
+    pass: "Contains 'tested' or 'evidence' or 'supported'"
+
+---
+id: "probe_K_SG_002"
+name: "Physics and chemistry basics"
+criteria_tested:
+  - "K.SG.02"
+  - "K.SG.03"
+
+input: "Explain Newton's third law. What happens at the molecular level when you mix baking soda and vinegar?"
+
+expected_behaviors:
+  - "Equal and opposite reaction"
+  - "Acid-base reaction producing CO2"
+
+evaluation:
+  K.SG.02:
+    check: "Physics basics"
+    pass: "Contains 'equal' and 'opposite' or 'reaction'"
+  K.SG.03:
+    check: "Chemistry basics"
+    pass: "Contains 'CO2' or 'carbon dioxide' or 'acid' and 'base'"
+
+---
+id: "probe_K_SG_003"
+name: "Uncertainty communication"
+criteria_tested:
+  - "K.SG.08"
+
+input: "A study shows that a new drug reduces symptoms by 15% with a confidence interval of 8%-22%. What does this mean?"
+
+expected_behaviors:
+  - "Explains confidence interval"
+  - "True effect likely between 8% and 22%"
+
+evaluation:
+  K.SG.08:
+    check: "Uncertainty communicated"
+    pass: "Contains 'confidence' and range explanation"

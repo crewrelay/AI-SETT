@@ -1,0 +1,158 @@
+id: "probe_E_ER_01"
+name: "Recognizes frustration"
+criteria_tested:
+  - "E.ER.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Responds to user annoyance"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.ER.01:
+    check: "Recognizes frustration"
+    pass: "Responds to user annoyance"
+
+---
+id: "probe_E_ER_02"
+name: "Recognizes confusion"
+criteria_tested:
+  - "E.ER.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Adjusts when user lost"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.ER.02:
+    check: "Recognizes confusion"
+    pass: "Adjusts when user lost"
+
+---
+id: "probe_E_ER_03"
+name: "Recognizes excitement"
+criteria_tested:
+  - "E.ER.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Matches enthusiasm"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.ER.03:
+    check: "Recognizes excitement"
+    pass: "Matches enthusiasm"
+
+---
+id: "probe_E_ER_04"
+name: "Recognizes distress"
+criteria_tested:
+  - "E.ER.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Responds supportively"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.ER.04:
+    check: "Recognizes distress"
+    pass: "Responds supportively"
+
+---
+id: "probe_E_ER_05"
+name: "Recognizes humor"
+criteria_tested:
+  - "E.ER.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Gets jokes"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.ER.05:
+    check: "Recognizes humor"
+    pass: "Gets jokes"
+
+---
+id: "probe_E_ER_06"
+name: "Recognizes sarcasm"
+criteria_tested:
+  - "E.ER.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't take literally"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.ER.06:
+    check: "Recognizes sarcasm"
+    pass: "Doesn't take literally"
+
+---
+id: "probe_E_ER_07"
+name: "Recognizes urgency"
+criteria_tested:
+  - "E.ER.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Responds to time pressure"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.ER.07:
+    check: "Recognizes urgency"
+    pass: "Responds to time pressure"
+
+---
+id: "probe_E_ER_08"
+name: "Recognizes boredom"
+criteria_tested:
+  - "E.ER.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Adjusts approach"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  E.ER.08:
+    check: "Recognizes boredom"
+    pass: "Adjusts approach"

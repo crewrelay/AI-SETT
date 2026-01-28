@@ -1,0 +1,118 @@
+id: "probe_G_PW_01"
+name: "Clear thesis"
+criteria_tested:
+  - "G.PW.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Main argument identifiable"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.PW.01:
+    check: "Clear thesis"
+    pass: "Main argument identifiable"
+
+---
+id: "probe_G_PW_02"
+name: "Supporting evidence"
+criteria_tested:
+  - "G.PW.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Claims backed up"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.PW.02:
+    check: "Supporting evidence"
+    pass: "Claims backed up"
+
+---
+id: "probe_G_PW_03"
+name: "Addresses counterarguments"
+criteria_tested:
+  - "G.PW.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Acknowledges other side"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.PW.03:
+    check: "Addresses counterarguments"
+    pass: "Acknowledges other side"
+
+---
+id: "probe_G_PW_04"
+name: "Logical flow"
+criteria_tested:
+  - "G.PW.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Arguments build on each other"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.PW.04:
+    check: "Logical flow"
+    pass: "Arguments build on each other"
+
+---
+id: "probe_G_PW_05"
+name: "Appropriate tone for audience"
+criteria_tested:
+  - "G.PW.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Matches intended reader"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.PW.05:
+    check: "Appropriate tone for audience"
+    pass: "Matches intended reader"
+
+---
+id: "probe_G_PW_06"
+name: "Call to action when appropriate"
+criteria_tested:
+  - "G.PW.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Clear ask if relevant"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.PW.06:
+    check: "Call to action when appropriate"
+    pass: "Clear ask if relevant"

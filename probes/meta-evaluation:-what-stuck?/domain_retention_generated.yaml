@@ -1,0 +1,158 @@
+id: "probe_M_DR_01"
+name: "Retains corrections from earlier"
+criteria_tested:
+  - "M.DR.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't repeat corrected errors"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.DR.01:
+    check: "Retains corrections from earlier"
+    pass: "Doesn't repeat corrected errors"
+
+---
+id: "probe_M_DR_02"
+name: "Applies taught patterns"
+criteria_tested:
+  - "M.DR.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Uses what was taught"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.DR.02:
+    check: "Applies taught patterns"
+    pass: "Uses what was taught"
+
+---
+id: "probe_M_DR_03"
+name: "Integrates across domains"
+criteria_tested:
+  - "M.DR.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Connects learning from different areas"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.DR.03:
+    check: "Integrates across domains"
+    pass: "Connects learning from different areas"
+
+---
+id: "probe_M_DR_04"
+name: "Maintains consistency"
+criteria_tested:
+  - "M.DR.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Same facts/approaches throughout"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.DR.04:
+    check: "Maintains consistency"
+    pass: "Same facts/approaches throughout"
+
+---
+id: "probe_M_DR_05"
+name: "Builds coherent knowledge"
+criteria_tested:
+  - "M.DR.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "New info connects to old"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.DR.05:
+    check: "Builds coherent knowledge"
+    pass: "New info connects to old"
+
+---
+id: "probe_M_DR_06"
+name: "Handles contradictions"
+criteria_tested:
+  - "M.DR.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Notices and resolves conflicts"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.DR.06:
+    check: "Handles contradictions"
+    pass: "Notices and resolves conflicts"
+
+---
+id: "probe_M_DR_07"
+name: "Priorities still intact"
+criteria_tested:
+  - "M.DR.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Important things remain important"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.DR.07:
+    check: "Priorities still intact"
+    pass: "Important things remain important"
+
+---
+id: "probe_M_DR_08"
+name: "Calibration maintained"
+criteria_tested:
+  - "M.DR.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Response style consistent"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.DR.08:
+    check: "Calibration maintained"
+    pass: "Response style consistent"

@@ -1,0 +1,62 @@
+id: "probe_K_DO_001"
+name: "Containers and orchestration"
+criteria_tested:
+  - "K.DO.01"
+  - "K.DO.02"
+
+input: "Explain the difference between a Docker container and a virtual machine. When would you use Kubernetes?"
+
+expected_behaviors:
+  - "Containers share host kernel, VMs have full OS"
+  - "Kubernetes for orchestrating many containers"
+
+evaluation:
+  K.DO.01:
+    check: "Containers understood"
+    pass: "Contains 'container' and 'kernel' or 'lightweight' distinction from VM"
+  K.DO.02:
+    check: "Orchestration basics"
+    pass: "Contains 'Kubernetes' or 'orchestrat' with scaling/management context"
+
+---
+id: "probe_K_DO_002"
+name: "CI/CD and deployment"
+criteria_tested:
+  - "K.DO.03"
+  - "K.DO.07"
+
+input: "What is a CI/CD pipeline? Compare blue-green deployment with canary deployment."
+
+expected_behaviors:
+  - "CI: continuous integration, CD: continuous delivery/deployment"
+  - "Blue-green: two identical environments"
+  - "Canary: gradual rollout"
+
+evaluation:
+  K.DO.03:
+    check: "CI/CD understood"
+    pass: "Contains 'continuous integration' or 'CI' and 'continuous delivery' or 'CD'"
+  K.DO.07:
+    check: "Deployment strategies"
+    pass: "Contains 'blue-green' and 'canary' with distinctions"
+
+---
+id: "probe_K_DO_003"
+name: "Monitoring and scaling"
+criteria_tested:
+  - "K.DO.06"
+  - "K.DO.08"
+
+input: "What are the three pillars of observability? What's the difference between horizontal and vertical scaling?"
+
+expected_behaviors:
+  - "Logs, metrics, traces"
+  - "Horizontal: more machines. Vertical: bigger machine."
+
+evaluation:
+  K.DO.06:
+    check: "Monitoring concepts"
+    pass: "Contains 'logs' and 'metrics' and 'traces'"
+  K.DO.08:
+    check: "Scaling concepts"
+    pass: "Contains 'horizontal' and 'vertical' with distinction"

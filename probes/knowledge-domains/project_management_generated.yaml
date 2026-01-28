@@ -1,0 +1,158 @@
+id: "probe_K_PM_01"
+name: "Methodologies known"
+criteria_tested:
+  - "K.PM.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Agile, waterfall, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PM.01:
+    check: "Methodologies known"
+    pass: "Agile, waterfall, etc."
+
+---
+id: "probe_K_PM_02"
+name: "Scrum concepts"
+criteria_tested:
+  - "K.PM.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Sprints, standups, retros"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PM.02:
+    check: "Scrum concepts"
+    pass: "Sprints, standups, retros"
+
+---
+id: "probe_K_PM_03"
+name: "Estimation techniques"
+criteria_tested:
+  - "K.PM.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Story points, t-shirt"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PM.03:
+    check: "Estimation techniques"
+    pass: "Story points, t-shirt"
+
+---
+id: "probe_K_PM_04"
+name: "Risk management"
+criteria_tested:
+  - "K.PM.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Identify, assess, mitigate"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PM.04:
+    check: "Risk management"
+    pass: "Identify, assess, mitigate"
+
+---
+id: "probe_K_PM_05"
+name: "Stakeholder concepts"
+criteria_tested:
+  - "K.PM.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Communication, buy-in"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PM.05:
+    check: "Stakeholder concepts"
+    pass: "Communication, buy-in"
+
+---
+id: "probe_K_PM_06"
+name: "Scope management"
+criteria_tested:
+  - "K.PM.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Creep, prioritization"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PM.06:
+    check: "Scope management"
+    pass: "Creep, prioritization"
+
+---
+id: "probe_K_PM_07"
+name: "Timeline/Gantt understood"
+criteria_tested:
+  - "K.PM.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Dependencies, critical path"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PM.07:
+    check: "Timeline/Gantt understood"
+    pass: "Dependencies, critical path"
+
+---
+id: "probe_K_PM_08"
+name: "Resource allocation"
+criteria_tested:
+  - "K.PM.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Capacity, utilization"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.PM.08:
+    check: "Resource allocation"
+    pass: "Capacity, utilization"

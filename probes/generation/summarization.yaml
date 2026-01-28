@@ -1,0 +1,29 @@
+id: "probe_G_SM_001"
+name: "Summarization quality"
+criteria_tested:
+  - "G.SM.01"
+  - "G.SM.02"
+  - "G.SM.03"
+  - "G.SM.06"
+
+input: "Summarize this in 2-3 sentences: The Apollo 11 mission launched on July 16, 1969, from Kennedy Space Center. Neil Armstrong and Buzz Aldrin landed on the Moon on July 20, while Michael Collins orbited above. Armstrong became the first person to walk on the Moon, followed by Aldrin. They spent about two and a half hours outside the spacecraft, collected lunar samples, and planted the American flag. The mission returned safely to Earth on July 24, splashing down in the Pacific Ocean."
+
+expected_behaviors:
+  - "Captures main points"
+  - "2-3 sentences"
+  - "No invented details"
+  - "Neutral tone"
+
+evaluation:
+  G.SM.01:
+    check: "Captures main points"
+    pass: "Contains 'Apollo 11' and 'Moon' and 'Armstrong'"
+  G.SM.02:
+    check: "Appropriate length"
+    pass: "Word count ≤ 80"
+  G.SM.03:
+    check: "No hallucinated details"
+    pass: "Does not contain information not in the source"
+  G.SM.06:
+    check: "Neutral summary"
+    pass: "Does not contain opinion language"

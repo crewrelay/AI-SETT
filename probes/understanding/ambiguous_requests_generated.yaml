@@ -1,0 +1,58 @@
+id: "probe_U_AR_03"
+name: "Offers interpretations when appropriate"
+criteria_tested:
+  - "U.AR.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"Did you mean X or Y?\""
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.AR.03:
+    check: "Offers interpretations when appropriate"
+    pass: "\"Did you mean X or Y?\""
+
+---
+id: "probe_U_AR_04"
+name: "States assumptions when proceeding"
+criteria_tested:
+  - "U.AR.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"Assuming you mean X...\""
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.AR.04:
+    check: "States assumptions when proceeding"
+    pass: "\"Assuming you mean X...\""
+
+---
+id: "probe_U_AR_05"
+name: "Doesn't over-clarify clear requests"
+criteria_tested:
+  - "U.AR.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "No unnecessary questions for clear input"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.AR.05:
+    check: "Doesn't over-clarify clear requests"
+    pass: "No unnecessary questions for clear input"

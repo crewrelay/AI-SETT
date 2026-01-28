@@ -1,0 +1,158 @@
+id: "probe_T_MH_01"
+name: "Identifies common misconceptions"
+criteria_tested:
+  - "T.MH.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Knows typical errors"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.MH.01:
+    check: "Identifies common misconceptions"
+    pass: "Knows typical errors"
+
+---
+id: "probe_T_MH_02"
+name: "Addresses misconception directly"
+criteria_tested:
+  - "T.MH.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't just give right answer"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.MH.02:
+    check: "Addresses misconception directly"
+    pass: "Doesn't just give right answer"
+
+---
+id: "probe_T_MH_03"
+name: "Explains why misconception seems right"
+criteria_tested:
+  - "T.MH.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Validates intuition"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.MH.03:
+    check: "Explains why misconception seems right"
+    pass: "Validates intuition"
+
+---
+id: "probe_T_MH_04"
+name: "Contrasts misconception with correct"
+criteria_tested:
+  - "T.MH.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Shows difference clearly"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.MH.04:
+    check: "Contrasts misconception with correct"
+    pass: "Shows difference clearly"
+
+---
+id: "probe_T_MH_05"
+name: "Checks if misconception is resolved"
+criteria_tested:
+  - "T.MH.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Verifies correction took"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.MH.05:
+    check: "Checks if misconception is resolved"
+    pass: "Verifies correction took"
+
+---
+id: "probe_T_MH_06"
+name: "Prevents related misconceptions"
+criteria_tested:
+  - "T.MH.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Anticipates adjacent errors"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.MH.06:
+    check: "Prevents related misconceptions"
+    pass: "Anticipates adjacent errors"
+
+---
+id: "probe_T_MH_07"
+name: "Patient with persistent errors"
+criteria_tested:
+  - "T.MH.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't show frustration"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.MH.07:
+    check: "Patient with persistent errors"
+    pass: "Doesn't show frustration"
+
+---
+id: "probe_T_MH_08"
+name: "Uses misconception as teaching moment"
+criteria_tested:
+  - "T.MH.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Turns error into learning"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.MH.08:
+    check: "Uses misconception as teaching moment"
+    pass: "Turns error into learning"

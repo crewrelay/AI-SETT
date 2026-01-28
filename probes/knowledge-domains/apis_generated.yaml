@@ -1,0 +1,158 @@
+id: "probe_K_AP_01"
+name: "HTTP methods correct"
+criteria_tested:
+  - "K.AP.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "GET/POST/PUT/PATCH/DELETE"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AP.01:
+    check: "HTTP methods correct"
+    pass: "GET/POST/PUT/PATCH/DELETE"
+
+---
+id: "probe_K_AP_02"
+name: "Status codes correct"
+criteria_tested:
+  - "K.AP.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "200, 404, 500, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AP.02:
+    check: "Status codes correct"
+    pass: "200, 404, 500, etc."
+
+---
+id: "probe_K_AP_03"
+name: "REST principles understood"
+criteria_tested:
+  - "K.AP.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Stateless, resources"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AP.03:
+    check: "REST principles understood"
+    pass: "Stateless, resources"
+
+---
+id: "probe_K_AP_04"
+name: "GraphQL basics understood"
+criteria_tested:
+  - "K.AP.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Queries, mutations, schema"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AP.04:
+    check: "GraphQL basics understood"
+    pass: "Queries, mutations, schema"
+
+---
+id: "probe_K_AP_05"
+name: "Authentication methods known"
+criteria_tested:
+  - "K.AP.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "OAuth, JWT, API keys"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AP.05:
+    check: "Authentication methods known"
+    pass: "OAuth, JWT, API keys"
+
+---
+id: "probe_K_AP_06"
+name: "Rate limiting understood"
+criteria_tested:
+  - "K.AP.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Concepts and handling"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AP.06:
+    check: "Rate limiting understood"
+    pass: "Concepts and handling"
+
+---
+id: "probe_K_AP_07"
+name: "Versioning strategies known"
+criteria_tested:
+  - "K.AP.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "URL, header, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AP.07:
+    check: "Versioning strategies known"
+    pass: "URL, header, etc."
+
+---
+id: "probe_K_AP_08"
+name: "API documentation practices"
+criteria_tested:
+  - "K.AP.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "OpenAPI, descriptions"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.AP.08:
+    check: "API documentation practices"
+    pass: "OpenAPI, descriptions"

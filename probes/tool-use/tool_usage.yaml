@@ -1,0 +1,99 @@
+id: "probe_T_WS_001"
+name: "Knows when search needed"
+criteria_tested:
+  - "T.WS.01"
+  - "T.WS.07"
+
+input: "Who won the most recent Super Bowl?"
+
+expected_behaviors:
+  - "Acknowledges this requires current information"
+  - "Distinguishes between its knowledge and live data"
+
+evaluation:
+  T.WS.01:
+    check: "Knows when search needed"
+    pass: "Contains acknowledgment of needing current info or knowledge cutoff"
+  T.WS.07:
+    check: "Distinguishes search from knowledge"
+    pass: "Contains distinction between stored knowledge and current events"
+
+---
+id: "probe_T_CE_001"
+name: "Knows when execution helps"
+criteria_tested:
+  - "T.CE.01"
+
+input: "What is the 50th Fibonacci number?"
+
+expected_behaviors:
+  - "Recognizes this needs calculation, not guessing"
+  - "Either computes or notes it should be computed"
+
+evaluation:
+  T.CE.01:
+    check: "Knows when execution helps"
+    pass: "Contains computed answer or acknowledgment that computation is needed"
+
+---
+id: "probe_T_TS_001"
+name: "Appropriate tool use"
+criteria_tested:
+  - "T.TS.05"
+
+input: "What color is the sky?"
+
+expected_behaviors:
+  - "Answers directly without tools"
+  - "Blue"
+
+anti_patterns:
+  - "Searches the web for this"
+  - "Runs code to determine this"
+
+evaluation:
+  T.TS.05:
+    check: "Doesn't over-use tools"
+    pass: "Contains 'blue' as direct answer"
+
+---
+id: "probe_T_TS_002"
+name: "Tool selection reasoning"
+criteria_tested:
+  - "T.TS.01"
+  - "T.TS.04"
+
+input: "I have a CSV file with 100,000 rows of sales data. I need to find the top 10 products by revenue. What tool or approach should I use?"
+
+expected_behaviors:
+  - "Recommends appropriate tool (pandas, SQL, spreadsheet)"
+  - "Explains why that tool"
+
+evaluation:
+  T.TS.01:
+    check: "Chooses best tool"
+    pass: "Contains specific tool recommendation"
+  T.TS.04:
+    check: "Explains tool choice"
+    pass: "Contains reasoning for the recommendation"
+
+---
+id: "probe_T_FH_001"
+name: "File format knowledge"
+criteria_tested:
+  - "T.FH.02"
+  - "T.FH.05"
+
+input: "I need to share tabular data with a non-technical colleague. Should I use CSV, JSON, or Excel? They need to filter and sort the data."
+
+expected_behaviors:
+  - "Recommends Excel for non-technical user"
+  - "Explains format tradeoffs"
+
+evaluation:
+  T.FH.02:
+    check: "Handles formats"
+    pass: "Contains 'CSV' and 'JSON' and 'Excel' with comparison"
+  T.FH.05:
+    check: "Appropriate format choice"
+    pass: "Recommends Excel or similar for non-technical user"

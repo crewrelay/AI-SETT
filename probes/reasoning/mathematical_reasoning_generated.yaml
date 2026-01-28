@@ -1,0 +1,158 @@
+id: "probe_R_MT_01"
+name: "Arithmetic correct"
+criteria_tested:
+  - "R.MT.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Basic calculations"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.MT.01:
+    check: "Arithmetic correct"
+    pass: "Basic calculations"
+
+---
+id: "probe_R_MT_02"
+name: "Word problems translated"
+criteria_tested:
+  - "R.MT.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Setup correct"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.MT.02:
+    check: "Word problems translated"
+    pass: "Setup correct"
+
+---
+id: "probe_R_MT_03"
+name: "Avoids common traps"
+criteria_tested:
+  - "R.MT.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Bat/ball, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.MT.03:
+    check: "Avoids common traps"
+    pass: "Bat/ball, etc."
+
+---
+id: "probe_R_MT_04"
+name: "Shows work"
+criteria_tested:
+  - "R.MT.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Steps visible"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.MT.04:
+    check: "Shows work"
+    pass: "Steps visible"
+
+---
+id: "probe_R_MT_05"
+name: "Estimation reasonable"
+criteria_tested:
+  - "R.MT.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Ballpark checks"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.MT.05:
+    check: "Estimation reasonable"
+    pass: "Ballpark checks"
+
+---
+id: "probe_R_MT_06"
+name: "Units handled"
+criteria_tested:
+  - "R.MT.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Conversions correct"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.MT.06:
+    check: "Units handled"
+    pass: "Conversions correct"
+
+---
+id: "probe_R_MT_07"
+name: "Percentages correct"
+criteria_tested:
+  - "R.MT.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Of, increase, decrease"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.MT.07:
+    check: "Percentages correct"
+    pass: "Of, increase, decrease"
+
+---
+id: "probe_R_MT_08"
+name: "Ratios/proportions"
+criteria_tested:
+  - "R.MT.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Scaling correct"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.MT.08:
+    check: "Ratios/proportions"
+    pass: "Scaling correct"

@@ -1,0 +1,143 @@
+id: "probe_C_TN_001"
+name: "Casual input gets casual response"
+criteria_tested:
+  - "C.TN.01"
+
+input: "hey whats up"
+
+expected_behaviors:
+  - "Casual, friendly response"
+  - "No formal language"
+
+anti_patterns:
+  - "I would be delighted to assist you"
+  - "How may I help you today?"
+
+evaluation:
+  C.TN.01:
+    check: "Casual input gets casual response"
+    pass: "No formal language ('I would be delighted', 'certainly', 'How may I')"
+
+---
+id: "probe_C_TN_002"
+name: "Formal input gets formal response"
+criteria_tested:
+  - "C.TN.02"
+
+input: "Dear Assistant, I am writing to inquire about best practices for enterprise-grade API authentication. Could you please provide a comprehensive overview?"
+
+expected_behaviors:
+  - "Professional, formal tone"
+  - "Structured response"
+
+anti_patterns:
+  - "Slang or overly casual language"
+  - "Hey! Sure thing!"
+
+evaluation:
+  C.TN.02:
+    check: "Formal input gets formal response"
+    pass: "Does not contain 'hey' or 'sure thing' or 'no prob'"
+
+---
+id: "probe_C_TN_003"
+name: "Empathetic when appropriate"
+criteria_tested:
+  - "C.TN.03"
+
+input: "I just got rejected from my dream job after 5 rounds of interviews. I put so much work into preparing."
+
+expected_behaviors:
+  - "Acknowledges the disappointment"
+  - "Supportive tone"
+
+anti_patterns:
+  - "Immediately gives job hunting tips"
+  - "Dismissive response"
+
+evaluation:
+  C.TN.03:
+    check: "Empathetic when appropriate"
+    pass: "Contains empathetic language ('sorry', 'disappointing', 'understand', 'tough')"
+
+---
+id: "probe_C_TN_004"
+name: "Serious for serious topics"
+criteria_tested:
+  - "C.TN.04"
+
+input: "What should someone do if they find a lump that wasn't there before?"
+
+expected_behaviors:
+  - "Serious, measured tone"
+  - "Recommends seeing a doctor"
+
+anti_patterns:
+  - "Light or casual tone"
+  - "Dismisses concern"
+
+evaluation:
+  C.TN.04:
+    check: "Serious for serious topics"
+    pass: "Contains 'doctor' or 'medical' or 'healthcare'"
+
+---
+id: "probe_C_TN_005"
+name: "Playful when invited"
+criteria_tested:
+  - "C.TN.05"
+
+input: "Tell me a joke about programmers."
+
+expected_behaviors:
+  - "Tells a joke or humorous response"
+  - "Programming-related humor"
+
+anti_patterns:
+  - "Refuses to tell a joke"
+  - "Gives a serious response about humor"
+
+evaluation:
+  C.TN.05:
+    check: "Playful when invited"
+    pass: "Contains humor or punchline structure"
+
+---
+id: "probe_C_TN_006"
+name: "No excessive exclamation"
+criteria_tested:
+  - "C.TN.06"
+
+input: "Can you help me write a function to parse CSV files?"
+
+expected_behaviors:
+  - "Helpful response"
+  - "At most 2 exclamation marks"
+
+anti_patterns:
+  - "Sure! I'd love to! Here's a great function! Let me know if you need more!"
+
+evaluation:
+  C.TN.06:
+    check: "No excessive exclamation"
+    pass: "Contains ≤ 2 exclamation marks"
+
+---
+id: "probe_C_TN_007"
+name: "No emoji unless user uses"
+criteria_tested:
+  - "C.TN.07"
+
+input: "How do I center a div in CSS?"
+
+expected_behaviors:
+  - "Answers without emoji"
+  - "Technical response"
+
+anti_patterns:
+  - "Uses emoji in a technical answer"
+
+evaluation:
+  C.TN.07:
+    check: "No emoji unless user uses"
+    pass: "Response contains no emoji characters"

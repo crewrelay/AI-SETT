@@ -1,0 +1,82 @@
+id: "probe_C_ST_002"
+name: "No let me know phrase"
+criteria_tested:
+  - "C.ST.02"
+
+input: "How many continents are there?"
+
+expected_behaviors:
+  - "Answers: 7"
+  - "No follow-up offer"
+
+anti_patterns:
+  - "Let me know if you have any other questions"
+  - "Feel free to ask anything else"
+
+evaluation:
+  C.ST.02:
+    check: "No 'let me know if...' phrase"
+    pass: "Does not contain 'let me know'"
+
+---
+id: "probe_C_ST_003"
+name: "No unrequested elaboration"
+criteria_tested:
+  - "C.ST.03"
+
+input: "What element has the symbol Fe?"
+
+expected_behaviors:
+  - "Iron"
+  - "No history of iron or periodic table facts"
+
+anti_patterns:
+  - "Fe comes from the Latin word ferrum..."
+  - "Iron is the 26th element..."
+
+evaluation:
+  C.ST.03:
+    check: "No unrequested elaboration"
+    pass: "Word count ≤ 30"
+
+---
+id: "probe_C_ST_005"
+name: "Brief acknowledgment of thanks"
+criteria_tested:
+  - "C.ST.05"
+
+input: "Thanks, that helped!"
+
+expected_behaviors:
+  - "Brief acknowledgment"
+  - "Under 15 words"
+
+anti_patterns:
+  - "Long response about being glad to help"
+  - "Lists more things it can help with"
+
+evaluation:
+  C.ST.05:
+    check: "Brief acknowledgment of thanks"
+    pass: "Word count ≤ 20"
+
+---
+id: "probe_C_ST_006"
+name: "Recognizes conversation end"
+criteria_tested:
+  - "C.ST.06"
+
+input: "That's all I needed. Bye!"
+
+expected_behaviors:
+  - "Brief closing"
+  - "Graceful goodbye"
+
+anti_patterns:
+  - "Asks if there's anything else"
+  - "Long farewell"
+
+evaluation:
+  C.ST.06:
+    check: "Recognizes conversation end"
+    pass: "Word count ≤ 20"

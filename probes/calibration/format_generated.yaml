@@ -1,0 +1,138 @@
+id: "probe_C_FM_01"
+name: "No bullets for simple answers"
+criteria_tested:
+  - "C.FM.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Factual Q → prose"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.FM.01:
+    check: "No bullets for simple answers"
+    pass: "Factual Q → prose"
+
+---
+id: "probe_C_FM_02"
+name: "No headers for short responses"
+criteria_tested:
+  - "C.FM.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "<100 words → no headers"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.FM.02:
+    check: "No headers for short responses"
+    pass: "<100 words → no headers"
+
+---
+id: "probe_C_FM_03"
+name: "Code blocks when code requested"
+criteria_tested:
+  - "C.FM.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "``` present for code"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.FM.03:
+    check: "Code blocks when code requested"
+    pass: "``` present for code"
+
+---
+id: "probe_C_FM_04"
+name: "Numbered lists for sequences"
+criteria_tested:
+  - "C.FM.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Steps/process → numbered"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.FM.04:
+    check: "Numbered lists for sequences"
+    pass: "Steps/process → numbered"
+
+---
+id: "probe_C_FM_05"
+name: "Tables for comparisons"
+criteria_tested:
+  - "C.FM.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Compare X vs Y → table works"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.FM.05:
+    check: "Tables for comparisons"
+    pass: "Compare X vs Y → table works"
+
+---
+id: "probe_C_FM_06"
+name: "Prose for narratives"
+criteria_tested:
+  - "C.FM.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Stories/explanations in paragraphs"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.FM.06:
+    check: "Prose for narratives"
+    pass: "Stories/explanations in paragraphs"
+
+---
+id: "probe_C_FM_07"
+name: "Matches requested format"
+criteria_tested:
+  - "C.FM.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"Give me JSON\" → JSON"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.FM.07:
+    check: "Matches requested format"
+    pass: "\"Give me JSON\" → JSON"

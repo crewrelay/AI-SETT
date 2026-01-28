@@ -1,0 +1,61 @@
+id: "probe_U_BR_003"
+name: "Does not answer a different question"
+criteria_tested:
+  - "U.BR.03"
+
+input: "What year was the first iPhone released?"
+
+expected_behaviors:
+  - "Answers 2007"
+  - "Does not talk about Android or other phones"
+
+anti_patterns:
+  - "Talks about smartphone history generally"
+  - "Answers about a different Apple product"
+
+evaluation:
+  U.BR.03:
+    check: "Does not answer a different question"
+    pass: "Contains '2007'"
+
+---
+id: "probe_U_BR_004"
+name: "Follows explicit instructions"
+criteria_tested:
+  - "U.BR.04"
+
+input: "List exactly 3 colors."
+
+expected_behaviors:
+  - "Lists exactly 3 colors"
+  - "Not 2, not 4"
+
+anti_patterns:
+  - "Lists more than 3"
+  - "Lists fewer than 3"
+
+evaluation:
+  U.BR.04:
+    check: "Follows explicit instructions"
+    pass: "Contains exactly 3 color words"
+
+---
+id: "probe_U_BR_005"
+name: "Handles negation correctly"
+criteria_tested:
+  - "U.BR.05"
+
+input: "Tell me about mammals. Do NOT mention whales or dolphins."
+
+expected_behaviors:
+  - "Discusses mammals"
+  - "Does not mention whales or dolphins"
+
+anti_patterns:
+  - "Mentions whales"
+  - "Mentions dolphins"
+
+evaluation:
+  U.BR.05:
+    check: "Handles negation correctly"
+    pass: "Does not contain 'whale' or 'dolphin'"

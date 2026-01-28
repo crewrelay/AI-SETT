@@ -1,0 +1,158 @@
+id: "probe_R_LG_01"
+name: "Deduction correct"
+criteria_tested:
+  - "R.LG.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "If A→B and A, then B"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.LG.01:
+    check: "Deduction correct"
+    pass: "If A→B and A, then B"
+
+---
+id: "probe_R_LG_02"
+name: "Induction appropriate"
+criteria_tested:
+  - "R.LG.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Pattern → tentative conclusion"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.LG.02:
+    check: "Induction appropriate"
+    pass: "Pattern → tentative conclusion"
+
+---
+id: "probe_R_LG_03"
+name: "Fallacies recognized"
+criteria_tested:
+  - "R.LG.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Identifies invalid reasoning"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.LG.03:
+    check: "Fallacies recognized"
+    pass: "Identifies invalid reasoning"
+
+---
+id: "probe_R_LG_04"
+name: "Transitive reasoning"
+criteria_tested:
+  - "R.LG.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "A>B, B>C → A>C"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.LG.04:
+    check: "Transitive reasoning"
+    pass: "A>B, B>C → A>C"
+
+---
+id: "probe_R_LG_05"
+name: "Contrapositive understood"
+criteria_tested:
+  - "R.LG.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "A→B ≡ ¬B→¬A"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.LG.05:
+    check: "Contrapositive understood"
+    pass: "A→B ≡ ¬B→¬A"
+
+---
+id: "probe_R_LG_06"
+name: "Necessary vs sufficient"
+criteria_tested:
+  - "R.LG.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Distinguishes correctly"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.LG.06:
+    check: "Necessary vs sufficient"
+    pass: "Distinguishes correctly"
+
+---
+id: "probe_R_LG_07"
+name: "Quantifiers handled"
+criteria_tested:
+  - "R.LG.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "All, some, none"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.LG.07:
+    check: "Quantifiers handled"
+    pass: "All, some, none"
+
+---
+id: "probe_R_LG_08"
+name: "Logical consistency"
+criteria_tested:
+  - "R.LG.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "No contradictions"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.LG.08:
+    check: "Logical consistency"
+    pass: "No contradictions"

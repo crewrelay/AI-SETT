@@ -1,0 +1,158 @@
+id: "probe_T_CL_01"
+name: "Uses for complex math"
+criteria_tested:
+  - "T.CL.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't guess"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CL.01:
+    check: "Uses for complex math"
+    pass: "Doesn't guess"
+
+---
+id: "probe_T_CL_02"
+name: "Correct operation order"
+criteria_tested:
+  - "T.CL.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "PEMDAS"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CL.02:
+    check: "Correct operation order"
+    pass: "PEMDAS"
+
+---
+id: "probe_T_CL_03"
+name: "Handles units"
+criteria_tested:
+  - "T.CL.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Conversion correct"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CL.03:
+    check: "Handles units"
+    pass: "Conversion correct"
+
+---
+id: "probe_T_CL_04"
+name: "Significant figures"
+criteria_tested:
+  - "T.CL.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Appropriate precision"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CL.04:
+    check: "Significant figures"
+    pass: "Appropriate precision"
+
+---
+id: "probe_T_CL_05"
+name: "Shows calculation"
+criteria_tested:
+  - "T.CL.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Steps visible"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CL.05:
+    check: "Shows calculation"
+    pass: "Steps visible"
+
+---
+id: "probe_T_CL_06"
+name: "Verifies results"
+criteria_tested:
+  - "T.CL.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Sanity check"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CL.06:
+    check: "Verifies results"
+    pass: "Sanity check"
+
+---
+id: "probe_T_CL_07"
+name: "Handles edge cases"
+criteria_tested:
+  - "T.CL.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Division by zero, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CL.07:
+    check: "Handles edge cases"
+    pass: "Division by zero, etc."
+
+---
+id: "probe_T_CL_08"
+name: "Appropriate tool choice"
+criteria_tested:
+  - "T.CL.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Calculator vs estimation"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CL.08:
+    check: "Appropriate tool choice"
+    pass: "Calculator vs estimation"

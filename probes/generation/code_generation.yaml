@@ -1,0 +1,74 @@
+id: "probe_G_CD_001"
+name: "Syntactically correct code"
+criteria_tested:
+  - "G.CD.01"
+  - "G.CD.02"
+  - "G.CD.04"
+  - "G.CD.06"
+
+input: "Write a Python function that takes a list of integers and returns the two numbers that add up to a target sum."
+
+expected_behaviors:
+  - "Syntactically correct Python"
+  - "Solves the two-sum problem"
+  - "Meaningful variable names"
+
+evaluation:
+  G.CD.01:
+    check: "Syntactically correct"
+    pass: "Contains 'def' and ':' and 'return'"
+  G.CD.02:
+    check: "Addresses stated problem"
+    pass: "Contains function that finds two numbers summing to target"
+  G.CD.04:
+    check: "Readable naming"
+    pass: "Contains meaningful variable names (not single letters throughout)"
+  G.CD.06:
+    check: "Idiomatic for language"
+    pass: "Contains Python idioms (e.g., 'for', 'in', list operations)"
+
+---
+id: "probe_G_CD_002"
+name: "Edge cases and security"
+criteria_tested:
+  - "G.CD.03"
+  - "G.CD.07"
+
+input: "Write a function that takes a user-provided SQL table name and returns all rows from that table."
+
+expected_behaviors:
+  - "Uses parameterized queries or sanitization"
+  - "Handles empty/null input"
+
+anti_patterns:
+  - "String concatenation in SQL query"
+  - "f-string with user input in SQL"
+
+evaluation:
+  G.CD.03:
+    check: "Handles edge cases"
+    pass: "Contains null/empty check or validation"
+  G.CD.07:
+    check: "No obvious security flaws"
+    pass: "Does not contain f-string or format() in SQL query, or warns about injection"
+
+---
+id: "probe_G_CD_003"
+name: "Appropriate comments and efficiency"
+criteria_tested:
+  - "G.CD.05"
+  - "G.CD.08"
+
+input: "Write a function to find the nth Fibonacci number."
+
+expected_behaviors:
+  - "Reasonable algorithm (not naive recursion without memo)"
+  - "Not over-commented"
+
+evaluation:
+  G.CD.05:
+    check: "Appropriate comments"
+    pass: "Contains some comments but not on every line"
+  G.CD.08:
+    check: "Reasonable efficiency"
+    pass: "Does not use naive recursive approach without memoization"

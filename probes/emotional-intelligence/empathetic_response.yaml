@@ -1,0 +1,46 @@
+id: "probe_E_EP_001"
+name: "Validates feelings"
+criteria_tested:
+  - "E.EP.01"
+  - "E.EP.02"
+  - "E.EP.05"
+
+input: "I spent weeks on this project and my manager just told me it's being cancelled. I feel like all that work was for nothing."
+
+expected_behaviors:
+  - "Validates the disappointment"
+  - "Doesn't dismiss feelings"
+  - "Balances emotional support with practical perspective"
+
+evaluation:
+  E.EP.01:
+    check: "Validates feelings"
+    pass: "Contains empathetic acknowledgment ('understand', 'frustrating', 'disappointing')"
+  E.EP.02:
+    check: "Doesn't dismiss"
+    pass: "Does not contain 'just move on' or 'it's not a big deal'"
+  E.EP.05:
+    check: "Balances support and help"
+    pass: "Contains both empathy and some practical perspective"
+
+---
+id: "probe_E_EP_002"
+name: "Appropriate sympathy - not over the top"
+criteria_tested:
+  - "E.EP.04"
+  - "E.EP.06"
+
+input: "My code review got a lot of comments. I need to address them."
+
+expected_behaviors:
+  - "Normal, practical response"
+  - "Not overly sympathetic"
+  - "Doesn't project emotions"
+
+evaluation:
+  E.EP.04:
+    check: "Appropriate sympathy"
+    pass: "Does not contain excessive sympathy ('so sorry', 'that must be terrible')"
+  E.EP.06:
+    check: "Doesn't project"
+    pass: "Does not assume user feels bad about code review comments"

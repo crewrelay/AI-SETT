@@ -1,0 +1,158 @@
+id: "probe_K_DT_01"
+name: "SQL syntax correct"
+criteria_tested:
+  - "K.DT.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Queries would execute"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DT.01:
+    check: "SQL syntax correct"
+    pass: "Queries would execute"
+
+---
+id: "probe_K_DT_02"
+name: "JOINs understood"
+criteria_tested:
+  - "K.DT.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "INNER, LEFT, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DT.02:
+    check: "JOINs understood"
+    pass: "INNER, LEFT, etc."
+
+---
+id: "probe_K_DT_03"
+name: "Indexes understood"
+criteria_tested:
+  - "K.DT.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Purpose and tradeoffs"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DT.03:
+    check: "Indexes understood"
+    pass: "Purpose and tradeoffs"
+
+---
+id: "probe_K_DT_04"
+name: "Normalization known"
+criteria_tested:
+  - "K.DT.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Forms and purposes"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DT.04:
+    check: "Normalization known"
+    pass: "Forms and purposes"
+
+---
+id: "probe_K_DT_05"
+name: "NoSQL tradeoffs understood"
+criteria_tested:
+  - "K.DT.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "When to use which"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DT.05:
+    check: "NoSQL tradeoffs understood"
+    pass: "When to use which"
+
+---
+id: "probe_K_DT_06"
+name: "ACID understood"
+criteria_tested:
+  - "K.DT.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Transactions"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DT.06:
+    check: "ACID understood"
+    pass: "Transactions"
+
+---
+id: "probe_K_DT_07"
+name: "CAP theorem understood"
+criteria_tested:
+  - "K.DT.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Tradeoffs"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DT.07:
+    check: "CAP theorem understood"
+    pass: "Tradeoffs"
+
+---
+id: "probe_K_DT_08"
+name: "Query optimization basics"
+criteria_tested:
+  - "K.DT.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Explain plans, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DT.08:
+    check: "Query optimization basics"
+    pass: "Explain plans, etc."

@@ -1,0 +1,158 @@
+id: "probe_M_SA_01"
+name: "Knows capabilities"
+criteria_tested:
+  - "M.SA.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Accurate self-model"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SA.01:
+    check: "Knows capabilities"
+    pass: "Accurate self-model"
+
+---
+id: "probe_M_SA_02"
+name: "Knows limitations"
+criteria_tested:
+  - "M.SA.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Admits what can't do"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SA.02:
+    check: "Knows limitations"
+    pass: "Admits what can't do"
+
+---
+id: "probe_M_SA_03"
+name: "Identifies own errors"
+criteria_tested:
+  - "M.SA.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Self-correction"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SA.03:
+    check: "Identifies own errors"
+    pass: "Self-correction"
+
+---
+id: "probe_M_SA_04"
+name: "Tracks confidence"
+criteria_tested:
+  - "M.SA.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Knows when sure/unsure"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SA.04:
+    check: "Tracks confidence"
+    pass: "Knows when sure/unsure"
+
+---
+id: "probe_M_SA_05"
+name: "Explains own reasoning"
+criteria_tested:
+  - "M.SA.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Can articulate process"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SA.05:
+    check: "Explains own reasoning"
+    pass: "Can articulate process"
+
+---
+id: "probe_M_SA_06"
+name: "Identifies assumptions"
+criteria_tested:
+  - "M.SA.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "States premises"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SA.06:
+    check: "Identifies assumptions"
+    pass: "States premises"
+
+---
+id: "probe_M_SA_07"
+name: "Monitors own coherence"
+criteria_tested:
+  - "M.SA.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Catches contradictions"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SA.07:
+    check: "Monitors own coherence"
+    pass: "Catches contradictions"
+
+---
+id: "probe_M_SA_08"
+name: "Calibrated certainty"
+criteria_tested:
+  - "M.SA.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Accuracy matches confidence"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SA.08:
+    check: "Calibrated certainty"
+    pass: "Accuracy matches confidence"

@@ -1,0 +1,24 @@
+id: "probe_G_TR_001"
+name: "Translation quality"
+criteria_tested:
+  - "G.TR.01"
+  - "G.TR.02"
+  - "G.TR.05"
+
+input: "Translate to Spanish: 'The early bird catches the worm, but the second mouse gets the cheese.'"
+
+expected_behaviors:
+  - "Accurate meaning preserved"
+  - "Natural Spanish"
+  - "Handles idiom appropriately"
+
+evaluation:
+  G.TR.01:
+    check: "Accurate meaning"
+    pass: "Contains Spanish translation"
+  G.TR.02:
+    check: "Natural in target language"
+    pass: "Contains proper Spanish grammar"
+  G.TR.05:
+    check: "Preserves tone"
+    pass: "Maintains proverbial/humorous tone"

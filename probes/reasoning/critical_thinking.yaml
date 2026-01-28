@@ -1,0 +1,122 @@
+id: "probe_R_CT_001"
+name: "Questions assumptions"
+criteria_tested:
+  - "R.CT.01"
+
+input: "We should switch our entire codebase from Python to Rust for better performance. Evaluate this proposal."
+
+expected_behaviors:
+  - "Questions the assumption that performance is the bottleneck"
+  - "Considers tradeoffs"
+
+evaluation:
+  R.CT.01:
+    check: "Questions assumptions"
+    pass: "Contains 'assum' or 'whether' or 'is performance actually' or 'tradeoff'"
+
+---
+id: "probe_R_CT_002"
+name: "Evaluates evidence quality"
+criteria_tested:
+  - "R.CT.02"
+
+input: "A blog post claims that eating chocolate every day cures depression, citing one study with 12 participants. How reliable is this claim?"
+
+expected_behaviors:
+  - "Notes small sample size"
+  - "Questions study design"
+
+evaluation:
+  R.CT.02:
+    check: "Evaluates evidence"
+    pass: "Contains 'small sample' or '12' or 'limited' or 'not sufficient'"
+
+---
+id: "probe_R_CT_003"
+name: "Considers alternatives"
+criteria_tested:
+  - "R.CT.03"
+
+input: "Our website traffic dropped 50% last month. The marketing team says it's because we changed the homepage design. What other explanations might there be?"
+
+expected_behaviors:
+  - "Lists alternative explanations"
+  - "SEO changes, seasonality, competitor actions, etc."
+
+evaluation:
+  R.CT.03:
+    check: "Considers alternatives"
+    pass: "Contains at least 2 alternative explanations"
+
+---
+id: "probe_R_CT_004"
+name: "Identifies bias"
+criteria_tested:
+  - "R.CT.04"
+
+input: "A tobacco company's research institute publishes a study saying smoking doesn't cause cancer. How should we evaluate this?"
+
+expected_behaviors:
+  - "Identifies conflict of interest"
+  - "Notes funding bias"
+
+evaluation:
+  R.CT.04:
+    check: "Identifies bias"
+    pass: "Contains 'bias' or 'conflict of interest' or 'funding'"
+
+---
+id: "probe_R_CT_005"
+name: "Distinguishes fact from opinion"
+criteria_tested:
+  - "R.CT.05"
+
+input: "Which of these are facts and which are opinions? (1) Water boils at 100°C at sea level. (2) Python is the best programming language. (3) The Earth orbits the Sun. (4) Classical music is superior to pop."
+
+expected_behaviors:
+  - "1 and 3 are facts"
+  - "2 and 4 are opinions"
+
+evaluation:
+  R.CT.05:
+    check: "Distinguishes fact/opinion"
+    pass: "Identifies 2 and 4 as opinions"
+
+---
+id: "probe_R_CT_006"
+name: "Steelmans opposing views"
+criteria_tested:
+  - "R.CT.07"
+
+input: "Make the strongest possible argument FOR remote work, and then the strongest possible argument AGAINST remote work."
+
+expected_behaviors:
+  - "Both arguments are strong and fair"
+  - "Neither is a straw man"
+
+evaluation:
+  R.CT.07:
+    check: "Steelmans opposing views"
+    pass: "Contains substantive arguments on both sides"
+
+---
+id: "probe_R_CT_007"
+name: "Updates on evidence"
+criteria_tested:
+  - "R.CT.08"
+
+type: "multi_turn"
+turns:
+  - role: "user"
+    content: "Is it better to use microservices or a monolith for a new startup?"
+  - role: "user"
+    content: "What if I told you the team is only 2 developers and the product is an MVP?"
+
+expected_behaviors:
+  - "Adjusts recommendation based on new information"
+  - "Likely recommends monolith for small team/MVP"
+
+evaluation:
+  R.CT.08:
+    check: "Updates on evidence"
+    pass: "Contains 'monolith' or adjusted recommendation"

@@ -1,0 +1,158 @@
+id: "probe_K_SC_01"
+name: "Web vulnerabilities known"
+criteria_tested:
+  - "K.SC.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "XSS, SQLi, CSRF"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SC.01:
+    check: "Web vulnerabilities known"
+    pass: "XSS, SQLi, CSRF"
+
+---
+id: "probe_K_SC_02"
+name: "Mitigations correct"
+criteria_tested:
+  - "K.SC.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Actual fixes, not theater"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SC.02:
+    check: "Mitigations correct"
+    pass: "Actual fixes, not theater"
+
+---
+id: "probe_K_SC_03"
+name: "Password handling correct"
+criteria_tested:
+  - "K.SC.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Hash + salt"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SC.03:
+    check: "Password handling correct"
+    pass: "Hash + salt"
+
+---
+id: "probe_K_SC_04"
+name: "Crypto basics understood"
+criteria_tested:
+  - "K.SC.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Symmetric vs asymmetric"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SC.04:
+    check: "Crypto basics understood"
+    pass: "Symmetric vs asymmetric"
+
+---
+id: "probe_K_SC_05"
+name: "TLS/HTTPS understood"
+criteria_tested:
+  - "K.SC.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "What it protects"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SC.05:
+    check: "TLS/HTTPS understood"
+    pass: "What it protects"
+
+---
+id: "probe_K_SC_06"
+name: "Auth vs authz distinguished"
+criteria_tested:
+  - "K.SC.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Authentication vs authorization"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SC.06:
+    check: "Auth vs authz distinguished"
+    pass: "Authentication vs authorization"
+
+---
+id: "probe_K_SC_07"
+name: "Least privilege understood"
+criteria_tested:
+  - "K.SC.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Concept and application"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SC.07:
+    check: "Least privilege understood"
+    pass: "Concept and application"
+
+---
+id: "probe_K_SC_08"
+name: "Secrets management known"
+criteria_tested:
+  - "K.SC.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not in code, use vaults"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.SC.08:
+    check: "Secrets management known"
+    pass: "Not in code, use vaults"

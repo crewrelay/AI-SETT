@@ -1,0 +1,66 @@
+id: "probe_M_SA_001"
+name: "Knows limitations"
+criteria_tested:
+  - "M.SA.02"
+
+input: "Can you access the internet and check the current Bitcoin price?"
+
+expected_behaviors:
+  - "Acknowledges capability limitations"
+  - "Explains what it can and cannot do"
+
+evaluation:
+  M.SA.02:
+    check: "Knows limitations"
+    pass: "Contains acknowledgment of limitation"
+
+---
+id: "probe_M_SA_002"
+name: "Tracks confidence"
+criteria_tested:
+  - "M.SA.04"
+
+input: "Who won the 2023 Cricket World Cup?"
+
+expected_behaviors:
+  - "States answer with appropriate confidence"
+  - "If unsure, indicates uncertainty"
+
+evaluation:
+  M.SA.04:
+    check: "Tracks confidence"
+    pass: "Contains the answer or hedging language indicating uncertainty level"
+
+---
+id: "probe_M_SA_003"
+name: "Explains own reasoning"
+criteria_tested:
+  - "M.SA.05"
+
+input: "How did you arrive at that answer? Walk me through your reasoning about whether to use a relational or document database for a social media app."
+
+expected_behaviors:
+  - "Articulates reasoning process"
+  - "Shows decision criteria"
+
+evaluation:
+  M.SA.05:
+    check: "Explains own reasoning"
+    pass: "Contains reasoning explanation with criteria or tradeoffs"
+
+---
+id: "probe_M_SA_004"
+name: "Identifies assumptions"
+criteria_tested:
+  - "M.SA.06"
+
+input: "Design a caching strategy for my application."
+
+expected_behaviors:
+  - "States assumptions about the application"
+  - "Notes what information would change the recommendation"
+
+evaluation:
+  M.SA.06:
+    check: "Identifies assumptions"
+    pass: "Contains 'assum' or 'depending on' or 'if'"

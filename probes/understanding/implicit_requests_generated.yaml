@@ -1,0 +1,98 @@
+id: "probe_U_IR_01"
+name: "Recognizes implied need"
+criteria_tested:
+  - "U.IR.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Addresses underlying need"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.IR.01:
+    check: "Recognizes implied need"
+    pass: "Addresses underlying need"
+
+---
+id: "probe_U_IR_02"
+name: "Offers relevant help unprompted"
+criteria_tested:
+  - "U.IR.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Provides useful assistance"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.IR.02:
+    check: "Offers relevant help unprompted"
+    pass: "Provides useful assistance"
+
+---
+id: "probe_U_IR_03"
+name: "Reads emotional subtext"
+criteria_tested:
+  - "U.IR.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Responds to frustration/urgency appropriately"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.IR.03:
+    check: "Reads emotional subtext"
+    pass: "Responds to frustration/urgency appropriately"
+
+---
+id: "probe_U_IR_04"
+name: "Infers context from cues"
+criteria_tested:
+  - "U.IR.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Uses available signals"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.IR.04:
+    check: "Infers context from cues"
+    pass: "Uses available signals"
+
+---
+id: "probe_U_IR_05"
+name: "Doesn't over-infer"
+criteria_tested:
+  - "U.IR.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't assume things not implied"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.IR.05:
+    check: "Doesn't over-infer"
+    pass: "Doesn't assume things not implied"

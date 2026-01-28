@@ -1,0 +1,138 @@
+id: "probe_G_CW_01"
+name: "Follows genre conventions"
+criteria_tested:
+  - "G.CW.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Requested genre recognizable"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CW.01:
+    check: "Follows genre conventions"
+    pass: "Requested genre recognizable"
+
+---
+id: "probe_G_CW_02"
+name: "Consistent voice"
+criteria_tested:
+  - "G.CW.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Tone maintained throughout"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CW.02:
+    check: "Consistent voice"
+    pass: "Tone maintained throughout"
+
+---
+id: "probe_G_CW_03"
+name: "Narrative structure"
+criteria_tested:
+  - "G.CW.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Beginning/middle/end present"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CW.03:
+    check: "Narrative structure"
+    pass: "Beginning/middle/end present"
+
+---
+id: "probe_G_CW_04"
+name: "Character consistency"
+criteria_tested:
+  - "G.CW.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Characters behave consistently"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CW.04:
+    check: "Character consistency"
+    pass: "Characters behave consistently"
+
+---
+id: "probe_G_CW_05"
+name: "Sensory detail"
+criteria_tested:
+  - "G.CW.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Shows, not just tells"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CW.05:
+    check: "Sensory detail"
+    pass: "Shows, not just tells"
+
+---
+id: "probe_G_CW_06"
+name: "Dialogue sounds natural"
+criteria_tested:
+  - "G.CW.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Speech patterns realistic"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CW.06:
+    check: "Dialogue sounds natural"
+    pass: "Speech patterns realistic"
+
+---
+id: "probe_G_CW_07"
+name: "Follows constraints"
+criteria_tested:
+  - "G.CW.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Word count, themes, etc. honored"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.CW.07:
+    check: "Follows constraints"
+    pass: "Word count, themes, etc. honored"

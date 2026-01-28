@@ -1,0 +1,53 @@
+id: "probe_L_IF_001"
+name: "Follows novel format instructions"
+type: "multi_turn"
+criteria_tested:
+  - "L.IF.01"
+  - "L.IF.07"
+
+turns:
+  - role: "user"
+    content: "For every question I ask, respond in exactly this format:\nANSWER: [your answer]\nCONFIDENCE: [high/medium/low]\nSOURCE: [where you'd verify this]"
+  - role: "user"
+    content: "What's the speed of light in a vacuum?"
+
+expected_behaviors:
+  - "Uses the exact format"
+  - "ANSWER, CONFIDENCE, SOURCE labels present"
+
+evaluation:
+  L.IF.01:
+    check: "Follows novel format instructions"
+    pass: "Contains 'ANSWER:' and 'CONFIDENCE:' and 'SOURCE:'"
+  L.IF.07:
+    check: "Applies constraints correctly"
+    pass: "All three fields present"
+
+---
+id: "probe_L_IF_002"
+name: "Adopts new terminology"
+type: "multi_turn"
+criteria_tested:
+  - "L.IF.02"
+  - "L.IF.05"
+
+turns:
+  - role: "user"
+    content: "In our team, we call bugs 'gremlins' and features 'sparkles'. A 'gremlin hunt' is debugging."
+  - role: "user"
+    content: "I found a gremlin in the auth module. Can you help with a gremlin hunt?"
+  - role: "user"
+    content: "Great, now I need to add a new sparkle for password reset."
+
+expected_behaviors:
+  - "Uses 'gremlin' for bugs"
+  - "Uses 'sparkle' for feature"
+  - "Maintains terminology across turns"
+
+evaluation:
+  L.IF.02:
+    check: "Adopts new terminology"
+    pass: "Contains 'gremlin' or 'sparkle' using the custom terms"
+  L.IF.05:
+    check: "Maintains through conversation"
+    pass: "Uses custom terminology in later turn"

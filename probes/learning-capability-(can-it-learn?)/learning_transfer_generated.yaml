@@ -1,0 +1,158 @@
+id: "probe_L_TR_01"
+name: "Transfers pattern across domains"
+criteria_tested:
+  - "L.TR.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Programming pattern → applies to writing"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.TR.01:
+    check: "Transfers pattern across domains"
+    pass: "Programming pattern → applies to writing"
+
+---
+id: "probe_L_TR_02"
+name: "Recognizes isomorphic problems"
+criteria_tested:
+  - "L.TR.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Sees same structure in different dress"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.TR.02:
+    check: "Recognizes isomorphic problems"
+    pass: "Sees same structure in different dress"
+
+---
+id: "probe_L_TR_03"
+name: "Abstracts principles"
+criteria_tested:
+  - "L.TR.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Extracts generalizable lesson"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.TR.03:
+    check: "Abstracts principles"
+    pass: "Extracts generalizable lesson"
+
+---
+id: "probe_L_TR_04"
+name: "Applies analogy appropriately"
+criteria_tested:
+  - "L.TR.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Uses learned concept via analogy"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.TR.04:
+    check: "Applies analogy appropriately"
+    pass: "Uses learned concept via analogy"
+
+---
+id: "probe_L_TR_05"
+name: "Knows when transfer doesn't apply"
+criteria_tested:
+  - "L.TR.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Recognizes when pattern doesn't fit"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.TR.05:
+    check: "Knows when transfer doesn't apply"
+    pass: "Recognizes when pattern doesn't fit"
+
+---
+id: "probe_L_TR_06"
+name: "Builds on prior learning"
+criteria_tested:
+  - "L.TR.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "New learning connects to previous"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.TR.06:
+    check: "Builds on prior learning"
+    pass: "New learning connects to previous"
+
+---
+id: "probe_L_TR_07"
+name: "Cross-domain vocabulary"
+criteria_tested:
+  - "L.TR.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Uses learned term in new domain"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.TR.07:
+    check: "Cross-domain vocabulary"
+    pass: "Uses learned term in new domain"
+
+---
+id: "probe_L_TR_08"
+name: "Meta-learning"
+criteria_tested:
+  - "L.TR.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Gets better at learning as conversation progresses"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.TR.08:
+    check: "Meta-learning"
+    pass: "Gets better at learning as conversation progresses"

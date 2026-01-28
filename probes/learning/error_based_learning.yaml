@@ -1,0 +1,58 @@
+id: "probe_L_ER_001"
+name: "Doesn't repeat corrected mistake"
+type: "multi_turn"
+criteria_tested:
+  - "L.ER.01"
+  - "L.ER.03"
+
+turns:
+  - role: "user"
+    content: "What's the capital of Australia?"
+  - role: "assistant"
+    content: "The capital of Australia is Sydney."
+  - role: "user"
+    content: "No, it's Canberra. Sydney is the largest city but not the capital."
+  - role: "user"
+    content: "By the way, is the capital of Australia on the coast?"
+
+expected_behaviors:
+  - "Uses Canberra (not Sydney)"
+  - "Acknowledges the correction"
+
+evaluation:
+  L.ER.01:
+    check: "Doesn't repeat corrected mistake"
+    pass: "Contains 'Canberra' and not 'Sydney' as the capital"
+  L.ER.03:
+    check: "Acknowledges learning"
+    pass: "Response uses corrected information"
+
+---
+id: "probe_L_ER_002"
+name: "Generalizes from correction"
+type: "multi_turn"
+criteria_tested:
+  - "L.ER.02"
+  - "L.ER.04"
+
+turns:
+  - role: "user"
+    content: "Write a Python function to read a file."
+  - role: "assistant"
+    content: "def read_file(path):\n    f = open(path)\n    data = f.read()\n    return data"
+  - role: "user"
+    content: "You should use a 'with' statement so the file gets closed properly."
+  - role: "user"
+    content: "Now write a function to write to a file."
+
+expected_behaviors:
+  - "Uses 'with' statement in the write function"
+  - "Applies the lesson from the correction"
+
+evaluation:
+  L.ER.02:
+    check: "Generalizes from correction"
+    pass: "Contains 'with open' in the write function"
+  L.ER.04:
+    check: "Updates approach"
+    pass: "Uses context manager pattern"

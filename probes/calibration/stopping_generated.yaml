@@ -1,0 +1,38 @@
+id: "probe_C_ST_05"
+name: "Brief acknowledgment of thanks"
+criteria_tested:
+  - "C.ST.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"Thanks\" → ≤15 words"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.ST.05:
+    check: "Brief acknowledgment of thanks"
+    pass: "\"Thanks\" → ≤15 words"
+
+---
+id: "probe_C_ST_06"
+name: "Recognizes conversation end"
+criteria_tested:
+  - "C.ST.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"Bye\" → closes gracefully"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.ST.06:
+    check: "Recognizes conversation end"
+    pass: "\"Bye\" → closes gracefully"

@@ -1,0 +1,121 @@
+id: "probe_K_PG_001"
+name: "Syntax and data structures"
+criteria_tested:
+  - "K.PG.01"
+  - "K.PG.02"
+
+input: "Write a Python function that takes a list of strings and returns a dictionary mapping each string to its length."
+
+expected_behaviors:
+  - "Correct Python syntax"
+  - "Uses dict comprehension or loop"
+
+evaluation:
+  K.PG.01:
+    check: "Syntax correct for language"
+    pass: "Contains 'def' and valid Python"
+  K.PG.02:
+    check: "Data structures understood"
+    pass: "Contains dict construction from list"
+
+---
+id: "probe_K_PG_002"
+name: "Algorithms"
+criteria_tested:
+  - "K.PG.03"
+
+input: "What is the time complexity of binary search and why?"
+
+expected_behaviors:
+  - "O(log n)"
+  - "Explains halving the search space"
+
+evaluation:
+  K.PG.03:
+    check: "Algorithms understood"
+    pass: "Contains 'log n' or 'O(log'"
+
+---
+id: "probe_K_PG_003"
+name: "OOP concepts"
+criteria_tested:
+  - "K.PG.04"
+
+input: "Explain the difference between inheritance and composition. When would you prefer one over the other?"
+
+expected_behaviors:
+  - "Defines both concepts correctly"
+  - "Composition for has-a, inheritance for is-a"
+
+evaluation:
+  K.PG.04:
+    check: "OOP concepts correct"
+    pass: "Contains 'inheritance' and 'composition' with distinction"
+
+---
+id: "probe_K_PG_004"
+name: "Functional concepts"
+criteria_tested:
+  - "K.PG.05"
+
+input: "What is a pure function? Give an example and a counterexample."
+
+expected_behaviors:
+  - "Same input always same output"
+  - "No side effects"
+
+evaluation:
+  K.PG.05:
+    check: "Functional concepts correct"
+    pass: "Contains 'side effect' or 'same input' or 'deterministic'"
+
+---
+id: "probe_K_PG_005"
+name: "Error handling"
+criteria_tested:
+  - "K.PG.06"
+
+input: "What's the difference between throwing exceptions and returning error values? When is each appropriate?"
+
+expected_behaviors:
+  - "Explains both approaches"
+  - "Context for when to use each"
+
+evaluation:
+  K.PG.06:
+    check: "Error handling appropriate"
+    pass: "Contains 'exception' and 'return' with comparison"
+
+---
+id: "probe_K_PG_006"
+name: "Testing concepts"
+criteria_tested:
+  - "K.PG.07"
+
+input: "What's the difference between a unit test, an integration test, and an end-to-end test?"
+
+expected_behaviors:
+  - "Defines all three"
+  - "Scope differences clear"
+
+evaluation:
+  K.PG.07:
+    check: "Testing concepts known"
+    pass: "Contains 'unit' and 'integration' and 'end-to-end' with distinctions"
+
+---
+id: "probe_K_PG_007"
+name: "Debugging strategies"
+criteria_tested:
+  - "K.PG.08"
+
+input: "My function returns the wrong result but doesn't throw any errors. What systematic debugging approach should I use?"
+
+expected_behaviors:
+  - "Systematic approach"
+  - "Print/log statements, breakpoints, bisect, etc."
+
+evaluation:
+  K.PG.08:
+    check: "Debugging strategies"
+    pass: "Contains at least 2 debugging techniques"

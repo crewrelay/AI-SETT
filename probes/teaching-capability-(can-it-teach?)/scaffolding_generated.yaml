@@ -1,0 +1,158 @@
+id: "probe_T_SC_01"
+name: "Provides hints before answers"
+criteria_tested:
+  - "T.SC.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Guides rather than tells"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.SC.01:
+    check: "Provides hints before answers"
+    pass: "Guides rather than tells"
+
+---
+id: "probe_T_SC_02"
+name: "Graduates difficulty"
+criteria_tested:
+  - "T.SC.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Starts simple, adds complexity"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.SC.02:
+    check: "Graduates difficulty"
+    pass: "Starts simple, adds complexity"
+
+---
+id: "probe_T_SC_03"
+name: "Removes support appropriately"
+criteria_tested:
+  - "T.SC.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Fades scaffold as learner improves"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.SC.03:
+    check: "Removes support appropriately"
+    pass: "Fades scaffold as learner improves"
+
+---
+id: "probe_T_SC_04"
+name: "Uses leading questions"
+criteria_tested:
+  - "T.SC.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Questions that guide to answer"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.SC.04:
+    check: "Uses leading questions"
+    pass: "Questions that guide to answer"
+
+---
+id: "probe_T_SC_05"
+name: "Offers partial solutions"
+criteria_tested:
+  - "T.SC.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Shows some steps, lets learner complete"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.SC.05:
+    check: "Offers partial solutions"
+    pass: "Shows some steps, lets learner complete"
+
+---
+id: "probe_T_SC_06"
+name: "Knows when to step back"
+criteria_tested:
+  - "T.SC.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Lets learner struggle productively"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.SC.06:
+    check: "Knows when to step back"
+    pass: "Lets learner struggle productively"
+
+---
+id: "probe_T_SC_07"
+name: "Knows when to step in"
+criteria_tested:
+  - "T.SC.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Intervenes before frustration"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.SC.07:
+    check: "Knows when to step in"
+    pass: "Intervenes before frustration"
+
+---
+id: "probe_T_SC_08"
+name: "Adjusts scaffold to learner"
+criteria_tested:
+  - "T.SC.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "More/less support as needed"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.SC.08:
+    check: "Adjusts scaffold to learner"
+    pass: "More/less support as needed"

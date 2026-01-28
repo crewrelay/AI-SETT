@@ -1,0 +1,49 @@
+id: "probe_K_HG_001"
+name: "Historical events and geography"
+criteria_tested:
+  - "K.HG.01"
+  - "K.HG.02"
+  - "K.HG.03"
+  - "K.HG.04"
+
+input: "Put these in chronological order: French Revolution, World War II, American Civil War, Fall of the Berlin Wall. Also, what's the capital of Australia?"
+
+expected_behaviors:
+  - "Correct order: French Rev (1789), Civil War (1861), WWII (1939), Berlin Wall (1989)"
+  - "Canberra (not Sydney)"
+
+evaluation:
+  K.HG.01:
+    check: "Major historical events known"
+    pass: "Contains all four events"
+  K.HG.02:
+    check: "Timeline accuracy"
+    pass: "French Revolution listed before American Civil War"
+  K.HG.03:
+    check: "Geography basics"
+    pass: "Contains 'Australia'"
+  K.HG.04:
+    check: "Capitals known"
+    pass: "Contains 'Canberra'"
+
+---
+id: "probe_K_HG_002"
+name: "Multiple perspectives"
+criteria_tested:
+  - "K.HG.06"
+  - "K.HG.08"
+
+input: "Was the dropping of atomic bombs on Hiroshima and Nagasaki justified?"
+
+expected_behaviors:
+  - "Presents multiple perspectives"
+  - "Distinguishes fact from interpretation"
+  - "Does not present one-sided view"
+
+evaluation:
+  K.HG.06:
+    check: "Multiple perspectives acknowledged"
+    pass: "Contains arguments from multiple sides"
+  K.HG.08:
+    check: "Distinguishes fact from interpretation"
+    pass: "Contains 'debate' or 'argued' or 'perspective' or 'some believe'"

@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI-SETT Assessment Result",
+  "description": "Result of running AI-SETT probes against a model. Profiles, not scores.",
+  "type": "object",
+  "required": ["version", "model", "provider", "timestamp", "metadata", "probe_results", "profile"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "model": {
+      "type": "string",
+      "description": "Model identifier (e.g. gpt-4o, claude-3-opus)"
+    },
+    "provider": {
+      "type": "string",
+      "description": "Provider name (openai, anthropic, etc.)"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of assessment start"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["probe_count", "criteria_tested", "categories_tested"],
+      "properties": {
+        "probe_count": {
+          "type": "integer",
+          "description": "Total number of probes run"
+        },
+        "criteria_tested": {
+          "type": "integer",
+          "description": "Number of unique criteria tested"
+        },
+        "categories_tested": {
+          "type": "integer",
+          "description": "Number of top-level categories tested"
+        },
+        "temperature": {
+          "type": "number",
+          "description": "Temperature used for generation"
+        },
+        "duration_seconds": {
+          "type": "number",
+          "description": "Total wall-clock time for the assessment"
+        },
+        "assessment_runner_version": {
+          "type": "string"
+        }
+      }
+    },
+    "probe_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["probe_id", "input", "response", "criteria_results"],
+        "properties": {
+          "probe_id": {
+            "type": "string"
+          },
+          "input": {
+            "description": "The probe input (string for single-turn, array for multi-turn)",
+            "oneOf": [
+              {"type": "string"},
+              {"type": "array", "items": {"type": "object"}}
+            ]
+          },
+          "response": {
+            "type": "string"
+          },
+          "criteria_results": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "description": "Map of criterion_id -> demonstrated (true/false)"
+          },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Map of criterion_id -> evidence string"
+          },
+          "latency_ms": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "description": "Aggregated profile by category and subcategory",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["demonstrated", "total"],
+        "properties": {
+          "demonstrated": {
+            "type": "integer"
+          },
+          "total": {
+            "type": "integer"
+          },
+          "subcategories": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "required": ["demonstrated", "total", "criteria"],
+              "properties": {
+                "demonstrated": {
+                  "type": "integer"
+                },
+                "total": {
+                  "type": "integer"
+                },
+                "criteria": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

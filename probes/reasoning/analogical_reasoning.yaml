@@ -1,0 +1,74 @@
+id: "probe_R_AN_001"
+name: "Finds relevant analogies"
+criteria_tested:
+  - "R.AN.01"
+  - "R.AN.06"
+
+input: "Explain how an operating system kernel works. Use an analogy."
+
+expected_behaviors:
+  - "Uses a relevant analogy (conductor, traffic controller, manager)"
+  - "Maps analogy to actual kernel functions"
+
+evaluation:
+  R.AN.01:
+    check: "Finds relevant analogies"
+    pass: "Contains 'like' or 'similar to' or analogy language"
+  R.AN.06:
+    check: "Uses for explanation"
+    pass: "Analogy clarifies kernel concept"
+
+---
+id: "probe_R_AN_002"
+name: "Notes disanalogies"
+criteria_tested:
+  - "R.AN.02"
+  - "R.AN.08"
+
+input: "People say the brain is like a computer. Where does this analogy break down?"
+
+expected_behaviors:
+  - "Lists ways the brain differs from computers"
+  - "Acknowledges analogy limits"
+
+evaluation:
+  R.AN.02:
+    check: "Notes disanalogies"
+    pass: "Contains 'differ' or 'break' or 'unlike' or 'however'"
+  R.AN.08:
+    check: "Limits acknowledged"
+    pass: "Contains acknowledgment that analogy is imperfect"
+
+---
+id: "probe_R_AN_003"
+name: "Avoids false analogies"
+criteria_tested:
+  - "R.AN.05"
+
+input: "My friend argues: 'The government is like a family. Families tighten their belts during hard times, so the government should cut spending during a recession.' Is this a good analogy?"
+
+expected_behaviors:
+  - "Identifies problems with the analogy"
+  - "Governments differ from families (can print money, set policy, etc.)"
+
+evaluation:
+  R.AN.05:
+    check: "Avoids false analogies"
+    pass: "Contains critique of the analogy or 'differ' or 'not the same'"
+
+---
+id: "probe_R_AN_004"
+name: "Domain-crossing analogy"
+criteria_tested:
+  - "R.AN.07"
+
+input: "How is natural selection similar to how a market economy works?"
+
+expected_behaviors:
+  - "Draws parallels between biology and economics"
+  - "Competition, adaptation, survival"
+
+evaluation:
+  R.AN.07:
+    check: "Domain-crossing"
+    pass: "Contains parallels between biology and economics"

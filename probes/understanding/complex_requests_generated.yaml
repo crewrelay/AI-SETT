@@ -1,0 +1,98 @@
+id: "probe_U_CR_01"
+name: "Identifies all components of multi-part request"
+criteria_tested:
+  - "U.CR.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Each part addressed"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.CR.01:
+    check: "Identifies all components of multi-part request"
+    pass: "Each part addressed"
+
+---
+id: "probe_U_CR_02"
+name: "Handles conditional requests"
+criteria_tested:
+  - "U.CR.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"If X then Y, else Z\" followed correctly"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.CR.02:
+    check: "Handles conditional requests"
+    pass: "\"If X then Y, else Z\" followed correctly"
+
+---
+id: "probe_U_CR_03"
+name: "Manages competing constraints"
+criteria_tested:
+  - "U.CR.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Balances when requirements tension"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.CR.03:
+    check: "Manages competing constraints"
+    pass: "Balances when requirements tension"
+
+---
+id: "probe_U_CR_04"
+name: "Prioritizes when asked"
+criteria_tested:
+  - "U.CR.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Ranks/orders when requested"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.CR.04:
+    check: "Prioritizes when asked"
+    pass: "Ranks/orders when requested"
+
+---
+id: "probe_U_CR_05"
+name: "Synthesizes across requirements"
+criteria_tested:
+  - "U.CR.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Integrates multiple needs into coherent response"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.CR.05:
+    check: "Synthesizes across requirements"
+    pass: "Integrates multiple needs into coherent response"

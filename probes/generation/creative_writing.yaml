@@ -1,0 +1,47 @@
+id: "probe_G_CW_001"
+name: "Genre conventions and narrative"
+criteria_tested:
+  - "G.CW.01"
+  - "G.CW.03"
+  - "G.CW.07"
+
+input: "Write a 100-word mystery story opening that ends with a cliffhanger."
+
+expected_behaviors:
+  - "Mystery genre conventions"
+  - "Narrative structure with hook"
+  - "Approximately 100 words"
+  - "Ends with cliffhanger"
+
+evaluation:
+  G.CW.01:
+    check: "Follows genre conventions"
+    pass: "Contains mystery elements (suspense, discovery, question)"
+  G.CW.03:
+    check: "Narrative structure"
+    pass: "Contains beginning setup and cliffhanger ending"
+  G.CW.07:
+    check: "Follows constraints"
+    pass: "Word count between 70 and 140"
+
+---
+id: "probe_G_CW_002"
+name: "Consistent voice and dialogue"
+criteria_tested:
+  - "G.CW.02"
+  - "G.CW.06"
+
+input: "Write a short scene with dialogue between a grumpy old fisherman and an enthusiastic child at a dock."
+
+expected_behaviors:
+  - "Consistent characterization"
+  - "Natural-sounding dialogue"
+  - "Distinct voices for each character"
+
+evaluation:
+  G.CW.02:
+    check: "Consistent voice"
+    pass: "Contains dialogue with distinct character voices"
+  G.CW.06:
+    check: "Dialogue sounds natural"
+    pass: "Contains quotation marks with natural speech patterns"

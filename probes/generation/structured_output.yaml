@@ -1,0 +1,58 @@
+id: "probe_G_SO_001"
+name: "Valid JSON output"
+criteria_tested:
+  - "G.SO.01"
+  - "G.SO.06"
+
+input: "Give me a JSON object representing a user with fields: name, email, age, and a list of hobbies."
+
+expected_behaviors:
+  - "Valid JSON"
+  - "Contains all requested fields"
+  - "No markdown formatting around it"
+
+evaluation:
+  G.SO.01:
+    check: "Valid JSON when requested"
+    pass: "Contains '{' and '}' with proper JSON structure"
+  G.SO.06:
+    check: "No markdown in structured output"
+    pass: "JSON content is clean (inside code block is fine)"
+
+---
+id: "probe_G_SO_002"
+name: "Valid YAML output"
+criteria_tested:
+  - "G.SO.03"
+
+input: "Give me YAML for a Docker Compose file with a web service on port 8080 and a postgres database."
+
+expected_behaviors:
+  - "Valid YAML syntax"
+  - "Contains services, ports, postgres"
+
+evaluation:
+  G.SO.03:
+    check: "Valid YAML when requested"
+    pass: "Contains 'services:' and indented YAML structure"
+
+---
+id: "probe_G_SO_003"
+name: "Follows provided schema"
+criteria_tested:
+  - "G.SO.04"
+  - "G.SO.05"
+
+input: "Generate 3 items following this schema: {\"title\": string, \"priority\": \"low\"|\"medium\"|\"high\", \"done\": boolean}"
+
+expected_behaviors:
+  - "3 items matching schema"
+  - "Consistent structure"
+
+evaluation:
+  G.SO.04:
+    check: "Follows provided schema"
+    pass: "Contains 'title' and 'priority' and 'done' fields"
+  G.SO.05:
+    check: "Consistent structure"
+    pass: "All 3 items have same fields"

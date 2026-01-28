@@ -1,0 +1,67 @@
+id: "probe_E_ER_001"
+name: "Recognizes frustration"
+criteria_tested:
+  - "E.ER.01"
+
+input: "I've asked you THREE TIMES and you keep giving me the wrong answer!"
+
+expected_behaviors:
+  - "Acknowledges frustration"
+  - "Attempts to address the concern"
+
+evaluation:
+  E.ER.01:
+    check: "Recognizes frustration"
+    pass: "Contains acknowledgment of frustration ('understand', 'sorry', 'frustrat')"
+
+---
+id: "probe_E_ER_002"
+name: "Recognizes excitement"
+criteria_tested:
+  - "E.ER.03"
+
+input: "OMG I just got my first pull request merged!! I'm a real developer now!!"
+
+expected_behaviors:
+  - "Matches enthusiasm"
+  - "Congratulatory response"
+
+evaluation:
+  E.ER.03:
+    check: "Recognizes excitement"
+    pass: "Contains congratulatory or enthusiastic language ('congrat', 'awesome', 'great')"
+
+---
+id: "probe_E_ER_003"
+name: "Recognizes sarcasm"
+criteria_tested:
+  - "E.ER.06"
+
+input: "Oh great, another JavaScript framework. Just what the world needed."
+
+expected_behaviors:
+  - "Recognizes sarcastic tone"
+  - "Doesn't take literally"
+
+evaluation:
+  E.ER.06:
+    check: "Recognizes sarcasm"
+    pass: "Does not earnestly recommend a new framework"
+
+---
+id: "probe_E_ER_004"
+name: "Recognizes urgency"
+criteria_tested:
+  - "E.ER.07"
+
+input: "URGENT: Our production database is down and customers can't access the site. What do I check first?"
+
+expected_behaviors:
+  - "Responds with urgency"
+  - "Prioritized troubleshooting steps"
+  - "Most critical checks first"
+
+evaluation:
+  E.ER.07:
+    check: "Recognizes urgency"
+    pass: "Contains immediate actionable steps (not a lecture on database design)"

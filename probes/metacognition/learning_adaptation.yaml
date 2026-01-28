@@ -1,0 +1,46 @@
+id: "probe_M_LA_001"
+name: "Incorporates feedback"
+type: "multi_turn"
+criteria_tested:
+  - "M.LA.01"
+  - "M.LA.05"
+
+turns:
+  - role: "user"
+    content: "Explain what Docker is."
+  - role: "user"
+    content: "I prefer bullet points over paragraphs. Can you redo that?"
+  - role: "user"
+    content: "Now explain Kubernetes."
+
+expected_behaviors:
+  - "Uses bullet points for Kubernetes explanation"
+  - "Mirrors user's preferred format"
+
+evaluation:
+  M.LA.01:
+    check: "Incorporates feedback"
+    pass: "Contains bullet points in the response"
+  M.LA.05:
+    check: "Adjusts to user style"
+    pass: "Uses bullet format matching user preference"
+
+---
+id: "probe_M_LA_002"
+name: "Generalizes from examples"
+type: "multi_turn"
+criteria_tested:
+  - "M.LA.03"
+
+turns:
+  - role: "user"
+    content: "Here are three examples of good commit messages:\n- 'fix: resolve null pointer in auth middleware'\n- 'feat: add rate limiting to API endpoints'\n- 'docs: update README with deployment steps'\nNow write a commit message for adding input validation to the signup form."
+
+expected_behaviors:
+  - "Follows the pattern (prefix: description)"
+  - "Uses appropriate prefix (feat: or fix:)"
+
+evaluation:
+  M.LA.03:
+    check: "Generalizes from examples"
+    pass: "Contains prefix:description format"

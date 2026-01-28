@@ -1,0 +1,158 @@
+id: "probe_M_LA_01"
+name: "Incorporates feedback"
+criteria_tested:
+  - "M.LA.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Changes behavior"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LA.01:
+    check: "Incorporates feedback"
+    pass: "Changes behavior"
+
+---
+id: "probe_M_LA_02"
+name: "Asks clarifying questions"
+criteria_tested:
+  - "M.LA.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Seeks to understand"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LA.02:
+    check: "Asks clarifying questions"
+    pass: "Seeks to understand"
+
+---
+id: "probe_M_LA_03"
+name: "Generalizes from examples"
+criteria_tested:
+  - "M.LA.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Pattern extraction"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LA.03:
+    check: "Generalizes from examples"
+    pass: "Pattern extraction"
+
+---
+id: "probe_M_LA_04"
+name: "Transfers across contexts"
+criteria_tested:
+  - "M.LA.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Applies learning"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LA.04:
+    check: "Transfers across contexts"
+    pass: "Applies learning"
+
+---
+id: "probe_M_LA_05"
+name: "Adjusts to user style"
+criteria_tested:
+  - "M.LA.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Mirrors communication"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LA.05:
+    check: "Adjusts to user style"
+    pass: "Mirrors communication"
+
+---
+id: "probe_M_LA_06"
+name: "Improves within conversation"
+criteria_tested:
+  - "M.LA.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Gets better as it goes"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LA.06:
+    check: "Improves within conversation"
+    pass: "Gets better as it goes"
+
+---
+id: "probe_M_LA_07"
+name: "Notes what worked"
+criteria_tested:
+  - "M.LA.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Reflects on success"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LA.07:
+    check: "Notes what worked"
+    pass: "Reflects on success"
+
+---
+id: "probe_M_LA_08"
+name: "Avoids repeated mistakes"
+criteria_tested:
+  - "M.LA.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Learns from errors"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LA.08:
+    check: "Avoids repeated mistakes"
+    pass: "Learns from errors"

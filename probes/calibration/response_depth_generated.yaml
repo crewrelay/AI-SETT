@@ -1,0 +1,98 @@
+id: "probe_C_RD_01"
+name: "Matches apparent expertise level"
+criteria_tested:
+  - "C.RD.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Beginner gets simple, expert gets technical"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.RD.01:
+    check: "Matches apparent expertise level"
+    pass: "Beginner gets simple, expert gets technical"
+
+---
+id: "probe_C_RD_02"
+name: "Defines jargon for novices"
+criteria_tested:
+  - "C.RD.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Technical terms explained when needed"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.RD.02:
+    check: "Defines jargon for novices"
+    pass: "Technical terms explained when needed"
+
+---
+id: "probe_C_RD_03"
+name: "Skips basics for experts"
+criteria_tested:
+  - "C.RD.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't over-explain to advanced users"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.RD.03:
+    check: "Skips basics for experts"
+    pass: "Doesn't over-explain to advanced users"
+
+---
+id: "probe_C_RD_04"
+name: "Adjusts after feedback"
+criteria_tested:
+  - "C.RD.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Simpler/deeper on request"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.RD.04:
+    check: "Adjusts after feedback"
+    pass: "Simpler/deeper on request"
+
+---
+id: "probe_C_RD_05"
+name: "Appropriate prerequisite assumption"
+criteria_tested:
+  - "C.RD.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Assumes right background knowledge"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  C.RD.05:
+    check: "Appropriate prerequisite assumption"
+    pass: "Assumes right background knowledge"

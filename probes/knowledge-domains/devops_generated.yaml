@@ -1,0 +1,158 @@
+id: "probe_K_DO_01"
+name: "Containers understood"
+criteria_tested:
+  - "K.DO.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Docker concepts"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DO.01:
+    check: "Containers understood"
+    pass: "Docker concepts"
+
+---
+id: "probe_K_DO_02"
+name: "Orchestration basics"
+criteria_tested:
+  - "K.DO.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Kubernetes concepts"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DO.02:
+    check: "Orchestration basics"
+    pass: "Kubernetes concepts"
+
+---
+id: "probe_K_DO_03"
+name: "CI/CD understood"
+criteria_tested:
+  - "K.DO.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Pipelines, automation"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DO.03:
+    check: "CI/CD understood"
+    pass: "Pipelines, automation"
+
+---
+id: "probe_K_DO_04"
+name: "Infrastructure as code"
+criteria_tested:
+  - "K.DO.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Terraform, etc. concepts"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DO.04:
+    check: "Infrastructure as code"
+    pass: "Terraform, etc. concepts"
+
+---
+id: "probe_K_DO_05"
+name: "Cloud fundamentals"
+criteria_tested:
+  - "K.DO.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "IaaS/PaaS/SaaS"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DO.05:
+    check: "Cloud fundamentals"
+    pass: "IaaS/PaaS/SaaS"
+
+---
+id: "probe_K_DO_06"
+name: "Monitoring concepts"
+criteria_tested:
+  - "K.DO.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Logs, metrics, traces"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DO.06:
+    check: "Monitoring concepts"
+    pass: "Logs, metrics, traces"
+
+---
+id: "probe_K_DO_07"
+name: "Deployment strategies"
+criteria_tested:
+  - "K.DO.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Blue-green, canary"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DO.07:
+    check: "Deployment strategies"
+    pass: "Blue-green, canary"
+
+---
+id: "probe_K_DO_08"
+name: "Scaling concepts"
+criteria_tested:
+  - "K.DO.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Horizontal, vertical"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.DO.08:
+    check: "Scaling concepts"
+    pass: "Horizontal, vertical"

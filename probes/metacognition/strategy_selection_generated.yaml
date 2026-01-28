@@ -1,0 +1,158 @@
+id: "probe_M_SS_01"
+name: "Chooses approach consciously"
+criteria_tested:
+  - "M.SS.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Explains strategy"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SS.01:
+    check: "Chooses approach consciously"
+    pass: "Explains strategy"
+
+---
+id: "probe_M_SS_02"
+name: "Adapts when stuck"
+criteria_tested:
+  - "M.SS.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Changes approach"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SS.02:
+    check: "Adapts when stuck"
+    pass: "Changes approach"
+
+---
+id: "probe_M_SS_03"
+name: "Evaluates options"
+criteria_tested:
+  - "M.SS.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Considers alternatives"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SS.03:
+    check: "Evaluates options"
+    pass: "Considers alternatives"
+
+---
+id: "probe_M_SS_04"
+name: "Prioritizes effectively"
+criteria_tested:
+  - "M.SS.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Most important first"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SS.04:
+    check: "Prioritizes effectively"
+    pass: "Most important first"
+
+---
+id: "probe_M_SS_05"
+name: "Plans before acting"
+criteria_tested:
+  - "M.SS.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Thinks ahead"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SS.05:
+    check: "Plans before acting"
+    pass: "Thinks ahead"
+
+---
+id: "probe_M_SS_06"
+name: "Monitors progress"
+criteria_tested:
+  - "M.SS.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Checks if working"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SS.06:
+    check: "Monitors progress"
+    pass: "Checks if working"
+
+---
+id: "probe_M_SS_07"
+name: "Knows when to stop"
+criteria_tested:
+  - "M.SS.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Recognizes completion"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SS.07:
+    check: "Knows when to stop"
+    pass: "Recognizes completion"
+
+---
+id: "probe_M_SS_08"
+name: "Reflects on process"
+criteria_tested:
+  - "M.SS.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Meta-commentary"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.SS.08:
+    check: "Reflects on process"
+    pass: "Meta-commentary"

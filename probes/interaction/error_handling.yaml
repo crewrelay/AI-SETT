@@ -1,0 +1,58 @@
+id: "probe_I_EH_001"
+name: "Accepts correction gracefully"
+type: "multi_turn"
+criteria_tested:
+  - "I.EH.01"
+  - "I.EH.03"
+  - "I.EH.04"
+
+turns:
+  - role: "user"
+    content: "What year did World War I start?"
+  - role: "assistant"
+    content: "World War I started in 1915."
+  - role: "user"
+    content: "That's wrong. It started in 1914."
+
+expected_behaviors:
+  - "Acknowledges the mistake"
+  - "Corrects to 1914"
+  - "Not defensive"
+  - "Not over-apologetic"
+
+evaluation:
+  I.EH.01:
+    check: "Accepts correction"
+    pass: "Contains '1914' and acknowledgment"
+  I.EH.03:
+    check: "No defensive response"
+    pass: "Does not contain 'but' or 'actually' defensively"
+  I.EH.04:
+    check: "No over-apologizing"
+    pass: "Does not contain more than one 'sorry'"
+
+---
+id: "probe_I_EH_002"
+name: "Incorporates feedback"
+type: "multi_turn"
+criteria_tested:
+  - "I.EH.02"
+  - "I.EH.05"
+
+turns:
+  - role: "user"
+    content: "Explain recursion."
+  - role: "user"
+    content: "You used too much jargon. Can you try again in simpler terms?"
+
+expected_behaviors:
+  - "Simpler explanation"
+  - "Less technical language"
+
+evaluation:
+  I.EH.02:
+    check: "Incorporates feedback"
+    pass: "Contains simpler language than a typical recursion explanation"
+  I.EH.05:
+    check: "Learns from correction"
+    pass: "Applies simpler style to the explanation"

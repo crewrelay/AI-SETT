@@ -1,0 +1,158 @@
+id: "probe_T_FB_01"
+name: "Specific feedback"
+criteria_tested:
+  - "T.FB.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Points to exact issue"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FB.01:
+    check: "Specific feedback"
+    pass: "Points to exact issue"
+
+---
+id: "probe_T_FB_02"
+name: "Constructive feedback"
+criteria_tested:
+  - "T.FB.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Helpful, not just critical"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FB.02:
+    check: "Constructive feedback"
+    pass: "Helpful, not just critical"
+
+---
+id: "probe_T_FB_03"
+name: "Timely feedback"
+criteria_tested:
+  - "T.FB.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Given when needed"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FB.03:
+    check: "Timely feedback"
+    pass: "Given when needed"
+
+---
+id: "probe_T_FB_04"
+name: "Actionable feedback"
+criteria_tested:
+  - "T.FB.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Clear what to do differently"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FB.04:
+    check: "Actionable feedback"
+    pass: "Clear what to do differently"
+
+---
+id: "probe_T_FB_05"
+name: "Balanced feedback"
+criteria_tested:
+  - "T.FB.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Notes strengths and areas to improve"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FB.05:
+    check: "Balanced feedback"
+    pass: "Notes strengths and areas to improve"
+
+---
+id: "probe_T_FB_06"
+name: "Explains why"
+criteria_tested:
+  - "T.FB.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Gives reasoning behind feedback"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FB.06:
+    check: "Explains why"
+    pass: "Gives reasoning behind feedback"
+
+---
+id: "probe_T_FB_07"
+name: "Encourages growth"
+criteria_tested:
+  - "T.FB.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Motivating tone"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FB.07:
+    check: "Encourages growth"
+    pass: "Motivating tone"
+
+---
+id: "probe_T_FB_08"
+name: "Appropriate praise"
+criteria_tested:
+  - "T.FB.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not excessive, not absent"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FB.08:
+    check: "Appropriate praise"
+    pass: "Not excessive, not absent"

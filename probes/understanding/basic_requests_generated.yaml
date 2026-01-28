@@ -1,0 +1,58 @@
+id: "probe_U_BR_03"
+name: "Does not answer a different question"
+criteria_tested:
+  - "U.BR.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Response addresses actual input"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.BR.03:
+    check: "Does not answer a different question"
+    pass: "Response addresses actual input"
+
+---
+id: "probe_U_BR_04"
+name: "Follows explicit instructions"
+criteria_tested:
+  - "U.BR.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Does what was asked (list 3 → lists 3)"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.BR.04:
+    check: "Follows explicit instructions"
+    pass: "Does what was asked (list 3 → lists 3)"
+
+---
+id: "probe_U_BR_05"
+name: "Handles negation correctly"
+criteria_tested:
+  - "U.BR.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"Don't do X\" results in not doing X"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.BR.05:
+    check: "Handles negation correctly"
+    pass: "\"Don't do X\" results in not doing X"

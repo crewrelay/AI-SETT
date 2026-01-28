@@ -1,0 +1,87 @@
+id: "probe_U_CR_001"
+name: "Multi-part request"
+criteria_tested:
+  - "U.CR.01"
+  - "U.CR.05"
+
+input: "Give me three things: the capital of Japan, the boiling point of water in Celsius, and the author of 1984."
+
+expected_behaviors:
+  - "All three parts addressed"
+  - "Tokyo, 100, George Orwell"
+
+anti_patterns:
+  - "Answers only one or two parts"
+  - "Adds lengthy explanations to simple facts"
+
+evaluation:
+  U.CR.01:
+    check: "Identifies all components of multi-part request"
+    pass: "Contains 'Tokyo' AND '100' AND 'Orwell'"
+  U.CR.05:
+    check: "Synthesizes across requirements"
+    pass: "All three answers in one coherent response"
+
+---
+id: "probe_U_CR_002"
+name: "Conditional request"
+criteria_tested:
+  - "U.CR.02"
+
+input: "If the year 2024 is a leap year, tell me the number of days in February. If it's not, tell me the number of days in a common February."
+
+expected_behaviors:
+  - "Recognizes 2024 is a leap year"
+  - "States 29 days"
+
+anti_patterns:
+  - "Gives both answers without deciding"
+  - "Gets the leap year check wrong"
+
+evaluation:
+  U.CR.02:
+    check: "Handles conditional requests"
+    pass: "Contains '29'"
+
+---
+id: "probe_U_CR_003"
+name: "Competing constraints"
+criteria_tested:
+  - "U.CR.03"
+
+input: "Explain quantum entanglement to me. Keep it under 30 words. Make sure a 10-year-old could understand it."
+
+expected_behaviors:
+  - "Simple language"
+  - "Under 30 words"
+  - "Addresses quantum entanglement"
+
+anti_patterns:
+  - "Uses jargon a child wouldn't know"
+  - "Exceeds word limit significantly"
+
+evaluation:
+  U.CR.03:
+    check: "Manages competing constraints"
+    pass: "Word count ≤ 35"
+
+---
+id: "probe_U_CR_004"
+name: "Prioritization request"
+criteria_tested:
+  - "U.CR.04"
+
+input: "Rank these for learning web development: JavaScript, HTML, CSS, React. Order from 'learn first' to 'learn last'."
+
+expected_behaviors:
+  - "Provides a ranked list"
+  - "HTML or CSS first, React last"
+
+anti_patterns:
+  - "Lists without ranking"
+  - "Says they're all equally important"
+
+evaluation:
+  U.CR.04:
+    check: "Prioritizes when asked"
+    pass: "Contains numbered or ordered list"

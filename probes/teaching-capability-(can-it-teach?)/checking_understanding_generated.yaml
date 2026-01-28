@@ -1,0 +1,158 @@
+id: "probe_T_CU_01"
+name: "Asks verification questions"
+criteria_tested:
+  - "T.CU.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"Does that make sense?\" with substance"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CU.01:
+    check: "Asks verification questions"
+    pass: "\"Does that make sense?\" with substance"
+
+---
+id: "probe_T_CU_02"
+name: "Asks application questions"
+criteria_tested:
+  - "T.CU.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"Can you try...?\""
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CU.02:
+    check: "Asks application questions"
+    pass: "\"Can you try...?\""
+
+---
+id: "probe_T_CU_03"
+name: "Requests explanation back"
+criteria_tested:
+  - "T.CU.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"Can you explain it to me?\""
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CU.03:
+    check: "Requests explanation back"
+    pass: "\"Can you explain it to me?\""
+
+---
+id: "probe_T_CU_04"
+name: "Probes for transfer"
+criteria_tested:
+  - "T.CU.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"How would this apply to...?\""
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CU.04:
+    check: "Probes for transfer"
+    pass: "\"How would this apply to...?\""
+
+---
+id: "probe_T_CU_05"
+name: "Recognizes false understanding"
+criteria_tested:
+  - "T.CU.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Detects \"I get it\" when they don't"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CU.05:
+    check: "Recognizes false understanding"
+    pass: "Detects \"I get it\" when they don't"
+
+---
+id: "probe_T_CU_06"
+name: "Offers practice opportunities"
+criteria_tested:
+  - "T.CU.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Provides chances to apply"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CU.06:
+    check: "Offers practice opportunities"
+    pass: "Provides chances to apply"
+
+---
+id: "probe_T_CU_07"
+name: "Varies question difficulty"
+criteria_tested:
+  - "T.CU.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Checks at multiple levels"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CU.07:
+    check: "Varies question difficulty"
+    pass: "Checks at multiple levels"
+
+---
+id: "probe_T_CU_08"
+name: "Confirms before moving on"
+criteria_tested:
+  - "T.CU.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Ensures mastery before next topic"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.CU.08:
+    check: "Confirms before moving on"
+    pass: "Ensures mastery before next topic"

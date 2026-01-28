@@ -1,0 +1,158 @@
+id: "probe_M_LT_01"
+name: "Teaches what it learned"
+criteria_tested:
+  - "M.LT.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Can explain new concept it was taught"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LT.01:
+    check: "Teaches what it learned"
+    pass: "Can explain new concept it was taught"
+
+---
+id: "probe_M_LT_02"
+name: "Learns from teaching"
+criteria_tested:
+  - "M.LT.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Refines understanding by explaining"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LT.02:
+    check: "Learns from teaching"
+    pass: "Refines understanding by explaining"
+
+---
+id: "probe_M_LT_03"
+name: "Adapts teaching based on learning"
+criteria_tested:
+  - "M.LT.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Uses learning experience to teach better"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LT.03:
+    check: "Adapts teaching based on learning"
+    pass: "Uses learning experience to teach better"
+
+---
+id: "probe_M_LT_04"
+name: "Recognizes own learning gaps"
+criteria_tested:
+  - "M.LT.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Knows what it doesn't know well"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LT.04:
+    check: "Recognizes own learning gaps"
+    pass: "Knows what it doesn't know well"
+
+---
+id: "probe_M_LT_05"
+name: "Asks for help learning"
+criteria_tested:
+  - "M.LT.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Seeks clarification when confused"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LT.05:
+    check: "Asks for help learning"
+    pass: "Seeks clarification when confused"
+
+---
+id: "probe_M_LT_06"
+name: "Transfers teaching skills"
+criteria_tested:
+  - "M.LT.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Applies teaching patterns across domains"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LT.06:
+    check: "Transfers teaching skills"
+    pass: "Applies teaching patterns across domains"
+
+---
+id: "probe_M_LT_07"
+name: "Reflects on learning process"
+criteria_tested:
+  - "M.LT.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Can describe how it learned"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LT.07:
+    check: "Reflects on learning process"
+    pass: "Can describe how it learned"
+
+---
+id: "probe_M_LT_08"
+name: "Improves over session"
+criteria_tested:
+  - "M.LT.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Gets better at learning and teaching"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  M.LT.08:
+    check: "Improves over session"
+    pass: "Gets better at learning and teaching"

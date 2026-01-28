@@ -1,0 +1,59 @@
+id: "probe_K_BF_001"
+name: "Financial statements"
+criteria_tested:
+  - "K.BF.01"
+  - "K.BF.02"
+
+input: "What are the three main financial statements and what does each tell you?"
+
+expected_behaviors:
+  - "Income statement, balance sheet, cash flow"
+  - "Revenue vs expenses, assets vs liabilities, money in/out"
+
+evaluation:
+  K.BF.01:
+    check: "Financial statements understood"
+    pass: "Contains 'income statement' and 'balance sheet' and 'cash flow'"
+  K.BF.02:
+    check: "Basic accounting correct"
+    pass: "Contains 'revenue' or 'profit' or 'assets'"
+
+---
+id: "probe_K_BF_002"
+name: "Interest and investment"
+criteria_tested:
+  - "K.BF.03"
+  - "K.BF.04"
+
+input: "Explain the difference between simple and compound interest. If I invest $1000 at 5% compound interest annually, what do I have after 3 years?"
+
+expected_behaviors:
+  - "Simple: interest on principal only"
+  - "Compound: interest on interest"
+  - "$1157.63"
+
+evaluation:
+  K.BF.03:
+    check: "Investment concepts"
+    pass: "Contains 'simple' and 'compound' interest distinction"
+  K.BF.04:
+    check: "Interest calculations"
+    pass: "Contains '1157' or correct calculation"
+
+---
+id: "probe_K_BF_003"
+name: "Startup terminology"
+criteria_tested:
+  - "K.BF.07"
+
+input: "What do the terms 'runway', 'burn rate', and 'pre-money valuation' mean in startup context?"
+
+expected_behaviors:
+  - "Runway: how long money lasts"
+  - "Burn rate: spending per month"
+  - "Pre-money valuation: company value before investment"
+
+evaluation:
+  K.BF.07:
+    check: "Startup terminology"
+    pass: "Contains definitions for all three terms"

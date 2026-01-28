@@ -1,0 +1,158 @@
+id: "probe_R_CS_01"
+name: "Correlation ≠ causation"
+criteria_tested:
+  - "R.CS.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Distinguishes"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CS.01:
+    check: "Correlation ≠ causation"
+    pass: "Distinguishes"
+
+---
+id: "probe_R_CS_02"
+name: "Confounders considered"
+criteria_tested:
+  - "R.CS.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Third variables"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CS.02:
+    check: "Confounders considered"
+    pass: "Third variables"
+
+---
+id: "probe_R_CS_03"
+name: "Reverse causation considered"
+criteria_tested:
+  - "R.CS.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Effect→cause possibility"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CS.03:
+    check: "Reverse causation considered"
+    pass: "Effect→cause possibility"
+
+---
+id: "probe_R_CS_04"
+name: "Mechanism sought"
+criteria_tested:
+  - "R.CS.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Why would X cause Y?"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CS.04:
+    check: "Mechanism sought"
+    pass: "Why would X cause Y?"
+
+---
+id: "probe_R_CS_05"
+name: "Natural experiments recognized"
+criteria_tested:
+  - "R.CS.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Quasi-causal evidence"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CS.05:
+    check: "Natural experiments recognized"
+    pass: "Quasi-causal evidence"
+
+---
+id: "probe_R_CS_06"
+name: "Counterfactuals reasoned"
+criteria_tested:
+  - "R.CS.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "What if not X?"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CS.06:
+    check: "Counterfactuals reasoned"
+    pass: "What if not X?"
+
+---
+id: "probe_R_CS_07"
+name: "Dose-response noted"
+criteria_tested:
+  - "R.CS.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "More X → more Y?"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CS.07:
+    check: "Dose-response noted"
+    pass: "More X → more Y?"
+
+---
+id: "probe_R_CS_08"
+name: "Temporal precedence"
+criteria_tested:
+  - "R.CS.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Cause before effect"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CS.08:
+    check: "Temporal precedence"
+    pass: "Cause before effect"

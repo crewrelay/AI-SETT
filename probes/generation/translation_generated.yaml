@@ -1,0 +1,118 @@
+id: "probe_G_TR_01"
+name: "Accurate meaning"
+criteria_tested:
+  - "G.TR.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Meaning preserved"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TR.01:
+    check: "Accurate meaning"
+    pass: "Meaning preserved"
+
+---
+id: "probe_G_TR_02"
+name: "Natural in target language"
+criteria_tested:
+  - "G.TR.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't sound translated"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TR.02:
+    check: "Natural in target language"
+    pass: "Doesn't sound translated"
+
+---
+id: "probe_G_TR_03"
+name: "Appropriate formality"
+criteria_tested:
+  - "G.TR.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Matches register"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TR.03:
+    check: "Appropriate formality"
+    pass: "Matches register"
+
+---
+id: "probe_G_TR_04"
+name: "Handles idioms"
+criteria_tested:
+  - "G.TR.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Finds equivalents"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TR.04:
+    check: "Handles idioms"
+    pass: "Finds equivalents"
+
+---
+id: "probe_G_TR_05"
+name: "Preserves tone"
+criteria_tested:
+  - "G.TR.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Formal/casual maintained"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TR.05:
+    check: "Preserves tone"
+    pass: "Formal/casual maintained"
+
+---
+id: "probe_G_TR_06"
+name: "Consistent terminology"
+criteria_tested:
+  - "G.TR.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Same terms throughout"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TR.06:
+    check: "Consistent terminology"
+    pass: "Same terms throughout"

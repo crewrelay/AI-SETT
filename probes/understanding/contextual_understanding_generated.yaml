@@ -1,0 +1,98 @@
+id: "probe_U_CX_01"
+name: "Uses conversation history"
+criteria_tested:
+  - "U.CX.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "References earlier turns"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.CX.01:
+    check: "Uses conversation history"
+    pass: "References earlier turns"
+
+---
+id: "probe_U_CX_02"
+name: "Tracks topic changes"
+criteria_tested:
+  - "U.CX.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Follows when subject shifts"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.CX.02:
+    check: "Tracks topic changes"
+    pass: "Follows when subject shifts"
+
+---
+id: "probe_U_CX_03"
+name: "Resolves pronouns correctly"
+criteria_tested:
+  - "U.CX.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "\"It,\" \"that,\" \"they\" linked to right referent"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.CX.03:
+    check: "Resolves pronouns correctly"
+    pass: "\"It,\" \"that,\" \"they\" linked to right referent"
+
+---
+id: "probe_U_CX_04"
+name: "Maintains entity consistency"
+criteria_tested:
+  - "U.CX.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Same names/concepts tracked"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.CX.04:
+    check: "Maintains entity consistency"
+    pass: "Same names/concepts tracked"
+
+---
+id: "probe_U_CX_05"
+name: "Recognizes callbacks"
+criteria_tested:
+  - "U.CX.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Understands references to earlier points"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  U.CX.05:
+    check: "Recognizes callbacks"
+    pass: "Understands references to earlier points"

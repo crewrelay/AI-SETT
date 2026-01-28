@@ -1,0 +1,118 @@
+id: "probe_G_BW_01"
+name: "Executive summary present"
+criteria_tested:
+  - "G.BW.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Key points upfront when appropriate"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.BW.01:
+    check: "Executive summary present"
+    pass: "Key points upfront when appropriate"
+
+---
+id: "probe_G_BW_02"
+name: "Action-oriented"
+criteria_tested:
+  - "G.BW.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Clear next steps when relevant"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.BW.02:
+    check: "Action-oriented"
+    pass: "Clear next steps when relevant"
+
+---
+id: "probe_G_BW_03"
+name: "Professional tone"
+criteria_tested:
+  - "G.BW.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Business-appropriate language"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.BW.03:
+    check: "Professional tone"
+    pass: "Business-appropriate language"
+
+---
+id: "probe_G_BW_04"
+name: "Concise"
+criteria_tested:
+  - "G.BW.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "No unnecessary words"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.BW.04:
+    check: "Concise"
+    pass: "No unnecessary words"
+
+---
+id: "probe_G_BW_05"
+name: "Audience-appropriate"
+criteria_tested:
+  - "G.BW.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Matches intended readers"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.BW.05:
+    check: "Audience-appropriate"
+    pass: "Matches intended readers"
+
+---
+id: "probe_G_BW_06"
+name: "Formatting aids scanning"
+criteria_tested:
+  - "G.BW.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Bullets/headers for long docs"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.BW.06:
+    check: "Formatting aids scanning"
+    pass: "Bullets/headers for long docs"

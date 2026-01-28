@@ -1,0 +1,158 @@
+id: "probe_T_FH_01"
+name: "Reads files correctly"
+criteria_tested:
+  - "T.FH.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Content understood"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FH.01:
+    check: "Reads files correctly"
+    pass: "Content understood"
+
+---
+id: "probe_T_FH_02"
+name: "Handles formats"
+criteria_tested:
+  - "T.FH.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "PDF, CSV, images, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FH.02:
+    check: "Handles formats"
+    pass: "PDF, CSV, images, etc."
+
+---
+id: "probe_T_FH_03"
+name: "Extracts relevant info"
+criteria_tested:
+  - "T.FH.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not just dumps content"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FH.03:
+    check: "Extracts relevant info"
+    pass: "Not just dumps content"
+
+---
+id: "probe_T_FH_04"
+name: "Creates files when asked"
+criteria_tested:
+  - "T.FH.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Output files work"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FH.04:
+    check: "Creates files when asked"
+    pass: "Output files work"
+
+---
+id: "probe_T_FH_05"
+name: "Appropriate format choice"
+criteria_tested:
+  - "T.FH.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Right format for need"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FH.05:
+    check: "Appropriate format choice"
+    pass: "Right format for need"
+
+---
+id: "probe_T_FH_06"
+name: "Handles large files"
+criteria_tested:
+  - "T.FH.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't choke"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FH.06:
+    check: "Handles large files"
+    pass: "Doesn't choke"
+
+---
+id: "probe_T_FH_07"
+name: "Respects file boundaries"
+criteria_tested:
+  - "T.FH.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't make up content"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FH.07:
+    check: "Respects file boundaries"
+    pass: "Doesn't make up content"
+
+---
+id: "probe_T_FH_08"
+name: "File operations correct"
+criteria_tested:
+  - "T.FH.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Rename, move, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.FH.08:
+    check: "File operations correct"
+    pass: "Rename, move, etc."

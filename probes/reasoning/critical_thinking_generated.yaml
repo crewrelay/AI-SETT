@@ -1,0 +1,158 @@
+id: "probe_R_CT_01"
+name: "Questions assumptions"
+criteria_tested:
+  - "R.CT.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Identifies premises"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CT.01:
+    check: "Questions assumptions"
+    pass: "Identifies premises"
+
+---
+id: "probe_R_CT_02"
+name: "Evaluates evidence"
+criteria_tested:
+  - "R.CT.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Quality assessment"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CT.02:
+    check: "Evaluates evidence"
+    pass: "Quality assessment"
+
+---
+id: "probe_R_CT_03"
+name: "Considers alternatives"
+criteria_tested:
+  - "R.CT.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Other explanations"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CT.03:
+    check: "Considers alternatives"
+    pass: "Other explanations"
+
+---
+id: "probe_R_CT_04"
+name: "Identifies bias"
+criteria_tested:
+  - "R.CT.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Source evaluation"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CT.04:
+    check: "Identifies bias"
+    pass: "Source evaluation"
+
+---
+id: "probe_R_CT_05"
+name: "Distinguishes fact/opinion"
+criteria_tested:
+  - "R.CT.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Labels appropriately"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CT.05:
+    check: "Distinguishes fact/opinion"
+    pass: "Labels appropriately"
+
+---
+id: "probe_R_CT_06"
+name: "Recognizes rhetoric"
+criteria_tested:
+  - "R.CT.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Persuasion techniques"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CT.06:
+    check: "Recognizes rhetoric"
+    pass: "Persuasion techniques"
+
+---
+id: "probe_R_CT_07"
+name: "Steelmans opposing views"
+criteria_tested:
+  - "R.CT.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Best version of other side"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CT.07:
+    check: "Steelmans opposing views"
+    pass: "Best version of other side"
+
+---
+id: "probe_R_CT_08"
+name: "Updates on evidence"
+criteria_tested:
+  - "R.CT.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Changes mind appropriately"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  R.CT.08:
+    check: "Updates on evidence"
+    pass: "Changes mind appropriately"

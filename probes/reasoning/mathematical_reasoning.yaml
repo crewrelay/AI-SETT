@@ -1,0 +1,124 @@
+id: "probe_R_MT_001"
+name: "Basic arithmetic"
+criteria_tested:
+  - "R.MT.01"
+
+input: "What is 847 + 368?"
+
+expected_behaviors:
+  - "1215"
+
+evaluation:
+  R.MT.01:
+    check: "Arithmetic correct"
+    pass: "Contains '1215'"
+
+---
+id: "probe_R_MT_002"
+name: "Word problem translation"
+criteria_tested:
+  - "R.MT.02"
+  - "R.MT.04"
+
+input: "A store sells apples for $1.50 each and oranges for $2.00 each. If I buy 4 apples and 3 oranges, how much do I spend?"
+
+expected_behaviors:
+  - "Shows calculation: 4 * 1.50 + 3 * 2.00 = 12.00"
+  - "$12.00"
+
+evaluation:
+  R.MT.02:
+    check: "Word problems translated"
+    pass: "Contains '12'"
+  R.MT.04:
+    check: "Shows work"
+    pass: "Contains multiplication or step breakdown"
+
+---
+id: "probe_R_MT_003"
+name: "Avoids common traps"
+criteria_tested:
+  - "R.MT.03"
+
+input: "A bat and a ball cost $1.10 together. The bat costs $1.00 more than the ball. How much does the ball cost?"
+
+expected_behaviors:
+  - "$0.05"
+  - "Not $0.10"
+
+anti_patterns:
+  - "Says $0.10"
+
+evaluation:
+  R.MT.03:
+    check: "Avoids common traps"
+    pass: "Contains '0.05' or '5 cents'"
+
+---
+id: "probe_R_MT_004"
+name: "Estimation"
+criteria_tested:
+  - "R.MT.05"
+
+input: "Roughly how many piano tuners are there in Chicago?"
+
+expected_behaviors:
+  - "Fermi estimation approach"
+  - "Reasonable ballpark (100-500)"
+
+evaluation:
+  R.MT.05:
+    check: "Estimation reasonable"
+    pass: "Contains reasoning steps and a number estimate"
+
+---
+id: "probe_R_MT_005"
+name: "Unit handling"
+criteria_tested:
+  - "R.MT.06"
+
+input: "If I drive 90 kilometers in 1.5 hours, what is my speed in miles per hour? (1 km = 0.621 miles)"
+
+expected_behaviors:
+  - "60 km/h = ~37.3 mph"
+
+evaluation:
+  R.MT.06:
+    check: "Units handled"
+    pass: "Contains '37' or correct conversion"
+
+---
+id: "probe_R_MT_006"
+name: "Percentages"
+criteria_tested:
+  - "R.MT.07"
+
+input: "A shirt was $80 and is now 25% off. Then there's an additional 10% off the sale price. What's the final price?"
+
+expected_behaviors:
+  - "$80 * 0.75 = $60, then $60 * 0.90 = $54"
+
+anti_patterns:
+  - "Says 35% off = $52"
+
+evaluation:
+  R.MT.07:
+    check: "Percentages correct"
+    pass: "Contains '54'"
+
+---
+id: "probe_R_MT_007"
+name: "Ratios"
+criteria_tested:
+  - "R.MT.08"
+
+input: "A recipe serves 4 people and needs 2 cups of flour. How much flour do I need for 10 people?"
+
+expected_behaviors:
+  - "5 cups"
+  - "Proportional scaling"
+
+evaluation:
+  R.MT.08:
+    check: "Ratios/proportions"
+    pass: "Contains '5'"

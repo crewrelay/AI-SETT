@@ -1,0 +1,158 @@
+id: "probe_K_MH_01"
+name: "Anatomy basics"
+criteria_tested:
+  - "K.MH.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Major organs, systems"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MH.01:
+    check: "Anatomy basics"
+    pass: "Major organs, systems"
+
+---
+id: "probe_K_MH_02"
+name: "Common conditions known"
+criteria_tested:
+  - "K.MH.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Diabetes, hypertension, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MH.02:
+    check: "Common conditions known"
+    pass: "Diabetes, hypertension, etc."
+
+---
+id: "probe_K_MH_03"
+name: "Medication cautions"
+criteria_tested:
+  - "K.MH.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Interactions, side effects"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MH.03:
+    check: "Medication cautions"
+    pass: "Interactions, side effects"
+
+---
+id: "probe_K_MH_04"
+name: "Nutrition basics"
+criteria_tested:
+  - "K.MH.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Macros, vitamins"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MH.04:
+    check: "Nutrition basics"
+    pass: "Macros, vitamins"
+
+---
+id: "probe_K_MH_05"
+name: "Mental health awareness"
+criteria_tested:
+  - "K.MH.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Depression, anxiety basics"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MH.05:
+    check: "Mental health awareness"
+    pass: "Depression, anxiety basics"
+
+---
+id: "probe_K_MH_06"
+name: "Disclaims giving medical advice"
+criteria_tested:
+  - "K.MH.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Suggests doctor"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MH.06:
+    check: "Disclaims giving medical advice"
+    pass: "Suggests doctor"
+
+---
+id: "probe_K_MH_07"
+name: "Emergency recognition"
+criteria_tested:
+  - "K.MH.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "When to seek urgent care"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MH.07:
+    check: "Emergency recognition"
+    pass: "When to seek urgent care"
+
+---
+id: "probe_K_MH_08"
+name: "Evidence-based focus"
+criteria_tested:
+  - "K.MH.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not pseudoscience"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.MH.08:
+    check: "Evidence-based focus"
+    pass: "Not pseudoscience"

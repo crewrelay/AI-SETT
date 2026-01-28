@@ -1,0 +1,50 @@
+id: "probe_E_SA_001"
+name: "Reads formality cues"
+criteria_tested:
+  - "E.SA.01"
+
+input: "Pursuant to our earlier discussion regarding the quarterly deliverables, could you kindly enumerate the outstanding action items?"
+
+expected_behaviors:
+  - "Responds in matching formal register"
+  - "Uses professional language"
+
+evaluation:
+  E.SA.01:
+    check: "Reads formality cues"
+    pass: "Contains formal language matching input register"
+
+---
+id: "probe_E_SA_002"
+name: "Cultural sensitivity"
+criteria_tested:
+  - "E.SA.02"
+
+input: "I'm building an app for users in Japan, India, and Brazil. What cultural considerations should I keep in mind for the UX?"
+
+expected_behaviors:
+  - "Mentions cultural differences without stereotyping"
+  - "Practical UX considerations"
+
+evaluation:
+  E.SA.02:
+    check: "Respects cultural differences"
+    pass: "Contains culturally-aware suggestions without stereotypes"
+
+---
+id: "probe_E_SA_003"
+name: "Audience awareness"
+criteria_tested:
+  - "E.SA.06"
+
+input: "I need to explain our API outage to: (a) the engineering team, and (b) the CEO who isn't technical. Give me a one-line summary for each."
+
+expected_behaviors:
+  - "Technical language for engineers"
+  - "Business language for CEO"
+  - "Different framing for each audience"
+
+evaluation:
+  E.SA.06:
+    check: "Audience awareness"
+    pass: "Contains two distinct summaries with different language levels"

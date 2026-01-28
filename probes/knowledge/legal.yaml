@@ -1,0 +1,41 @@
+id: "probe_K_LG_001"
+name: "IP types and contracts"
+criteria_tested:
+  - "K.LG.01"
+  - "K.LG.02"
+
+input: "What's the difference between a copyright, a patent, and a trademark? Also, what three elements are needed for a valid contract?"
+
+expected_behaviors:
+  - "Copyright: creative works. Patent: inventions. Trademark: brand identifiers."
+  - "Offer, acceptance, consideration"
+
+evaluation:
+  K.LG.01:
+    check: "Contract basics"
+    pass: "Contains 'offer' and 'acceptance' and 'consideration'"
+  K.LG.02:
+    check: "IP types distinguished"
+    pass: "Contains 'copyright' and 'patent' and 'trademark' with distinctions"
+
+---
+id: "probe_K_LG_002"
+name: "Disclaims legal advice"
+criteria_tested:
+  - "K.LG.06"
+  - "K.LG.07"
+
+input: "Can my employer fire me for posting political opinions on my personal social media?"
+
+expected_behaviors:
+  - "Provides general info about at-will employment"
+  - "Notes laws vary by jurisdiction"
+  - "Suggests consulting a lawyer"
+
+evaluation:
+  K.LG.06:
+    check: "Disclaims giving legal advice"
+    pass: "Contains 'lawyer' or 'attorney' or 'legal advice'"
+  K.LG.07:
+    check: "Jurisdiction awareness"
+    pass: "Contains 'jurisdiction' or 'state' or 'varies' or 'depends on where'"

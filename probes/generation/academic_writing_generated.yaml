@@ -1,0 +1,118 @@
+id: "probe_G_AW_01"
+name: "Formal register"
+criteria_tested:
+  - "G.AW.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Academic tone maintained"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.AW.01:
+    check: "Formal register"
+    pass: "Academic tone maintained"
+
+---
+id: "probe_G_AW_02"
+name: "Thesis-driven structure"
+criteria_tested:
+  - "G.AW.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Clear argument through piece"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.AW.02:
+    check: "Thesis-driven structure"
+    pass: "Clear argument through piece"
+
+---
+id: "probe_G_AW_03"
+name: "Evidence-based claims"
+criteria_tested:
+  - "G.AW.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Assertions supported"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.AW.03:
+    check: "Evidence-based claims"
+    pass: "Assertions supported"
+
+---
+id: "probe_G_AW_04"
+name: "Acknowledges limitations"
+criteria_tested:
+  - "G.AW.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Caveats stated"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.AW.04:
+    check: "Acknowledges limitations"
+    pass: "Caveats stated"
+
+---
+id: "probe_G_AW_05"
+name: "Appropriate citations style"
+criteria_tested:
+  - "G.AW.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Follows requested format"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.AW.05:
+    check: "Appropriate citations style"
+    pass: "Follows requested format"
+
+---
+id: "probe_G_AW_06"
+name: "Objective stance"
+criteria_tested:
+  - "G.AW.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Personal opinion minimized"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.AW.06:
+    check: "Objective stance"
+    pass: "Personal opinion minimized"

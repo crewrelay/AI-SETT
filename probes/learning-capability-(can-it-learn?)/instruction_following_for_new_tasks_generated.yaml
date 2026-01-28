@@ -1,0 +1,158 @@
+id: "probe_L_IF_01"
+name: "Follows novel format instructions"
+criteria_tested:
+  - "L.IF.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "New output format, follows it"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.IF.01:
+    check: "Follows novel format instructions"
+    pass: "New output format, follows it"
+
+---
+id: "probe_L_IF_02"
+name: "Adopts new terminology"
+criteria_tested:
+  - "L.IF.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Uses terms as defined in conversation"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.IF.02:
+    check: "Adopts new terminology"
+    pass: "Uses terms as defined in conversation"
+
+---
+id: "probe_L_IF_03"
+name: "Applies new rules"
+criteria_tested:
+  - "L.IF.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Given rule, applies consistently"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.IF.03:
+    check: "Applies new rules"
+    pass: "Given rule, applies consistently"
+
+---
+id: "probe_L_IF_04"
+name: "Combines multiple new instructions"
+criteria_tested:
+  - "L.IF.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Handles several new rules together"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.IF.04:
+    check: "Combines multiple new instructions"
+    pass: "Handles several new rules together"
+
+---
+id: "probe_L_IF_05"
+name: "Maintains through conversation"
+criteria_tested:
+  - "L.IF.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't drift back to defaults"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.IF.05:
+    check: "Maintains through conversation"
+    pass: "Doesn't drift back to defaults"
+
+---
+id: "probe_L_IF_06"
+name: "Asks clarification on unclear instructions"
+criteria_tested:
+  - "L.IF.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Seeks info when instruction ambiguous"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.IF.06:
+    check: "Asks clarification on unclear instructions"
+    pass: "Seeks info when instruction ambiguous"
+
+---
+id: "probe_L_IF_07"
+name: "Applies constraints correctly"
+criteria_tested:
+  - "L.IF.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Honors restrictions given"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.IF.07:
+    check: "Applies constraints correctly"
+    pass: "Honors restrictions given"
+
+---
+id: "probe_L_IF_08"
+name: "Prioritizes when instructions conflict"
+criteria_tested:
+  - "L.IF.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Handles competing requirements"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.IF.08:
+    check: "Prioritizes when instructions conflict"
+    pass: "Handles competing requirements"

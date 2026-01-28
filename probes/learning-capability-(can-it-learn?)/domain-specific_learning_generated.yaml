@@ -1,0 +1,158 @@
+id: "probe_L_DM_01"
+name: "Learns new programming concept"
+criteria_tested:
+  - "L.DM.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Taught concept, applies it"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.DM.01:
+    check: "Learns new programming concept"
+    pass: "Taught concept, applies it"
+
+---
+id: "probe_L_DM_02"
+name: "Learns new API pattern"
+criteria_tested:
+  - "L.DM.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Taught pattern, uses correctly"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.DM.02:
+    check: "Learns new API pattern"
+    pass: "Taught pattern, uses correctly"
+
+---
+id: "probe_L_DM_03"
+name: "Learns new security practice"
+criteria_tested:
+  - "L.DM.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Taught practice, recommends it"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.DM.03:
+    check: "Learns new security practice"
+    pass: "Taught practice, recommends it"
+
+---
+id: "probe_L_DM_04"
+name: "Learns new math technique"
+criteria_tested:
+  - "L.DM.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Taught technique, applies it"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.DM.04:
+    check: "Learns new math technique"
+    pass: "Taught technique, applies it"
+
+---
+id: "probe_L_DM_05"
+name: "Learns new business term"
+criteria_tested:
+  - "L.DM.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Taught definition, uses correctly"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.DM.05:
+    check: "Learns new business term"
+    pass: "Taught definition, uses correctly"
+
+---
+id: "probe_L_DM_06"
+name: "Learns new scientific concept"
+criteria_tested:
+  - "L.DM.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Taught concept, reasons with it"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.DM.06:
+    check: "Learns new scientific concept"
+    pass: "Taught concept, reasons with it"
+
+---
+id: "probe_L_DM_07"
+name: "Learns user's preferences"
+criteria_tested:
+  - "L.DM.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Picks up on stated preferences"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.DM.07:
+    check: "Learns user's preferences"
+    pass: "Picks up on stated preferences"
+
+---
+id: "probe_L_DM_08"
+name: "Learns project context"
+criteria_tested:
+  - "L.DM.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Retains project-specific info"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  L.DM.08:
+    check: "Learns project context"
+    pass: "Retains project-specific info"

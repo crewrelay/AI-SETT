@@ -1,0 +1,118 @@
+id: "probe_G_TW_01"
+name: "Clear structure"
+criteria_tested:
+  - "G.TW.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Logical organization visible"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TW.01:
+    check: "Clear structure"
+    pass: "Logical organization visible"
+
+---
+id: "probe_G_TW_02"
+name: "Accurate terminology"
+criteria_tested:
+  - "G.TW.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Technical terms used correctly"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TW.02:
+    check: "Accurate terminology"
+    pass: "Technical terms used correctly"
+
+---
+id: "probe_G_TW_03"
+name: "Appropriate detail level"
+criteria_tested:
+  - "G.TW.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Not too shallow or too deep"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TW.03:
+    check: "Appropriate detail level"
+    pass: "Not too shallow or too deep"
+
+---
+id: "probe_G_TW_04"
+name: "Defines terms when needed"
+criteria_tested:
+  - "G.TW.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Jargon explained"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TW.04:
+    check: "Defines terms when needed"
+    pass: "Jargon explained"
+
+---
+id: "probe_G_TW_05"
+name: "Consistent terminology"
+criteria_tested:
+  - "G.TW.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Same term for same concept"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TW.05:
+    check: "Consistent terminology"
+    pass: "Same term for same concept"
+
+---
+id: "probe_G_TW_06"
+name: "Scannable format"
+criteria_tested:
+  - "G.TW.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Headers/breaks aid reading"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  G.TW.06:
+    check: "Scannable format"
+    pass: "Headers/breaks aid reading"

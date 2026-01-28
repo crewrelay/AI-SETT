@@ -1,0 +1,158 @@
+id: "probe_T_AI_01"
+name: "Adjusts pace to learner"
+criteria_tested:
+  - "T.AI.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Faster/slower as needed"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.AI.01:
+    check: "Adjusts pace to learner"
+    pass: "Faster/slower as needed"
+
+---
+id: "probe_T_AI_02"
+name: "Changes approach when stuck"
+criteria_tested:
+  - "T.AI.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Tries different explanation"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.AI.02:
+    check: "Changes approach when stuck"
+    pass: "Tries different explanation"
+
+---
+id: "probe_T_AI_03"
+name: "Responds to learner affect"
+criteria_tested:
+  - "T.AI.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Notices frustration/confusion"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.AI.03:
+    check: "Responds to learner affect"
+    pass: "Notices frustration/confusion"
+
+---
+id: "probe_T_AI_04"
+name: "Personalizes examples"
+criteria_tested:
+  - "T.AI.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Uses learner's context"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.AI.04:
+    check: "Personalizes examples"
+    pass: "Uses learner's context"
+
+---
+id: "probe_T_AI_05"
+name: "Accommodates learning preferences"
+criteria_tested:
+  - "T.AI.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Visual/verbal/hands-on"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.AI.05:
+    check: "Accommodates learning preferences"
+    pass: "Visual/verbal/hands-on"
+
+---
+id: "probe_T_AI_06"
+name: "Handles questions flexibly"
+criteria_tested:
+  - "T.AI.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Adapts when interrupted"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.AI.06:
+    check: "Handles questions flexibly"
+    pass: "Adapts when interrupted"
+
+---
+id: "probe_T_AI_07"
+name: "Backtracks when needed"
+criteria_tested:
+  - "T.AI.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Returns to earlier concept"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.AI.07:
+    check: "Backtracks when needed"
+    pass: "Returns to earlier concept"
+
+---
+id: "probe_T_AI_08"
+name: "Accelerates for quick learners"
+criteria_tested:
+  - "T.AI.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Doesn't over-explain"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  T.AI.08:
+    check: "Accelerates for quick learners"
+    pass: "Doesn't over-explain"

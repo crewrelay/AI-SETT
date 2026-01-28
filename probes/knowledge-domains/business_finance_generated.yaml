@@ -1,0 +1,158 @@
+id: "probe_K_BF_01"
+name: "Financial statements understood"
+criteria_tested:
+  - "K.BF.01"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Income, balance, cash flow"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.BF.01:
+    check: "Financial statements understood"
+    pass: "Income, balance, cash flow"
+
+---
+id: "probe_K_BF_02"
+name: "Basic accounting correct"
+criteria_tested:
+  - "K.BF.02"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Revenue, expenses, profit"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.BF.02:
+    check: "Basic accounting correct"
+    pass: "Revenue, expenses, profit"
+
+---
+id: "probe_K_BF_03"
+name: "Investment concepts"
+criteria_tested:
+  - "K.BF.03"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Stocks, bonds, diversification"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.BF.03:
+    check: "Investment concepts"
+    pass: "Stocks, bonds, diversification"
+
+---
+id: "probe_K_BF_04"
+name: "Interest calculations"
+criteria_tested:
+  - "K.BF.04"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Simple, compound"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.BF.04:
+    check: "Interest calculations"
+    pass: "Simple, compound"
+
+---
+id: "probe_K_BF_05"
+name: "Business model concepts"
+criteria_tested:
+  - "K.BF.05"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Revenue streams, costs"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.BF.05:
+    check: "Business model concepts"
+    pass: "Revenue streams, costs"
+
+---
+id: "probe_K_BF_06"
+name: "Market concepts"
+criteria_tested:
+  - "K.BF.06"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Supply, demand, competition"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.BF.06:
+    check: "Market concepts"
+    pass: "Supply, demand, competition"
+
+---
+id: "probe_K_BF_07"
+name: "Startup terminology"
+criteria_tested:
+  - "K.BF.07"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Runway, valuation, etc."
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.BF.07:
+    check: "Startup terminology"
+    pass: "Runway, valuation, etc."
+
+---
+id: "probe_K_BF_08"
+name: "Risk concepts"
+criteria_tested:
+  - "K.BF.08"
+
+# TODO: Write a prompt that tests this criterion
+input: ""
+
+expected_behaviors:
+  - "Types, mitigation"
+
+anti_patterns:
+  - "TODO: Define what failure looks like"
+
+evaluation:
+  K.BF.08:
+    check: "Risk concepts"
+    pass: "Types, mitigation"

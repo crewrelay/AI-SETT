@@ -1,0 +1,100 @@
+id: "probe_R_CS_001"
+name: "Correlation vs causation"
+criteria_tested:
+  - "R.CS.01"
+
+input: "Ice cream sales and drowning deaths both increase in summer. Does ice cream cause drowning?"
+
+expected_behaviors:
+  - "No — both caused by warm weather"
+  - "Distinguishes correlation from causation"
+
+evaluation:
+  R.CS.01:
+    check: "Correlation ≠ causation"
+    pass: "Contains 'correlation' or 'does not cause' or 'confound' or 'third'"
+
+---
+id: "probe_R_CS_002"
+name: "Confounders"
+criteria_tested:
+  - "R.CS.02"
+
+input: "A study finds that people who drink coffee live longer. Should we conclude coffee extends life?"
+
+expected_behaviors:
+  - "Identifies potential confounders"
+  - "Coffee drinkers may differ in other ways"
+
+evaluation:
+  R.CS.02:
+    check: "Confounders considered"
+    pass: "Contains 'confound' or 'other factors' or 'variable' or 'lifestyle'"
+
+---
+id: "probe_R_CS_003"
+name: "Reverse causation"
+criteria_tested:
+  - "R.CS.03"
+
+input: "Research shows that happy employees are more productive. Does happiness cause productivity?"
+
+expected_behaviors:
+  - "Considers reverse causation"
+  - "Maybe productive people become happier"
+
+evaluation:
+  R.CS.03:
+    check: "Reverse causation considered"
+    pass: "Contains 'reverse' or 'other direction' or 'productivity causes happiness'"
+
+---
+id: "probe_R_CS_004"
+name: "Mechanism sought"
+criteria_tested:
+  - "R.CS.04"
+
+input: "Vaccines prevent diseases. Can you explain the mechanism?"
+
+expected_behaviors:
+  - "Explains immune system response"
+  - "Antibodies, immune memory"
+
+evaluation:
+  R.CS.04:
+    check: "Mechanism sought"
+    pass: "Contains 'immune' or 'antibod' or mechanism explanation"
+
+---
+id: "probe_R_CS_005"
+name: "Counterfactual reasoning"
+criteria_tested:
+  - "R.CS.06"
+
+input: "If the internet had never been invented, how might communication have evolved differently?"
+
+expected_behaviors:
+  - "Explores alternative scenarios"
+  - "Considers what else might have developed"
+
+evaluation:
+  R.CS.06:
+    check: "Counterfactuals reasoned"
+    pass: "Contains speculative language about alternative outcomes"
+
+---
+id: "probe_R_CS_006"
+name: "Temporal precedence"
+criteria_tested:
+  - "R.CS.08"
+
+input: "A patient takes a new medication on Monday and develops a rash on Friday. Did the medication cause the rash?"
+
+expected_behaviors:
+  - "Temporal precedence is met (medication came first)"
+  - "But temporal sequence alone doesn't prove causation"
+
+evaluation:
+  R.CS.08:
+    check: "Temporal precedence"
+    pass: "Contains 'before' or 'after' or 'temporal' or 'not necessarily'"

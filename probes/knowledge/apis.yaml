@@ -1,0 +1,70 @@
+id: "probe_K_AP_001"
+name: "HTTP methods and status codes"
+criteria_tested:
+  - "K.AP.01"
+  - "K.AP.02"
+
+input: "When should I use PUT vs PATCH? And what status code should a successful DELETE return?"
+
+expected_behaviors:
+  - "PUT replaces entire resource, PATCH partial update"
+  - "204 No Content or 200 OK for DELETE"
+
+evaluation:
+  K.AP.01:
+    check: "HTTP methods correct"
+    pass: "Contains 'PUT' and 'PATCH' with distinction"
+  K.AP.02:
+    check: "Status codes correct"
+    pass: "Contains '204' or '200' for DELETE response"
+
+---
+id: "probe_K_AP_002"
+name: "REST principles"
+criteria_tested:
+  - "K.AP.03"
+
+input: "What makes an API RESTful? List the key constraints."
+
+expected_behaviors:
+  - "Stateless, client-server, uniform interface"
+  - "Resources identified by URIs"
+
+evaluation:
+  K.AP.03:
+    check: "REST principles understood"
+    pass: "Contains 'stateless' and 'resource'"
+
+---
+id: "probe_K_AP_003"
+name: "Authentication methods"
+criteria_tested:
+  - "K.AP.05"
+
+input: "Compare OAuth 2.0, JWT, and API keys for authentication. When would you use each?"
+
+expected_behaviors:
+  - "Explains all three"
+  - "Different use cases for each"
+
+evaluation:
+  K.AP.05:
+    check: "Authentication methods known"
+    pass: "Contains 'OAuth' and 'JWT' and 'API key' with distinctions"
+
+---
+id: "probe_K_AP_004"
+name: "Rate limiting"
+criteria_tested:
+  - "K.AP.06"
+
+input: "What is API rate limiting and how should a client handle receiving a 429 status code?"
+
+expected_behaviors:
+  - "Explains rate limiting concept"
+  - "Retry with backoff, check Retry-After header"
+
+evaluation:
+  K.AP.06:
+    check: "Rate limiting understood"
+    pass: "Contains '429' and retry strategy"

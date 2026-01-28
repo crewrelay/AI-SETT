@@ -1,0 +1,45 @@
+id: "probe_I_CR_001"
+name: "Asks when confused"
+criteria_tested:
+  - "I.CR.01"
+  - "I.CR.02"
+
+input: "dploy the thng to prd"
+
+expected_behaviors:
+  - "Asks for clarification"
+  - "Offers interpretation: deploy the thing to production?"
+
+evaluation:
+  I.CR.01:
+    check: "Asks when confused"
+    pass: "Contains '?' or asks for clarification"
+  I.CR.02:
+    check: "Offers rephrase"
+    pass: "Contains 'deploy' or 'production' as interpretation"
+
+---
+id: "probe_I_CR_002"
+name: "Handles user confusion"
+type: "multi_turn"
+criteria_tested:
+  - "I.CR.04"
+  - "I.CR.08"
+
+turns:
+  - role: "user"
+    content: "What's a closure?"
+  - role: "user"
+    content: "I still don't get it. Can you explain differently?"
+
+expected_behaviors:
+  - "Different explanation approach"
+  - "Patient re-explanation"
+
+evaluation:
+  I.CR.04:
+    check: "Handles user confusion"
+    pass: "Contains new approach to explaining (different words/analogy)"
+  I.CR.08:
+    check: "Patience with repetition"
+    pass: "Re-explains willingly without frustration"

@@ -1,0 +1,77 @@
+id: "probe_K_SC_001"
+name: "Web vulnerabilities and mitigations"
+criteria_tested:
+  - "K.SC.01"
+  - "K.SC.02"
+
+input: "Explain XSS and SQL injection. How do you prevent each?"
+
+expected_behaviors:
+  - "Defines both vulnerabilities"
+  - "Real mitigations (not just 'be careful')"
+
+evaluation:
+  K.SC.01:
+    check: "Web vulnerabilities known"
+    pass: "Contains 'XSS' and 'SQL injection' with explanations"
+  K.SC.02:
+    check: "Mitigations correct"
+    pass: "Contains 'sanitiz' or 'escape' or 'parameterized' or 'prepared statement'"
+
+---
+id: "probe_K_SC_002"
+name: "Password handling"
+criteria_tested:
+  - "K.SC.03"
+
+input: "How should passwords be stored in a database?"
+
+expected_behaviors:
+  - "Hash + salt"
+  - "bcrypt, scrypt, or argon2"
+  - "Never plain text"
+
+evaluation:
+  K.SC.03:
+    check: "Password handling correct"
+    pass: "Contains 'hash' and ('salt' or 'bcrypt' or 'argon')"
+
+---
+id: "probe_K_SC_003"
+name: "Auth vs authz"
+criteria_tested:
+  - "K.SC.06"
+  - "K.SC.07"
+
+input: "What's the difference between authentication and authorization? How does the principle of least privilege relate?"
+
+expected_behaviors:
+  - "Authentication = who you are"
+  - "Authorization = what you can do"
+  - "Least privilege = minimum permissions needed"
+
+evaluation:
+  K.SC.06:
+    check: "Auth vs authz distinguished"
+    pass: "Contains distinction between authentication and authorization"
+  K.SC.07:
+    check: "Least privilege understood"
+    pass: "Contains 'least privilege' or 'minimum' permissions concept"
+
+---
+id: "probe_K_SC_004"
+name: "Secrets management"
+criteria_tested:
+  - "K.SC.08"
+
+input: "A junior developer committed an API key to a public GitHub repo. What should we do?"
+
+expected_behaviors:
+  - "Revoke the key immediately"
+  - "Rotate credentials"
+  - "Use environment variables or secrets manager"
+
+evaluation:
+  K.SC.08:
+    check: "Secrets management known"
+    pass: "Contains 'revoke' or 'rotate' and secret management approach"

@@ -1,0 +1,78 @@
+id: "probe_K_DT_001"
+name: "SQL and JOINs"
+criteria_tested:
+  - "K.DT.01"
+  - "K.DT.02"
+
+input: "Write a SQL query to get all orders with their customer names, including customers who haven't placed any orders."
+
+expected_behaviors:
+  - "Uses LEFT JOIN"
+  - "Valid SQL syntax"
+
+evaluation:
+  K.DT.01:
+    check: "SQL syntax correct"
+    pass: "Contains 'SELECT' and 'FROM' and 'JOIN'"
+  K.DT.02:
+    check: "JOINs understood"
+    pass: "Contains 'LEFT JOIN' or 'LEFT OUTER JOIN'"
+
+---
+id: "probe_K_DT_002"
+name: "Indexes and normalization"
+criteria_tested:
+  - "K.DT.03"
+  - "K.DT.04"
+
+input: "When should I add a database index, and what are the tradeoffs? Also briefly explain what database normalization achieves."
+
+expected_behaviors:
+  - "Indexes speed reads, slow writes"
+  - "Normalization reduces redundancy"
+
+evaluation:
+  K.DT.03:
+    check: "Indexes understood"
+    pass: "Contains 'read' or 'query' speed and write overhead tradeoff"
+  K.DT.04:
+    check: "Normalization known"
+    pass: "Contains 'redundancy' or 'duplication' or 'normal form'"
+
+---
+id: "probe_K_DT_003"
+name: "NoSQL and ACID"
+criteria_tested:
+  - "K.DT.05"
+  - "K.DT.06"
+
+input: "When would you choose MongoDB over PostgreSQL? What does ACID guarantee?"
+
+expected_behaviors:
+  - "Document store vs relational tradeoffs"
+  - "ACID: Atomicity, Consistency, Isolation, Durability"
+
+evaluation:
+  K.DT.05:
+    check: "NoSQL tradeoffs understood"
+    pass: "Contains tradeoff explanation for document vs relational"
+  K.DT.06:
+    check: "ACID understood"
+    pass: "Contains 'Atomicity' or all four ACID properties"
+
+---
+id: "probe_K_DT_004"
+name: "CAP theorem"
+criteria_tested:
+  - "K.DT.07"
+
+input: "Explain the CAP theorem and why you can't have all three."
+
+expected_behaviors:
+  - "Consistency, Availability, Partition tolerance"
+  - "Must choose 2 of 3 during network partition"
+
+evaluation:
+  K.DT.07:
+    check: "CAP theorem understood"
+    pass: "Contains 'Consistency' and 'Availability' and 'Partition'"

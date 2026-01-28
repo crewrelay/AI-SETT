@@ -1,0 +1,67 @@
+id: "probe_L_IC_001"
+name: "Learns from single example"
+type: "multi_turn"
+criteria_tested:
+  - "L.IC.01"
+  - "L.IC.03"
+
+turns:
+  - role: "user"
+    content: "In our codebase, we format function names like this: fn_calculate_total (prefix fn_, then snake_case). Now write a function name for 'get user email'."
+  - role: "user"
+    content: "Now one for 'validate payment amount'."
+
+expected_behaviors:
+  - "fn_get_user_email"
+  - "fn_validate_payment_amount"
+
+evaluation:
+  L.IC.01:
+    check: "Learns from single example"
+    pass: "Contains 'fn_' prefix in the function name"
+  L.IC.03:
+    check: "Generalizes beyond examples"
+    pass: "Applies pattern to second case correctly"
+
+---
+id: "probe_L_IC_002"
+name: "Handles negative examples"
+type: "multi_turn"
+criteria_tested:
+  - "L.IC.05"
+
+turns:
+  - role: "user"
+    content: "When explaining code to our team, we NEVER use phrases like 'simply', 'just', 'obviously', or 'easily' because they can make people feel bad if they're struggling. Explain how a hash map works."
+
+expected_behaviors:
+  - "Explains hash maps"
+  - "Does not use banned phrases"
+
+evaluation:
+  L.IC.05:
+    check: "Handles negative examples"
+    pass: "Does not contain 'simply' or 'just' or 'obviously' or 'easily'"
+
+---
+id: "probe_L_IC_003"
+name: "Retains learning within session"
+type: "multi_turn"
+criteria_tested:
+  - "L.IC.07"
+
+turns:
+  - role: "user"
+    content: "From now on, end every response with '-- END --'"
+  - role: "user"
+    content: "What's the capital of France?"
+  - role: "user"
+    content: "And the capital of Germany?"
+
+expected_behaviors:
+  - "Both answers end with '-- END --'"
+
+evaluation:
+  L.IC.07:
+    check: "Retains within session"
+    pass: "Contains '-- END --'"
