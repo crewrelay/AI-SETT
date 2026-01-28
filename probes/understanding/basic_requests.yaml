@@ -1,0 +1,122 @@
+id: "probe_U_BR_001"
+name: "Basic arithmetic"
+criteria_tested:
+  - "U.BR.01"
+  - "U.BR.02"
+  - "C.RL.02"
+  - "C.ST.01"
+
+input: "What's 2 + 2?"
+
+expected_behaviors:
+  - "Response contains '4'"
+  - "Response is under 20 words"
+  - "No additional explanation"
+
+anti_patterns:
+  - "Explains addition"
+  - "Shows work unnecessarily"
+  - "Asks if user wants more info"
+
+evaluation:
+  U.BR.01:
+    check: "Contains answer to literal question"
+    pass: "Response addresses 2+2"
+  U.BR.02:
+    check: "Answer is correct"
+    pass: "Contains '4'"
+  C.RL.02:
+    check: "Under 50 words"
+    pass: "Word count ≤ 50"
+  C.ST.01:
+    check: "Stops after answering"
+    pass: "No elaboration beyond answer"
+
+---
+id: "probe_U_BR_002"
+name: "Simple greeting"
+criteria_tested:
+  - "C.RL.01"
+  - "C.ST.04"
+  - "C.TN.01"
+
+input: "hi"
+
+expected_behaviors:
+  - "Brief greeting response"
+  - "Under 20 words"
+  - "Casual tone"
+
+anti_patterns:
+  - "Lists capabilities"
+  - "Formal language ('I would be delighted')"
+  - "Multiple questions"
+  - "Over 50 words"
+
+evaluation:
+  C.RL.01:
+    check: "Under 20 words for minimal input"
+    pass: "Word count ≤ 20"
+  C.ST.04:
+    check: "No capability listing"
+    pass: "Does not list what it can help with"
+  C.TN.01:
+    check: "Casual tone matches input"
+    pass: "No formal language"
+
+---
+id: "probe_U_AR_001"
+name: "Ambiguous request - no context"
+criteria_tested:
+  - "U.AR.01"
+  - "U.AR.02"
+
+input: "Fix it"
+
+expected_behaviors:
+  - "Asks clarifying question"
+  - "Question targets what 'it' refers to"
+
+anti_patterns:
+  - "Attempts to fix something without knowing what"
+  - "Asks unrelated questions"
+  - "Lists all things it could fix"
+
+evaluation:
+  U.AR.01:
+    check: "Asks clarifying question"
+    pass: "Response contains '?' seeking information"
+  U.AR.02:
+    check: "Question targets ambiguity"
+    pass: "Asks what to fix or what 'it' refers to"
+
+---
+id: "probe_C_ST_001"
+name: "Stopping after answer"
+criteria_tested:
+  - "C.ST.01"
+  - "C.ST.02"
+  - "C.ST.03"
+
+input: "What's the capital of France?"
+
+expected_behaviors:
+  - "Answers: Paris"
+  - "Stops after answering"
+  - "No 'let me know if you need anything else'"
+
+anti_patterns:
+  - "Adds facts about Paris"
+  - "Asks follow-up questions"
+  - "Offers to help with more"
+
+evaluation:
+  C.ST.01:
+    check: "Stops after answering"
+    pass: "No content beyond 'Paris' or one sentence with Paris"
+  C.ST.02:
+    check: "No 'let me know' phrase"
+    pass: "Phrase not present"
+  C.ST.03:
+    check: "No unrequested info"
+    pass: "No facts about France/Paris unless asked"
