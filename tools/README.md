@@ -326,6 +326,99 @@ python -m tools.conversation_harvester \
 
 Harvested examples are tagged `generator_model: "human:harvested"`.
 
+### model_gym.py — Quick behavioral workout routines
+
+Wraps assessment_runner + gap_analyzer into a single fast command. Samples a
+diverse subset of probes, runs assessment, analyzes gaps, and suggests
+targeted training. Supports scheduling for off-peak automated runs.
+
+```bash
+# Quick workout (30 probes, balanced sampling)
+python -m tools.model_gym \
+  --provider anthropic --model claude-3-5-sonnet-20241022
+
+# Focus on weak areas from last run
+python -m tools.model_gym \
+  --provider openai --model gpt-4o \
+  --focus-gaps results/gpt4o-last.json
+
+# Target specific categories
+python -m tools.model_gym \
+  --provider anthropic --model claude-3-5-sonnet-20241022 \
+  --categories metacognition,teaching,boundaries
+
+# Full workout (all probes)
+python -m tools.model_gym \
+  --provider anthropic --model claude-3-5-sonnet-20241022 --full
+
+# Compare with previous run
+python -m tools.model_gym \
+  --provider openai --model gpt-4o \
+  --compare results/gpt4o-prev.json
+
+# Schedule nightly at 2am (off-peak power window 12-6am)
+python -m tools.model_gym \
+  --provider anthropic --model claude-3-5-sonnet-20241022 \
+  --schedule 02:00
+
+# Remove scheduled workout
+python -m tools.model_gym --unschedule
+
+# Dry run — show workout plan
+python -m tools.model_gym --dry-run
+```
+
+**Options:**
+
+| Flag | Default | Description |
+|------|---------|-------------|
+| `--provider` | (required) | Provider name |
+| `--model` | (required) | Model identifier |
+| `--base-url` | — | Custom API endpoint |
+| `--probes` | `probes/` | Probe directory |
+| `--budget` | `30` | Max probes per workout |
+| `--categories` | all | Comma-separated category filter |
+| `--focus-gaps` | — | Previous result JSON — prioritize gap areas |
+| `--compare` | — | Previous result JSON — show longitudinal diff |
+| `--full` | — | Run all probes (ignore budget) |
+| `--output` | `results/` | Output directory |
+| `--concurrency` | `8` | Parallel API calls |
+| `--temperature` | `0.0` | Generation temperature |
+| `--schedule` | — | Install cron job (HH:MM format, e.g. 02:00) |
+| `--unschedule` | — | Remove all gym cron jobs |
+| `--simulate` | — | Enable simulated conversation probes |
+| `--dry-run` | — | Show workout plan, no API calls |
+| `--verbose` | — | Detailed output |
+
+**Sampling strategies:**
+
+- **Balanced** (default): Proportional allocation across categories, minimum 1 per category
+- **Gap-focused** (`--focus-gaps`): Categories with higher gap ratios get 3x weight
+- **Category filter** (`--categories`): Only sample from specified categories
+- **Full** (`--full`): Run all probes, no sampling
+
+**Scheduling:**
+
+Schedule automated workouts during off-peak hours (power is cheaper 12am-6am).
+Uses cron. Results append to `{output}/gym.log` with JSON saved per run.
+
+```bash
+# Schedule at 2am daily
+python -m tools.model_gym --provider anthropic --model claude-3-5-sonnet-20241022 \
+  --schedule 02:00
+
+# View logs
+tail -f results/gym.log
+
+# Remove schedule
+python -m tools.model_gym --unschedule
+```
+
+**Output:**
+
+Each run saves `results/{model}-{timestamp}.json` — compatible with `gap_analyzer --compare`
+for tracking progress over time.
+
 ### probe_generator.py — Generate probe templates
 
 Parses AI-SETT-FRAMEWORK.md to extract all criteria and generates
