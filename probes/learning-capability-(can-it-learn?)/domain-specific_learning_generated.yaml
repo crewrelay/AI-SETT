@@ -1,158 +1,143 @@
-id: "probe_L_DM_01"
-name: "Learns new programming concept"
+id: probe_L_DM_01
+name: Learns new programming concept
 criteria_tested:
-  - "L.DM.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.DM.01
+input: I'm learning about functional programming. Can you show me how to use map()
+  in Python and explain its core concept?
 expected_behaviors:
-  - "Taught concept, applies it"
-
+- Explain map() function
+- Provide a clear code example
+- Describe functional programming principle
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overly complex explanation
+- Failure to demonstrate practical usage
 evaluation:
   L.DM.01:
-    check: "Learns new programming concept"
-    pass: "Taught concept, applies it"
-
+    check: Learns new programming concept
+    pass: Contains working map() example and explanation
 ---
-id: "probe_L_DM_02"
-name: "Learns new API pattern"
+id: probe_L_DM_02
+name: Learns new API pattern
 criteria_tested:
-  - "L.DM.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.DM.02
+input: I want to understand GraphQL. Can you show me a basic query and explain how
+  it differs from REST?
 expected_behaviors:
-  - "Taught pattern, uses correctly"
-
+- Demonstrate GraphQL query syntax
+- Compare with REST architecture
+- Explain query flexibility
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial explanation
+- Incorrect query structure
 evaluation:
   L.DM.02:
-    check: "Learns new API pattern"
-    pass: "Taught pattern, uses correctly"
-
+    check: Learns new API pattern
+    pass: Contains valid GraphQL query example
 ---
-id: "probe_L_DM_03"
-name: "Learns new security practice"
+id: probe_L_DM_03
+name: Learns new security practice
 criteria_tested:
-  - "L.DM.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.DM.03
+input: What are some modern security practices for preventing cross-site scripting
+  (XSS) in web applications?
 expected_behaviors:
-  - "Taught practice, recommends it"
-
+- Recommend input sanitization
+- Explain content security policy
+- Suggest specific prevention techniques
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic security advice
+- Incomplete mitigation strategies
 evaluation:
   L.DM.03:
-    check: "Learns new security practice"
-    pass: "Taught practice, recommends it"
-
+    check: Learns new security practice
+    pass: Contains specific XSS prevention techniques
 ---
-id: "probe_L_DM_04"
-name: "Learns new math technique"
+id: probe_L_DM_04
+name: Learns new math technique
 criteria_tested:
-  - "L.DM.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.DM.04
+input: Can you help me solve this calculus problem using the integration by parts
+  method? I want to integrate x * cos(x) dx.
 expected_behaviors:
-  - "Taught technique, applies it"
-
+- Explains the integration by parts formula
+- Demonstrates step-by-step solution using the technique
+- Correctly applies the u-substitution method
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides a generic solution without showing the specific technique
+- Fails to break down the integration steps
 evaluation:
   L.DM.04:
-    check: "Learns new math technique"
-    pass: "Taught technique, applies it"
-
+    check: Learns new math technique
+    pass: Contains step-by-step explanation of integration by parts
 ---
-id: "probe_L_DM_05"
-name: "Learns new business term"
+id: probe_L_DM_05
+name: Learns new business term
 criteria_tested:
-  - "L.DM.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.DM.05
+input: I'm preparing for a business meeting and heard the term 'EBITDA' thrown around.
+  What does it mean?
 expected_behaviors:
-  - "Taught definition, uses correctly"
-
+- Provides a clear definition of EBITDA
+- Explains its significance in financial analysis
+- Uses the term correctly in a business context
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives a vague or incomplete explanation
+- Misuses the term in subsequent discussion
 evaluation:
   L.DM.05:
-    check: "Learns new business term"
-    pass: "Taught definition, uses correctly"
-
+    check: Learns new business term
+    pass: Contains accurate definition of EBITDA
 ---
-id: "probe_L_DM_06"
-name: "Learns new scientific concept"
+id: probe_L_DM_06
+name: Learns new scientific concept
 criteria_tested:
-  - "L.DM.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.DM.06
+input: I'm curious about quantum entanglement. Can you explain how two particles can
+  be connected even when separated by large distances?
 expected_behaviors:
-  - "Taught concept, reasons with it"
-
+- Provides a detailed explanation of quantum entanglement
+- Uses scientific terminology accurately
+- Demonstrates understanding of the concept's implications
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives a superficial or overly simplified explanation
+- Mixes up quantum mechanics concepts
 evaluation:
   L.DM.06:
-    check: "Learns new scientific concept"
-    pass: "Taught concept, reasons with it"
-
+    check: Learns new scientific concept
+    pass: Contains in-depth explanation of quantum entanglement
 ---
-id: "probe_L_DM_07"
-name: "Learns user's preferences"
+id: probe_L_DM_07
+name: Learns user's preferences
 criteria_tested:
-  - "L.DM.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.DM.07
+input: I really enjoy vegetarian cuisine, especially Indian food. I'm not a fan of
+  spicy dishes, though.
 expected_behaviors:
-  - "Picks up on stated preferences"
-
+- Remembers user's preference for vegetarian food
+- Notes the dislike for spicy dishes
+- Tailors subsequent recommendations accordingly
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Suggests spicy dishes in future interactions
+- Forgets previously stated preferences
 evaluation:
   L.DM.07:
-    check: "Learns user's preferences"
-    pass: "Picks up on stated preferences"
-
+    check: Learns user's preferences
+    pass: Contains reference to vegetarian, non-spicy food preference
 ---
-id: "probe_L_DM_08"
-name: "Learns project context"
+id: probe_L_DM_08
+name: Learns project context
 criteria_tested:
-  - "L.DM.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.DM.08
+input: We're developing a mobile app for local restaurant recommendations. The key
+  features will be user reviews, GPS-based suggestions, and a clean, minimalist design.
 expected_behaviors:
-  - "Retains project-specific info"
-
+- Recalls specific project details in subsequent interactions
+- Provides suggestions aligned with project context
+- Demonstrates understanding of project goals
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Forgets key project details
+- Offers irrelevant suggestions
 evaluation:
   L.DM.08:
-    check: "Learns project context"
-    pass: "Retains project-specific info"
+    check: Learns project context
+    pass: Contains specific details about mobile app project

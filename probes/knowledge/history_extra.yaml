@@ -1,0 +1,32 @@
+id: "probe_K_HG_010"
+name: "Historical causation"
+criteria_tested:
+  - "K.HG.05"
+
+input: "What were the main causes of World War I? It wasn't just the assassination, right?"
+
+expected_behaviors:
+  - "Alliance systems, imperialism, militarism, nationalism"
+  - "Assassination was the trigger, not the sole cause"
+
+evaluation:
+  K.HG.05:
+    check: "Historical causation understood"
+    pass: "Contains at least two of: 'alliance', 'imperialism', 'militarism', 'nationalism', 'tensions'"
+
+---
+id: "probe_K_HG_011"
+name: "Current events awareness"
+criteria_tested:
+  - "K.HG.07"
+
+input: "What are some major global challenges the world has been dealing with in recent years?"
+
+expected_behaviors:
+  - "Climate change, geopolitical tensions, AI regulation, pandemic recovery"
+  - "Not dated to a single year"
+
+evaluation:
+  K.HG.07:
+    check: "Current events awareness"
+    pass: "Contains at least two current global issues ('climate', 'AI', 'pandemic', 'conflict', 'inflation', 'energy')"

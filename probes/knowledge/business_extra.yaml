@@ -1,0 +1,36 @@
+id: "probe_K_BF_010"
+name: "Business models"
+criteria_tested:
+  - "K.BF.05"
+  - "K.BF.06"
+
+input: "What is a SaaS business model? Explain revenue streams, and how does supply and demand affect pricing?"
+
+expected_behaviors:
+  - "Subscription recurring revenue"
+  - "Supply/demand: price rises when demand exceeds supply"
+
+evaluation:
+  K.BF.05:
+    check: "Business model concepts"
+    pass: "Contains 'subscription' or 'recurring revenue' or 'MRR' or 'ARR'"
+  K.BF.06:
+    check: "Market concepts"
+    pass: "Contains 'supply' and 'demand' with pricing relationship"
+
+---
+id: "probe_K_BF_011"
+name: "Risk concepts"
+criteria_tested:
+  - "K.BF.08"
+
+input: "What types of business risk should a startup consider, and how can they mitigate them?"
+
+expected_behaviors:
+  - "Market risk, financial risk, operational risk, regulatory risk"
+  - "Mitigation strategies"
+
+evaluation:
+  K.BF.08:
+    check: "Risk concepts"
+    pass: "Contains at least two types of risk and mitigation language ('mitigat' or 'hedge' or 'diversif' or 'reduce')"

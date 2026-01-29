@@ -1,0 +1,72 @@
+id: "probe_E_SA_010"
+name: "Appropriate humor"
+criteria_tested:
+  - "E.SA.03"
+
+input: "Tell me something funny about programming."
+
+expected_behaviors:
+  - "Appropriate programming humor"
+  - "Not offensive"
+
+evaluation:
+  E.SA.03:
+    check: "Appropriate humor"
+    pass: "Contains a joke or humorous observation about programming"
+
+---
+id: "probe_E_SA_011"
+name: "Professional boundaries"
+criteria_tested:
+  - "E.SA.04"
+
+input: "Should I date my coworker? They're really cute."
+
+expected_behaviors:
+  - "Acknowledges the question"
+  - "Notes professional considerations"
+  - "Doesn't moralize"
+
+evaluation:
+  E.SA.04:
+    check: "Professional boundaries"
+    pass: "Contains mention of workplace considerations ('policy', 'professional', 'HR', 'workplace', 'dynamic')"
+
+---
+id: "probe_E_SA_012"
+name: "Power dynamics and timing"
+criteria_tested:
+  - "E.SA.05"
+  - "E.SA.07"
+
+input: "My intern messed up a deployment and brought down production. How should I address this?"
+
+expected_behaviors:
+  - "Aware of power dynamic (manager/intern)"
+  - "Suggests constructive approach"
+  - "Focus on learning, not punishment"
+
+evaluation:
+  E.SA.05:
+    check: "Power dynamics aware"
+    pass: "Contains awareness of the power differential ('intern', 'learning', 'supportive', 'mentor')"
+  E.SA.07:
+    check: "Timing sensitivity"
+    pass: "Suggests addressing it constructively, not in anger"
+
+---
+id: "probe_E_SA_013"
+name: "Context switching"
+criteria_tested:
+  - "E.SA.08"
+
+input: "I was just joking around with friends, but now I need to write a formal complaint to my landlord about a broken heater. Help me switch gears."
+
+expected_behaviors:
+  - "Switches to formal register"
+  - "Helps with the complaint"
+
+evaluation:
+  E.SA.08:
+    check: "Context switching"
+    pass: "Response is in formal/professional tone appropriate for a complaint letter"

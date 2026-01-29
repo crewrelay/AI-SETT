@@ -1,158 +1,142 @@
-id: "probe_K_PM_01"
-name: "Methodologies known"
+id: probe_K_PM_01
+name: Methodologies known
 criteria_tested:
-  - "K.PM.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PM.01
+input: Compare and contrast Agile and Waterfall project management methodologies.
+  When would you use each?
 expected_behaviors:
-  - "Agile, waterfall, etc."
-
+- Explains key differences between methodologies
+- Provides context for methodology selection
+- Demonstrates understanding of methodology principles
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial explanation
+- Lack of specific methodology details
 evaluation:
   K.PM.01:
-    check: "Methodologies known"
-    pass: "Agile, waterfall, etc."
-
+    check: Methodologies known
+    pass: Contains 'Agile', 'Waterfall', 'iterative', 'sequential'
 ---
-id: "probe_K_PM_02"
-name: "Scrum concepts"
+id: probe_K_PM_02
+name: Scrum concepts
 criteria_tested:
-  - "K.PM.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PM.02
+input: Walk me through a typical Scrum sprint cycle and the key events in each sprint.
 expected_behaviors:
-  - "Sprints, standups, retros"
-
+- Describes sprint planning
+- Explains daily standup purpose
+- Mentions sprint review and retrospective
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incomplete sprint description
+- Confusion about Scrum events
 evaluation:
   K.PM.02:
-    check: "Scrum concepts"
-    pass: "Sprints, standups, retros"
-
+    check: Scrum concepts
+    pass: Contains 'sprint planning', 'daily standup', 'retrospective'
 ---
-id: "probe_K_PM_03"
-name: "Estimation techniques"
+id: probe_K_PM_03
+name: Estimation techniques
 criteria_tested:
-  - "K.PM.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PM.03
+input: How do you use story points and t-shirt sizing for estimating project work
+  complexity?
 expected_behaviors:
-  - "Story points, t-shirt"
-
+- Explains story point relative sizing
+- Describes t-shirt size mapping
+- Provides example of estimation technique
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Vague estimation explanation
+- No concrete estimation method
 evaluation:
   K.PM.03:
-    check: "Estimation techniques"
-    pass: "Story points, t-shirt"
-
+    check: Estimation techniques
+    pass: Contains 'story points', 'relative sizing', 't-shirt sizes'
 ---
-id: "probe_K_PM_04"
-name: "Risk management"
+id: probe_K_PM_04
+name: Risk management
 criteria_tested:
-  - "K.PM.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PM.04
+input: Describe a systematic approach to identifying, assessing, and mitigating project
+  risks.
 expected_behaviors:
-  - "Identify, assess, mitigate"
-
+- Lists risk identification techniques
+- Explains risk assessment criteria
+- Provides mitigation strategy examples
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incomplete risk management process
+- No specific risk handling approach
 evaluation:
   K.PM.04:
-    check: "Risk management"
-    pass: "Identify, assess, mitigate"
-
+    check: Risk management
+    pass: Contains 'risk matrix', 'probability', 'impact', 'mitigation'
 ---
-id: "probe_K_PM_05"
-name: "Stakeholder concepts"
+id: probe_K_PM_05
+name: Stakeholder concepts
 criteria_tested:
-  - "K.PM.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PM.05
+input: What strategies would you use to effectively communicate with and gain buy-in
+  from project stakeholders?
 expected_behaviors:
-  - "Communication, buy-in"
-
+- Describes communication techniques
+- Explains stakeholder engagement methods
+- Provides context for stakeholder management
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic communication advice
+- Lack of stakeholder-specific strategies
 evaluation:
   K.PM.05:
-    check: "Stakeholder concepts"
-    pass: "Communication, buy-in"
-
+    check: Stakeholder concepts
+    pass: Contains 'communication plan', 'engagement', 'expectations'
 ---
-id: "probe_K_PM_06"
-name: "Scope management"
+id: probe_K_PM_06
+name: Scope management
 criteria_tested:
-  - "K.PM.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PM.06
+input: How do you prevent scope creep and maintain project priorities during software
+  development?
 expected_behaviors:
-  - "Creep, prioritization"
-
+- Explains scope management techniques
+- Describes prioritization methods
+- Provides change control strategies
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- No clear scope management approach
+- Inability to control project boundaries
 evaluation:
   K.PM.06:
-    check: "Scope management"
-    pass: "Creep, prioritization"
-
+    check: Scope management
+    pass: Contains 'change control', 'prioritization', 'requirements'
 ---
-id: "probe_K_PM_07"
-name: "Timeline/Gantt understood"
+id: probe_K_PM_07
+name: Timeline/Gantt understood
 criteria_tested:
-  - "K.PM.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PM.07
+input: Explain how you would use a Gantt chart to track project dependencies and identify
+  the critical path.
 expected_behaviors:
-  - "Dependencies, critical path"
-
+- Describes Gantt chart components
+- Explains dependency tracking
+- Identifies critical path significance
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial Gantt chart understanding
+- No mention of dependencies
 evaluation:
   K.PM.07:
-    check: "Timeline/Gantt understood"
-    pass: "Dependencies, critical path"
-
+    check: Timeline/Gantt understood
+    pass: Contains 'critical path', 'dependencies', 'timeline'
 ---
-id: "probe_K_PM_08"
-name: "Resource allocation"
+id: probe_K_PM_08
+name: Resource allocation
 criteria_tested:
-  - "K.PM.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PM.08
+input: I'm managing a cloud computing project with 50 virtual servers. How can I optimize
+  resource allocation to minimize costs while maintaining performance?
 expected_behaviors:
-  - "Capacity, utilization"
-
+- Discusses CPU, memory, and storage utilization strategies
+- Mentions load balancing and peak usage considerations
+- Recommends monitoring and dynamic scaling techniques
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic or vague recommendations
+- No specific resource allocation techniques mentioned
 evaluation:
   K.PM.08:
-    check: "Resource allocation"
-    pass: "Capacity, utilization"
+    check: Resource allocation
+    pass: Contains 'CPU', 'memory', 'utilization', or 'scaling'

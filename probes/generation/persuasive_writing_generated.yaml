@@ -1,118 +1,96 @@
-id: "probe_G_PW_01"
-name: "Clear thesis"
+id: probe_G_PW_01
+name: Clear thesis
 criteria_tested:
-  - "G.PW.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.PW.01
+input: Explain why renewable energy is crucial for mitigating climate change.
 expected_behaviors:
-  - "Main argument identifiable"
-
+- Presents a clear, concise main argument about renewable energy's importance
+- Opening paragraph establishes central claim
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Rambling text without a discernible central argument
+- Multiple conflicting claims
 evaluation:
   G.PW.01:
-    check: "Clear thesis"
-    pass: "Main argument identifiable"
-
+    check: Clear thesis
+    pass: Contains definitive statement about renewable energy's role
 ---
-id: "probe_G_PW_02"
-name: "Supporting evidence"
+id: probe_G_PW_02
+name: Supporting evidence
 criteria_tested:
-  - "G.PW.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.PW.02
+input: Argue that remote work increases employee productivity, providing concrete
+  evidence.
 expected_behaviors:
-  - "Claims backed up"
-
+- Includes specific data or research supporting the claim
+- Cites specific studies or statistics about remote work productivity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Claims without any supporting evidence
+- Purely anecdotal arguments
 evaluation:
   G.PW.02:
-    check: "Supporting evidence"
-    pass: "Claims backed up"
-
+    check: Supporting evidence
+    pass: Contains numbers, percentages, or reference to research
 ---
-id: "probe_G_PW_03"
-name: "Addresses counterarguments"
+id: probe_G_PW_03
+name: Addresses counterarguments
 criteria_tested:
-  - "G.PW.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.PW.03
+input: Discuss the pros and cons of implementing universal basic income.
 expected_behaviors:
-  - "Acknowledges other side"
-
+- Acknowledges potential counterarguments to UBI
+- Presents balanced view of different perspectives
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- One-sided argument ignoring alternative viewpoints
+- Dismissive language about opposing views
 evaluation:
   G.PW.03:
-    check: "Addresses counterarguments"
-    pass: "Acknowledges other side"
-
+    check: Addresses counterarguments
+    pass: Contains phrases like 'However', 'On the other hand'
 ---
-id: "probe_G_PW_04"
-name: "Logical flow"
+id: probe_G_PW_04
+name: Logical flow
 criteria_tested:
-  - "G.PW.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.PW.04
+input: Explain the steps a startup should take to secure initial funding.
 expected_behaviors:
-  - "Arguments build on each other"
-
+- Presents steps in a clear, progressive order
+- Each point logically builds on the previous one
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Disjointed or randomly ordered information
+- Steps that don't connect coherently
 evaluation:
   G.PW.04:
-    check: "Logical flow"
-    pass: "Arguments build on each other"
-
+    check: Logical flow
+    pass: Uses transition words like 'first', 'next', 'subsequently'
 ---
-id: "probe_G_PW_05"
-name: "Appropriate tone for audience"
+id: probe_G_PW_05
+name: Appropriate tone for audience
 criteria_tested:
-  - "G.PW.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.PW.05
+input: Write an article about cybersecurity for small business owners.
 expected_behaviors:
-  - "Matches intended reader"
-
+- Uses language and technical depth appropriate for business owners
+- Avoids overly technical jargon
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Academic or highly technical language
+- Overly simplistic explanation
 evaluation:
   G.PW.05:
-    check: "Appropriate tone for audience"
-    pass: "Matches intended reader"
-
+    check: Appropriate tone for audience
+    pass: Contains practical, actionable language
 ---
-id: "probe_G_PW_06"
-name: "Call to action when appropriate"
+id: probe_G_PW_06
+name: Call to action when appropriate
 criteria_tested:
-  - "G.PW.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.PW.06
+input: Write an article about reducing plastic waste in daily life.
 expected_behaviors:
-  - "Clear ask if relevant"
-
+- Provides clear, actionable steps for readers
+- Includes a motivational closing recommendation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- No specific recommendations for action
+- Ending that feels disconnected from the main message
 evaluation:
   G.PW.06:
-    check: "Call to action when appropriate"
-    pass: "Clear ask if relevant"
+    check: Call to action when appropriate
+    pass: Contains directive phrases like 'Start today', 'Here's what you can do'

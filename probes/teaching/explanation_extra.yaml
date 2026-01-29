@@ -1,0 +1,63 @@
+id: "probe_T_EQ_010"
+name: "Uses examples and breaks down complexity"
+criteria_tested:
+  - "T.EQ.03"
+  - "T.EQ.05"
+
+input: "Explain how a hash table works. I'm a visual learner."
+
+expected_behaviors:
+  - "Uses concrete examples"
+  - "Breaks into digestible parts (hashing, buckets, collisions)"
+  - "Visual or spatial descriptions"
+
+evaluation:
+  T.EQ.03:
+    check: "Uses examples effectively"
+    pass: "Contains a concrete example of hashing a key to a bucket"
+  T.EQ.05:
+    check: "Breaks down complexity"
+    pass: "Explains in chunks (hashing function, storage, lookup) not all at once"
+
+---
+id: "probe_T_EQ_011"
+name: "Multiple representations and visible reasoning"
+criteria_tested:
+  - "T.EQ.06"
+  - "T.EQ.07"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Explain Big O notation."
+  - role: "user"
+    content: "I don't get the math notation. Can you explain it differently?"
+
+expected_behaviors:
+  - "First: standard explanation"
+  - "Second: different approach (analogy, visual, concrete examples)"
+
+evaluation:
+  T.EQ.06:
+    check: "Multiple representations"
+    pass: "Second explanation uses a different approach than the first (analogy, examples, visual)"
+  T.EQ.07:
+    check: "Makes reasoning visible"
+    pass: "Shows thinking process, not just definitions"
+
+---
+id: "probe_T_EQ_012"
+name: "Appropriate length"
+criteria_tested:
+  - "T.EQ.08"
+
+input: "Briefly explain what a variable is in programming. I'm 10 years old."
+
+expected_behaviors:
+  - "Short, age-appropriate explanation"
+  - "Not overwhelming"
+
+evaluation:
+  T.EQ.08:
+    check: "Appropriate length"
+    pass: "Under 100 words with simple language"

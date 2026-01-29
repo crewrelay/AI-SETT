@@ -1,158 +1,139 @@
-id: "probe_T_DA_01"
-name: "Checks learner's prior knowledge"
+id: probe_T_DA_01
+name: Checks learner's prior knowledge
 criteria_tested:
-  - "T.DA.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DA.01
+input: I want to learn about machine learning algorithms. What do you know about my
+  current background?
 expected_behaviors:
-  - "Asks what they know before explaining"
-
+- Asks about previous experience with ML
+- Inquires about math and programming background
+- Seeks to understand learner's starting point
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Starts explaining without checking prior knowledge
+- Assumes a standard knowledge level
 evaluation:
   T.DA.01:
-    check: "Checks learner's prior knowledge"
-    pass: "Asks what they know before explaining"
-
+    check: Checks learner's prior knowledge
+    pass: Contains question like 'What experience do you have with...'
 ---
-id: "probe_T_DA_02"
-name: "Identifies specific confusion"
+id: probe_T_DA_02
+name: Identifies specific confusion
 criteria_tested:
-  - "T.DA.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DA.02
+input: I'm struggling with understanding how recursion works in Python. Something
+  feels unclear.
 expected_behaviors:
-  - "Pinpoints what's unclear"
-
+- Asks specifically what part of recursion is confusing
+- Probes for exact point of misunderstanding
+- Seeks precise details about confusion
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives generic explanation without targeting specific confusion
+- Assumes all aspects are equally unclear
 evaluation:
   T.DA.02:
-    check: "Identifies specific confusion"
-    pass: "Pinpoints what's unclear"
-
+    check: Identifies specific confusion
+    pass: Contains question like 'Which specific part of recursion...'
 ---
-id: "probe_T_DA_03"
-name: "Assesses level correctly"
+id: probe_T_DA_03
+name: Assesses level correctly
 criteria_tested:
-  - "T.DA.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DA.03
+input: I know a little bit of JavaScript and want to learn more advanced concepts.
 expected_behaviors:
-  - "Matches explanation to actual level"
-
+- Asks about current skill level
+- Proposes appropriate complexity of explanation
+- Matches explanation depth to learner's level
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses overly complex or overly simple language
+- Doesn't calibrate explanation to skill level
 evaluation:
   T.DA.03:
-    check: "Assesses level correctly"
-    pass: "Matches explanation to actual level"
-
+    check: Assesses level correctly
+    pass: Contains question like 'How comfortable are you with...'
 ---
-id: "probe_T_DA_04"
-name: "Asks good diagnostic questions"
+id: probe_T_DA_04
+name: Asks good diagnostic questions
 criteria_tested:
-  - "T.DA.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DA.04
+input: I'm trying to understand object-oriented programming, but I'm not sure where
+  to start.
 expected_behaviors:
-  - "Questions reveal understanding state"
-
+- Asks targeted questions about OOP understanding
+- Probes for specific knowledge gaps
+- Uses questions to map learner's comprehension
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives a monologue without checking understanding
+- Uses vague or unhelpful diagnostic questions
 evaluation:
   T.DA.04:
-    check: "Asks good diagnostic questions"
-    pass: "Questions reveal understanding state"
-
+    check: Asks good diagnostic questions
+    pass: Contains multiple specific diagnostic questions
 ---
-id: "probe_T_DA_05"
-name: "Doesn't assume knowledge"
+id: probe_T_DA_05
+name: Doesn't assume knowledge
 criteria_tested:
-  - "T.DA.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DA.05
+input: I want to learn data structures. What do I need to know first?
 expected_behaviors:
-  - "Checks prerequisites"
-
+- Asks about mathematical background
+- Checks programming prerequisites
+- Verifies foundational knowledge before explaining
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Jumps into complex explanations
+- Assumes universal prerequisite knowledge
 evaluation:
   T.DA.05:
-    check: "Doesn't assume knowledge"
-    pass: "Checks prerequisites"
-
+    check: Doesn't assume knowledge
+    pass: Contains question like 'What programming experience do you have?'
 ---
-id: "probe_T_DA_06"
-name: "Recognizes misconceptions"
+id: probe_T_DA_06
+name: Recognizes misconceptions
 criteria_tested:
-  - "T.DA.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DA.06
+input: I think inheritance in Java means copying all methods directly from the parent
+  class.
 expected_behaviors:
-  - "Identifies wrong mental models"
-
+- Identifies the incorrect mental model
+- Explains why the current understanding is wrong
+- Provides correct conceptual framework
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Accepts the misconception without correction
+- Gives a generic explanation without addressing specific misunderstanding
 evaluation:
   T.DA.06:
-    check: "Recognizes misconceptions"
-    pass: "Identifies wrong mental models"
-
+    check: Recognizes misconceptions
+    pass: Contains phrase like 'That's not quite correct' or 'Let me clarify'
 ---
-id: "probe_T_DA_07"
-name: "Adjusts based on responses"
+id: probe_T_DA_07
+name: Adjusts based on responses
 criteria_tested:
-  - "T.DA.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DA.07
+input: I didn't understand your last explanation about closures. Can you try again?
 expected_behaviors:
-  - "Changes approach based on learner input"
-
+- Changes explanation approach
+- Uses different examples or metaphors
+- Adapts teaching style based on feedback
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats the same explanation verbatim
+- Doesn't modify approach after feedback
 evaluation:
   T.DA.07:
-    check: "Adjusts based on responses"
-    pass: "Changes approach based on learner input"
-
+    check: Adjusts based on responses
+    pass: Contains different explanation strategy
 ---
-id: "probe_T_DA_08"
-name: "Tracks understanding through session"
+id: probe_T_DA_08
+name: Tracks understanding through session
 criteria_tested:
-  - "T.DA.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DA.08
+input: We've been discussing functional programming for a while now. How am I doing?
 expected_behaviors:
-  - "Monitors comprehension over time"
-
+- Summarizes key concepts learned
+- Checks overall comprehension
+- Reflects on progress throughout the session
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Loses track of earlier discussion points
+- Cannot recall previous learning milestones
 evaluation:
   T.DA.08:
-    check: "Tracks understanding through session"
-    pass: "Monitors comprehension over time"
+    check: Tracks understanding through session
+    pass: Contains summary of learning progress

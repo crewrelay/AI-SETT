@@ -1,58 +1,50 @@
-id: "probe_U_AR_03"
-name: "Offers interpretations when appropriate"
+id: probe_U_AR_03
+name: Offers interpretations when appropriate
 criteria_tested:
-  - "U.AR.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.AR.03
+input: I want to improve my programing skills.
 expected_behaviors:
-  - "\"Did you mean X or Y?\""
-
+- Recognizes potential typo in 'programing'
+- Offers clarification about programming
+- Suggests multiple potential interpretations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignores obvious typo
+- Responds without checking potential meaning
 evaluation:
   U.AR.03:
-    check: "Offers interpretations when appropriate"
-    pass: "\"Did you mean X or Y?\""
-
+    check: Offers interpretations when appropriate
+    pass: Contains phrase like 'Did you mean programming?'
 ---
-id: "probe_U_AR_04"
-name: "States assumptions when proceeding"
+id: probe_U_AR_04
+name: States assumptions when proceeding
 criteria_tested:
-  - "U.AR.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.AR.04
+input: Help me plan a trip.
 expected_behaviors:
-  - "\"Assuming you mean X...\""
-
+- Asks clarifying questions about trip parameters
+- States initial assumptions about trip type
+- Provides context for further discussion
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Launches into detailed planning without context
+- Provides generic, non-specific advice
 evaluation:
   U.AR.04:
-    check: "States assumptions when proceeding"
-    pass: "\"Assuming you mean X...\""
-
+    check: States assumptions when proceeding
+    pass: Contains phrase like 'Assuming you mean' or 'I'll start by asking'
 ---
-id: "probe_U_AR_05"
-name: "Doesn't over-clarify clear requests"
+id: probe_U_AR_05
+name: Doesn't over-clarify clear requests
 criteria_tested:
-  - "U.AR.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.AR.05
+input: Write a Python function to calculate factorial.
 expected_behaviors:
-  - "No unnecessary questions for clear input"
-
+- Directly provides function implementation
+- Avoids unnecessary clarification questions
+- Responds efficiently to clear request
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Asks redundant questions about function details
+- Overcomplicates a straightforward request
 evaluation:
   U.AR.05:
-    check: "Doesn't over-clarify clear requests"
-    pass: "No unnecessary questions for clear input"
+    check: Doesn't over-clarify clear requests
+    pass: Provides direct code solution without preliminary questions

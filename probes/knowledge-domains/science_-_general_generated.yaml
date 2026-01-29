@@ -1,158 +1,137 @@
-id: "probe_K_SG_01"
-name: "Scientific method understood"
+id: probe_K_SG_01
+name: Scientific method understood
 criteria_tested:
-  - "K.SG.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SG.01
+input: Explain how a scientist would investigate whether a new fertilizer increases
+  crop yield.
 expected_behaviors:
-  - "Hypothesis, experiment, etc."
-
+- Describes forming a testable hypothesis
+- Outlines experimental design with control group
+- Explains data collection and statistical analysis
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Describes process without scientific method steps
+- Lacks mention of hypothesis testing
 evaluation:
   K.SG.01:
-    check: "Scientific method understood"
-    pass: "Hypothesis, experiment, etc."
-
+    check: Scientific method understood
+    pass: Contains 'hypothesis', 'experiment', 'control group'
 ---
-id: "probe_K_SG_02"
-name: "Physics basics"
+id: probe_K_SG_02
+name: Physics basics
 criteria_tested:
-  - "K.SG.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SG.02
+input: Describe how Newton's third law explains the motion of a rocket launching into
+  space.
 expected_behaviors:
-  - "Newton's laws, energy"
-
+- Explains action-reaction principle
+- Describes how rocket propulsion works
+- Uses correct physics terminology
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect explanation of Newton's laws
+- Vague or unscientific description
 evaluation:
   K.SG.02:
-    check: "Physics basics"
-    pass: "Newton's laws, energy"
-
+    check: Physics basics
+    pass: Contains 'Newton's third law', 'action', 'reaction'
 ---
-id: "probe_K_SG_03"
-name: "Chemistry basics"
+id: probe_K_SG_03
+name: Chemistry basics
 criteria_tested:
-  - "K.SG.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SG.03
+input: What happens chemically when sodium and chlorine combine to form table salt?
 expected_behaviors:
-  - "Elements, reactions"
-
+- Explains ionic bonding
+- Describes electron transfer
+- Uses correct chemical notation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect chemical explanation
+- No mention of electron configuration
 evaluation:
   K.SG.03:
-    check: "Chemistry basics"
-    pass: "Elements, reactions"
-
+    check: Chemistry basics
+    pass: Contains 'ionic bond', 'sodium chloride', 'NaCl'
 ---
-id: "probe_K_SG_04"
-name: "Biology basics"
+id: probe_K_SG_04
+name: Biology basics
 criteria_tested:
-  - "K.SG.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SG.04
+input: Explain how DNA replication occurs during cell division.
 expected_behaviors:
-  - "Cells, DNA, evolution"
-
+- Describes DNA helicase and polymerase roles
+- Explains semiconservative replication
+- Mentions complementary base pairing
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Oversimplified or incorrect description
+- No mention of specific cellular mechanisms
 evaluation:
   K.SG.04:
-    check: "Biology basics"
-    pass: "Cells, DNA, evolution"
-
+    check: Biology basics
+    pass: Contains 'DNA', 'cell division', 'replication'
 ---
-id: "probe_K_SG_05"
-name: "Earth science basics"
+id: probe_K_SG_05
+name: Earth science basics
 criteria_tested:
-  - "K.SG.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SG.05
+input: How do plate tectonics contribute to the formation of mountain ranges?
 expected_behaviors:
-  - "Geology, climate"
-
+- Explains convergent plate boundaries
+- Describes uplift and compression processes
+- Mentions specific geological mechanisms
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Vague geological explanation
+- No mention of specific tectonic processes
 evaluation:
   K.SG.05:
-    check: "Earth science basics"
-    pass: "Geology, climate"
-
+    check: Earth science basics
+    pass: Contains 'plate tectonics', 'mountain formation'
 ---
-id: "probe_K_SG_06"
-name: "Distinguishes theory from hypothesis"
+id: probe_K_SG_06
+name: Distinguishes theory from hypothesis
 criteria_tested:
-  - "K.SG.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SG.06
+input: What's the difference between a scientific theory and a hypothesis?
 expected_behaviors:
-  - "Correct usage"
-
+- Explains hypothesis as testable prediction
+- Describes theory as well-substantiated explanation
+- Highlights evidence and peer review
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Confuses theory and hypothesis
+- Provides incorrect definitions
 evaluation:
   K.SG.06:
-    check: "Distinguishes theory from hypothesis"
-    pass: "Correct usage"
-
+    check: Distinguishes theory from hypothesis
+    pass: Contains clear distinction between 'hypothesis' and 'theory'
 ---
-id: "probe_K_SG_07"
-name: "Peer review understood"
+id: probe_K_SG_07
+name: Peer review understood
 criteria_tested:
-  - "K.SG.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SG.07
+input: Why is peer review important in scientific research?
 expected_behaviors:
-  - "What it means"
-
+- Explains quality control process
+- Mentions error checking and validation
+- Discusses scientific community standards
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial understanding of peer review
+- No mention of scientific validation
 evaluation:
   K.SG.07:
-    check: "Peer review understood"
-    pass: "What it means"
-
+    check: Peer review understood
+    pass: Contains 'validation', 'review process', 'scientific standards'
 ---
-id: "probe_K_SG_08"
-name: "Uncertainty communicated"
+id: probe_K_SG_08
+name: Uncertainty communicated
 criteria_tested:
-  - "K.SG.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SG.08
+input: How do scientists communicate the reliability of their experimental results?
 expected_behaviors:
-  - "Error bars, confidence"
-
+- Mentions statistical significance
+- Explains confidence intervals
+- Describes error bars and standard deviation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- No discussion of measurement uncertainty
+- Ignores statistical validity
 evaluation:
   K.SG.08:
-    check: "Uncertainty communicated"
-    pass: "Error bars, confidence"
+    check: Uncertainty communicated
+    pass: Contains 'error bars', 'confidence interval', 'uncertainty'

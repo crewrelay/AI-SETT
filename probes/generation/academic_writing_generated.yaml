@@ -1,118 +1,100 @@
-id: "probe_G_AW_01"
-name: "Formal register"
+id: probe_G_AW_01
+name: Formal register
 criteria_tested:
-  - "G.AW.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.AW.01
+input: Write a research summary about quantum computing's potential in cryptography
 expected_behaviors:
-  - "Academic tone maintained"
-
+- Uses academic, precise language
+- Maintains objective, scholarly tone
+- Avoids colloquial expressions
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Informal or conversational language
+- Subjective statements without evidence
 evaluation:
   G.AW.01:
-    check: "Formal register"
-    pass: "Academic tone maintained"
-
+    check: Formal register
+    pass: Contains academic terminology AND no conversational phrases
 ---
-id: "probe_G_AW_02"
-name: "Thesis-driven structure"
+id: probe_G_AW_02
+name: Thesis-driven structure
 criteria_tested:
-  - "G.AW.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.AW.02
+input: Develop an argumentative essay about the ethical implications of AI in healthcare
 expected_behaviors:
-  - "Clear argument through piece"
-
+- Presents clear central argument
+- Structures response with logical progression
+- Maintains consistent argumentative thread
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Meandering or unfocused discussion
+- No discernible central thesis
 evaluation:
   G.AW.02:
-    check: "Thesis-driven structure"
-    pass: "Clear argument through piece"
-
+    check: Thesis-driven structure
+    pass: Contains clear thesis statement AND logically organized paragraphs
 ---
-id: "probe_G_AW_03"
-name: "Evidence-based claims"
+id: probe_G_AW_03
+name: Evidence-based claims
 criteria_tested:
-  - "G.AW.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.AW.03
+input: Make a case for increased funding in renewable energy research
 expected_behaviors:
-  - "Assertions supported"
-
+- Provides statistical or research-based support
+- Cites credible sources
+- Links claims to empirical evidence
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Making unsupported claims
+- Using only emotional argumentation
 evaluation:
   G.AW.03:
-    check: "Evidence-based claims"
-    pass: "Assertions supported"
-
+    check: Evidence-based claims
+    pass: Contains numerical data OR cited research sources
 ---
-id: "probe_G_AW_04"
-name: "Acknowledges limitations"
+id: probe_G_AW_04
+name: Acknowledges limitations
 criteria_tested:
-  - "G.AW.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.AW.04
+input: Write a comprehensive analysis of machine learning's predictive capabilities
 expected_behaviors:
-  - "Caveats stated"
-
+- Discusses potential algorithmic biases
+- Highlights areas of uncertainty
+- Recognizes technological constraints
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Presenting technology as infallible
+- Ignoring potential methodological weaknesses
 evaluation:
   G.AW.04:
-    check: "Acknowledges limitations"
-    pass: "Caveats stated"
-
+    check: Acknowledges limitations
+    pass: Contains statements about potential errors OR technological constraints
 ---
-id: "probe_G_AW_05"
-name: "Appropriate citations style"
+id: probe_G_AW_05
+name: Appropriate citations style
 criteria_tested:
-  - "G.AW.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.AW.05
+input: Write a research paper on machine learning trends, using APA 7th edition citation
+  style for all references.
 expected_behaviors:
-  - "Follows requested format"
-
+- Uses proper APA in-text citations
+- Includes a correctly formatted reference list
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Missing citations
+- Incorrect citation format
 evaluation:
   G.AW.05:
-    check: "Appropriate citations style"
-    pass: "Follows requested format"
-
+    check: Appropriate citations style
+    pass: Contains 'APA 7th edition'
 ---
-id: "probe_G_AW_06"
-name: "Objective stance"
+id: probe_G_AW_06
+name: Objective stance
 criteria_tested:
-  - "G.AW.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.AW.06
+input: Analyze the impact of remote work on employee productivity in tech companies.
 expected_behaviors:
-  - "Personal opinion minimized"
-
+- Uses neutral, data-driven language
+- Presents balanced perspectives
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses first-person subjective statements
+- Shows clear bias toward one viewpoint
 evaluation:
   G.AW.06:
-    check: "Objective stance"
-    pass: "Personal opinion minimized"
+    check: Objective stance
+    pass: does not contain 'I think' or 'In my opinion'

@@ -1,158 +1,139 @@
-id: "probe_T_AI_01"
-name: "Adjusts pace to learner"
+id: probe_T_AI_01
+name: Adjusts pace to learner
 criteria_tested:
-  - "T.AI.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AI.01
+input: I'm new to programming and having trouble understanding recursion. Can you
+  explain it?
 expected_behaviors:
-  - "Faster/slower as needed"
-
+- Starts with very basic explanation
+- Offers to slow down or speed up based on comprehension signals
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses overly complex technical language
+- Provides uniform explanation without checking understanding
 evaluation:
   T.AI.01:
-    check: "Adjusts pace to learner"
-    pass: "Faster/slower as needed"
-
+    check: Adjusts pace to learner
+    pass: Contains phrases like 'let me know if this is too fast' OR offers multiple
+      explanation depths
 ---
-id: "probe_T_AI_02"
-name: "Changes approach when stuck"
+id: probe_T_AI_02
+name: Changes approach when stuck
 criteria_tested:
-  - "T.AI.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AI.02
+input: I'm confused about your previous explanation of linked lists. Can you try explaining
+  it differently?
 expected_behaviors:
-  - "Tries different explanation"
-
+- Provides alternative explanation approach
+- Uses different metaphor or learning strategy
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats exact same explanation
+- Becomes defensive about initial explanation
 evaluation:
   T.AI.02:
-    check: "Changes approach when stuck"
-    pass: "Tries different explanation"
-
+    check: Changes approach when stuck
+    pass: Contains new explanation method OR explicitly acknowledges previous explanation's
+      ineffectiveness
 ---
-id: "probe_T_AI_03"
-name: "Responds to learner affect"
+id: probe_T_AI_03
+name: Responds to learner affect
 criteria_tested:
-  - "T.AI.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AI.03
+input: I'm feeling really overwhelmed trying to learn machine learning concepts.
 expected_behaviors:
-  - "Notices frustration/confusion"
-
+- Acknowledges emotional state
+- Offers supportive and empathetic response
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Continues technical explanation without addressing emotional context
+- Dismisses learner's emotional experience
 evaluation:
   T.AI.03:
-    check: "Responds to learner affect"
-    pass: "Notices frustration/confusion"
-
+    check: Responds to learner affect
+    pass: Contains empathetic language OR directly addresses emotional state
 ---
-id: "probe_T_AI_04"
-name: "Personalizes examples"
+id: probe_T_AI_04
+name: Personalizes examples
 criteria_tested:
-  - "T.AI.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AI.04
+input: I work in healthcare IT. Can you explain database normalization in a way relevant
+  to my field?
 expected_behaviors:
-  - "Uses learner's context"
-
+- Uses healthcare-specific examples
+- Connects explanation to learner's professional context
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides generic explanation
+- Ignores contextual information provided
 evaluation:
   T.AI.04:
-    check: "Personalizes examples"
-    pass: "Uses learner's context"
-
+    check: Personalizes examples
+    pass: Contains healthcare-specific database normalization scenario
 ---
-id: "probe_T_AI_05"
-name: "Accommodates learning preferences"
+id: probe_T_AI_05
+name: Accommodates learning preferences
 criteria_tested:
-  - "T.AI.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AI.05
+input: I learn best by seeing things visually. Can you help me understand how neural
+  networks work?
 expected_behaviors:
-  - "Visual/verbal/hands-on"
-
+- Offers visual explanation or diagram
+- Provides multiple learning approach options
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses only text-based explanation
+- Ignores learner's stated learning preference
 evaluation:
   T.AI.05:
-    check: "Accommodates learning preferences"
-    pass: "Visual/verbal/hands-on"
-
+    check: Accommodates learning preferences
+    pass: Mentions visual aid OR offers multiple explanation styles
 ---
-id: "probe_T_AI_06"
-name: "Handles questions flexibly"
+id: probe_T_AI_06
+name: Handles questions flexibly
 criteria_tested:
-  - "T.AI.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AI.06
+input: I want to learn Python. Wait, can we first discuss what programming languages
+  are good for beginners?
 expected_behaviors:
-  - "Adapts when interrupted"
-
+- Smoothly shifts conversation to discussing programming languages
+- Acknowledges the original Python learning goal
+- Provides flexible response without rigid adherence to original topic
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignoring the interruption and continuing with original Python explanation
+- Becoming confused or unable to adapt to the topic shift
 evaluation:
   T.AI.06:
-    check: "Handles questions flexibly"
-    pass: "Adapts when interrupted"
-
+    check: Handles questions flexibly
+    pass: Contains question about programming languages
 ---
-id: "probe_T_AI_07"
-name: "Backtracks when needed"
+id: probe_T_AI_07
+name: Backtracks when needed
 criteria_tested:
-  - "T.AI.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AI.07
+input: Let's talk about machine learning algorithms. Actually, can we start with what
+  an algorithm is first?
 expected_behaviors:
-  - "Returns to earlier concept"
-
+- Returns to foundational concept of 'algorithm'
+- Acknowledges the need to establish basic understanding
+- Provides clear explanation before diving into machine learning
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Continuing with machine learning without explaining algorithm
+- Showing confusion about returning to a previous concept
 evaluation:
   T.AI.07:
-    check: "Backtracks when needed"
-    pass: "Returns to earlier concept"
-
+    check: Backtracks when needed
+    pass: Contains explanation of 'algorithm'
 ---
-id: "probe_T_AI_08"
-name: "Accelerates for quick learners"
+id: probe_T_AI_08
+name: Accelerates for quick learners
 criteria_tested:
-  - "T.AI.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AI.08
+input: I know basic programming concepts. Can you explain advanced data structures
+  quickly?
 expected_behaviors:
-  - "Doesn't over-explain"
-
+- Provides concise, high-level explanation
+- Skips over basic introductory details
+- Uses technical language appropriate for someone with prior knowledge
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Giving a very long, beginner-level explanation
+- Using overly simplistic language
 evaluation:
   T.AI.08:
-    check: "Accelerates for quick learners"
-    pass: "Doesn't over-explain"
+    check: Accelerates for quick learners
+    pass: word count ≤ 150

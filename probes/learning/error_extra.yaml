@@ -1,0 +1,71 @@
+id: "probe_L_ER_010"
+name: "Asks why wrong and checks before repeating"
+criteria_tested:
+  - "L.ER.05"
+  - "L.ER.06"
+type: "multi_turn"
+
+turns:
+  - role: "assistant"
+    content: "You can use localStorage to store authentication tokens securely."
+  - role: "user"
+    content: "That's actually not secure. localStorage is vulnerable to XSS attacks. Tokens should be in httpOnly cookies."
+  - role: "user"
+    content: "Where should I store the user's session token in my React app?"
+
+expected_behaviors:
+  - "Acknowledges the security concern"
+  - "Recommends httpOnly cookies, not localStorage"
+
+evaluation:
+  L.ER.05:
+    check: "Asks why it was wrong"
+    pass: "Acknowledges the XSS vulnerability or security concern"
+  L.ER.06:
+    check: "Checks before repeating"
+    pass: "Recommends httpOnly cookies, not localStorage"
+
+---
+id: "probe_L_ER_011"
+name: "Learns from implicit feedback"
+criteria_tested:
+  - "L.ER.07"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Explain what a closure is."
+  - role: "user"
+    content: "Hmm. Can you try again with a code example?"
+
+expected_behaviors:
+  - "Interprets 'hmm' + retry request as dissatisfaction"
+  - "Provides a clearer explanation with code"
+
+evaluation:
+  L.ER.07:
+    check: "Learns from implicit feedback"
+    pass: "Contains a code example in the second explanation"
+
+---
+id: "probe_L_ER_012"
+name: "Retains across topics"
+criteria_tested:
+  - "L.ER.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "When you write code, always use snake_case for variables, not camelCase."
+  - role: "user"
+    content: "What's the weather like on Mars?"
+  - role: "user"
+    content: "Write a function to calculate compound interest."
+
+expected_behaviors:
+  - "Uses snake_case in the function (after topic change)"
+
+evaluation:
+  L.ER.08:
+    check: "Retains across topics"
+    pass: "Contains snake_case variable names (underscores) in the compound interest function"

@@ -1,158 +1,143 @@
-id: "probe_L_IF_01"
-name: "Follows novel format instructions"
+id: probe_L_IF_01
+name: Follows novel format instructions
 criteria_tested:
-  - "L.IF.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IF.01
+input: Please describe my weekend using a bulleted timeline with exact time stamps,
+  emojis for each activity, and a total energy score at the end.
 expected_behaviors:
-  - "New output format, follows it"
-
+- Creates response in the exact specified format
+- Uses time stamps and emojis consistently
+- Adds a numerical energy score
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responding in standard paragraph format
+- Ignoring specific formatting instructions
 evaluation:
   L.IF.01:
-    check: "Follows novel format instructions"
-    pass: "New output format, follows it"
-
+    check: Follows novel format instructions
+    pass: Contains bullets, time stamps, emojis, and energy score
 ---
-id: "probe_L_IF_02"
-name: "Adopts new terminology"
+id: probe_L_IF_02
+name: Adopts new terminology
 criteria_tested:
-  - "L.IF.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IF.02
+input: I'm introducing a new term 'cognishift' which means the moment of sudden mental
+  reframing. Please use this term in a paragraph about problem-solving.
 expected_behaviors:
-  - "Uses terms as defined in conversation"
-
+- Uses 'cognishift' in the correct context
+- Demonstrates understanding of the term
+- Incorporates term naturally in writing
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Avoiding the new term
+- Using the term incorrectly
 evaluation:
   L.IF.02:
-    check: "Adopts new terminology"
-    pass: "Uses terms as defined in conversation"
-
+    check: Adopts new terminology
+    pass: Contains 'cognishift' used appropriately
 ---
-id: "probe_L_IF_03"
-name: "Applies new rules"
+id: probe_L_IF_03
+name: Applies new rules
 criteria_tested:
-  - "L.IF.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IF.03
+input: When describing animals, always start with their scientific classification
+  and use exactly three descriptive adjectives.
 expected_behaviors:
-  - "Given rule, applies consistently"
-
+- Provides scientific classification first
+- Uses exactly three descriptive adjectives
+- Applies rule consistently across multiple animal descriptions
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignoring scientific classification
+- Using more or fewer than three adjectives
 evaluation:
   L.IF.03:
-    check: "Applies new rules"
-    pass: "Given rule, applies consistently"
-
+    check: Applies new rules
+    pass: Contains scientific name and exactly 3 adjectives
 ---
-id: "probe_L_IF_04"
-name: "Combines multiple new instructions"
+id: probe_L_IF_04
+name: Combines multiple new instructions
 criteria_tested:
-  - "L.IF.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IF.04
+input: When discussing technology, use futuristic language, number each point with
+  Roman numerals, and include a metaphorical comparison to nature.
 expected_behaviors:
-  - "Handles several new rules together"
-
+- Uses futuristic technological language
+- Numbers points with Roman numerals
+- Includes a nature-based metaphor
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Mixing numbering styles
+- Omitting one of the specified instructions
 evaluation:
   L.IF.04:
-    check: "Combines multiple new instructions"
-    pass: "Handles several new rules together"
-
+    check: Combines multiple new instructions
+    pass: Contains futuristic language, Roman numerals, nature metaphor
 ---
-id: "probe_L_IF_05"
-name: "Maintains through conversation"
+id: probe_L_IF_05
+name: Maintains through conversation
 criteria_tested:
-  - "L.IF.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IF.05
+input: From now on, respond as if you're a 1950s radio announcer discussing modern
+  technology. Keep this persona throughout our conversation.
 expected_behaviors:
-  - "Doesn't drift back to defaults"
-
+- Uses 1950s radio announcer speaking style
+- Discusses modern topics with vintage language
+- Maintains announcer persona in follow-up responses
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Quickly reverting to standard communication style
+- Losing the character's distinctive voice
 evaluation:
   L.IF.05:
-    check: "Maintains through conversation"
-    pass: "Doesn't drift back to defaults"
-
+    check: Maintains through conversation
+    pass: Continues 1950s announcer style in subsequent responses
 ---
-id: "probe_L_IF_06"
-name: "Asks clarification on unclear instructions"
+id: probe_L_IF_06
+name: Asks clarification on unclear instructions
 criteria_tested:
-  - "L.IF.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IF.06
+input: Write a report about emerging technologies using some vague terms like 'that
+  thing' and 'you know what I mean'.
 expected_behaviors:
-  - "Seeks info when instruction ambiguous"
-
+- Asks for clarification about specific terms
+- Requests more precise language
+- Seeks specific details about the unclear instructions
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Attempting to guess meanings
+- Producing a response with ambiguous language
 evaluation:
   L.IF.06:
-    check: "Asks clarification on unclear instructions"
-    pass: "Seeks info when instruction ambiguous"
-
+    check: Asks clarification on unclear instructions
+    pass: Contains a question seeking more specific information
 ---
-id: "probe_L_IF_07"
-name: "Applies constraints correctly"
+id: probe_L_IF_07
+name: Applies constraints correctly
 criteria_tested:
-  - "L.IF.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IF.07
+input: Describe a software project, but do not mention any specific programming languages,
+  and keep the description under 100 words.
 expected_behaviors:
-  - "Honors restrictions given"
-
+- Avoids mentioning specific programming languages
+- Keeps description concise
+- Stays within the 100-word limit
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Naming specific programming languages
+- Exceeding word count
 evaluation:
   L.IF.07:
-    check: "Applies constraints correctly"
-    pass: "Honors restrictions given"
-
+    check: Applies constraints correctly
+    pass: word count ≤ 100 and no language names
 ---
-id: "probe_L_IF_08"
-name: "Prioritizes when instructions conflict"
+id: probe_L_IF_08
+name: Prioritizes when instructions conflict
 criteria_tested:
-  - "L.IF.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IF.08
+input: 'Describe a project, but first tell me: should I prioritize speed or quality?
+  If speed, use bullet points. If quality, use a detailed narrative paragraph.'
 expected_behaviors:
-  - "Handles competing requirements"
-
+- Asks which priority to emphasize
+- Chooses appropriate format based on instruction
+- Demonstrates ability to handle competing requirements
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignoring the prioritization request
+- Using a default response format
 evaluation:
   L.IF.08:
-    check: "Prioritizes when instructions conflict"
-    pass: "Handles competing requirements"
+    check: Prioritizes when instructions conflict
+    pass: Contains a response that directly addresses prioritization

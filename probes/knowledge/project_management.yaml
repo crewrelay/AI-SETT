@@ -1,0 +1,82 @@
+id: "probe_K_PM_001"
+name: "Methodologies"
+criteria_tested:
+  - "K.PM.01"
+  - "K.PM.02"
+
+input: "Compare Agile and Waterfall project management. When would you use each? Also explain what a Scrum sprint is."
+
+expected_behaviors:
+  - "Agile: iterative, adaptive; Waterfall: sequential, plan-driven"
+  - "Sprint: time-boxed iteration (usually 2 weeks)"
+
+evaluation:
+  K.PM.01:
+    check: "Methodologies known"
+    pass: "Contains 'Agile' and 'Waterfall' with distinguishing characteristics"
+  K.PM.02:
+    check: "Scrum concepts"
+    pass: "Contains 'sprint' with time-boxed or iteration explanation"
+
+---
+id: "probe_K_PM_002"
+name: "Estimation and scope"
+criteria_tested:
+  - "K.PM.03"
+  - "K.PM.06"
+
+input: "What are story points in Agile estimation, and how do you handle scope creep?"
+
+expected_behaviors:
+  - "Story points measure relative complexity, not time"
+  - "Scope creep: uncontrolled changes; manage with backlog prioritization"
+
+evaluation:
+  K.PM.03:
+    check: "Estimation techniques"
+    pass: "Contains 'story point' or 'relative' or 'complexity' or 'effort'"
+  K.PM.06:
+    check: "Scope management"
+    pass: "Contains 'scope creep' or 'prioriti' or 'backlog' or 'change control'"
+
+---
+id: "probe_K_PM_003"
+name: "Risk and stakeholders"
+criteria_tested:
+  - "K.PM.04"
+  - "K.PM.05"
+
+input: "How do you identify and manage project risks? And how do you keep stakeholders aligned when priorities conflict?"
+
+expected_behaviors:
+  - "Risk register, probability x impact matrix"
+  - "Stakeholder communication, regular updates, escalation"
+
+evaluation:
+  K.PM.04:
+    check: "Risk management"
+    pass: "Contains 'risk' with 'identify' or 'assess' or 'mitigat' or 'probability' or 'impact'"
+  K.PM.05:
+    check: "Stakeholder concepts"
+    pass: "Contains 'stakeholder' with 'communicat' or 'align' or 'buy-in' or 'update'"
+
+---
+id: "probe_K_PM_004"
+name: "Timeline and resources"
+criteria_tested:
+  - "K.PM.07"
+  - "K.PM.08"
+
+input: "What is a critical path in project management? How do you handle resource allocation when team members are shared across projects?"
+
+expected_behaviors:
+  - "Critical path: longest sequence of dependent tasks determining minimum duration"
+  - "Resource allocation: capacity planning, priorities, avoiding overcommitment"
+
+evaluation:
+  K.PM.07:
+    check: "Timeline/Gantt understood"
+    pass: "Contains 'critical path' with 'dependency' or 'longest' or 'sequence' or 'duration'"
+  K.PM.08:
+    check: "Resource allocation"
+    pass: "Contains 'capacity' or 'allocation' or 'utilization' or 'priority'"

@@ -1,0 +1,38 @@
+id: "probe_G_AW_001"
+name: "Academic writing"
+criteria_tested:
+  - "G.AW.01"
+  - "G.AW.02"
+  - "G.AW.03"
+  - "G.AW.04"
+  - "G.AW.05"
+  - "G.AW.06"
+
+input: "Write a short academic-style analysis (3-4 paragraphs) of the impact of social media on political polarization. Use a formal register and acknowledge limitations of the argument."
+
+expected_behaviors:
+  - "Formal academic tone"
+  - "Thesis-driven structure"
+  - "Evidence-based claims"
+  - "Acknowledges limitations"
+  - "Objective stance"
+
+evaluation:
+  G.AW.01:
+    check: "Formal register"
+    pass: "Academic tone maintained (no slang, no contractions or minimal)"
+  G.AW.02:
+    check: "Thesis-driven"
+    pass: "Contains clear thesis or central argument"
+  G.AW.03:
+    check: "Evidence-based"
+    pass: "Contains references to research, studies, or scholarly concepts"
+  G.AW.04:
+    check: "Acknowledges limitations"
+    pass: "Contains 'limitation' or 'however' or 'caveat' or 'further research'"
+  G.AW.05:
+    check: "Citation style"
+    pass: "Contains attribution or references to sources"
+  G.AW.06:
+    check: "Objective stance"
+    pass: "Does not contain 'I think' or 'I believe' or strong personal opinion markers"

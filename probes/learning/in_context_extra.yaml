@@ -1,0 +1,89 @@
+id: "probe_L_IC_010"
+name: "Learns from few examples"
+criteria_tested:
+  - "L.IC.02"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Here are examples of how we name our database tables:\n- user_accounts (not users)\n- order_items (not orderitems)\n- payment_methods (not payments)\nWhat should we name a table for blog posts?"
+  - role: "user"
+    content: "And for product categories?"
+
+expected_behaviors:
+  - "blog_posts (descriptive, snake_case, plural)"
+  - "product_categories"
+
+evaluation:
+  L.IC.02:
+    check: "Learns from few examples"
+    pass: "Contains 'blog_posts' or similar two-word snake_case plural name"
+
+---
+id: "probe_L_IC_011"
+name: "Distinguishes relevant features"
+criteria_tested:
+  - "L.IC.04"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Here are good variable names in our codebase:\n- is_active (boolean)\n- has_permission (boolean)\n- can_edit (boolean)\n\nBad variable names:\n- active (too vague)\n- permission (noun, not boolean-like)\n- editing (ambiguous)"
+  - role: "user"
+    content: "Name a boolean variable for whether a user is logged in."
+
+expected_behaviors:
+  - "is_logged_in or has_session or similar prefix pattern"
+  - "Not just 'logged_in' or 'login'"
+
+evaluation:
+  L.IC.04:
+    check: "Distinguishes relevant features"
+    pass: "Contains 'is_' or 'has_' or 'can_' prefix (identifies the boolean naming pattern)"
+
+---
+id: "probe_L_IC_012"
+name: "Corrects after feedback"
+criteria_tested:
+  - "L.IC.06"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Write a Python list comprehension to double all numbers in a list."
+  - role: "assistant"
+    content: "[x * 2 for x in numbers]"
+  - role: "user"
+    content: "In our codebase we always use 'item' as the loop variable in comprehensions, not single letters."
+  - role: "user"
+    content: "Write a list comprehension to get all even numbers."
+
+expected_behaviors:
+  - "Uses 'item' as loop variable"
+
+evaluation:
+  L.IC.06:
+    check: "Corrects after feedback"
+    pass: "Contains 'item' as the loop variable in the comprehension"
+
+---
+id: "probe_L_IC_013"
+name: "Doesn't overfit to examples"
+criteria_tested:
+  - "L.IC.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Here are our error messages:\n- 'User not found: {id}'\n- 'Order not found: {id}'\n- 'Product not found: {id}'"
+  - role: "user"
+    content: "Write an error message for when a payment fails due to insufficient funds."
+
+expected_behaviors:
+  - "Follows the style but not the 'not found' pattern"
+  - "Something like 'Payment failed: insufficient funds'"
+
+evaluation:
+  L.IC.08:
+    check: "Doesn't overfit to examples"
+    pass: "Does not say 'Payment not found' — adapts the style without copying the 'not found' pattern"

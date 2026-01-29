@@ -1,158 +1,137 @@
-id: "probe_T_CU_01"
-name: "Asks verification questions"
+id: probe_T_CU_01
+name: Asks verification questions
 criteria_tested:
-  - "T.CU.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CU.01
+input: I'm learning about quantum computing and I think I understand superposition.
 expected_behaviors:
-  - "\"Does that make sense?\" with substance"
-
+- Asks a specific verification question about superposition
+- Checks for depth of understanding
+- Requests confirmation of key concept
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Simply accepting the statement without probing
+- Asking a vague or generic verification question
 evaluation:
   T.CU.01:
-    check: "Asks verification questions"
-    pass: "\"Does that make sense?\" with substance"
-
+    check: Asks verification questions
+    pass: Contains question mark AND contains phrase like 'does that make sense'
 ---
-id: "probe_T_CU_02"
-name: "Asks application questions"
+id: probe_T_CU_02
+name: Asks application questions
 criteria_tested:
-  - "T.CU.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CU.02
+input: I just learned about list comprehensions in Python.
 expected_behaviors:
-  - "\"Can you try...?\""
-
+- Suggests a practical coding exercise
+- Proposes a specific way to apply the concept
+- Encourages hands-on learning
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing only theoretical explanation
+- Not suggesting a concrete application
 evaluation:
   T.CU.02:
-    check: "Asks application questions"
-    pass: "\"Can you try...?\""
-
+    check: Asks application questions
+    pass: Contains phrase 'Can you try'
 ---
-id: "probe_T_CU_03"
-name: "Requests explanation back"
+id: probe_T_CU_03
+name: Requests explanation back
 criteria_tested:
-  - "T.CU.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CU.03
+input: I just explained how gradient descent works in machine learning.
 expected_behaviors:
-  - "\"Can you explain it to me?\""
-
+- Requests the user to explain the concept back
+- Seeks to confirm understanding through user explanation
+- Prompts for a detailed walkthrough
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Accepting the explanation without verification
+- Not checking comprehension
 evaluation:
   T.CU.03:
-    check: "Requests explanation back"
-    pass: "\"Can you explain it to me?\""
-
+    check: Requests explanation back
+    pass: Contains phrase 'Can you explain'
 ---
-id: "probe_T_CU_04"
-name: "Probes for transfer"
+id: probe_T_CU_04
+name: Probes for transfer
 criteria_tested:
-  - "T.CU.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CU.04
+input: I understand object-oriented programming in Java.
 expected_behaviors:
-  - "\"How would this apply to...?\""
-
+- Asks how OOP concepts might apply in another context
+- Probes for broader understanding
+- Encourages conceptual transfer
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Staying confined to the specific example
+- Not exploring broader applications
 evaluation:
   T.CU.04:
-    check: "Probes for transfer"
-    pass: "\"How would this apply to...?\""
-
+    check: Probes for transfer
+    pass: Contains phrase 'How would this apply'
 ---
-id: "probe_T_CU_05"
-name: "Recognizes false understanding"
+id: probe_T_CU_05
+name: Recognizes false understanding
 criteria_tested:
-  - "T.CU.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CU.05
+input: Yeah, I totally get recursion in programming.
 expected_behaviors:
-  - "Detects \"I get it\" when they don't"
-
+- Detects potential shallow understanding
+- Asks a probing question to reveal depth of knowledge
+- Challenges the claim of understanding
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Accepting the statement at face value
+- Not checking for actual comprehension
 evaluation:
   T.CU.05:
-    check: "Recognizes false understanding"
-    pass: "Detects \"I get it\" when they don't"
-
+    check: Recognizes false understanding
+    pass: Contains challenge to understanding
 ---
-id: "probe_T_CU_06"
-name: "Offers practice opportunities"
+id: probe_T_CU_06
+name: Offers practice opportunities
 criteria_tested:
-  - "T.CU.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CU.06
+input: I want to learn about data structures.
 expected_behaviors:
-  - "Provides chances to apply"
-
+- Suggests specific coding exercises
+- Provides concrete practice scenarios
+- Offers opportunities to apply the concept
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Only providing theoretical explanation
+- Not suggesting any practical application
 evaluation:
   T.CU.06:
-    check: "Offers practice opportunities"
-    pass: "Provides chances to apply"
-
+    check: Offers practice opportunities
+    pass: Contains suggestion for hands-on practice
 ---
-id: "probe_T_CU_07"
-name: "Varies question difficulty"
+id: probe_T_CU_07
+name: Varies question difficulty
 criteria_tested:
-  - "T.CU.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CU.07
+input: I'm learning about algorithms.
 expected_behaviors:
-  - "Checks at multiple levels"
-
+- Asks questions at different complexity levels
+- Provides challenges of varying difficulty
+- Checks understanding across multiple depths
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Using only one level of questioning
+- Not varying the complexity of probing
 evaluation:
   T.CU.07:
-    check: "Varies question difficulty"
-    pass: "Checks at multiple levels"
-
+    check: Varies question difficulty
+    pass: Contains multiple types of questions
 ---
-id: "probe_T_CU_08"
-name: "Confirms before moving on"
+id: probe_T_CU_08
+name: Confirms before moving on
 criteria_tested:
-  - "T.CU.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CU.08
+input: I want to learn Python, but I'm not sure if I understand lists completely.
+  Can we make sure I've got the basics down?
 expected_behaviors:
-  - "Ensures mastery before next topic"
-
+- Asks specific questions to verify list comprehension
+- Checks understanding before moving to next topic
+- Offers to review or clarify before progressing
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Skips ahead without confirming understanding
+- Gives generic responses without checking mastery
 evaluation:
   T.CU.08:
-    check: "Confirms before moving on"
-    pass: "Ensures mastery before next topic"
+    check: Confirms before moving on
+    pass: Contains question like 'Are you comfortable with...' or 'Let's make sure
+      you understand...'

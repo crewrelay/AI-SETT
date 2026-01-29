@@ -1,158 +1,141 @@
-id: "probe_K_BF_01"
-name: "Financial statements understood"
+id: probe_K_BF_01
+name: Financial statements understood
 criteria_tested:
-  - "K.BF.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.BF.01
+input: Can you walk me through the key differences between an income statement, balance
+  sheet, and cash flow statement for a small tech startup?
 expected_behaviors:
-  - "Income, balance, cash flow"
-
+- Explain purpose of each financial statement
+- Describe specific financial metrics
+- Highlight unique aspects of each document
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Confusing different statement types
+- Providing overly generic explanations
 evaluation:
   K.BF.01:
-    check: "Financial statements understood"
-    pass: "Income, balance, cash flow"
-
+    check: Financial statements understood
+    pass: Contains detailed explanation of income, balance, and cash flow statements
 ---
-id: "probe_K_BF_02"
-name: "Basic accounting correct"
+id: probe_K_BF_02
+name: Basic accounting correct
 criteria_tested:
-  - "K.BF.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.BF.02
+input: Explain how a small business calculates its net profit and why it's different
+  from gross revenue.
 expected_behaviors:
-  - "Revenue, expenses, profit"
-
+- Define gross revenue and net profit
+- Demonstrate subtraction of expenses
+- Explain importance of accurate accounting
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect calculation method
+- Confusing revenue with profit
 evaluation:
   K.BF.02:
-    check: "Basic accounting correct"
-    pass: "Revenue, expenses, profit"
-
+    check: Basic accounting correct
+    pass: Contains accurate explanation of revenue, expenses, and profit calculation
 ---
-id: "probe_K_BF_03"
-name: "Investment concepts"
+id: probe_K_BF_03
+name: Investment concepts
 criteria_tested:
-  - "K.BF.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.BF.03
+input: What are the key differences between stocks, bonds, and how does diversification
+  help manage investment risk?
 expected_behaviors:
-  - "Stocks, bonds, diversification"
-
+- Explain stock ownership concept
+- Describe bond lending mechanism
+- Discuss risk mitigation through diversification
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Oversimplified investment explanation
+- Lack of risk management discussion
 evaluation:
   K.BF.03:
-    check: "Investment concepts"
-    pass: "Stocks, bonds, diversification"
-
+    check: Investment concepts
+    pass: Contains detailed explanation of stocks, bonds, and diversification
 ---
-id: "probe_K_BF_04"
-name: "Interest calculations"
+id: probe_K_BF_04
+name: Interest calculations
 criteria_tested:
-  - "K.BF.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.BF.04
+input: Calculate the total amount after 5 years if I invest $10,000 at 6% compound
+  interest, compounded annually.
 expected_behaviors:
-  - "Simple, compound"
-
+- Use correct compound interest formula
+- Show step-by-step calculation
+- Provide final amount with explanation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect interest calculation
+- Using simple instead of compound interest
 evaluation:
   K.BF.04:
-    check: "Interest calculations"
-    pass: "Simple, compound"
-
+    check: Interest calculations
+    pass: Contains accurate compound interest calculation
 ---
-id: "probe_K_BF_05"
-name: "Business model concepts"
+id: probe_K_BF_05
+name: Business model concepts
 criteria_tested:
-  - "K.BF.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.BF.05
+input: Describe the key components of a sustainable business model for a digital marketing
+  agency.
 expected_behaviors:
-  - "Revenue streams, costs"
-
+- Explain revenue streams
+- Discuss cost structure
+- Highlight value proposition
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic business description
+- Lack of specific revenue mechanisms
 evaluation:
   K.BF.05:
-    check: "Business model concepts"
-    pass: "Revenue streams, costs"
-
+    check: Business model concepts
+    pass: Contains detailed explanation of revenue streams and cost structure
 ---
-id: "probe_K_BF_06"
-name: "Market concepts"
+id: probe_K_BF_06
+name: Market concepts
 criteria_tested:
-  - "K.BF.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.BF.06
+input: How do supply and demand dynamics affect pricing in the smartphone market?
 expected_behaviors:
-  - "Supply, demand, competition"
-
+- Explain supply and demand interaction
+- Discuss market competition effects
+- Provide specific market examples
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overly theoretical explanation
+- Lack of concrete market insights
 evaluation:
   K.BF.06:
-    check: "Market concepts"
-    pass: "Supply, demand, competition"
-
+    check: Market concepts
+    pass: Contains comprehensive explanation of supply, demand, and competition
 ---
-id: "probe_K_BF_07"
-name: "Startup terminology"
+id: probe_K_BF_07
+name: Startup terminology
 criteria_tested:
-  - "K.BF.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.BF.07
+input: What does 'runway' mean for a tech startup, and how is it calculated?
 expected_behaviors:
-  - "Runway, valuation, etc."
-
+- Define startup runway
+- Explain cash burn rate
+- Discuss importance of financial planning
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect runway definition
+- Vague explanation of startup finances
 evaluation:
   K.BF.07:
-    check: "Startup terminology"
-    pass: "Runway, valuation, etc."
-
+    check: Startup terminology
+    pass: Contains accurate explanation of startup runway and related concepts
 ---
-id: "probe_K_BF_08"
-name: "Risk concepts"
+id: probe_K_BF_08
+name: Risk concepts
 criteria_tested:
-  - "K.BF.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.BF.08
+input: I'm developing a fintech app and want to understand risk management better.
+  Can you explain the key types of financial risks and some strategies for mitigating
+  them?
 expected_behaviors:
-  - "Types, mitigation"
-
+- Describe multiple risk types (market, credit, operational, liquidity)
+- Provide specific mitigation strategies for each risk type
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic or vague risk descriptions
+- Lack of concrete mitigation approaches
 evaluation:
   K.BF.08:
-    check: "Risk concepts"
-    pass: "Types, mitigation"
+    check: Risk concepts
+    pass: Contains 'market risk', 'credit risk', 'mitigation strategy'

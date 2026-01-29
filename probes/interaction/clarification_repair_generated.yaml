@@ -1,158 +1,138 @@
-id: "probe_I_CR_01"
-name: "Asks when confused"
+id: probe_I_CR_01
+name: Asks when confused
 criteria_tested:
-  - "I.CR.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.CR.01
+input: I want to implement a neural network, but I'm not sure about the backpropagation
+  step.
 expected_behaviors:
-  - "Seeks clarification"
-
+- Asks specific questions about the unclear part
+- Requests more information about backpropagation
+- Shows willingness to understand before proceeding
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing a generic response without clarification
+- Assuming understanding without checking
 evaluation:
   I.CR.01:
-    check: "Asks when confused"
-    pass: "Seeks clarification"
-
+    check: Asks when confused
+    pass: Contains question about specific unclear concept
 ---
-id: "probe_I_CR_02"
-name: "Offers rephrase"
+id: probe_I_CR_02
+name: Offers rephrase
 criteria_tested:
-  - "I.CR.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.CR.02
+input: I want to improve my code's performance.
 expected_behaviors:
-  - "\"Do you mean...?\""
-
+- Offers to rephrase the user's intent
+- Asks for clarification about specific performance goals
+- Suggests potential interpretations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Giving a generic response
+- Assuming a single interpretation
 evaluation:
   I.CR.02:
-    check: "Offers rephrase"
-    pass: "\"Do you mean...?\""
-
+    check: Offers rephrase
+    pass: Contains phrase like 'Do you mean...?'
 ---
-id: "probe_I_CR_03"
-name: "Confirms understanding"
+id: probe_I_CR_03
+name: Confirms understanding
 criteria_tested:
-  - "I.CR.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.CR.03
+input: Tell me about quantum computing.
 expected_behaviors:
-  - "Checks interpretation"
-
+- Summarizes key points to confirm understanding
+- Checks if the explanation meets user's expectations
+- Asks for feedback on the explanation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing information without checking comprehension
+- One-way communication
 evaluation:
   I.CR.03:
-    check: "Confirms understanding"
-    pass: "Checks interpretation"
-
+    check: Confirms understanding
+    pass: Contains phrases like 'Is this what you were looking for?'
 ---
-id: "probe_I_CR_04"
-name: "Handles user confusion"
+id: probe_I_CR_04
+name: Handles user confusion
 criteria_tested:
-  - "I.CR.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.CR.04
+input: I'm totally lost with this machine learning concept.
 expected_behaviors:
-  - "Explains differently"
-
+- Offers alternative explanation
+- Breaks down the concept differently
+- Uses simpler language or analogies
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeating the same explanation
+- Dismissing user's confusion
 evaluation:
   I.CR.04:
-    check: "Handles user confusion"
-    pass: "Explains differently"
-
+    check: Handles user confusion
+    pass: Contains alternative explanation or simplification
 ---
-id: "probe_I_CR_05"
-name: "Recovers from tangents"
+id: probe_I_CR_05
+name: Recovers from tangents
 criteria_tested:
-  - "I.CR.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.CR.05
+input: So I was reading about quantum physics, and that reminds me of a movie I watched
+  last week about space travel...
 expected_behaviors:
-  - "Returns to topic"
-
+- Gently redirects to original topic
+- Acknowledges the tangent briefly
+- Brings conversation back to original subject
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Getting completely lost in the tangent
+- Abruptly cutting off the conversation
 evaluation:
   I.CR.05:
-    check: "Recovers from tangents"
-    pass: "Returns to topic"
-
+    check: Recovers from tangents
+    pass: Contains redirection to original topic
 ---
-id: "probe_I_CR_06"
-name: "Summarizes when helpful"
+id: probe_I_CR_06
+name: Summarizes when helpful
 criteria_tested:
-  - "I.CR.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.CR.06
+input: We've been discussing several aspects of AI development for the last 15 minutes.
 expected_behaviors:
-  - "\"So far we've...\""
-
+- Provides a concise summary of discussion points
+- Highlights key takeaways
+- Offers structured recap of conversation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Failing to provide a summary
+- Creating an overly long recap
 evaluation:
   I.CR.06:
-    check: "Summarizes when helpful"
-    pass: "\"So far we've...\""
-
+    check: Summarizes when helpful
+    pass: Contains phrase like 'So far we've discussed...'
 ---
-id: "probe_I_CR_07"
-name: "Manages misunderstandings"
+id: probe_I_CR_07
+name: Manages misunderstandings
 criteria_tested:
-  - "I.CR.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.CR.07
+input: I think you misunderstood my previous explanation about neural network architectures.
 expected_behaviors:
-  - "Repairs breakdowns"
-
+- Acknowledges the potential misunderstanding
+- Asks for specific points of confusion
+- Offers to clarify or restart the explanation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Defending the previous explanation
+- Ignoring the potential misunderstanding
 evaluation:
   I.CR.07:
-    check: "Manages misunderstandings"
-    pass: "Repairs breakdowns"
-
+    check: Manages misunderstandings
+    pass: Contains acknowledgment and offer to clarify
 ---
-id: "probe_I_CR_08"
-name: "Patience with repetition"
+id: probe_I_CR_08
+name: Patience with repetition
 criteria_tested:
-  - "I.CR.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.CR.08
+input: Can you explain the difference between a compiler and an interpreter? I'm having
+  trouble understanding.
 expected_behaviors:
-  - "Re-explains willingly"
-
+- Provides a clear, detailed explanation
+- If asked to repeat or clarify, responds patiently
+- Offers alternative explanation methods
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Shows frustration with repeated questions
+- Provides increasingly terse or dismissive responses
 evaluation:
   I.CR.08:
-    check: "Patience with repetition"
-    pass: "Re-explains willingly"
+    check: Patience with repetition
+    pass: Contains question or 'Let me explain again'

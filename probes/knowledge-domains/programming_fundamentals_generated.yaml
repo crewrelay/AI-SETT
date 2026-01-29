@@ -1,158 +1,135 @@
-id: "probe_K_PG_01"
-name: "Syntax correct for language"
+id: probe_K_PG_01
+name: Syntax correct for language
 criteria_tested:
-  - "K.PG.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PG.01
+input: Can you help me review this Python code snippet for syntax errors?
 expected_behaviors:
-  - "Code would parse"
-
+- Identifies correct Python syntax rules
+- Demonstrates understanding of language-specific syntax
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Suggests syntactically incorrect code
+- Misunderstands basic language syntax
 evaluation:
   K.PG.01:
-    check: "Syntax correct for language"
-    pass: "Code would parse"
-
+    check: Syntax correct for language
+    pass: Contains 'syntax' AND Contains 'Python'
 ---
-id: "probe_K_PG_02"
-name: "Data structures understood"
+id: probe_K_PG_02
+name: Data structures understood
 criteria_tested:
-  - "K.PG.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PG.02
+input: Explain the difference between a list and a dictionary in Python, and when
+  you would use each.
 expected_behaviors:
-  - "Arrays, maps, trees, etc."
-
+- Clearly explains characteristics of lists and dictionaries
+- Provides practical use cases for each data structure
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Confuses different data structure properties
+- Provides incorrect or incomplete explanations
 evaluation:
   K.PG.02:
-    check: "Data structures understood"
-    pass: "Arrays, maps, trees, etc."
-
+    check: Data structures understood
+    pass: Contains 'list' AND Contains 'dictionary'
 ---
-id: "probe_K_PG_03"
-name: "Algorithms understood"
+id: probe_K_PG_03
+name: Algorithms understood
 criteria_tested:
-  - "K.PG.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PG.03
+input: What's the most efficient algorithm for sorting a large list of numbers?
 expected_behaviors:
-  - "Sorting, searching, etc."
-
+- Discusses multiple sorting algorithms
+- Explains time complexity considerations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides only one sorting approach
+- Fails to discuss algorithmic efficiency
 evaluation:
   K.PG.03:
-    check: "Algorithms understood"
-    pass: "Sorting, searching, etc."
-
+    check: Algorithms understood
+    pass: Contains 'quicksort' OR Contains 'merge sort'
 ---
-id: "probe_K_PG_04"
-name: "OOP concepts correct"
+id: probe_K_PG_04
+name: OOP concepts correct
 criteria_tested:
-  - "K.PG.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PG.04
+input: Can you explain inheritance in object-oriented programming and provide a simple
+  example?
 expected_behaviors:
-  - "Classes, inheritance, etc."
-
+- Defines inheritance clearly
+- Provides a concrete example of class inheritance
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides a confusing or incorrect explanation
+- Fails to demonstrate inheritance mechanism
 evaluation:
   K.PG.04:
-    check: "OOP concepts correct"
-    pass: "Classes, inheritance, etc."
-
+    check: OOP concepts correct
+    pass: Contains 'inheritance' AND Contains 'class'
 ---
-id: "probe_K_PG_05"
-name: "Functional concepts correct"
+id: probe_K_PG_05
+name: Functional concepts correct
 criteria_tested:
-  - "K.PG.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PG.05
+input: What makes a function 'pure' in functional programming, and why is immutability
+  important?
 expected_behaviors:
-  - "Pure functions, immutability"
-
+- Explains characteristics of pure functions
+- Discusses benefits of immutability
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Misunderstands functional programming principles
+- Provides superficial or incorrect explanation
 evaluation:
   K.PG.05:
-    check: "Functional concepts correct"
-    pass: "Pure functions, immutability"
-
+    check: Functional concepts correct
+    pass: Contains 'pure function' AND Contains 'immutability'
 ---
-id: "probe_K_PG_06"
-name: "Error handling appropriate"
+id: probe_K_PG_06
+name: Error handling appropriate
 criteria_tested:
-  - "K.PG.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PG.06
+input: Can you show me an example of proper error handling in Python for a function
+  that divides two numbers?
 expected_behaviors:
-  - "Try/catch, error returns"
-
+- Demonstrates try/except block
+- Handles potential division by zero
+- Returns meaningful error message
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uncaught exceptions
+- Vague error handling
 evaluation:
   K.PG.06:
-    check: "Error handling appropriate"
-    pass: "Try/catch, error returns"
-
+    check: Error handling appropriate
+    pass: Contains 'try:', 'except', 'ZeroDivisionError'
 ---
-id: "probe_K_PG_07"
-name: "Testing concepts known"
+id: probe_K_PG_07
+name: Testing concepts known
 criteria_tested:
-  - "K.PG.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PG.07
+input: Describe how you would write unit tests for a simple calculator class in Python
+  that does addition, subtraction, multiplication, and division.
 expected_behaviors:
-  - "Unit tests, mocking"
-
+- Mentions using unittest framework
+- Describes test cases for different scenarios
+- Explains mocking for external dependencies
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- No specific testing approach
+- Lack of edge case testing
 evaluation:
   K.PG.07:
-    check: "Testing concepts known"
-    pass: "Unit tests, mocking"
-
+    check: Testing concepts known
+    pass: Contains 'unit test', 'assert', 'mock'
 ---
-id: "probe_K_PG_08"
-name: "Debugging strategies"
+id: probe_K_PG_08
+name: Debugging strategies
 criteria_tested:
-  - "K.PG.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.PG.08
+input: What systematic approaches would you use to debug a memory leak in a Java application?
 expected_behaviors:
-  - "Systematic approaches"
-
+- Mentions profiling tools
+- Describes step-by-step debugging process
+- Suggests checking memory allocation and release
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Random guessing approach
+- No specific debugging technique
 evaluation:
   K.PG.08:
-    check: "Debugging strategies"
-    pass: "Systematic approaches"
+    check: Debugging strategies
+    pass: Contains 'memory profiler', 'heap dump', 'breakpoints'

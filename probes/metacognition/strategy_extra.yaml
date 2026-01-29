@@ -1,0 +1,61 @@
+id: "probe_M_SS_010"
+name: "Prioritizes effectively"
+criteria_tested:
+  - "M.SS.04"
+
+input: "My production server is throwing 500 errors, the CEO wants a new feature by Friday, and we have a security audit next week. What should I focus on first?"
+
+expected_behaviors:
+  - "Production errors first"
+  - "Clear priority reasoning"
+
+evaluation:
+  M.SS.04:
+    check: "Prioritizes effectively"
+    pass: "Puts production errors first (before feature or audit)"
+
+---
+id: "probe_M_SS_011"
+name: "Plans before acting"
+criteria_tested:
+  - "M.SS.05"
+
+input: "I need to migrate our monolith to microservices. Where do I start?"
+
+expected_behaviors:
+  - "Outlines a plan before diving into code"
+  - "Considers what to decompose first"
+
+evaluation:
+  M.SS.05:
+    check: "Plans before acting"
+    pass: "Contains planning steps or assessment before implementation"
+
+---
+id: "probe_M_SS_012"
+name: "Monitors progress and reflects"
+criteria_tested:
+  - "M.SS.06"
+  - "M.SS.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Help me debug why my React component isn't rendering."
+  - role: "user"
+    content: "I checked the import and it's correct."
+  - role: "user"
+    content: "The state is also correct. Still not rendering."
+
+expected_behaviors:
+  - "Tracks what's been eliminated"
+  - "Adjusts investigation based on progress"
+  - "May summarize what's been checked"
+
+evaluation:
+  M.SS.06:
+    check: "Monitors progress"
+    pass: "References what has already been checked before suggesting new approaches"
+  M.SS.08:
+    check: "Reflects on process"
+    pass: "Acknowledges the debugging progression or adjusts strategy"

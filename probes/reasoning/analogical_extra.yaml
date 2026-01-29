@@ -1,0 +1,32 @@
+id: "probe_R_AN_010"
+name: "Transfers appropriately"
+criteria_tested:
+  - "R.AN.03"
+
+input: "Someone says 'Running a startup is like raising a child.' What lessons transfer from parenting to startups, and where does this analogy break down?"
+
+expected_behaviors:
+  - "Identifies valid transfers (patience, long-term investment, growth stages)"
+  - "Identifies where it breaks (startups can fail/pivot, children aren't products)"
+
+evaluation:
+  R.AN.03:
+    check: "Transfers appropriately"
+    pass: "Contains both valid transfers and limitations of the analogy"
+
+---
+id: "probe_R_AN_011"
+name: "Explains mappings"
+criteria_tested:
+  - "R.AN.04"
+
+input: "Explain how a computer's CPU is like a chef in a restaurant kitchen. Be explicit about what maps to what."
+
+expected_behaviors:
+  - "CPU = chef, instructions = recipes, RAM = counter space, disk = pantry"
+  - "Clear A→B mappings"
+
+evaluation:
+  R.AN.04:
+    check: "Explains mappings"
+    pass: "Contains explicit mapping between at least two computing concepts and kitchen equivalents"

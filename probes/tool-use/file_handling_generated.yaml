@@ -1,158 +1,137 @@
-id: "probe_T_FH_01"
-name: "Reads files correctly"
+id: probe_T_FH_01
+name: Reads files correctly
 criteria_tested:
-  - "T.FH.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FH.01
+input: Can you read and summarize the contents of this research paper about machine
+  learning trends?
 expected_behaviors:
-  - "Content understood"
-
+- Demonstrates understanding of file contents
+- Provides a concise, accurate summary
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Misinterprets key points
+- Provides a generic response unrelated to the file
 evaluation:
   T.FH.01:
-    check: "Reads files correctly"
-    pass: "Content understood"
-
+    check: Reads files correctly
+    pass: Contains specific details from the file
 ---
-id: "probe_T_FH_02"
-name: "Handles formats"
+id: probe_T_FH_02
+name: Handles formats
 criteria_tested:
-  - "T.FH.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FH.02
+input: I have financial data in PDF, CSV, and XLSX formats. Can you help me extract
+  some key information from these files?
 expected_behaviors:
-  - "PDF, CSV, images, etc."
-
+- Demonstrates ability to handle multiple file formats
+- Provides appropriate extraction method for each format
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Fails to handle one or more file types
+- Provides generic response
 evaluation:
   T.FH.02:
-    check: "Handles formats"
-    pass: "PDF, CSV, images, etc."
-
+    check: Handles formats
+    pass: Contains specific instructions for PDF, CSV, XLSX
 ---
-id: "probe_T_FH_03"
-name: "Extracts relevant info"
+id: probe_T_FH_03
+name: Extracts relevant info
 criteria_tested:
-  - "T.FH.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FH.03
+input: I've uploaded a large technical report. Can you extract the key findings and
+  most important statistics?
 expected_behaviors:
-  - "Not just dumps content"
-
+- Identifies and highlights most significant information
+- Provides a focused summary of key points
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Dumps entire file content without analysis
+- Provides irrelevant or superficial information
 evaluation:
   T.FH.03:
-    check: "Extracts relevant info"
-    pass: "Not just dumps content"
-
+    check: Extracts relevant info
+    pass: Contains synthesized insights, not raw text
 ---
-id: "probe_T_FH_04"
-name: "Creates files when asked"
+id: probe_T_FH_04
+name: Creates files when asked
 criteria_tested:
-  - "T.FH.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FH.04
+input: Can you create a CSV file with sample student grade data for a class of 30
+  students?
 expected_behaviors:
-  - "Output files work"
-
+- Generates a properly formatted CSV file
+- Includes realistic, structured data
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Fails to create an actual file
+- Creates a malformed or incorrect file
 evaluation:
   T.FH.04:
-    check: "Creates files when asked"
-    pass: "Output files work"
-
+    check: Creates files when asked
+    pass: Produces a valid, readable file
 ---
-id: "probe_T_FH_05"
-name: "Appropriate format choice"
+id: probe_T_FH_05
+name: Appropriate format choice
 criteria_tested:
-  - "T.FH.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FH.05
+input: I need to store some complex nested data about a company's organizational structure.
+  What file format would you recommend?
 expected_behaviors:
-  - "Right format for need"
-
+- Suggests JSON or XML for hierarchical data
+- Explains reasoning for format choice
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Recommends an inappropriate file format
+- Provides vague or unhelpful advice
 evaluation:
   T.FH.05:
-    check: "Appropriate format choice"
-    pass: "Right format for need"
-
+    check: Appropriate format choice
+    pass: Recommends JSON or XML with clear rationale
 ---
-id: "probe_T_FH_06"
-name: "Handles large files"
+id: probe_T_FH_06
+name: Handles large files
 criteria_tested:
-  - "T.FH.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FH.06
+input: I have a 2GB log file from a server. Can you help me process and analyze its
+  contents?
 expected_behaviors:
-  - "Doesn't choke"
-
+- Suggests efficient processing methods
+- Demonstrates ability to handle large file sizes
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Fails to handle large file
+- Suggests impractical processing methods
 evaluation:
   T.FH.06:
-    check: "Handles large files"
-    pass: "Doesn't choke"
-
+    check: Handles large files
+    pass: Provides streaming or efficient processing approach
 ---
-id: "probe_T_FH_07"
-name: "Respects file boundaries"
+id: probe_T_FH_07
+name: Respects file boundaries
 criteria_tested:
-  - "T.FH.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FH.07
+input: Can you extract specific sections from this technical documentation without
+  making up any additional content?
 expected_behaviors:
-  - "Doesn't make up content"
-
+- Precisely extracts requested sections
+- Does not add or invent information
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Adds fictional or invented content
+- Misrepresents file contents
 evaluation:
   T.FH.07:
-    check: "Respects file boundaries"
-    pass: "Doesn't make up content"
-
+    check: Respects file boundaries
+    pass: Contains only extracted text, no invented content
 ---
-id: "probe_T_FH_08"
-name: "File operations correct"
+id: probe_T_FH_08
+name: File operations correct
 criteria_tested:
-  - "T.FH.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FH.08
+input: I want to move my project files from 'Documents/old_project' to 'Backup/archived_projects'
+  and rename the folder from 'old_project' to 'project_2022'. How would I do this
+  in Python?
 expected_behaviors:
-  - "Rename, move, etc."
-
+- Provide a clear Python code snippet demonstrating file/directory operations
+- Show correct use of shutil or os module for moving and renaming
+- Include error handling considerations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Giving vague or incomplete file manipulation instructions
+- Suggesting manual copy-paste instead of programmatic method
 evaluation:
   T.FH.08:
-    check: "File operations correct"
-    pass: "Rename, move, etc."
+    check: File operations correct
+    pass: Contains 'shutil.move' or 'os.rename'

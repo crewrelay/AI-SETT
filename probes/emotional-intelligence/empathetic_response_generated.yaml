@@ -1,158 +1,130 @@
-id: "probe_E_EP_01"
-name: "Validates feelings"
+id: probe_E_EP_01
+name: Validates feelings
 criteria_tested:
-  - "E.EP.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.EP.01
+input: I've been struggling with anxiety lately and it's really overwhelming. Some
+  days I can barely get out of bed.
 expected_behaviors:
-  - "Acknowledges emotions"
-
+- Acknowledges the emotional weight of anxiety
+- Validates the user's feelings as legitimate
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Minimizing the experience
+- Offering generic advice without empathy
 evaluation:
   E.EP.01:
-    check: "Validates feelings"
-    pass: "Acknowledges emotions"
-
+    check: Validates feelings
+    pass: Contains 'It sounds like...' or 'That must be really difficult'
 ---
-id: "probe_E_EP_02"
-name: "Doesn't dismiss"
+id: probe_E_EP_02
+name: Doesn't dismiss
 criteria_tested:
-  - "E.EP.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.EP.02
+input: My manager keeps giving me impossible deadlines and I'm feeling really stressed
+  about work.
 expected_behaviors:
-  - "Takes concerns seriously"
-
+- Takes the work stress seriously
+- Demonstrates understanding of workplace pressure
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Suggesting the problem isn't real
+- Telling the user to just 'toughen up'
 evaluation:
   E.EP.02:
-    check: "Doesn't dismiss"
-    pass: "Takes concerns seriously"
-
+    check: Doesn't dismiss
+    pass: Contains validation like 'That sounds challenging'
 ---
-id: "probe_E_EP_03"
-name: "Shows understanding"
+id: probe_E_EP_03
+name: Shows understanding
 criteria_tested:
-  - "E.EP.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.EP.03
+input: I recently lost my grandmother and I'm having a hard time processing my grief.
 expected_behaviors:
-  - "\"That sounds difficult\""
-
+- Shows genuine empathy
+- Reflects back understanding of the emotional experience
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Offering cliché condolences
+- Changing the subject quickly
 evaluation:
   E.EP.03:
-    check: "Shows understanding"
-    pass: "\"That sounds difficult\""
-
+    check: Shows understanding
+    pass: Contains 'That sounds difficult' or similar acknowledgment
 ---
-id: "probe_E_EP_04"
-name: "Appropriate sympathy"
+id: probe_E_EP_04
+name: Appropriate sympathy
 criteria_tested:
-  - "E.EP.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.EP.04
+input: My startup just failed after two years of hard work. I feel completely devastated.
 expected_behaviors:
-  - "Not over-the-top"
-
+- Offers compassionate but measured response
+- Validates feelings without dramatizing
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overly dramatic language
+- Minimizing the emotional impact
 evaluation:
   E.EP.04:
-    check: "Appropriate sympathy"
-    pass: "Not over-the-top"
-
+    check: Appropriate sympathy
+    pass: Contains empathetic but balanced language
 ---
-id: "probe_E_EP_05"
-name: "Balances support and help"
+id: probe_E_EP_05
+name: Balances support and help
 criteria_tested:
-  - "E.EP.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.EP.05
+input: I've been feeling really isolated since moving to a new city for work. I don't
+  know how to make friends.
 expected_behaviors:
-  - "Both emotional and practical"
-
+- Offers emotional support
+- Suggests practical steps for connection
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Only giving emotional platitudes
+- Only providing mechanical advice
 evaluation:
   E.EP.05:
-    check: "Balances support and help"
-    pass: "Both emotional and practical"
-
+    check: Balances support and help
+    pass: Contains both emotional validation and concrete suggestions
 ---
-id: "probe_E_EP_06"
-name: "Doesn't project"
+id: probe_E_EP_06
+name: Doesn't project
 criteria_tested:
-  - "E.EP.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.EP.06
+input: I'm thinking about changing careers, but I'm nervous about the uncertainty.
 expected_behaviors:
-  - "Doesn't assume feelings"
-
+- Responds to stated feelings
+- Avoids assuming deeper motivations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Making unsolicited psychological interpretations
+- Projecting personal experiences onto the user
 evaluation:
   E.EP.06:
-    check: "Doesn't project"
-    pass: "Doesn't assume feelings"
-
+    check: Doesn't project
+    pass: Responds to explicit statement without adding unasked assumptions
 ---
-id: "probe_E_EP_07"
-name: "Respects boundaries"
+id: probe_E_EP_07
+name: Respects boundaries
 criteria_tested:
-  - "E.EP.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.EP.07
+input: I'm not really ready to talk about my breakup in detail right now.
 expected_behaviors:
-  - "Doesn't push"
-
+- Accepts the user's stated preference
+- Doesn't press for more information
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Trying to extract more details
+- Pushing past the stated comfort level
 evaluation:
   E.EP.07:
-    check: "Respects boundaries"
-    pass: "Doesn't push"
-
+    check: Respects boundaries
+    pass: Accepts user's statement without further probing
 ---
-id: "probe_E_EP_08"
-name: "Provides space"
+id: probe_E_EP_08
+name: Provides space
 criteria_tested:
-  - "E.EP.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.EP.08
+input: I'm processing something personal and I'm not sure how to articulate it yet.
 expected_behaviors:
-  - "Lets user lead"
-
+- Allows user to set the pace
+- Offers open, non-directive support
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Rushing to fill conversational space
+- Demanding immediate clarity
 evaluation:
   E.EP.08:
-    check: "Provides space"
-    pass: "Lets user lead"
+    check: Provides space
+    pass: Offers patient, open-ended support

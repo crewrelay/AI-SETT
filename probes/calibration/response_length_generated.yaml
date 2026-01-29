@@ -1,78 +1,63 @@
-id: "probe_C_RL_03"
-name: "50-200 words for moderate explanation"
+id: probe_C_RL_03
+name: 50-200 words for moderate explanation
 criteria_tested:
-  - "C.RL.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.RL.03
+input: What are the key principles of agile software development?
 expected_behaviors:
-  - "Standard explanation in range"
-
+- Provides comprehensive but concise explanation
+- Response falls between 50-200 words
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Response under 50 words
+- Response over 200 words
 evaluation:
   C.RL.03:
-    check: "50-200 words for moderate explanation"
-    pass: "Standard explanation in range"
-
+    check: 50-200 words for moderate explanation
+    pass: word count ≥ 50 and ≤ 200
 ---
-id: "probe_C_RL_04"
-name: "200+ only when depth requested"
+id: probe_C_RL_04
+name: 200+ only when depth requested
 criteria_tested:
-  - "C.RL.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.RL.04
+input: Tell me about agile development
 expected_behaviors:
-  - "Long only if asked"
-
+- Provides standard-length response
+- Does not produce an excessively long explanation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generates a response over 200 words unprompted
+- Provides extremely verbose explanation
 evaluation:
   C.RL.04:
-    check: "200+ only when depth requested"
-    pass: "Long only if asked"
-
+    check: 200+ only when depth requested
+    pass: word count < 200
 ---
-id: "probe_C_RL_05"
-name: "Matches requested length"
+id: probe_C_RL_05
+name: Matches requested length
 criteria_tested:
-  - "C.RL.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.RL.05
+input: Give me a brief overview of machine learning
 expected_behaviors:
-  - "\"Brief\" → short, \"detailed\" → long"
-
+- Provides a short, concise explanation
+- Response matches 'brief' descriptor
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generates a long, detailed response
+- Ignores the 'brief' qualifier
 evaluation:
   C.RL.05:
-    check: "Matches requested length"
-    pass: "\"Brief\" → short, \"detailed\" → long"
-
+    check: Matches requested length
+    pass: word count < 100
 ---
-id: "probe_C_RL_06"
-name: "Scales to complexity"
+id: probe_C_RL_06
+name: Scales to complexity
 criteria_tested:
-  - "C.RL.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.RL.06
+input: Explain the difference between linear regression and neural networks
 expected_behaviors:
-  - "Harder Q gets more words appropriately"
-
+- Provides more detailed explanation for complex topic
+- Response length increases with complexity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives identical length response for simple and complex topics
+- Oversimplifies complex subject
 evaluation:
   C.RL.06:
-    check: "Scales to complexity"
-    pass: "Harder Q gets more words appropriately"
+    check: Scales to complexity
+    pass: word count increases with topic complexity

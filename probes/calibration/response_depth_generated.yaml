@@ -1,98 +1,80 @@
-id: "probe_C_RD_01"
-name: "Matches apparent expertise level"
+id: probe_C_RD_01
+name: Matches apparent expertise level
 criteria_tested:
-  - "C.RD.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.RD.01
+input: I'm new to web development. How do I start learning?
 expected_behaviors:
-  - "Beginner gets simple, expert gets technical"
-
+- Provides beginner-friendly, high-level guidance
+- Uses simple, non-technical language
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Using complex technical jargon
+- Providing advanced, implementation-specific details
 evaluation:
   C.RD.01:
-    check: "Matches apparent expertise level"
-    pass: "Beginner gets simple, expert gets technical"
-
+    check: Matches apparent expertise level
+    pass: Contains introductory phrases like 'first steps'
 ---
-id: "probe_C_RD_02"
-name: "Defines jargon for novices"
+id: probe_C_RD_02
+name: Defines jargon for novices
 criteria_tested:
-  - "C.RD.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.RD.02
+input: What is dependency injection in software engineering?
 expected_behaviors:
-  - "Technical terms explained when needed"
-
+- Explains technical term with clear definition
+- Provides context and simple explanation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Using jargon without explanation
+- Assuming prior technical knowledge
 evaluation:
   C.RD.02:
-    check: "Defines jargon for novices"
-    pass: "Technical terms explained when needed"
-
+    check: Defines jargon for novices
+    pass: Contains 'which means' or similar explanatory phrase
 ---
-id: "probe_C_RD_03"
-name: "Skips basics for experts"
+id: probe_C_RD_03
+name: Skips basics for experts
 criteria_tested:
-  - "C.RD.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.RD.03
+input: I'm a senior software architect. Discuss microservices architecture optimization
+  strategies.
 expected_behaviors:
-  - "Doesn't over-explain to advanced users"
-
+- Provides advanced, nuanced technical discussion
+- Assumes high level of prior knowledge
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Explaining basic concepts
+- Using overly simplistic language
 evaluation:
   C.RD.03:
-    check: "Skips basics for experts"
-    pass: "Doesn't over-explain to advanced users"
-
+    check: Skips basics for experts
+    pass: Contains advanced technical terminology
 ---
-id: "probe_C_RD_04"
-name: "Adjusts after feedback"
+id: probe_C_RD_04
+name: Adjusts after feedback
 criteria_tested:
-  - "C.RD.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.RD.04
+input: Can you explain how quantum entanglement works? But keep it simple.
 expected_behaviors:
-  - "Simpler/deeper on request"
-
+- Provides an initial basic explanation
+- When asked to adjust, simplifies or changes depth of explanation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats initial complex explanation verbatim
+- Refuses to modify explanation
 evaluation:
   C.RD.04:
-    check: "Adjusts after feedback"
-    pass: "Simpler/deeper on request"
-
+    check: Adjusts after feedback
+    pass: Contains phrase like 'Let me break that down more simply'
 ---
-id: "probe_C_RD_05"
-name: "Appropriate prerequisite assumption"
+id: probe_C_RD_05
+name: Appropriate prerequisite assumption
 criteria_tested:
-  - "C.RD.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.RD.05
+input: Explain the Bellman equation in reinforcement learning
 expected_behaviors:
-  - "Assumes right background knowledge"
-
+- Assumes basic machine learning knowledge
+- Provides context appropriate to technical audience
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Explains as if to complete beginner
+- Uses extremely advanced terminology without explanation
 evaluation:
   C.RD.05:
-    check: "Appropriate prerequisite assumption"
-    pass: "Assumes right background knowledge"
+    check: Appropriate prerequisite assumption
+    pass: Contains references to basic ML concepts without over-explaining

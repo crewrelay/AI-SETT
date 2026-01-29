@@ -1,158 +1,139 @@
-id: "probe_K_SC_01"
-name: "Web vulnerabilities known"
+id: probe_K_SC_01
+name: Web vulnerabilities known
 criteria_tested:
-  - "K.SC.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SC.01
+input: What are the most common web security vulnerabilities developers should protect
+  against?
 expected_behaviors:
-  - "XSS, SQLi, CSRF"
-
+- Explains Cross-Site Scripting (XSS)
+- Describes SQL Injection risks
+- Mentions Cross-Site Request Forgery (CSRF)
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incomplete or incorrect vulnerability descriptions
+- No specific web security techniques mentioned
 evaluation:
   K.SC.01:
-    check: "Web vulnerabilities known"
-    pass: "XSS, SQLi, CSRF"
-
+    check: Web vulnerabilities known
+    pass: Contains 'XSS', 'SQLi', 'CSRF'
 ---
-id: "probe_K_SC_02"
-name: "Mitigations correct"
+id: probe_K_SC_02
+name: Mitigations correct
 criteria_tested:
-  - "K.SC.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SC.02
+input: Our web app has a SQL injection vulnerability. What are some concrete ways
+  to mitigate this risk?
 expected_behaviors:
-  - "Actual fixes, not theater"
-
+- Recommend input validation
+- Suggest prepared statements
+- Explain parameterized queries
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic security advice
+- Only surface-level recommendations
 evaluation:
   K.SC.02:
-    check: "Mitigations correct"
-    pass: "Actual fixes, not theater"
-
+    check: Mitigations correct
+    pass: Contains 'prepared statements' and 'parameterized queries'
 ---
-id: "probe_K_SC_03"
-name: "Password handling correct"
+id: probe_K_SC_03
+name: Password handling correct
 criteria_tested:
-  - "K.SC.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SC.03
+input: How should I store user passwords in my Django application to ensure they're
+  secure?
 expected_behaviors:
-  - "Hash + salt"
-
+- Mention password hashing
+- Recommend using salt
+- Suggest using built-in password hash functions
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Storing passwords in plain text
+- Using weak hashing methods
 evaluation:
   K.SC.03:
-    check: "Password handling correct"
-    pass: "Hash + salt"
-
+    check: Password handling correct
+    pass: Contains 'salt' and 'hash'
 ---
-id: "probe_K_SC_04"
-name: "Crypto basics understood"
+id: probe_K_SC_04
+name: Crypto basics understood
 criteria_tested:
-  - "K.SC.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SC.04
+input: Can you explain the key differences between symmetric and asymmetric encryption?
 expected_behaviors:
-  - "Symmetric vs asymmetric"
-
+- Describe symmetric key characteristics
+- Explain asymmetric key pair concept
+- Highlight use cases for each
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Confusing the two encryption types
+- Providing vague explanations
 evaluation:
   K.SC.04:
-    check: "Crypto basics understood"
-    pass: "Symmetric vs asymmetric"
-
+    check: Crypto basics understood
+    pass: Contains clear distinction between symmetric and asymmetric encryption
 ---
-id: "probe_K_SC_05"
-name: "TLS/HTTPS understood"
+id: probe_K_SC_05
+name: TLS/HTTPS understood
 criteria_tested:
-  - "K.SC.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SC.05
+input: What exactly does HTTPS protect against when I'm browsing a banking website?
 expected_behaviors:
-  - "What it protects"
-
+- Explain data encryption
+- Mention man-in-the-middle protection
+- Describe certificate verification
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incomplete security explanation
+- Misunderstanding TLS purpose
 evaluation:
   K.SC.05:
-    check: "TLS/HTTPS understood"
-    pass: "What it protects"
-
+    check: TLS/HTTPS understood
+    pass: Contains 'encryption' and 'data protection'
 ---
-id: "probe_K_SC_06"
-name: "Auth vs authz distinguished"
+id: probe_K_SC_06
+name: Auth vs authz distinguished
 criteria_tested:
-  - "K.SC.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SC.06
+input: What's the difference between authentication and authorization in a web application?
 expected_behaviors:
-  - "Authentication vs authorization"
-
+- Define authentication process
+- Explain authorization mechanism
+- Provide distinct examples
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Using terms interchangeably
+- Incomplete explanation
 evaluation:
   K.SC.06:
-    check: "Auth vs authz distinguished"
-    pass: "Authentication vs authorization"
-
+    check: Auth vs authz distinguished
+    pass: Contains clear distinction between authentication and authorization
 ---
-id: "probe_K_SC_07"
-name: "Least privilege understood"
+id: probe_K_SC_07
+name: Least privilege understood
 criteria_tested:
-  - "K.SC.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SC.07
+input: How does the principle of least privilege apply in a cloud infrastructure setting?
 expected_behaviors:
-  - "Concept and application"
-
+- Explain minimal access concept
+- Describe role-based access control
+- Provide practical implementation example
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overly broad access recommendations
+- Vague security guidance
 evaluation:
   K.SC.07:
-    check: "Least privilege understood"
-    pass: "Concept and application"
-
+    check: Least privilege understood
+    pass: Contains 'minimal access' and specific implementation suggestion
 ---
-id: "probe_K_SC_08"
-name: "Secrets management known"
+id: probe_K_SC_08
+name: Secrets management known
 criteria_tested:
-  - "K.SC.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.SC.08
+input: What's the best way to manage API keys and database credentials in a production
+  application?
 expected_behaviors:
-  - "Not in code, use vaults"
-
+- Recommend using secret managers
+- Suggest environment variable isolation
+- Explain risks of hardcoding secrets
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Suggesting storing secrets in code
+- Incomplete security recommendations
 evaluation:
   K.SC.08:
-    check: "Secrets management known"
-    pass: "Not in code, use vaults"
+    check: Secrets management known
+    pass: Contains 'secret vault' or 'environment variables'

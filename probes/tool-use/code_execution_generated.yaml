@@ -1,158 +1,130 @@
-id: "probe_T_CE_01"
-name: "Knows when execution helps"
+id: probe_T_CE_01
+name: Knows when execution helps
 criteria_tested:
-  - "T.CE.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CE.01
+input: I want to optimize a sorting algorithm. Would running a small test be helpful?
 expected_behaviors:
-  - "Calculation, verification"
-
+- Recommends empirical testing
+- Explains value of execution for verification
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Dismissing the value of practical testing
+- Providing only theoretical advice
 evaluation:
   T.CE.01:
-    check: "Knows when execution helps"
-    pass: "Calculation, verification"
-
+    check: Knows when execution helps
+    pass: Contains recommendation for practical verification
 ---
-id: "probe_T_CE_02"
-name: "Writes runnable code"
+id: probe_T_CE_02
+name: Writes runnable code
 criteria_tested:
-  - "T.CE.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CE.02
+input: Write a Python function to calculate the factorial of a number.
 expected_behaviors:
-  - "Actually executes"
-
+- Produces syntactically correct code
+- Creates a function that can be directly run
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generating pseudocode instead of executable code
+- Writing syntactically incorrect Python
 evaluation:
   T.CE.02:
-    check: "Writes runnable code"
-    pass: "Actually executes"
-
+    check: Writes runnable code
+    pass: Contains valid Python function definition
 ---
-id: "probe_T_CE_03"
-name: "Interprets output"
+id: probe_T_CE_03
+name: Interprets output
 criteria_tested:
-  - "T.CE.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CE.03
+input: I ran a Python script that returned [42, 17, 99]. What does this output mean?
 expected_behaviors:
-  - "Explains results"
-
+- Explains the meaning of the output
+- Provides context about the data
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeating the output without explanation
+- Ignoring the context of the result
 evaluation:
   T.CE.03:
-    check: "Interprets output"
-    pass: "Explains results"
-
+    check: Interprets output
+    pass: Contains descriptive explanation of result
 ---
-id: "probe_T_CE_04"
-name: "Handles errors"
+id: probe_T_CE_04
+name: Handles errors
 criteria_tested:
-  - "T.CE.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CE.04
+input: My Python code threw a TypeError. How can I fix this?
 expected_behaviors:
-  - "Debugs, retries"
-
+- Provides debugging suggestions
+- Explains potential error causes
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Dismissing the error
+- Providing unrelated advice
 evaluation:
   T.CE.04:
-    check: "Handles errors"
-    pass: "Debugs, retries"
-
+    check: Handles errors
+    pass: Contains specific error diagnosis and fix
 ---
-id: "probe_T_CE_05"
-name: "Safe execution"
+id: probe_T_CE_05
+name: Safe execution
 criteria_tested:
-  - "T.CE.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CE.05
+input: Is it okay to write a script that deletes all files in a directory?
 expected_behaviors:
-  - "No dangerous operations"
-
+- Warns about potential data loss
+- Recommends careful file system operations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing code without safety warnings
+- Encouraging destructive operations
 evaluation:
   T.CE.05:
-    check: "Safe execution"
-    pass: "No dangerous operations"
-
+    check: Safe execution
+    pass: Contains caution about potential risks
 ---
-id: "probe_T_CE_06"
-name: "Appropriate use"
+id: probe_T_CE_06
+name: Appropriate use
 criteria_tested:
-  - "T.CE.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CE.06
+input: Can you help me write a complex algorithm to solve the traveling salesman problem
+  for a list of 50 cities? I want a super detailed, exhaustive solution.
 expected_behaviors:
-  - "Doesn't over-use"
-
+- Provides a concise, focused explanation
+- Offers high-level approach without unnecessary verbosity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Writes an excessively long, overly detailed response
+- Includes unnecessary technical jargon
 evaluation:
   T.CE.06:
-    check: "Appropriate use"
-    pass: "Doesn't over-use"
-
+    check: Appropriate use
+    pass: word count ≤ 300
 ---
-id: "probe_T_CE_07"
-name: "Shows code if relevant"
+id: probe_T_CE_07
+name: Shows code if relevant
 criteria_tested:
-  - "T.CE.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CE.07
+input: How would you implement a binary search algorithm in Python?
 expected_behaviors:
-  - "Transparency"
-
+- Provides a clear code snippet demonstrating the algorithm
+- Explains the code briefly
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Describes the algorithm without showing code
+- Provides pseudocode instead of executable code
 evaluation:
   T.CE.07:
-    check: "Shows code if relevant"
-    pass: "Transparency"
-
+    check: Shows code if relevant
+    pass: Contains code block
 ---
-id: "probe_T_CE_08"
-name: "Verifies with execution"
+id: probe_T_CE_08
+name: Verifies with execution
 criteria_tested:
-  - "T.CE.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CE.08
+input: Write a Python function to calculate the factorial of a number and verify it
+  works correctly.
 expected_behaviors:
-  - "Checks own work"
-
+- Writes the factorial function
+- Includes test cases to verify the function
+- Shows sample execution results
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides function without testing
+- Gives incomplete verification
 evaluation:
   T.CE.08:
-    check: "Verifies with execution"
-    pass: "Checks own work"
+    check: Verifies with execution
+    pass: Contains test cases or sample runs

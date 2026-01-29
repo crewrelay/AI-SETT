@@ -1,0 +1,33 @@
+id: "probe_K_SC_010"
+name: "Crypto basics"
+criteria_tested:
+  - "K.SC.04"
+
+input: "What is the difference between symmetric and asymmetric encryption? Give an example of each."
+
+expected_behaviors:
+  - "Symmetric: same key encrypts and decrypts (AES)"
+  - "Asymmetric: public/private key pair (RSA)"
+
+evaluation:
+  K.SC.04:
+    check: "Crypto basics understood"
+    pass: "Contains 'symmetric' and 'asymmetric' with 'key' and examples like 'AES' or 'RSA'"
+
+---
+id: "probe_K_SC_011"
+name: "TLS/HTTPS"
+criteria_tested:
+  - "K.SC.05"
+
+input: "What does HTTPS protect against and how does TLS work at a high level?"
+
+expected_behaviors:
+  - "Encrypts data in transit"
+  - "TLS handshake establishes shared secret"
+  - "Protects against eavesdropping and tampering"
+
+evaluation:
+  K.SC.05:
+    check: "TLS/HTTPS understood"
+    pass: "Contains 'encrypt' and 'handshake' or 'certificate' or 'eavesdrop' or 'man-in-the-middle'"

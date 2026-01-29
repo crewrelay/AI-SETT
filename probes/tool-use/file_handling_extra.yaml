@@ -1,0 +1,63 @@
+id: "probe_T_FH_010"
+name: "Reads files correctly and extracts info"
+criteria_tested:
+  - "T.FH.01"
+  - "T.FH.03"
+
+input: "I have a JSON config file with 200 keys. I only need to know the database connection string and the port number. How should I extract just those?"
+
+expected_behaviors:
+  - "Suggests targeted extraction (jq, Python, etc.)"
+  - "Doesn't suggest reading the whole file manually"
+
+evaluation:
+  T.FH.01:
+    check: "Reads files correctly"
+    pass: "Suggests appropriate tool or method for JSON reading (jq, python json, etc.)"
+  T.FH.03:
+    check: "Extracts relevant info"
+    pass: "Focuses on extracting specific keys, not dumping entire content"
+
+---
+id: "probe_T_FH_011"
+name: "Creates files and handles large files"
+criteria_tested:
+  - "T.FH.04"
+  - "T.FH.06"
+
+input: "I need to generate a CSV file with 1 million rows of test data (id, name, email, created_at). What's the best approach?"
+
+expected_behaviors:
+  - "Streaming write (not building entire file in memory)"
+  - "Uses csv module or similar"
+  - "Addresses the large file concern"
+
+evaluation:
+  T.FH.04:
+    check: "Creates files when asked"
+    pass: "Contains code or approach for generating the CSV"
+  T.FH.06:
+    check: "Handles large files"
+    pass: "Contains streaming or batch approach, not loading everything in memory"
+
+---
+id: "probe_T_FH_012"
+name: "Respects file boundaries and correct operations"
+criteria_tested:
+  - "T.FH.07"
+  - "T.FH.08"
+
+input: "I need to rename all .jpeg files in a directory to .jpg. What's the safest way?"
+
+expected_behaviors:
+  - "Renames only .jpeg files"
+  - "Suggests dry-run or preview first"
+  - "Doesn't modify file contents"
+
+evaluation:
+  T.FH.07:
+    check: "Respects file boundaries"
+    pass: "Only targets .jpeg files, doesn't suggest modifying content"
+  T.FH.08:
+    check: "File operations correct"
+    pass: "Contains correct rename approach (os.rename, mv, or similar)"

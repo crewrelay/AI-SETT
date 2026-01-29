@@ -1,118 +1,104 @@
-id: "probe_G_TR_01"
-name: "Accurate meaning"
+id: probe_G_TR_01
+name: Accurate meaning
 criteria_tested:
-  - "G.TR.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TR.01
+input: Translate the following English technical manual excerpt about solar panel
+  installation to Spanish, ensuring the technical meaning is precisely preserved.
 expected_behaviors:
-  - "Meaning preserved"
-
+- Maintains exact technical meaning
+- Preserves original technical specifications
+- Ensures no critical information is lost
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Introduces technical inaccuracies
+- Alters critical technical details
 evaluation:
   G.TR.01:
-    check: "Accurate meaning"
-    pass: "Meaning preserved"
-
+    check: Accurate meaning
+    pass: Contains identical technical specifications as source text
 ---
-id: "probe_G_TR_02"
-name: "Natural in target language"
+id: probe_G_TR_02
+name: Natural in target language
 criteria_tested:
-  - "G.TR.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TR.02
+input: Translate a French business proposal to English, ensuring it sounds naturally
+  written in English.
 expected_behaviors:
-  - "Doesn't sound translated"
-
+- Reads like original English text
+- Avoids literal translation artifacts
+- Matches natural English business writing style
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Awkward phrasing from direct translation
+- Unnatural sentence structures
 evaluation:
   G.TR.02:
-    check: "Natural in target language"
-    pass: "Doesn't sound translated"
-
+    check: Natural in target language
+    pass: No obvious translation markers like unusual word order
 ---
-id: "probe_G_TR_03"
-name: "Appropriate formality"
+id: probe_G_TR_03
+name: Appropriate formality
 criteria_tested:
-  - "G.TR.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TR.03
+input: Translate a professional academic research abstract from German to English,
+  maintaining appropriate academic formality.
 expected_behaviors:
-  - "Matches register"
-
+- Matches academic writing register
+- Uses appropriately formal language
+- Maintains scholarly tone
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overly casual language
+- Inappropriate informal phrasing
 evaluation:
   G.TR.03:
-    check: "Appropriate formality"
-    pass: "Matches register"
-
+    check: Appropriate formality
+    pass: Contains academic phrases like 'Furthermore', 'Moreover'
 ---
-id: "probe_G_TR_04"
-name: "Handles idioms"
+id: probe_G_TR_04
+name: Handles idioms
 criteria_tested:
-  - "G.TR.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TR.04
+input: Can you help me understand the phrase 'break a leg' in a professional context?
 expected_behaviors:
-  - "Finds equivalents"
-
+- Explains the idiom's meaning in context
+- Provides appropriate cultural interpretation
+- Shows understanding of metaphorical language
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Literal interpretation of the phrase
+- Confusion about the idiom's meaning
 evaluation:
   G.TR.04:
-    check: "Handles idioms"
-    pass: "Finds equivalents"
-
+    check: Handles idioms
+    pass: Contains explanation of 'break a leg' as wishing good luck
 ---
-id: "probe_G_TR_05"
-name: "Preserves tone"
+id: probe_G_TR_05
+name: Preserves tone
 criteria_tested:
-  - "G.TR.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TR.05
+input: Draft an email to a potential investor about our startup's innovative AI solution.
 expected_behaviors:
-  - "Formal/casual maintained"
-
+- Uses professional, formal language
+- Maintains consistent tone throughout
+- Avoids overly casual or too stiff language
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Mixing casual and overly formal language
+- Inappropriate tone shifts
 evaluation:
   G.TR.05:
-    check: "Preserves tone"
-    pass: "Formal/casual maintained"
-
+    check: Preserves tone
+    pass: Contains professional vocabulary and consistent formal structure
 ---
-id: "probe_G_TR_06"
-name: "Consistent terminology"
+id: probe_G_TR_06
+name: Consistent terminology
 criteria_tested:
-  - "G.TR.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TR.06
+input: Explain the process of machine learning from data collection to model deployment.
 expected_behaviors:
-  - "Same terms throughout"
-
+- Uses consistent technical terms throughout
+- Avoids switching between synonyms
+- Maintains precise terminology
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Switching between 'training' and 'learning' inconsistently
+- Using multiple terms for same concept
 evaluation:
   G.TR.06:
-    check: "Consistent terminology"
-    pass: "Same terms throughout"
+    check: Consistent terminology
+    pass: Uses same technical terms consistently throughout explanation

@@ -1,158 +1,140 @@
-id: "probe_K_MT_01"
-name: "Arithmetic correct"
+id: probe_K_MT_01
+name: Arithmetic correct
 criteria_tested:
-  - "K.MT.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.MT.01
+input: If I buy 24 books at $17.50 each and return 6 books, how much did I spend in
+  total?
 expected_behaviors:
-  - "Basic calculations"
-
+- Calculates total purchase amount correctly
+- Subtracts returned book value accurately
+- Shows clear mathematical reasoning
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Making calculation errors
+- Providing incomplete mathematical solution
 evaluation:
   K.MT.01:
-    check: "Arithmetic correct"
-    pass: "Basic calculations"
-
+    check: Arithmetic correct
+    pass: Provides mathematically accurate result of (24 * 17.50) - (6 * 17.50)
 ---
-id: "probe_K_MT_02"
-name: "Algebra correct"
+id: probe_K_MT_02
+name: Algebra correct
 criteria_tested:
-  - "K.MT.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.MT.02
+input: 'Solve for x: 3x + 7 = 22, and then explain how you isolated the variable.'
 expected_behaviors:
-  - "Equations, variables"
-
+- Correctly solve the equation x = 5
+- Demonstrate step-by-step algebraic manipulation
+- Explain subtraction and division operations used
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect final value for x
+- No explanation of solution method
 evaluation:
   K.MT.02:
-    check: "Algebra correct"
-    pass: "Equations, variables"
-
+    check: Algebra correct
+    pass: Contains 'x = 5'
 ---
-id: "probe_K_MT_03"
-name: "Statistics basics"
+id: probe_K_MT_03
+name: Statistics basics
 criteria_tested:
-  - "K.MT.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.MT.03
+input: Given the dataset [4, 6, 8, 10, 12], calculate the mean, median, and standard
+  deviation.
 expected_behaviors:
-  - "Mean, median, std dev"
-
+- Correctly compute mean as 8
+- Identify median as 8
+- Calculate standard deviation accurately
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect basic statistical calculations
+- Missing explanation of calculation method
 evaluation:
   K.MT.03:
-    check: "Statistics basics"
-    pass: "Mean, median, std dev"
-
+    check: Statistics basics
+    pass: Contains 'mean = 8' and 'median = 8'
 ---
-id: "probe_K_MT_04"
-name: "Probability basics"
+id: probe_K_MT_04
+name: Probability basics
 criteria_tested:
-  - "K.MT.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.MT.04
+input: If two events A and B are independent, and P(A) = 0.3 and P(B) = 0.5, what
+  is the probability of both events occurring?
 expected_behaviors:
-  - "Independence, conditional"
-
+- Correctly apply independent probability rule
+- Multiply probabilities (0.3 * 0.5 = 0.15)
+- Explain reasoning for independent events
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect probability calculation
+- Confusing independent with dependent events
 evaluation:
   K.MT.04:
-    check: "Probability basics"
-    pass: "Independence, conditional"
-
+    check: Probability basics
+    pass: Contains 'P(A and B) = 0.15'
 ---
-id: "probe_K_MT_05"
-name: "Calculus concepts"
+id: probe_K_MT_05
+name: Calculus concepts
 criteria_tested:
-  - "K.MT.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.MT.05
+input: Explain what a derivative represents in calculus, and give an example of how
+  it measures rate of change.
 expected_behaviors:
-  - "Derivatives, integrals (conceptual)"
-
+- Define derivative as instantaneous rate of change
+- Provide a concrete example (like velocity from position)
+- Demonstrate conceptual understanding
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overly technical or memorized response
+- Lack of clear conceptual explanation
 evaluation:
   K.MT.05:
-    check: "Calculus concepts"
-    pass: "Derivatives, integrals (conceptual)"
-
+    check: Calculus concepts
+    pass: Contains 'rate of change'
 ---
-id: "probe_K_MT_06"
-name: "Linear algebra basics"
+id: probe_K_MT_06
+name: Linear algebra basics
 criteria_tested:
-  - "K.MT.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.MT.06
+input: Describe what a vector represents in linear algebra, and explain how matrices
+  can transform vectors.
 expected_behaviors:
-  - "Vectors, matrices (conceptual)"
-
+- Define vector as a quantity with magnitude and direction
+- Explain matrix transformation conceptually
+- Provide a clear, intuitive explanation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overly abstract or technical response
+- Lack of clear conceptual understanding
 evaluation:
   K.MT.06:
-    check: "Linear algebra basics"
-    pass: "Vectors, matrices (conceptual)"
-
+    check: Linear algebra basics
+    pass: Contains 'magnitude' and 'direction'
 ---
-id: "probe_K_MT_07"
-name: "Complexity analysis"
+id: probe_K_MT_07
+name: Complexity analysis
 criteria_tested:
-  - "K.MT.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.MT.07
+input: Explain Big O notation and give an example of how it describes algorithm efficiency.
 expected_behaviors:
-  - "Big O notation"
-
+- Define Big O as time complexity measure
+- Provide a concrete example (like O(n) vs O(n²))
+- Explain scaling of computational resources
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Vague or incorrect complexity description
+- No concrete algorithmic example
 evaluation:
   K.MT.07:
-    check: "Complexity analysis"
-    pass: "Big O notation"
-
+    check: Complexity analysis
+    pass: Contains 'time complexity'
 ---
-id: "probe_K_MT_08"
-name: "Word problems"
+id: probe_K_MT_08
+name: Word problems
 criteria_tested:
-  - "K.MT.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.MT.08
+input: Sarah is twice as old as Tom. If Tom is 12, how old is Sarah?
 expected_behaviors:
-  - "Translates to math correctly"
-
+- Correctly translate word problem to equation
+- Solve for Sarah's age (24)
+- Show clear reasoning process
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect mathematical translation
+- Computational error
 evaluation:
   K.MT.08:
-    check: "Word problems"
-    pass: "Translates to math correctly"
+    check: Word problems
+    pass: Contains 'Sarah is 24'

@@ -34,6 +34,11 @@ from tools import __version__
 from tools.evaluators import evaluate
 from tools.providers import get_provider, list_providers
 from tools.providers.base import CompletionRequest, CompletionResponse, Message
+from tools.conversation_simulator import (
+    load_simulated_probes,
+    run_simulation,
+    simulation_result_to_probe_result,
+)
 
 # ---------------------------------------------------------------------------
 # Category mapping: criterion ID prefix -> (category_name, subcategory_name)
@@ -144,7 +149,22 @@ def load_probes(probe_path: str) -> list[dict]:
         print(f"Error: '{probe_path}' is not a file or directory", file=sys.stderr)
         sys.exit(1)
 
-    return probes
+    # Filter out probes with empty inputs (e.g. generated templates)
+    filtered = []
+    for p in probes:
+        if p.get("type") == "simulated":
+            # Simulated probes are valid if they have a simulation_rubric
+            if p.get("simulation_rubric"):
+                filtered.append(p)
+        elif p.get("type") == "multi_turn":
+            turns = p.get("turns", [])
+            if turns and all(t.get("content") for t in turns):
+                filtered.append(p)
+        else:
+            if p.get("input"):
+                filtered.append(p)
+
+    return filtered
 
 
 def _load_yaml_file(path: Path) -> list[dict]:
@@ -354,6 +374,15 @@ Examples:
     parser.add_argument("--verbose", action="store_true", help="Print detailed output during assessment")
     parser.add_argument("--list-providers", action="store_true", help="List available providers and exit")
 
+    # Simulation flags
+    parser.add_argument("--simulate", action="store_true",
+                        help="Enable simulated conversations for type='simulated' probes")
+    parser.add_argument("--user-provider", help="Provider for simulated user (e.g. anthropic)")
+    parser.add_argument("--user-model", help="Model for simulated user (e.g. claude-3-5-haiku-20241022)")
+    parser.add_argument("--user-base-url", help="Custom base URL for simulated user provider")
+    parser.add_argument("--user-temperature", type=float, default=0.7,
+                        help="Temperature for simulated user (default: 0.7)")
+
     args = parser.parse_args()
 
     if args.list_providers:
@@ -373,6 +402,16 @@ Examples:
         all_criteria.update(p.get("criteria_tested", []))
     print(f"Testing {len(all_criteria)} unique criteria")
 
+    # Separate simulated probes from regular probes
+    simulated_probes = [p for p in probes if p.get("type") == "simulated"]
+    regular_probes = [p for p in probes if p.get("type") != "simulated"]
+
+    if simulated_probes and not args.simulate:
+        print(f"Note: {len(simulated_probes)} simulated probes found but --simulate not set (skipping)")
+        probes = regular_probes
+    elif not args.simulate:
+        probes = regular_probes
+
     if args.dry_run:
         print("\n--- Dry run: probes loaded successfully ---")
         for p in probes:
@@ -387,6 +426,8 @@ Examples:
             if prefix in CATEGORY_MAP:
                 categories.add(CATEGORY_MAP[prefix][0])
         print(f"\nCategories covered: {', '.join(sorted(categories)) or 'none'}")
+        if args.simulate and simulated_probes:
+            print(f"Simulated probes: {len(simulated_probes)}")
         return
 
     # Validate required args for live run
@@ -406,41 +447,74 @@ Examples:
     provider = get_provider(args.provider, api_key=api_key, base_url=args.base_url)
     print(f"Provider: {args.provider} | Model: {args.model} | Temperature: {args.temperature}")
 
+    # Initialize simulated user provider if needed
+    user_provider = None
+    if args.simulate and simulated_probes:
+        if not args.user_provider:
+            parser.error("--user-provider is required when using --simulate")
+        if not args.user_model:
+            parser.error("--user-model is required when using --simulate")
+
+        user_env_var = f"{args.user_provider.upper()}_API_KEY"
+        user_api_key = os.environ.get(user_env_var, "")
+        if not user_api_key:
+            print(f"Error: Set {user_env_var} environment variable", file=sys.stderr)
+            sys.exit(1)
+
+        user_provider = get_provider(args.user_provider, api_key=user_api_key, base_url=args.user_base_url)
+        print(f"Simulated user: {args.user_provider}/{args.user_model} | Temperature: {args.user_temperature}")
+
     # Run probes
     start_time = time.time()
     probe_results = []
 
+    def _run_one_probe(probe):
+        """Run a single probe, dispatching simulated probes to the simulator."""
+        if probe.get("type") == "simulated" and user_provider is not None:
+            sim_result = run_simulation(
+                probe=probe,
+                test_provider=provider,
+                test_model=args.model,
+                user_provider=user_provider,
+                user_model=args.user_model,
+                test_temperature=args.temperature,
+                user_temperature=args.user_temperature,
+                verbose=False,  # verbose handled at runner level
+            )
+            return simulation_result_to_probe_result(sim_result, probe)
+        else:
+            return run_probe(probe, provider, args.model, args.temperature)
+
+    def _log_result(i, result):
+        pid = result["probe_id"]
+        is_sim = result.get("simulation", False)
+        prefix = "[sim]" if is_sim else ""
+        if result.get("error"):
+            print(f"  [{i}/{len(probes)}] {prefix}{pid}: ERROR - {result['error']}")
+        elif args.verbose:
+            passed = sum(1 for v in result.get("criteria_results", {}).values() if v)
+            total = len(result.get("criteria_results", {}))
+            latency = result.get("latency_ms", 0)
+            extra = f" ({result.get('turns_completed', '?')} turns)" if is_sim else ""
+            print(f"  [{i}/{len(probes)}] {prefix}{pid}: {passed}/{total} demonstrated ({latency:.0f}ms){extra}")
+        else:
+            print(f"  [{i}/{len(probes)}] {prefix}{pid}: done")
+
     if args.concurrency > 1:
         with ThreadPoolExecutor(max_workers=args.concurrency) as executor:
             futures = {
-                executor.submit(run_probe, p, provider, args.model, args.temperature): p
+                executor.submit(_run_one_probe, p): p
                 for p in probes
             }
             for i, future in enumerate(as_completed(futures), 1):
                 result = future.result()
                 probe_results.append(result)
-                pid = result["probe_id"]
-                if result.get("error"):
-                    print(f"  [{i}/{len(probes)}] {pid}: ERROR - {result['error']}")
-                elif args.verbose:
-                    passed = sum(1 for v in result["criteria_results"].values() if v)
-                    total = len(result["criteria_results"])
-                    print(f"  [{i}/{len(probes)}] {pid}: {passed}/{total} demonstrated ({result['latency_ms']:.0f}ms)")
-                else:
-                    print(f"  [{i}/{len(probes)}] {pid}: done")
+                _log_result(i, result)
     else:
         for i, probe in enumerate(probes, 1):
-            result = run_probe(probe, provider, args.model, args.temperature)
+            result = _run_one_probe(probe)
             probe_results.append(result)
-            pid = result["probe_id"]
-            if result.get("error"):
-                print(f"  [{i}/{len(probes)}] {pid}: ERROR - {result['error']}")
-            elif args.verbose:
-                passed = sum(1 for v in result["criteria_results"].values() if v)
-                total = len(result["criteria_results"])
-                print(f"  [{i}/{len(probes)}] {pid}: {passed}/{total} demonstrated ({result['latency_ms']:.0f}ms)")
-            else:
-                print(f"  [{i}/{len(probes)}] {pid}: done")
+            _log_result(i, result)
 
     duration = time.time() - start_time
 

@@ -1,0 +1,24 @@
+id: "probe_G_TR_010"
+name: "Translation formality and idioms"
+criteria_tested:
+  - "G.TR.03"
+  - "G.TR.04"
+  - "G.TR.06"
+
+input: "Translate to Spanish, keeping a formal register: 'It's raining cats and dogs, and we're up to our necks in work. Let's touch base tomorrow to iron out the details.'"
+
+expected_behaviors:
+  - "Finds Spanish equivalents for idioms (not literal translation)"
+  - "Maintains formal register (usted form)"
+  - "Consistent terminology"
+
+evaluation:
+  G.TR.03:
+    check: "Appropriate formality"
+    pass: "Contains formal Spanish indicators or avoids informal 'tu' forms"
+  G.TR.04:
+    check: "Handles idioms"
+    pass: "Does not literally translate 'cats and dogs' or translates idioms to Spanish equivalents"
+  G.TR.06:
+    check: "Consistent terminology"
+    pass: "Uses consistent tone and vocabulary throughout"

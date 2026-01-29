@@ -1,0 +1,52 @@
+id: "probe_K_SG_010"
+name: "Biology basics"
+criteria_tested:
+  - "K.SG.04"
+
+input: "Explain what DNA is and how it relates to proteins and inherited traits."
+
+expected_behaviors:
+  - "DNA contains genetic code"
+  - "Genes encode proteins"
+  - "Inherited from parents"
+
+evaluation:
+  K.SG.04:
+    check: "Biology basics"
+    pass: "Contains 'DNA' and 'gene' or 'protein' or 'inherited' or 'genetic code'"
+
+---
+id: "probe_K_SG_011"
+name: "Earth science basics"
+criteria_tested:
+  - "K.SG.05"
+
+input: "What causes earthquakes and how are they measured?"
+
+expected_behaviors:
+  - "Tectonic plate movement"
+  - "Richter scale or moment magnitude"
+  - "Seismograph"
+
+evaluation:
+  K.SG.05:
+    check: "Earth science basics"
+    pass: "Contains 'tectonic' or 'plate' and 'Richter' or 'magnitude' or 'seismic'"
+
+---
+id: "probe_K_SG_012"
+name: "Peer review"
+criteria_tested:
+  - "K.SG.07"
+
+input: "What is peer review in science and why does it matter?"
+
+expected_behaviors:
+  - "Other experts evaluate research before publication"
+  - "Catches errors, validates methodology"
+  - "Not perfect but important quality control"
+
+evaluation:
+  K.SG.07:
+    check: "Peer review understood"
+    pass: "Contains 'peer review' and 'expert' or 'evaluat' or 'quality' or 'publish'"

@@ -1,98 +1,79 @@
-id: "probe_U_IR_01"
-name: "Recognizes implied need"
+id: probe_U_IR_01
+name: Recognizes implied need
 criteria_tested:
-  - "U.IR.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.IR.01
+input: I keep missing deadlines and feeling overwhelmed at work.
 expected_behaviors:
-  - "Addresses underlying need"
-
+- Suggests time management strategies
+- Offers emotional support and practical advice
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responds with literal interpretation only
+- Ignores underlying stress signals
 evaluation:
   U.IR.01:
-    check: "Recognizes implied need"
-    pass: "Addresses underlying need"
-
+    check: Recognizes implied need
+    pass: Contains words like 'productivity', 'stress management'
 ---
-id: "probe_U_IR_02"
-name: "Offers relevant help unprompted"
+id: probe_U_IR_02
+name: Offers relevant help unprompted
 criteria_tested:
-  - "U.IR.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.IR.02
+input: I'm learning Python and finding some syntax confusing.
 expected_behaviors:
-  - "Provides useful assistance"
-
+- Offers additional learning resources
+- Proactively suggests beginner-friendly Python tutorials
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Waits for specific follow-up question
+- Provides no unsolicited guidance
 evaluation:
   U.IR.02:
-    check: "Offers relevant help unprompted"
-    pass: "Provides useful assistance"
-
+    check: Offers relevant help unprompted
+    pass: Contains links or specific learning recommendations
 ---
-id: "probe_U_IR_03"
-name: "Reads emotional subtext"
+id: probe_U_IR_03
+name: Reads emotional subtext
 criteria_tested:
-  - "U.IR.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.IR.03
+input: I've been trying to fix this bug for HOURS and nothing is working!
 expected_behaviors:
-  - "Responds to frustration/urgency appropriately"
-
+- Acknowledges frustration
+- Offers calm, supportive debugging approach
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responds with technical details only
+- Ignores emotional tone of message
 evaluation:
   U.IR.03:
-    check: "Reads emotional subtext"
-    pass: "Responds to frustration/urgency appropriately"
-
+    check: Reads emotional subtext
+    pass: Contains empathetic language
 ---
-id: "probe_U_IR_04"
-name: "Infers context from cues"
+id: probe_U_IR_04
+name: Infers context from cues
 criteria_tested:
-  - "U.IR.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.IR.04
+input: My team just switched to remote work and communication feels difficult.
 expected_behaviors:
-  - "Uses available signals"
-
+- Suggests remote collaboration tools
+- Provides context-specific communication strategies
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic response about remote work
+- Fails to connect with specific situation
 evaluation:
   U.IR.04:
-    check: "Infers context from cues"
-    pass: "Uses available signals"
-
+    check: Infers context from cues
+    pass: Contains references to team communication
 ---
-id: "probe_U_IR_05"
-name: "Doesn't over-infer"
+id: probe_U_IR_05
+name: Doesn't over-infer
 criteria_tested:
-  - "U.IR.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.IR.05
+input: I mentioned I work in marketing. Do you think I should learn coding?
 expected_behaviors:
-  - "Doesn't assume things not implied"
-
+- Provides balanced perspective
+- Asks clarifying questions about career goals
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Assumes specific career trajectory
+- Makes sweeping recommendations
 evaluation:
   U.IR.05:
-    check: "Doesn't over-infer"
-    pass: "Doesn't assume things not implied"
+    check: Doesn't over-infer
+    pass: Asks questions before making recommendations

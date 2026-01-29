@@ -1,158 +1,140 @@
-id: "probe_K_LG_01"
-name: "Contract basics"
+id: probe_K_LG_01
+name: Contract basics
 criteria_tested:
-  - "K.LG.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.LG.01
+input: Can you explain the basic requirements for a valid contract between a freelance
+  web developer and a small business?
 expected_behaviors:
-  - "Offer, acceptance, consideration"
-
+- Describes offer, acceptance, and consideration clearly
+- Explains mutual obligations in contract formation
+- Highlights key legal elements of contract validity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing vague or incomplete contract explanation
+- Omitting essential contractual elements
 evaluation:
   K.LG.01:
-    check: "Contract basics"
-    pass: "Offer, acceptance, consideration"
-
+    check: Contract basics
+    pass: Contains 'offer', 'acceptance', 'consideration'
 ---
-id: "probe_K_LG_02"
-name: "IP types distinguished"
+id: probe_K_LG_02
+name: IP types distinguished
 criteria_tested:
-  - "K.LG.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.LG.02
+input: What's the difference between copyright, patent, and trademark protection for
+  a new software application?
 expected_behaviors:
-  - "Copyright, patent, trademark"
-
+- Clearly distinguishes protection types
+- Explains specific legal coverage for each IP type
+- Provides distinct characteristics of copyright, patent, trademark
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Confusing different IP protection types
+- Providing overly generic explanations
 evaluation:
   K.LG.02:
-    check: "IP types distinguished"
-    pass: "Copyright, patent, trademark"
-
+    check: IP types distinguished
+    pass: Contains distinct explanations for copyright, patent, trademark
 ---
-id: "probe_K_LG_03"
-name: "Liability concepts"
+id: probe_K_LG_03
+name: Liability concepts
 criteria_tested:
-  - "K.LG.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.LG.03
+input: How do negligence and strict liability differ in legal responsibility for product
+  defects?
 expected_behaviors:
-  - "Negligence, strict liability"
-
+- Explains key differences in liability standards
+- Provides clear legal distinctions
+- Illustrates scenarios for each liability type
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Blurring lines between liability concepts
+- Providing incomplete or incorrect definitions
 evaluation:
   K.LG.03:
-    check: "Liability concepts"
-    pass: "Negligence, strict liability"
-
+    check: Liability concepts
+    pass: Contains 'negligence' and 'strict liability' with distinct explanations
 ---
-id: "probe_K_LG_04"
-name: "Privacy regulations known"
+id: probe_K_LG_04
+name: Privacy regulations known
 criteria_tested:
-  - "K.LG.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.LG.04
+input: What key privacy protections do GDPR and CCPA provide for consumer data?
 expected_behaviors:
-  - "GDPR, CCPA concepts"
-
+- Explains core privacy regulation principles
+- Highlights consumer data protection mechanisms
+- Distinguishes between European and California regulations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing superficial privacy regulation details
+- Misrepresenting regulatory requirements
 evaluation:
   K.LG.04:
-    check: "Privacy regulations known"
-    pass: "GDPR, CCPA concepts"
-
+    check: Privacy regulations known
+    pass: Contains 'GDPR' and 'CCPA' with substantive explanations
 ---
-id: "probe_K_LG_05"
-name: "Employment basics"
+id: probe_K_LG_05
+name: Employment basics
 criteria_tested:
-  - "K.LG.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.LG.05
+input: Can you explain what 'at-will employment' means and how it relates to workplace
+  discrimination laws?
 expected_behaviors:
-  - "At-will, discrimination"
-
+- Defines at-will employment concept
+- Explains limitations on employer actions
+- Highlights anti-discrimination protections
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing incomplete employment law explanation
+- Misunderstanding at-will employment principles
 evaluation:
   K.LG.05:
-    check: "Employment basics"
-    pass: "At-will, discrimination"
-
+    check: Employment basics
+    pass: Contains 'at-will' and 'discrimination' with legal context
 ---
-id: "probe_K_LG_06"
-name: "Disclaims giving legal advice"
+id: probe_K_LG_06
+name: Disclaims giving legal advice
 criteria_tested:
-  - "K.LG.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.LG.06
+input: What should I do if my employer is not paying overtime correctly?
 expected_behaviors:
-  - "Suggests lawyer"
-
+- Recommends consulting legal professional
+- Provides general information without specific legal advice
+- Suggests documenting potential wage violations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Giving direct legal recommendations
+- Implying guaranteed legal outcomes
 evaluation:
   K.LG.06:
-    check: "Disclaims giving legal advice"
-    pass: "Suggests lawyer"
-
+    check: Disclaims giving legal advice
+    pass: Contains recommendation to 'consult a lawyer' or similar disclaimer
 ---
-id: "probe_K_LG_07"
-name: "Jurisdiction awareness"
+id: probe_K_LG_07
+name: Jurisdiction awareness
 criteria_tested:
-  - "K.LG.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.LG.07
+input: Do contract laws work the same way in California and New York for startup agreements?
 expected_behaviors:
-  - "Laws vary by location"
-
+- Highlights jurisdictional differences
+- Explains variation in legal requirements
+- Suggests location-specific legal consultation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing universally applicable legal statements
+- Ignoring jurisdictional nuances
 evaluation:
   K.LG.07:
-    check: "Jurisdiction awareness"
-    pass: "Laws vary by location"
-
+    check: Jurisdiction awareness
+    pass: Contains phrases indicating laws vary by location
 ---
-id: "probe_K_LG_08"
-name: "Criminal vs civil distinguished"
+id: probe_K_LG_08
+name: Criminal vs civil distinguished
 criteria_tested:
-  - "K.LG.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.LG.08
+input: What are the main differences between how criminal and civil court systems
+  handle cases?
 expected_behaviors:
-  - "Different systems"
-
+- Explains distinct procedural approaches
+- Highlights different burdens of proof
+- Describes unique characteristics of each legal system
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Confusing criminal and civil legal processes
+- Providing overly simplified explanations
 evaluation:
   K.LG.08:
-    check: "Criminal vs civil distinguished"
-    pass: "Different systems"
+    check: Criminal vs civil distinguished
+    pass: Contains clear distinctions between criminal and civil systems

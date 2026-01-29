@@ -1,158 +1,135 @@
-id: "probe_T_SC_01"
-name: "Provides hints before answers"
+id: probe_T_SC_01
+name: Provides hints before answers
 criteria_tested:
-  - "T.SC.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.SC.01
+input: 'How do I solve this quadratic equation: x² + 5x + 6 = 0?'
 expected_behaviors:
-  - "Guides rather than tells"
-
+- Asks learner to identify key parts of the equation first
+- Provides strategic questions about solving method
+- Guides toward factoring approach without giving direct solution
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Immediately showing full solution steps
+- Solving the equation without checking understanding
 evaluation:
   T.SC.01:
-    check: "Provides hints before answers"
-    pass: "Guides rather than tells"
-
+    check: Provides hints before answers
+    pass: Contains question marks or guidance words before solution
 ---
-id: "probe_T_SC_02"
-name: "Graduates difficulty"
+id: probe_T_SC_02
+name: Graduates difficulty
 criteria_tested:
-  - "T.SC.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.SC.02
+input: Can you teach me Python list operations?
 expected_behaviors:
-  - "Starts simple, adds complexity"
-
+- Starts with basic list creation
+- Progressively introduces more complex list manipulations
+- Moves from simple indexing to advanced slicing and comprehensions
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Dumping all list operations at once
+- Starting with overly complex list techniques
 evaluation:
   T.SC.02:
-    check: "Graduates difficulty"
-    pass: "Starts simple, adds complexity"
-
+    check: Graduates difficulty
+    pass: Contains progression from simple to complex concepts
 ---
-id: "probe_T_SC_03"
-name: "Removes support appropriately"
+id: probe_T_SC_03
+name: Removes support appropriately
 criteria_tested:
-  - "T.SC.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.SC.03
+input: I'm learning to debug Python code. Can you help me step by step?
 expected_behaviors:
-  - "Fades scaffold as learner improves"
-
+- Initially provides detailed debugging guidance
+- Gradually reduces explicit instructions
+- Encourages independent problem-solving
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Continuing to provide full solution after learner shows competence
+- Withdrawing support too quickly
 evaluation:
   T.SC.03:
-    check: "Removes support appropriately"
-    pass: "Fades scaffold as learner improves"
-
+    check: Removes support appropriately
+    pass: Shows reduction in explicit guidance over interaction
 ---
-id: "probe_T_SC_04"
-name: "Uses leading questions"
+id: probe_T_SC_04
+name: Uses leading questions
 criteria_tested:
-  - "T.SC.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.SC.04
+input: I'm stuck on this algebra problem about linear equations.
 expected_behaviors:
-  - "Questions that guide to answer"
-
+- Asks probing questions about equation components
+- Uses questions to guide problem-solving approach
+- Helps learner discover solution path through strategic questioning
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Directly solving the problem
+- Giving unrelated or vague questions
 evaluation:
   T.SC.04:
-    check: "Uses leading questions"
-    pass: "Questions that guide to answer"
-
+    check: Uses leading questions
+    pass: Contains multiple question marks guiding solution
 ---
-id: "probe_T_SC_05"
-name: "Offers partial solutions"
+id: probe_T_SC_05
+name: Offers partial solutions
 criteria_tested:
-  - "T.SC.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.SC.05
+input: How would you implement a binary search algorithm?
 expected_behaviors:
-  - "Shows some steps, lets learner complete"
-
+- Shows initial algorithm structure
+- Leaves key implementation details for learner
+- Provides skeleton code with strategic gaps
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Complete, fully-implemented solution
+- No guidance on missing components
 evaluation:
   T.SC.05:
-    check: "Offers partial solutions"
-    pass: "Shows some steps, lets learner complete"
-
+    check: Offers partial solutions
+    pass: Contains incomplete code or solution with clear learning spaces
 ---
-id: "probe_T_SC_06"
-name: "Knows when to step back"
+id: probe_T_SC_06
+name: Knows when to step back
 criteria_tested:
-  - "T.SC.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.SC.06
+input: I'm having trouble understanding recursion in programming.
 expected_behaviors:
-  - "Lets learner struggle productively"
-
+- Allows learner to work through initial confusion
+- Provides minimal guidance to prevent complete frustration
+- Gives space for independent exploration
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Immediately jumping in to solve the problem
+- Providing overly complex explanations
 evaluation:
   T.SC.06:
-    check: "Knows when to step back"
-    pass: "Lets learner struggle productively"
-
+    check: Knows when to step back
+    pass: Contains language indicating learner should explore independently
 ---
-id: "probe_T_SC_07"
-name: "Knows when to step in"
+id: probe_T_SC_07
+name: Knows when to step in
 criteria_tested:
-  - "T.SC.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.SC.07
+input: I've been stuck on this programming problem for hours.
 expected_behaviors:
-  - "Intervenes before frustration"
-
+- Recognizes signs of learner frustration
+- Offers targeted, specific help
+- Provides strategic intervention to unblock learning
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignoring clear signs of extended struggle
+- Providing unhelpful or generic advice
 evaluation:
   T.SC.07:
-    check: "Knows when to step in"
-    pass: "Intervenes before frustration"
-
+    check: Knows when to step in
+    pass: Contains direct offer of assistance or targeted guidance
 ---
-id: "probe_T_SC_08"
-name: "Adjusts scaffold to learner"
+id: probe_T_SC_08
+name: Adjusts scaffold to learner
 criteria_tested:
-  - "T.SC.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.SC.08
+input: I'm learning Python, but some concepts are harder for me than others.
 expected_behaviors:
-  - "More/less support as needed"
-
+- Assesses learner's current understanding level
+- Provides customized learning approach
+- Adapts explanation complexity based on learner's responses
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Using a one-size-fits-all teaching approach
+- Not modifying explanation style
 evaluation:
   T.SC.08:
-    check: "Adjusts scaffold to learner"
-    pass: "More/less support as needed"
+    check: Adjusts scaffold to learner
+    pass: Contains language indicating personalized learning support

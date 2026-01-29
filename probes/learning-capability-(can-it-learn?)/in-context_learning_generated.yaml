@@ -1,158 +1,135 @@
-id: "probe_L_IC_01"
-name: "Learns from single example"
+id: probe_L_IC_01
+name: Learns from single example
 criteria_tested:
-  - "L.IC.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IC.01
+input: 'Here''s a JSON parsing function in Python: def parse_config(file_path): return
+  json.load(open(file_path)). Can you write a similar function that handles YAML?'
 expected_behaviors:
-  - "Given one example, applies pattern to new case"
-
+- Creates a YAML parsing function with similar structure
+- Applies parsing pattern from Python JSON example
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Asks for more examples
+- Provides completely unrelated solution
 evaluation:
   L.IC.01:
-    check: "Learns from single example"
-    pass: "Given one example, applies pattern to new case"
-
+    check: Learns from single example
+    pass: Contains YAML parsing function with similar structure to JSON example
 ---
-id: "probe_L_IC_02"
-name: "Learns from few examples"
+id: probe_L_IC_02
+name: Learns from few examples
 criteria_tested:
-  - "L.IC.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IC.02
+input: 'I want to create a function that validates email addresses. Here are three
+  examples: ''user@example.com'', ''john.doe@company.org'', ''alice+work@gmail.com''.'
 expected_behaviors:
-  - "2-5 examples sufficient to establish pattern"
-
+- Develops a regex or validation function covering these patterns
+- Identifies common email format characteristics
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Requires more than 5 examples
+- Fails to extract email validation rules
 evaluation:
   L.IC.02:
-    check: "Learns from few examples"
-    pass: "2-5 examples sufficient to establish pattern"
-
+    check: Learns from few examples
+    pass: Contains email validation logic covering given examples
 ---
-id: "probe_L_IC_03"
-name: "Generalizes beyond examples"
+id: probe_L_IC_03
+name: Generalizes beyond examples
 criteria_tested:
-  - "L.IC.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IC.03
+input: I showed you how to parse CSV files for three specific datasets. Can you explain
+  how you might parse a CSV file with a different structure?
 expected_behaviors:
-  - "Applies to cases not shown"
-
+- Describes generalized CSV parsing approach
+- Applies parsing logic beyond specific examples
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Only repeats previous specific examples
+- Unable to describe generalized approach
 evaluation:
   L.IC.03:
-    check: "Generalizes beyond examples"
-    pass: "Applies to cases not shown"
-
+    check: Generalizes beyond examples
+    pass: Contains abstract CSV parsing strategy
 ---
-id: "probe_L_IC_04"
-name: "Distinguishes relevant features"
+id: probe_L_IC_04
+name: Distinguishes relevant features
 criteria_tested:
-  - "L.IC.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IC.04
+input: 'Look at these machine learning features: age, income, education level, and
+  zip code. Which seem most relevant for predicting loan approval?'
 expected_behaviors:
-  - "Identifies what matters in examples"
-
+- Identifies most predictive features
+- Explains reasoning behind feature selection
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Treats all features as equally important
+- Cannot distinguish meaningful predictors
 evaluation:
   L.IC.04:
-    check: "Distinguishes relevant features"
-    pass: "Identifies what matters in examples"
-
+    check: Distinguishes relevant features
+    pass: Contains explanation prioritizing most significant features
 ---
-id: "probe_L_IC_05"
-name: "Handles negative examples"
+id: probe_L_IC_05
+name: Handles negative examples
 criteria_tested:
-  - "L.IC.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IC.05
+input: 'Here are some bad coding practices: global variables, copy-pasting code, no
+  error handling. Can you explain why these are problematic?'
 expected_behaviors:
-  - "Learns what NOT to do"
-
+- Explains specific issues with each anti-pattern
+- Demonstrates understanding of what NOT to do
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Describes only positive practices
+- Fails to critique negative examples
 evaluation:
   L.IC.05:
-    check: "Handles negative examples"
-    pass: "Learns what NOT to do"
-
+    check: Handles negative examples
+    pass: Contains critique of each bad practice
 ---
-id: "probe_L_IC_06"
-name: "Corrects after feedback"
+id: probe_L_IC_06
+name: Corrects after feedback
 criteria_tested:
-  - "L.IC.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IC.06
+input: Your previous solution used a linear regression model. I think a random forest
+  might work better here.
 expected_behaviors:
-  - "Changes behavior when corrected"
-
+- Acknowledges potential improvement
+- Modifies approach based on feedback
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Defensively argues for original solution
+- Ignores suggested improvement
 evaluation:
   L.IC.06:
-    check: "Corrects after feedback"
-    pass: "Changes behavior when corrected"
-
+    check: Corrects after feedback
+    pass: Contains willingness to explore alternative approach
 ---
-id: "probe_L_IC_07"
-name: "Retains within session"
+id: probe_L_IC_07
+name: Retains within session
 criteria_tested:
-  - "L.IC.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IC.07
+input: Earlier we discussed using list comprehensions in Python. Now I'm working on
+  a data cleaning task. Can you apply that approach?
 expected_behaviors:
-  - "Still applies learning later in conversation"
-
+- Remembers previous list comprehension discussion
+- Applies earlier learning to new context
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Forgets previous Python discussion
+- Provides unrelated solution
 evaluation:
   L.IC.07:
-    check: "Retains within session"
-    pass: "Still applies learning later in conversation"
-
+    check: Retains within session
+    pass: References previous list comprehension approach
 ---
-id: "probe_L_IC_08"
-name: "Doesn't overfit to examples"
+id: probe_L_IC_08
+name: Doesn't overfit to examples
 criteria_tested:
-  - "L.IC.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.IC.08
+input: Can you write a summary of the novel 'To Kill a Mockingbird' using only the
+  exact words from the first paragraph of the book?
 expected_behaviors:
-  - "Doesn't copy surface features blindly"
-
+- Generates a summary that captures the novel's essence
+- Uses original language creatively, not just verbatim copying
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Directly copying the first paragraph without synthesizing
+- Producing a mechanical, word-for-word repetition
 evaluation:
   L.IC.08:
-    check: "Doesn't overfit to examples"
-    pass: "Doesn't copy surface features blindly"
+    check: Doesn't overfit to examples
+    pass: Contains original summary language, not direct copy

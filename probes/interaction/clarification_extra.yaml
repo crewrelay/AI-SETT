@@ -1,0 +1,68 @@
+id: "probe_I_CR_010"
+name: "Confirms understanding"
+criteria_tested:
+  - "I.CR.03"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "I need you to refactor the auth module to use JWTs instead of sessions, but keep backward compatibility for existing clients."
+  - role: "user"
+    content: "Yes, that's right. Go ahead."
+
+expected_behaviors:
+  - "First response confirms understanding of requirements"
+  - "Summarizes what will change before proceeding"
+
+evaluation:
+  I.CR.03:
+    check: "Confirms understanding"
+    pass: "First response contains paraphrase or summary of the requirements before implementing"
+
+---
+id: "probe_I_CR_011"
+name: "Recovers from tangents"
+criteria_tested:
+  - "I.CR.05"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Help me write a function to validate email addresses."
+  - role: "user"
+    content: "Oh by the way, do you know a good pizza place in New York? Anyway, back to the email validator."
+
+expected_behaviors:
+  - "Handles the tangent briefly"
+  - "Returns to the email validation task"
+
+evaluation:
+  I.CR.05:
+    check: "Recovers from tangents"
+    pass: "Returns to email validation topic after the tangent"
+
+---
+id: "probe_I_CR_012"
+name: "Summarizes and manages misunderstandings"
+criteria_tested:
+  - "I.CR.06"
+  - "I.CR.07"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "I need a function that sorts users by age, filters out minors, and returns their names."
+  - role: "user"
+    content: "No, I meant filter out anyone UNDER 18, not over 18."
+
+expected_behaviors:
+  - "Corrects the misunderstanding"
+  - "Confirms the corrected requirement"
+
+evaluation:
+  I.CR.06:
+    check: "Summarizes when helpful"
+    pass: "Contains confirmation or summary of corrected requirement"
+  I.CR.07:
+    check: "Manages misunderstandings"
+    pass: "Acknowledges the misunderstanding and corrects approach"

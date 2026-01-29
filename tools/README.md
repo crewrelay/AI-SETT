@@ -257,6 +257,75 @@ python -m tools.training_data_generator \
 6. Optionally validates outputs with rule-based checks
 7. Writes formatted JSONL output
 
+### conversation_harvester.py — Extract training data from real conversations
+
+Extracts training examples from real Claude conversations (16,000+ turn pairs)
+and files them into the AI-SETT training data library by criterion. Uses a
+two-stage LLM classifier: category triage (batched) then criterion-level matching.
+
+```bash
+# Harvest from Claude Code transcripts (main use case)
+python -m tools.conversation_harvester \
+  --input docs/claude-transcripts/all-conversations.jsonl \
+  --framework docs/AI-SETT-FRAMEWORK.md \
+  --classifier anthropic:claude-3-5-haiku-20241022 \
+  --output training_data/ --split-by-category --append
+
+# Dry run — show extraction stats
+python -m tools.conversation_harvester \
+  --input docs/claude-transcripts/all-conversations.jsonl --dry-run
+
+# Single session, verbose
+python -m tools.conversation_harvester \
+  --input ~/.claude/projects/-Users-Israel-crewrelay-backend/session.jsonl \
+  --framework docs/AI-SETT-FRAMEWORK.md \
+  --classifier anthropic:claude-3-5-haiku-20241022 --verbose
+
+# Higher quality threshold
+python -m tools.conversation_harvester \
+  --input all-conversations.jsonl \
+  --framework docs/AI-SETT-FRAMEWORK.md \
+  --classifier anthropic:claude-3-5-haiku-20241022 \
+  --min-quality 0.8
+```
+
+**Options:**
+
+| Flag | Default | Description |
+|------|---------|-------------|
+| `--input` | (required) | Conversation file (JSONL or JSON) |
+| `--framework` | `docs/AI-SETT-FRAMEWORK.md` | Path to framework |
+| `--classifier` | (required unless --dry-run) | `provider:model` for classification |
+| `--output` | `training_data` | Output directory or file |
+| `--format` | `raw_jsonl` | Output format (same as training_data_generator) |
+| `--split-by-category` | — | Write category/subcategory/criterion tree |
+| `--append` | — | Add to existing library |
+| `--min-quality` | `0.7` | Minimum classifier quality score |
+| `--min-user-words` | `5` | Skip short user messages |
+| `--min-assistant-words` | `20` | Skip short responses |
+| `--max-tool-ratio` | `0.6` | Skip tool-heavy exchanges |
+| `--concurrency` | `4` | Parallel classifier calls |
+| `--limit` | `0` | Max turn pairs to process (0=all) |
+| `--dry-run` | — | Stats only |
+| `--verbose` | — | Detailed output |
+
+**Input formats (auto-detected):**
+
+- **Claude Code JSONL** — Records with `type` field (`user`, `assistant`, etc.), linked by `parentUuid`→`uuid` within `sessionId`. Extracts text blocks, skips tool_use/thinking/sidechains.
+- **Claude.ai Web JSON** — `{"conversations": [...]}` or bare array with `chat_messages` containing `sender`/`text` pairs.
+
+**How it works:**
+
+1. Streams conversation file line-by-line (memory-efficient for 63K+ records)
+2. Reconstructs user→assistant turn pairs by session and parent chain
+3. Filters out short, tool-heavy, and code-heavy exchanges (~60-80% filtered)
+4. Stage 1 — Category triage: batches of 10 pairs classified into 12 categories
+5. Stage 2 — Criterion matching: each pair matched to specific criteria within its categories
+6. Quality threshold filter, deduplication
+7. Writes to training data library (reuses training_data_generator output format)
+
+Harvested examples are tagged `generator_model: "human:harvested"`.
+
 ### probe_generator.py — Generate probe templates
 
 Parses AI-SETT-FRAMEWORK.md to extract all criteria and generates

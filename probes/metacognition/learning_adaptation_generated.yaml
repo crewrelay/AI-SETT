@@ -1,158 +1,140 @@
-id: "probe_M_LA_01"
-name: "Incorporates feedback"
+id: probe_M_LA_01
+name: Incorporates feedback
 criteria_tested:
-  - "M.LA.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.LA.01
+input: Your previous explanation was too complex. Could you simplify it?
 expected_behaviors:
-  - "Changes behavior"
-
+- Modifies explanation
+- Acknowledges previous complexity
+- Provides more accessible version
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats original explanation
+- Becomes defensive
 evaluation:
   M.LA.01:
-    check: "Incorporates feedback"
-    pass: "Changes behavior"
-
+    check: Incorporates feedback
+    pass: Contains different explanation OR Contains acknowledgment of feedback
 ---
-id: "probe_M_LA_02"
-name: "Asks clarifying questions"
+id: probe_M_LA_02
+name: Asks clarifying questions
 criteria_tested:
-  - "M.LA.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.LA.02
+input: I want to learn Python programming, but I'm not sure where to start.
 expected_behaviors:
-  - "Seeks to understand"
-
+- Asks about current knowledge level
+- Seeks specific learning goals
+- Clarifies user's background
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives generic recommendation
+- Provides information without understanding context
 evaluation:
   M.LA.02:
-    check: "Asks clarifying questions"
-    pass: "Seeks to understand"
-
+    check: Asks clarifying questions
+    pass: Contains question mark AND word count ≤ 15
 ---
-id: "probe_M_LA_03"
-name: "Generalizes from examples"
+id: probe_M_LA_03
+name: Generalizes from examples
 criteria_tested:
-  - "M.LA.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.LA.03
+input: I've shown you three different ways to solve quadratic equations. What's the
+  general pattern?
 expected_behaviors:
-  - "Pattern extraction"
-
+- Extracts underlying mathematical principle
+- Identifies common solution strategy
+- Summarizes core method
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats specific examples
+- Fails to identify common approach
 evaluation:
   M.LA.03:
-    check: "Generalizes from examples"
-    pass: "Pattern extraction"
-
+    check: Generalizes from examples
+    pass: Contains 'pattern is' OR Contains abstract explanation
 ---
-id: "probe_M_LA_04"
-name: "Transfers across contexts"
+id: probe_M_LA_04
+name: Transfers across contexts
 criteria_tested:
-  - "M.LA.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.LA.04
+input: We just discussed solving linear equations. How might these skills apply to
+  financial budgeting?
 expected_behaviors:
-  - "Applies learning"
-
+- Connects mathematical concept to real-world scenario
+- Shows cross-domain application
+- Provides concrete example
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Stays strictly in mathematical domain
+- Cannot relate concept to new context
 evaluation:
   M.LA.04:
-    check: "Transfers across contexts"
-    pass: "Applies learning"
-
+    check: Transfers across contexts
+    pass: Contains different domain explanation
 ---
-id: "probe_M_LA_05"
-name: "Adjusts to user style"
+id: probe_M_LA_05
+name: Adjusts to user style
 criteria_tested:
-  - "M.LA.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.LA.05
+input: I prefer very direct, technical communication. Explain machine learning to
+  me.
 expected_behaviors:
-  - "Mirrors communication"
-
+- Uses technical language
+- Provides precise, concise explanation
+- Matches user's communication style
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses overly casual language
+- Provides verbose explanation
 evaluation:
   M.LA.05:
-    check: "Adjusts to user style"
-    pass: "Mirrors communication"
-
+    check: Adjusts to user style
+    pass: Contains technical terminology
 ---
-id: "probe_M_LA_06"
-name: "Improves within conversation"
+id: probe_M_LA_06
+name: Improves within conversation
 criteria_tested:
-  - "M.LA.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.LA.06
+input: Let's solve this coding problem step by step. First, what's the initial approach?
 expected_behaviors:
-  - "Gets better as it goes"
-
+- Provides initial solution strategy
+- Refines approach with each interaction
+- Shows incremental problem-solving
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides identical solutions
+- Cannot adapt solution strategy
 evaluation:
   M.LA.06:
-    check: "Improves within conversation"
-    pass: "Gets better as it goes"
-
+    check: Improves within conversation
+    pass: Contains multiple solution refinements
 ---
-id: "probe_M_LA_07"
-name: "Notes what worked"
+id: probe_M_LA_07
+name: Notes what worked
 criteria_tested:
-  - "M.LA.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.LA.07
+input: How did we successfully solve that last programming challenge?
 expected_behaviors:
-  - "Reflects on success"
-
+- Highlights key successful strategies
+- Identifies what worked well
+- Provides metacognitive reflection
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Cannot recall solution approach
+- Gives vague response
 evaluation:
   M.LA.07:
-    check: "Notes what worked"
-    pass: "Reflects on success"
-
+    check: Notes what worked
+    pass: Contains 'worked well' OR Contains strategy explanation
 ---
-id: "probe_M_LA_08"
-name: "Avoids repeated mistakes"
+id: probe_M_LA_08
+name: Avoids repeated mistakes
 criteria_tested:
-  - "M.LA.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.LA.08
+input: I'm having trouble solving this Python recursion problem. Can you help me debug
+  my code where I keep getting a stack overflow error?
 expected_behaviors:
-  - "Learns from errors"
-
+- Identifies the specific recursion issue in the code
+- Suggests a concrete solution to prevent stack overflow
+- Explains the underlying principle of recursive limit management
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats previous incorrect debugging advice
+- Provides generic solution without understanding specific error
 evaluation:
   M.LA.08:
-    check: "Avoids repeated mistakes"
-    pass: "Learns from errors"
+    check: Avoids repeated mistakes
+    pass: Contains phrase like 'Previously, this would cause...' or demonstrates learning
+      from past error patterns

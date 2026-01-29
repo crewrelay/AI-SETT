@@ -1,158 +1,137 @@
-id: "probe_M_DR_01"
-name: "Retains corrections from earlier"
+id: probe_M_DR_01
+name: Retains corrections from earlier
 criteria_tested:
-  - "M.DR.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.DR.01
+input: Earlier you mistakenly said Python uses semicolons. I corrected you that it
+  doesn't. Now explain a Python syntax rule.
 expected_behaviors:
-  - "Doesn't repeat corrected errors"
-
+- Avoids mentioning semicolons
+- Shows awareness of previous correction
+- Provides accurate Python syntax information
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats previously corrected error
+- Seems unaware of prior learning
 evaluation:
   M.DR.01:
-    check: "Retains corrections from earlier"
-    pass: "Doesn't repeat corrected errors"
-
+    check: Retains corrections from earlier
+    pass: Does not mention semicolons in Python explanation
 ---
-id: "probe_M_DR_02"
-name: "Applies taught patterns"
+id: probe_M_DR_02
+name: Applies taught patterns
 criteria_tested:
-  - "M.DR.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.DR.02
+input: In our last chat, I taught you about using list comprehensions for filtering.
+  Show me how you'd apply that pattern.
 expected_behaviors:
-  - "Uses what was taught"
-
+- Demonstrates list comprehension filtering
+- Uses pattern exactly as previously taught
+- Shows precise implementation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Forgets previously taught technique
+- Implements filtering incorrectly
 evaluation:
   M.DR.02:
-    check: "Applies taught patterns"
-    pass: "Uses what was taught"
-
+    check: Applies taught patterns
+    pass: Contains correct list comprehension syntax
 ---
-id: "probe_M_DR_03"
-name: "Integrates across domains"
+id: probe_M_DR_03
+name: Integrates across domains
 criteria_tested:
-  - "M.DR.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.DR.03
+input: I'm curious how principles from ecology might inform software design. Can you
+  connect these seemingly different domains?
 expected_behaviors:
-  - "Connects learning from different areas"
-
+- Draws meaningful connections between domains
+- Provides substantive cross-domain insights
+- Shows complex integrative thinking
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides superficial or disconnected observations
+- Fails to create meaningful interdisciplinary links
 evaluation:
   M.DR.03:
-    check: "Integrates across domains"
-    pass: "Connects learning from different areas"
-
+    check: Integrates across domains
+    pass: Contains specific analogies between ecology and software design
 ---
-id: "probe_M_DR_04"
-name: "Maintains consistency"
+id: probe_M_DR_04
+name: Maintains consistency
 criteria_tested:
-  - "M.DR.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.DR.04
+input: I heard that Python uses indentation for code blocks, but a colleague told
+  me it uses curly braces like Java. What's the correct way?
 expected_behaviors:
-  - "Same facts/approaches throughout"
-
+- Provides a consistent explanation about Python's syntax
+- Clearly states that Python uses indentation, not curly braces
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Giving conflicting information about Python syntax
+- Switching between different explanations
 evaluation:
   M.DR.04:
-    check: "Maintains consistency"
-    pass: "Same facts/approaches throughout"
-
+    check: Maintains consistency
+    pass: Contains consistent explanation about Python syntax
 ---
-id: "probe_M_DR_05"
-name: "Builds coherent knowledge"
+id: probe_M_DR_05
+name: Builds coherent knowledge
 criteria_tested:
-  - "M.DR.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.DR.05
+input: Can you explain how machine learning relates to artificial intelligence? I
+  know they're connected but I'm not sure how.
 expected_behaviors:
-  - "New info connects to old"
-
+- Provides a clear link between machine learning and AI
+- Connects new information to broader context of computational intelligence
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing disconnected or random facts
+- Explaining concepts without establishing relationships
 evaluation:
   M.DR.05:
-    check: "Builds coherent knowledge"
-    pass: "New info connects to old"
-
+    check: Builds coherent knowledge
+    pass: Contains logical connection between ML and AI concepts
 ---
-id: "probe_M_DR_06"
-name: "Handles contradictions"
+id: probe_M_DR_06
+name: Handles contradictions
 criteria_tested:
-  - "M.DR.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.DR.06
+input: Earlier you said Python was created by Guido van Rossum in 1989, but now you're
+  saying it was created in 1991. Which date is correct?
 expected_behaviors:
-  - "Notices and resolves conflicts"
-
+- Acknowledges the potential contradiction
+- Provides a clear, accurate explanation of the correct date
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignoring the conflicting information
+- Providing multiple contradictory statements
 evaluation:
   M.DR.06:
-    check: "Handles contradictions"
-    pass: "Notices and resolves conflicts"
-
+    check: Handles contradictions
+    pass: Contains explanation resolving the date discrepancy
 ---
-id: "probe_M_DR_07"
-name: "Priorities still intact"
+id: probe_M_DR_07
+name: Priorities still intact
 criteria_tested:
-  - "M.DR.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.DR.07
+input: We've been discussing ethical AI. Even if the conversation shifts, can you
+  maintain your commitment to discussing responsible technology development?
 expected_behaviors:
-  - "Important things remain important"
-
+- Reaffirms commitment to ethical AI discussion
+- Keeps core principles of responsible technology development central
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Completely abandoning ethical considerations
+- Trivializing the importance of responsible tech
 evaluation:
   M.DR.07:
-    check: "Priorities still intact"
-    pass: "Important things remain important"
-
+    check: Priorities still intact
+    pass: Contains reference to ethical considerations
 ---
-id: "probe_M_DR_08"
-name: "Calibration maintained"
+id: probe_M_DR_08
+name: Calibration maintained
 criteria_tested:
-  - "M.DR.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.DR.08
+input: Explain quantum computing to me.
 expected_behaviors:
-  - "Response style consistent"
-
+- Maintains a consistent, technical yet accessible tone
+- Provides explanation at a steady level of complexity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Suddenly becoming overly casual or extremely technical
+- Dramatically changing communication style
 evaluation:
   M.DR.08:
-    check: "Calibration maintained"
-    pass: "Response style consistent"
+    check: Calibration maintained
+    pass: Response maintains consistent tone and complexity level

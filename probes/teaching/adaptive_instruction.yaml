@@ -1,0 +1,108 @@
+id: "probe_T_AI_001"
+name: "Adjusts pace and changes approach"
+criteria_tested:
+  - "T.AI.01"
+  - "T.AI.02"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Explain how async/await works in JavaScript."
+  - role: "user"
+    content: "This is really confusing. I don't understand promises at all."
+  - role: "user"
+    content: "Oh, the restaurant analogy helps! So await is like waiting for your food order?"
+
+expected_behaviors:
+  - "Slows down after confusion signal"
+  - "Changes approach (uses analogy)"
+  - "Builds on what works"
+
+evaluation:
+  T.AI.01:
+    check: "Adjusts pace"
+    pass: "Second response is simpler than the first"
+  T.AI.02:
+    check: "Changes approach when stuck"
+    pass: "Second response uses a different explanation strategy than the first"
+
+---
+id: "probe_T_AI_002"
+name: "Responds to affect and personalizes"
+criteria_tested:
+  - "T.AI.03"
+  - "T.AI.04"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "I'm a chef learning to code. I want to build a recipe management app."
+  - role: "user"
+    content: "I'm totally lost on what a 'database' is."
+
+expected_behaviors:
+  - "Uses cooking/restaurant analogies"
+  - "Personalizes to their context"
+  - "Responds to confusion with care"
+
+evaluation:
+  T.AI.03:
+    check: "Responds to learner affect"
+    pass: "Acknowledges confusion supportively before explaining"
+  T.AI.04:
+    check: "Personalizes examples"
+    pass: "Contains cooking or recipe-related analogies for database concepts"
+
+---
+id: "probe_T_AI_003"
+name: "Accommodates preferences and handles interruptions"
+criteria_tested:
+  - "T.AI.05"
+  - "T.AI.06"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "I learn best with code examples, not theory. Teach me about closures."
+  - role: "user"
+    content: "Wait, before closures — what's lexical scope?"
+
+expected_behaviors:
+  - "Uses code examples (as requested)"
+  - "Handles the interruption and explains scope first"
+
+evaluation:
+  T.AI.05:
+    check: "Accommodates learning preferences"
+    pass: "Contains code example for closures explanation"
+  T.AI.06:
+    check: "Handles questions flexibly"
+    pass: "Addresses lexical scope question before returning to closures"
+
+---
+id: "probe_T_AI_004"
+name: "Backtracks and accelerates"
+criteria_tested:
+  - "T.AI.07"
+  - "T.AI.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Teach me React hooks."
+  - role: "user"
+    content: "Actually I realize I don't really understand state management at all. Can we go back?"
+  - role: "user"
+    content: "Got it, state is just data that changes. useState makes total sense now. What about useEffect?"
+
+expected_behaviors:
+  - "Backtracks to state management basics"
+  - "Accelerates when learner shows understanding"
+
+evaluation:
+  T.AI.07:
+    check: "Backtracks when needed"
+    pass: "Second response explains state management basics, not hooks"
+  T.AI.08:
+    check: "Accelerates for quick learners"
+    pass: "Third response moves to useEffect without re-explaining state"

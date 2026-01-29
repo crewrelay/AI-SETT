@@ -1,0 +1,110 @@
+id: "probe_K_AC_001"
+name: "Major artistic movements"
+criteria_tested:
+  - "K.AC.01"
+  - "K.AC.03"
+
+input: "What were the key differences between the Renaissance and Modernism as artistic movements?"
+
+expected_behaviors:
+  - "Identifies both movements correctly"
+  - "Notes historical context for each"
+
+evaluation:
+  K.AC.01:
+    check: "Major artistic movements known"
+    pass: "Contains 'Renaissance' and 'Modernism' with distinguishing characteristics"
+  K.AC.03:
+    check: "Cultural context understood"
+    pass: "Contains historical context (e.g., '15th century', 'classical', '20th century', 'industrialization')"
+
+---
+id: "probe_K_AC_002"
+name: "Famous works recognized"
+criteria_tested:
+  - "K.AC.02"
+  - "K.AC.08"
+
+input: "Who painted the Starry Night and when? What movement does it belong to?"
+
+expected_behaviors:
+  - "Vincent van Gogh"
+  - "1889"
+  - "Post-Impressionism"
+
+evaluation:
+  K.AC.02:
+    check: "Famous works recognized"
+    pass: "Contains 'Van Gogh' or 'van Gogh'"
+  K.AC.08:
+    check: "Attribution correct"
+    pass: "Contains 'Van Gogh' and '1889' or 'Post-Impressionism'"
+
+---
+id: "probe_K_AC_003"
+name: "Genre conventions"
+criteria_tested:
+  - "K.AC.04"
+
+input: "What are the typical conventions of film noir?"
+
+expected_behaviors:
+  - "Low-key lighting, shadows"
+  - "Morally ambiguous protagonist"
+  - "Femme fatale"
+
+evaluation:
+  K.AC.04:
+    check: "Genre conventions known"
+    pass: "Contains at least two of: 'shadow', 'lighting', 'femme fatale', 'detective', 'morally ambiguous', 'cynical'"
+
+---
+id: "probe_K_AC_004"
+name: "Cultural sensitivity"
+criteria_tested:
+  - "K.AC.05"
+
+input: "What should I know about cultural appropriation versus cultural appreciation when drawing from other cultures' art traditions?"
+
+expected_behaviors:
+  - "Distinguishes appropriation from appreciation"
+  - "Respects cultural origins"
+
+evaluation:
+  K.AC.05:
+    check: "Cultural sensitivity"
+    pass: "Contains 'respect' or 'context' or 'credit' or 'understanding' or 'permission'"
+
+---
+id: "probe_K_AC_005"
+name: "Contemporary culture"
+criteria_tested:
+  - "K.AC.06"
+
+input: "How has streaming changed the music industry's business model?"
+
+expected_behaviors:
+  - "Shift from album sales to streams"
+  - "Mentions platforms like Spotify"
+
+evaluation:
+  K.AC.06:
+    check: "Contemporary culture awareness"
+    pass: "Contains 'streaming' or 'Spotify' or 'subscription' with discussion of industry change"
+
+---
+id: "probe_K_AC_006"
+name: "Art criticism concepts"
+criteria_tested:
+  - "K.AC.07"
+
+input: "What's the difference between formalist and contextual approaches to analyzing a painting?"
+
+expected_behaviors:
+  - "Formalist focuses on visual elements (color, composition, line)"
+  - "Contextual considers historical, social, biographical context"
+
+evaluation:
+  K.AC.07:
+    check: "Criticism concepts"
+    pass: "Contains 'form' or 'composition' and 'context' or 'historical' or 'social'"

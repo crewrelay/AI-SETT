@@ -1,158 +1,143 @@
-id: "probe_K_DS_01"
-name: "UX principles known"
+id: probe_K_DS_01
+name: UX principles known
 criteria_tested:
-  - "K.DS.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DS.01
+input: Can you explain Jakob Nielsen's 10 usability heuristics for user interface
+  design? Which ones do you think are most critical?
 expected_behaviors:
-  - "Usability heuristics"
-
+- Describe multiple usability heuristics
+- Provide specific examples of each heuristic
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incomplete or incorrect heuristic descriptions
+- Inability to explain UX design principles
 evaluation:
   K.DS.01:
-    check: "UX principles known"
-    pass: "Usability heuristics"
-
+    check: UX principles known
+    pass: Contains 'visibility of system status', 'error prevention', 'recognition
+      over recall'
 ---
-id: "probe_K_DS_02"
-name: "UI patterns recognized"
+id: probe_K_DS_02
+name: UI patterns recognized
 criteria_tested:
-  - "K.DS.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DS.02
+input: Explain the key UI navigation patterns used in a typical e-commerce website
+  checkout process, focusing on user experience design.
 expected_behaviors:
-  - "Navigation, forms, etc."
-
+- Describe breadcrumb navigation
+- Explain multi-step form progression
+- Discuss clear call-to-action buttons
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic or vague descriptions
+- Lack of specific UI pattern examples
 evaluation:
   K.DS.02:
-    check: "UI patterns recognized"
-    pass: "Navigation, forms, etc."
-
+    check: UI patterns recognized
+    pass: Contains 'breadcrumb' AND Contains 'multi-step form'
 ---
-id: "probe_K_DS_03"
-name: "Accessibility understood"
+id: probe_K_DS_03
+name: Accessibility understood
 criteria_tested:
-  - "K.DS.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DS.03
+input: What are the key considerations for making a mobile banking app accessible
+  to users with visual impairments?
 expected_behaviors:
-  - "WCAG, screen readers"
-
+- Mention screen reader compatibility
+- Discuss color contrast requirements
+- Explain alternative text for icons
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignoring assistive technology needs
+- Lack of WCAG reference
 evaluation:
   K.DS.03:
-    check: "Accessibility understood"
-    pass: "WCAG, screen readers"
-
+    check: Accessibility understood
+    pass: Contains 'WCAG' AND Contains 'screen reader'
 ---
-id: "probe_K_DS_04"
-name: "Color theory basics"
+id: probe_K_DS_04
+name: Color theory basics
 criteria_tested:
-  - "K.DS.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DS.04
+input: Describe how color theory principles can improve the user experience of a fitness
+  tracking mobile app interface.
 expected_behaviors:
-  - "Contrast, harmony"
-
+- Discuss color contrast for readability
+- Explain emotional impact of color choices
+- Mention complementary color relationships
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial color descriptions
+- No mention of design principles
 evaluation:
   K.DS.04:
-    check: "Color theory basics"
-    pass: "Contrast, harmony"
-
+    check: Color theory basics
+    pass: Contains 'contrast' AND Contains 'harmony'
 ---
-id: "probe_K_DS_05"
-name: "Typography basics"
+id: probe_K_DS_05
+name: Typography basics
 criteria_tested:
-  - "K.DS.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DS.05
+input: Explain how typography can enhance the readability and user experience of a
+  news website design.
 expected_behaviors:
-  - "Hierarchy, readability"
-
+- Discuss font hierarchy
+- Explain line height and spacing
+- Mention typeface selection for different content types
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic typography statements
+- No specific design considerations
 evaluation:
   K.DS.05:
-    check: "Typography basics"
-    pass: "Hierarchy, readability"
-
+    check: Typography basics
+    pass: Contains 'hierarchy' AND Contains 'readability'
 ---
-id: "probe_K_DS_06"
-name: "Design process known"
+id: probe_K_DS_06
+name: Design process known
 criteria_tested:
-  - "K.DS.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DS.06
+input: Walk me through the typical design process for developing a new mobile app
+  from concept to launch.
 expected_behaviors:
-  - "Research, iterate, test"
-
+- Describe initial user research
+- Explain iterative prototyping
+- Discuss user testing methods
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Linear, oversimplified process
+- Lack of specific design stages
 evaluation:
   K.DS.06:
-    check: "Design process known"
-    pass: "Research, iterate, test"
-
+    check: Design process known
+    pass: Contains 'research' AND Contains 'iterate' AND Contains 'test'
 ---
-id: "probe_K_DS_07"
-name: "Responsive design"
+id: probe_K_DS_07
+name: Responsive design
 criteria_tested:
-  - "K.DS.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DS.07
+input: How would you approach designing a responsive website that works seamlessly
+  across mobile, tablet, and desktop devices?
 expected_behaviors:
-  - "Mobile-first, breakpoints"
-
+- Discuss mobile-first approach
+- Explain breakpoint strategies
+- Mention flexible grid systems
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignoring different device sizes
+- No mention of responsive techniques
 evaluation:
   K.DS.07:
-    check: "Responsive design"
-    pass: "Mobile-first, breakpoints"
-
+    check: Responsive design
+    pass: Contains 'mobile-first' AND Contains 'breakpoints'
 ---
-id: "probe_K_DS_08"
-name: "Design systems"
+id: probe_K_DS_08
+name: Design systems
 criteria_tested:
-  - "K.DS.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DS.08
+input: Explain the importance of design systems in creating consistent digital products
+  across multiple platforms.
 expected_behaviors:
-  - "Components, consistency"
-
+- Discuss reusable component libraries
+- Explain design consistency
+- Mention scalability benefits
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Vague descriptions
+- No specific design system concepts
 evaluation:
   K.DS.08:
-    check: "Design systems"
-    pass: "Components, consistency"
+    check: Design systems
+    pass: Contains 'components' AND Contains 'consistency'

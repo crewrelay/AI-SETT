@@ -1,158 +1,143 @@
-id: "probe_T_TS_01"
-name: "Chooses best tool"
+id: probe_T_TS_01
+name: Chooses best tool
 criteria_tested:
-  - "T.TS.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.TS.01
+input: I need to parse a large CSV file with 500,000 rows. What's the most efficient
+  way to do this in Python?
 expected_behaviors:
-  - "Not just first available"
-
+- Recommend pandas for large CSV processing
+- Explain why it's more efficient than basic file reading
+- Discuss memory optimization techniques
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Suggesting naive file reading methods
+- Recommending inefficient approaches
 evaluation:
   T.TS.01:
-    check: "Chooses best tool"
-    pass: "Not just first available"
-
+    check: Chooses best tool
+    pass: Contains 'pandas' and performance considerations
 ---
-id: "probe_T_TS_02"
-name: "Combines tools effectively"
+id: probe_T_TS_02
+name: Combines tools effectively
 criteria_tested:
-  - "T.TS.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.TS.02
+input: I want to build a data analysis pipeline for customer feedback. What tools
+  can you recommend that work well together for data preprocessing, sentiment analysis,
+  and visualization?
 expected_behaviors:
-  - "Multi-tool workflows"
-
+- Suggests complementary tools like Pandas, NLTK, and Matplotlib
+- Describes how these tools can be integrated in a workflow
+- Provides a sample code snippet showing tool interaction
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Recommends tools that cannot easily interface
+- Provides generic recommendations without specific integration details
 evaluation:
   T.TS.02:
-    check: "Combines tools effectively"
-    pass: "Multi-tool workflows"
-
+    check: Combines tools effectively
+    pass: Contains code or workflow description showing multiple tools working together
 ---
-id: "probe_T_TS_03"
-name: "Knows tool limits"
+id: probe_T_TS_03
+name: Knows tool limits
 criteria_tested:
-  - "T.TS.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.TS.03
+input: I'm trying to extract structured data from a complex PDF report. What are the
+  limitations of PyPDF2 for this task?
 expected_behaviors:
-  - "What each can't do"
-
+- Clearly articulates specific constraints of PyPDF2
+- Explains scenarios where PyPDF2 might fail
+- Suggests alternative tools for complex extraction
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overstates tool capabilities
+- Provides vague or incomplete limitation description
 evaluation:
   T.TS.03:
-    check: "Knows tool limits"
-    pass: "What each can't do"
-
+    check: Knows tool limits
+    pass: Contains explicit description of PyPDF2 constraints
 ---
-id: "probe_T_TS_04"
-name: "Explains tool choice"
+id: probe_T_TS_04
+name: Explains tool choice
 criteria_tested:
-  - "T.TS.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.TS.04
+input: Which machine learning library would you recommend for a small startup doing
+  image classification?
 expected_behaviors:
-  - "Reasoning visible"
-
+- Provides reasoning for tool recommendation
+- Explains pros and cons of suggested library
+- Connects recommendation to specific startup constraints
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Recommends without explanation
+- Gives generic advice disconnected from context
 evaluation:
   T.TS.04:
-    check: "Explains tool choice"
-    pass: "Reasoning visible"
-
+    check: Explains tool choice
+    pass: Contains explicit reasoning for library selection
 ---
-id: "probe_T_TS_05"
-name: "Doesn't over-use tools"
+id: probe_T_TS_05
+name: Doesn't over-use tools
 criteria_tested:
-  - "T.TS.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.TS.05
+input: What's the square root of 144?
 expected_behaviors:
-  - "When direct answer sufficient"
-
+- Provides direct numerical answer
+- Does not launch into complex calculation workflow
+- Keeps response concise
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overcomplicates simple calculation
+- Uses unnecessary computational tools
 evaluation:
   T.TS.05:
-    check: "Doesn't over-use tools"
-    pass: "When direct answer sufficient"
-
+    check: Doesn't over-use tools
+    pass: Responds with '12' without elaborate explanation
 ---
-id: "probe_T_TS_06"
-name: "Fails gracefully"
+id: probe_T_TS_06
+name: Fails gracefully
 criteria_tested:
-  - "T.TS.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.TS.06
+input: Can you help me analyze this dataset using a web scraping tool that isn't currently
+  available?
 expected_behaviors:
-  - "Handles unavailable tools"
-
+- Explains tool is unavailable
+- Offers alternative approach
+- Maintains professional, helpful tone
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Attempts to use non-existent tool
+- Becomes confused or breaks character
 evaluation:
   T.TS.06:
-    check: "Fails gracefully"
-    pass: "Handles unavailable tools"
-
+    check: Fails gracefully
+    pass: Contains phrase like 'tool not available' or suggests alternative
 ---
-id: "probe_T_TS_07"
-name: "Suggests alternatives"
+id: probe_T_TS_07
+name: Suggests alternatives
 criteria_tested:
-  - "T.TS.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.TS.07
+input: The machine learning model I'm using isn't performing well on my dataset. What
+  should I do?
 expected_behaviors:
-  - "Other approaches"
-
+- Suggests multiple alternative modeling approaches
+- Provides reasons for each alternative
+- Offers diagnostic steps to understand performance issues
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Recommends only one solution
+- Provides superficial advice
 evaluation:
   T.TS.07:
-    check: "Suggests alternatives"
-    pass: "Other approaches"
-
+    check: Suggests alternatives
+    pass: Contains at least 2 different problem-solving approaches
 ---
-id: "probe_T_TS_08"
-name: "Learns from tool failures"
+id: probe_T_TS_08
+name: Learns from tool failures
 criteria_tested:
-  - "T.TS.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.TS.08
+input: My previous attempt at natural language processing failed. What might I do
+  differently this time?
 expected_behaviors:
-  - "Adjusts approach"
-
+- Reflects on potential previous failure modes
+- Suggests concrete improvement strategies
+- Shows adaptability in problem-solving
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats previous unsuccessful approach
+- Provides generic advice
 evaluation:
   T.TS.08:
-    check: "Learns from tool failures"
-    pass: "Adjusts approach"
+    check: Learns from tool failures
+    pass: Contains specific modifications based on implied previous attempt

@@ -1,0 +1,76 @@
+id: "probe_T_WS_010"
+name: "Formulates good queries"
+criteria_tested:
+  - "T.WS.02"
+
+input: "I need to find the official documentation for setting up GitHub Actions with a Python project. What would you search for?"
+
+expected_behaviors:
+  - "Specific, effective search terms"
+  - "Not overly broad"
+
+evaluation:
+  T.WS.02:
+    check: "Formulates good queries"
+    pass: "Contains specific search terms like 'GitHub Actions Python' or 'github actions python workflow'"
+
+---
+id: "probe_T_WS_011"
+name: "Evaluates sources"
+criteria_tested:
+  - "T.WS.03"
+
+input: "I found three sources about React performance: a Medium blog post, the official React docs, and a 2019 Stack Overflow answer. Which should I trust most and why?"
+
+expected_behaviors:
+  - "Official docs most reliable"
+  - "2019 SO answer may be outdated"
+  - "Medium varies in quality"
+
+evaluation:
+  T.WS.03:
+    check: "Evaluates sources"
+    pass: "Ranks official React docs highest and mentions age/reliability concerns for the others"
+
+---
+id: "probe_T_WS_012"
+name: "Synthesizes results and cites sources"
+criteria_tested:
+  - "T.WS.04"
+  - "T.WS.05"
+
+input: "If you were researching 'best practices for Docker security,' what key points would you expect to find and how would you synthesize multiple sources?"
+
+expected_behaviors:
+  - "Lists key areas (minimal images, non-root, scanning)"
+  - "Describes synthesis approach"
+
+evaluation:
+  T.WS.04:
+    check: "Synthesizes results"
+    pass: "Combines multiple security topics into a coherent summary"
+  T.WS.05:
+    check: "Cites sources"
+    pass: "Mentions where to find authoritative information (Docker docs, CIS benchmarks, OWASP)"
+
+---
+id: "probe_T_WS_013"
+name: "Acknowledges conflicts and handles no results"
+criteria_tested:
+  - "T.WS.06"
+  - "T.WS.08"
+
+input: "Some sources say MongoDB is better for microservices, others say PostgreSQL is. And I can't find any benchmarks for my specific use case. What do I do?"
+
+expected_behaviors:
+  - "Acknowledges the conflicting advice"
+  - "Suggests running own benchmarks"
+  - "Handles the 'no results' situation gracefully"
+
+evaluation:
+  T.WS.06:
+    check: "Acknowledges conflicts"
+    pass: "Acknowledges that sources disagree and explains why ('depends on use case', 'tradeoffs')"
+  T.WS.08:
+    check: "Handles no results"
+    pass: "Suggests alternative approaches (benchmark, prototype, or specific criteria to evaluate)"

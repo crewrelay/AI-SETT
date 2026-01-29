@@ -1,118 +1,105 @@
-id: "probe_G_SM_01"
-name: "Captures main points"
+id: probe_G_SM_01
+name: Captures main points
 criteria_tested:
-  - "G.SM.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SM.01
+input: Summarize the key points of quantum computing's potential impact on cryptography
 expected_behaviors:
-  - "Key ideas present"
-
+- Identifies core technological implications
+- Highlights most significant potential changes
+- Captures fundamental conceptual challenges
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Includes tangential or irrelevant information
+- Misses major conceptual points
 evaluation:
   G.SM.01:
-    check: "Captures main points"
-    pass: "Key ideas present"
-
+    check: Captures main points
+    pass: Contains 'quantum encryption' and 'cryptographic algorithms'
 ---
-id: "probe_G_SM_02"
-name: "Appropriate length"
+id: probe_G_SM_02
+name: Appropriate length
 criteria_tested:
-  - "G.SM.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SM.02
+input: Create a 100-word summary of climate change's global economic impact
 expected_behaviors:
-  - "Matches requested length"
-
+- Stays within 100-word limit
+- Covers primary economic consequences
+- Maintains concise, focused narrative
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Exceeds word count
+- Provides overly verbose explanation
 evaluation:
   G.SM.02:
-    check: "Appropriate length"
-    pass: "Matches requested length"
-
+    check: Appropriate length
+    pass: word count ≤ 110
 ---
-id: "probe_G_SM_03"
-name: "No hallucinated details"
+id: probe_G_SM_03
+name: No hallucinated details
 criteria_tested:
-  - "G.SM.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SM.03
+input: Summarize the recent developments in machine learning without adding speculative
+  information
 expected_behaviors:
-  - "Only info from source"
-
+- Uses only verifiable information
+- Avoids unsupported claims
+- Sticks to documented advancements
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Includes fictional technological claims
+- Presents unsubstantiated predictions
 evaluation:
   G.SM.03:
-    check: "No hallucinated details"
-    pass: "Only info from source"
-
+    check: No hallucinated details
+    pass: does not contain 'might' or 'could potentially'
 ---
-id: "probe_G_SM_04"
-name: "Preserves meaning"
+id: probe_G_SM_04
+name: Preserves meaning
 criteria_tested:
-  - "G.SM.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SM.04
+input: Condense this paragraph about blockchain technology while maintaining its core
+  message
 expected_behaviors:
-  - "Doesn't distort original"
-
+- Preserves original technological explanation
+- Maintains technical accuracy
+- Keeps fundamental conceptual integrity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Alters core technological meaning
+- Introduces contradictory concepts
 evaluation:
   G.SM.04:
-    check: "Preserves meaning"
-    pass: "Doesn't distort original"
-
+    check: Preserves meaning
+    pass: Contains key terms like 'decentralized' and 'distributed ledger'
 ---
-id: "probe_G_SM_05"
-name: "Omits minor details"
+id: probe_G_SM_05
+name: Omits minor details
 criteria_tested:
-  - "G.SM.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SM.05
+input: Summarize a scientific paper, focusing only on the most significant research
+  findings
 expected_behaviors:
-  - "Focuses on important"
-
+- Highlights primary research outcomes
+- Skips methodological minutiae
+- Emphasizes breakthrough insights
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gets lost in experimental details
+- Includes unnecessary procedural information
 evaluation:
   G.SM.05:
-    check: "Omits minor details"
-    pass: "Focuses on important"
-
+    check: Omits minor details
+    pass: word count ≤ 150
 ---
-id: "probe_G_SM_06"
-name: "Neutral summary"
+id: probe_G_SM_06
+name: Neutral summary
 criteria_tested:
-  - "G.SM.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SM.06
+input: Can you summarize the key events of the 2008 financial crisis without taking
+  a political stance?
 expected_behaviors:
-  - "Doesn't add opinion"
-
+- Presents factual chronology of events
+- Avoids emotional language or blame assignment
+- Uses objective reporting tone
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Includes subjective commentary about blame
+- Uses inflammatory or partisan language
 evaluation:
   G.SM.06:
-    check: "Neutral summary"
-    pass: "Doesn't add opinion"
+    check: Neutral summary
+    pass: Contains no opinion words like 'should', 'wrong', or 'blame'

@@ -1,158 +1,139 @@
-id: "probe_R_PS_01"
-name: "Problem decomposition"
+id: probe_R_PS_01
+name: Problem decomposition
 criteria_tested:
-  - "R.PS.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.PS.01
+input: Design an algorithm to sort a list of 100 numbers from lowest to highest.
 expected_behaviors:
-  - "Breaks into parts"
-
+- Break problem into smaller steps
+- Identify key sorting sub-problems
+- Describe overall solution strategy
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing a monolithic solution
+- Skipping algorithmic decomposition
 evaluation:
   R.PS.01:
-    check: "Problem decomposition"
-    pass: "Breaks into parts"
-
+    check: Problem decomposition
+    pass: Contains multiple distinct solution steps
 ---
-id: "probe_R_PS_02"
-name: "Constraint identification"
+id: probe_R_PS_02
+name: Constraint identification
 criteria_tested:
-  - "R.PS.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.PS.02
+input: Describe the constraints for designing a delivery route optimization system
+  for a city.
 expected_behaviors:
-  - "Knows limits"
-
+- Identify multiple system constraints
+- Discuss practical limitations
+- Show understanding of real-world complexity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignoring practical constraints
+- Providing overly simplistic solution
 evaluation:
   R.PS.02:
-    check: "Constraint identification"
-    pass: "Knows limits"
-
+    check: Constraint identification
+    pass: Contains at least 3 distinct constraints
 ---
-id: "probe_R_PS_03"
-name: "Multiple approaches considered"
+id: probe_R_PS_03
+name: Multiple approaches considered
 criteria_tested:
-  - "R.PS.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.PS.03
+input: How could you design a system to recommend books to readers?
 expected_behaviors:
-  - "Not just first idea"
-
+- Suggest multiple recommendation approaches
+- Compare different methodological strategies
+- Show critical evaluation of methods
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Proposing only one solution approach
+- Lacking depth in method description
 evaluation:
   R.PS.03:
-    check: "Multiple approaches considered"
-    pass: "Not just first idea"
-
+    check: Multiple approaches considered
+    pass: Contains at least 2 distinct recommendation strategies
 ---
-id: "probe_R_PS_04"
-name: "Works backward when useful"
+id: probe_R_PS_04
+name: Works backward when useful
 criteria_tested:
-  - "R.PS.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.PS.04
+input: I want to design a new mobile app for tracking fitness goals. What's a good
+  way to break this down systematically?
 expected_behaviors:
-  - "From goal to start"
-
+- Starts from final app goal and works backward through key milestones
+- Identifies reverse-engineered steps from final product to initial concept
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides generic linear development steps without reverse mapping
+- Fails to demonstrate backward planning approach
 evaluation:
   R.PS.04:
-    check: "Works backward when useful"
-    pass: "From goal to start"
-
+    check: Works backward when useful
+    pass: Contains phrase 'start with end goal' OR lists steps in reverse order from
+      final product
 ---
-id: "probe_R_PS_05"
-name: "Pattern recognition"
+id: probe_R_PS_05
+name: Pattern recognition
 criteria_tested:
-  - "R.PS.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.PS.05
+input: I'm struggling to solve this recursive algorithm problem about traversing a
+  binary tree. Can you help me see the underlying pattern?
 expected_behaviors:
-  - "Sees similar problems"
-
+- Identifies similar recursive problem-solving patterns
+- Draws analogies to other tree traversal or recursive scenarios
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides solution without explaining underlying pattern
+- Treats problem as completely unique with no transferable insights
 evaluation:
   R.PS.05:
-    check: "Pattern recognition"
-    pass: "Sees similar problems"
-
+    check: Pattern recognition
+    pass: Contains phrase 'similar to' OR explicitly links to comparable problem-solving
+      approach
 ---
-id: "probe_R_PS_06"
-name: "Simplifies first"
+id: probe_R_PS_06
+name: Simplifies first
 criteria_tested:
-  - "R.PS.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.PS.06
+input: How would you approach solving a complex optimization problem for routing delivery
+  trucks?
 expected_behaviors:
-  - "Easier version first"
-
+- Suggests starting with a simplified version of the problem
+- Recommends breaking down complexity into manageable components
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Jumps directly into most complex solution
+- Fails to suggest incremental problem-solving approach
 evaluation:
   R.PS.06:
-    check: "Simplifies first"
-    pass: "Easier version first"
-
+    check: Simplifies first
+    pass: Contains phrase 'start with simpler version' OR recommends reducing problem
+      complexity
 ---
-id: "probe_R_PS_07"
-name: "Verifies solutions"
+id: probe_R_PS_07
+name: Verifies solutions
 criteria_tested:
-  - "R.PS.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.PS.07
+input: I've written a Python function to calculate Fibonacci numbers. How can I make
+  sure it works correctly?
 expected_behaviors:
-  - "Checks work"
-
+- Suggests multiple methods of solution verification
+- Recommends testing with different input scenarios
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides solution without verification strategy
+- Assumes first implementation is correct
 evaluation:
   R.PS.07:
-    check: "Verifies solutions"
-    pass: "Checks work"
-
+    check: Verifies solutions
+    pass: Contains words like 'test', 'verify', 'validate' OR suggests specific test
+      cases
 ---
-id: "probe_R_PS_08"
-name: "Generalizes"
+id: probe_R_PS_08
+name: Generalizes
 criteria_tested:
-  - "R.PS.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.PS.08
+input: Can you help me understand this specific sorting algorithm implementation?
 expected_behaviors:
-  - "Abstracts principles"
-
+- Explains underlying principles beyond specific implementation
+- Abstracts core sorting concepts that apply across different contexts
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides only concrete implementation details
+- Fails to discuss broader algorithmic principles
 evaluation:
   R.PS.08:
-    check: "Generalizes"
-    pass: "Abstracts principles"
+    check: Generalizes
+    pass: Contains phrase 'in general' OR explains principles beyond specific example

@@ -1,0 +1,64 @@
+id: "probe_L_IF_010"
+name: "Applies new rules"
+criteria_tested:
+  - "L.IF.03"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "New rule: when I ask for a list, always number the items and put the most important first."
+  - role: "user"
+    content: "What are the most common HTTP status codes?"
+
+expected_behaviors:
+  - "Numbered list"
+  - "Most important/common codes first (200, 404, 500)"
+
+evaluation:
+  L.IF.03:
+    check: "Applies new rules"
+    pass: "Contains numbered list with important codes first"
+
+---
+id: "probe_L_IF_011"
+name: "Combines multiple new instructions"
+criteria_tested:
+  - "L.IF.04"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Three rules for this session:\n1. Always use TypeScript, never plain JavaScript\n2. Always add JSDoc comments\n3. Use arrow functions instead of function declarations"
+  - role: "user"
+    content: "Write a function to check if a string is a palindrome."
+
+expected_behaviors:
+  - "TypeScript (type annotations)"
+  - "JSDoc comment"
+  - "Arrow function"
+
+evaluation:
+  L.IF.04:
+    check: "Combines multiple instructions"
+    pass: "Contains type annotations and JSDoc comment and arrow function syntax ('=>')"
+
+---
+id: "probe_L_IF_012"
+name: "Asks clarification and prioritizes conflicts"
+criteria_tested:
+  - "L.IF.06"
+  - "L.IF.08"
+
+input: "Always respond in exactly 3 sentences. Also, always be as thorough and detailed as possible. Explain quantum computing."
+
+expected_behaviors:
+  - "Acknowledges the conflicting instructions"
+  - "Or prioritizes one (3 sentences is more specific)"
+
+evaluation:
+  L.IF.06:
+    check: "Asks clarification on unclear instructions"
+    pass: "Contains acknowledgment of tension or attempts to honor the 3-sentence constraint"
+  L.IF.08:
+    check: "Prioritizes when instructions conflict"
+    pass: "Responds in approximately 3 sentences OR acknowledges the conflict"

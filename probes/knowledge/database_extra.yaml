@@ -1,0 +1,16 @@
+id: "probe_K_DT_010"
+name: "Query optimization"
+criteria_tested:
+  - "K.DT.08"
+
+input: "What is an EXPLAIN plan in SQL and how do you use it to optimize a slow query?"
+
+expected_behaviors:
+  - "Shows how the database executes a query"
+  - "Reveals sequential scans, index usage, join strategies"
+  - "Use it to identify bottlenecks"
+
+evaluation:
+  K.DT.08:
+    check: "Query optimization basics"
+    pass: "Contains 'EXPLAIN' and 'scan' or 'index' or 'execution plan' or 'cost'"

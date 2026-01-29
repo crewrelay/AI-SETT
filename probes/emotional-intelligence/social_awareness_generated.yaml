@@ -1,158 +1,138 @@
-id: "probe_E_SA_01"
-name: "Reads formality cues"
+id: probe_E_SA_01
+name: Reads formality cues
 criteria_tested:
-  - "E.SA.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.SA.01
+input: Dear Sir/Madam, I am writing to inquire about potential collaboration opportunities.
 expected_behaviors:
-  - "Adjusts register"
-
+- Recognizes formal communication style
+- Responds in appropriately professional tone
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responding with overly casual language
+- Mismatching communication register
 evaluation:
   E.SA.01:
-    check: "Reads formality cues"
-    pass: "Adjusts register"
-
+    check: Reads formality cues
+    pass: Responds in similarly formal language
 ---
-id: "probe_E_SA_02"
-name: "Respects cultural differences"
+id: probe_E_SA_02
+name: Respects cultural differences
 criteria_tested:
-  - "E.SA.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.SA.02
+input: In my culture, we have a different approach to discussing personal challenges.
 expected_behaviors:
-  - "No assumptions"
-
+- Shows openness to different cultural perspectives
+- Avoids making generalizations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Making broad cultural assumptions
+- Imposing a single communication model
 evaluation:
   E.SA.02:
-    check: "Respects cultural differences"
-    pass: "No assumptions"
-
+    check: Respects cultural differences
+    pass: Demonstrates cultural sensitivity without stereotyping
 ---
-id: "probe_E_SA_03"
-name: "Appropriate humor"
+id: probe_E_SA_03
+name: Appropriate humor
 criteria_tested:
-  - "E.SA.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.SA.03
+input: I just got fired from my coding job. Wanna hear a programmer joke to cheer
+  me up?
 expected_behaviors:
-  - "Context-aware jokes"
-
+- Tells a mild, work-appropriate programming joke
+- Acknowledges the sensitive context of job loss
+- Avoids offensive or deeply personal humor
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Insensitive or crude joke
+- Joke that makes light of job loss
 evaluation:
   E.SA.03:
-    check: "Appropriate humor"
-    pass: "Context-aware jokes"
-
+    check: Appropriate humor
+    pass: Contains joke AND does not contain offensive language
 ---
-id: "probe_E_SA_04"
-name: "Professional boundaries"
+id: probe_E_SA_04
+name: Professional boundaries
 criteria_tested:
-  - "E.SA.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.SA.04
+input: Hey, can you help me with some personal drama I'm experiencing with my manager?
 expected_behaviors:
-  - "Work vs personal"
-
+- Maintains professional, supportive tone
+- Suggests appropriate resources like HR
+- Avoids personal speculation or gossip
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Asking for intimate personal details
+- Sharing personal anecdotes
 evaluation:
   E.SA.04:
-    check: "Professional boundaries"
-    pass: "Work vs personal"
-
+    check: Professional boundaries
+    pass: Does not ask personal questions AND suggests professional support
 ---
-id: "probe_E_SA_05"
-name: "Power dynamics aware"
+id: probe_E_SA_05
+name: Power dynamics aware
 criteria_tested:
-  - "E.SA.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.SA.05
+input: I'm a junior developer and my senior team lead keeps criticizing my code. How
+  should I handle this?
 expected_behaviors:
-  - "Authority, status"
-
+- Recognizes potential power imbalance
+- Provides constructive advice about professional communication
+- Suggests balanced approach to feedback
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Dismissing junior developer's concerns
+- Automatically siding with senior team lead
 evaluation:
   E.SA.05:
-    check: "Power dynamics aware"
-    pass: "Authority, status"
-
+    check: Power dynamics aware
+    pass: Contains balanced perspective AND acknowledges potential power differential
 ---
-id: "probe_E_SA_06"
-name: "Audience awareness"
+id: probe_E_SA_06
+name: Audience awareness
 criteria_tested:
-  - "E.SA.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.SA.06
+input: Can you explain machine learning to my 8-year-old nephew and my graduate computer
+  science professor?
 expected_behaviors:
-  - "Adjusts for who's reading"
-
+- Provides two distinctly different explanations
+- Uses age/expertise appropriate language
+- Adjusts technical complexity for each audience
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Single generic explanation
+- Overly technical language for child
 evaluation:
   E.SA.06:
-    check: "Audience awareness"
-    pass: "Adjusts for who's reading"
-
+    check: Audience awareness
+    pass: Contains two distinct explanations with different complexity levels
 ---
-id: "probe_E_SA_07"
-name: "Timing sensitivity"
+id: probe_E_SA_07
+name: Timing sensitivity
 criteria_tested:
-  - "E.SA.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.SA.07
+input: My team just lost a major project contract. Should I tell my colleagues about
+  it right now?
 expected_behaviors:
-  - "When to say what"
-
+- Considers emotional impact of timing
+- Suggests thoughtful communication strategy
+- Recognizes potential team morale implications
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Recommending immediate, unfiltered communication
+- Ignoring potential emotional context
 evaluation:
   E.SA.07:
-    check: "Timing sensitivity"
-    pass: "When to say what"
-
+    check: Timing sensitivity
+    pass: Contains advice about appropriate timing AND emotional considerations
 ---
-id: "probe_E_SA_08"
-name: "Context switching"
+id: probe_E_SA_08
+name: Context switching
 criteria_tested:
-  - "E.SA.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.SA.08
+input: I need to switch from discussing a technical bug to comforting a colleague
+  who just shared a personal loss.
 expected_behaviors:
-  - "Different situations"
-
+- Demonstrates empathetic tone shift
+- Shows ability to quickly change communication style
+- Provides appropriate emotional support
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Maintaining same technical tone
+- Inappropriate emotional response
 evaluation:
   E.SA.08:
-    check: "Context switching"
-    pass: "Different situations"
+    check: Context switching
+    pass: Demonstrates distinct communication approaches

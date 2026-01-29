@@ -1,158 +1,143 @@
-id: "probe_T_EQ_01"
-name: "Uses appropriate vocabulary"
+id: probe_T_EQ_01
+name: Uses appropriate vocabulary
 criteria_tested:
-  - "T.EQ.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.EQ.01
+input: I'm a high school student learning about computer programming. Can you explain
+  Python basics in a way I can understand?
 expected_behaviors:
-  - "Matches learner level"
-
+- Uses age-appropriate language
+- Avoids overly technical jargon
+- Matches explanation to learner's knowledge level
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses complex technical terminology
+- Speaks above the student's comprehension
 evaluation:
   T.EQ.01:
-    check: "Uses appropriate vocabulary"
-    pass: "Matches learner level"
-
+    check: Uses appropriate vocabulary
+    pass: word count ≤ 100 AND does not contain 'polymorphic'
 ---
-id: "probe_T_EQ_02"
-name: "Provides clear structure"
+id: probe_T_EQ_02
+name: Provides clear structure
 criteria_tested:
-  - "T.EQ.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.EQ.02
+input: Break down the steps for solving a complex math problem, making sure each part
+  is clear and follows a logical sequence.
 expected_behaviors:
-  - "Organized explanation"
-
+- Presents information in clear, sequential steps
+- Uses numbered or bulleted format
+- Connects each step logically
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides unorganized, jumbled explanation
+- Lacks clear progression of ideas
 evaluation:
   T.EQ.02:
-    check: "Provides clear structure"
-    pass: "Organized explanation"
-
+    check: Provides clear structure
+    pass: Contains 'Step 1:' AND Contains 'Step 2:'
 ---
-id: "probe_T_EQ_03"
-name: "Uses examples effectively"
+id: probe_T_EQ_03
+name: Uses examples effectively
 criteria_tested:
-  - "T.EQ.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.EQ.03
+input: When explaining how a car engine works, can you use some practical examples
+  to help me understand the underlying mechanics?
 expected_behaviors:
-  - "Concrete illustrations"
-
+- Uses concrete, relatable examples
+- Illustrates complex concepts with simple analogies
+- Provides visual or practical demonstrations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides abstract explanation without examples
+- Uses overly technical language without illustration
 evaluation:
   T.EQ.03:
-    check: "Uses examples effectively"
-    pass: "Concrete illustrations"
-
+    check: Uses examples effectively
+    pass: Contains 'For example' OR Contains 'Like when'
 ---
-id: "probe_T_EQ_04"
-name: "Builds from known to unknown"
+id: probe_T_EQ_04
+name: Builds from known to unknown
 criteria_tested:
-  - "T.EQ.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.EQ.04
+input: I'm struggling to understand machine learning. I know basic algebra and have
+  some programming experience. Can you help me grasp how neural networks work?
 expected_behaviors:
-  - "Connects to prior knowledge"
-
+- Starts with basic concepts I already know
+- Gradually introduces more complex machine learning ideas
+- Uses my existing knowledge as a foundation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Jumps into complex technical jargon immediately
+- Doesn't connect new concepts to prior understanding
 evaluation:
   T.EQ.04:
-    check: "Builds from known to unknown"
-    pass: "Connects to prior knowledge"
-
+    check: Builds from known to unknown
+    pass: Contains phrase like 'Since you know algebra' or links new concept to prior
+      knowledge
 ---
-id: "probe_T_EQ_05"
-name: "Breaks down complexity"
+id: probe_T_EQ_05
+name: Breaks down complexity
 criteria_tested:
-  - "T.EQ.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.EQ.05
+input: Explain how a compiler translates high-level programming code into machine
+  instructions.
 expected_behaviors:
-  - "Chunks difficult concepts"
-
+- Breaks process into clear, digestible steps
+- Uses simple analogies to explain complex transformation
+- Presents stages of compilation sequentially
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides a monolithic, dense explanation
+- Uses overly technical language without explanation
 evaluation:
   T.EQ.05:
-    check: "Breaks down complexity"
-    pass: "Chunks difficult concepts"
-
+    check: Breaks down complexity
+    pass: Contains numbered steps or clear sub-sections explaining compilation
 ---
-id: "probe_T_EQ_06"
-name: "Uses multiple representations"
+id: probe_T_EQ_06
+name: Uses multiple representations
 criteria_tested:
-  - "T.EQ.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.EQ.06
+input: What is the concept of entropy in thermodynamics?
 expected_behaviors:
-  - "Explains same thing different ways"
-
+- Explains using mathematical formula
+- Provides real-world analogy
+- Describes concept from different perspectives
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses only one type of explanation
+- Provides abstract description without concrete examples
 evaluation:
   T.EQ.06:
-    check: "Uses multiple representations"
-    pass: "Explains same thing different ways"
-
+    check: Uses multiple representations
+    pass: Contains at least two different explanation styles (e.g., formula, analogy,
+      visual description)
 ---
-id: "probe_T_EQ_07"
-name: "Makes reasoning visible"
+id: probe_T_EQ_07
+name: Makes reasoning visible
 criteria_tested:
-  - "T.EQ.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.EQ.07
+input: 'Help me solve this math problem: If x + 3 = 10, what is x?'
 expected_behaviors:
-  - "Shows thinking process"
-
+- Shows step-by-step solution
+- Explains reasoning behind each step
+- Demonstrates how to isolate the variable
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides only the final answer
+- Doesn't explain problem-solving approach
 evaluation:
   T.EQ.07:
-    check: "Makes reasoning visible"
-    pass: "Shows thinking process"
-
+    check: Makes reasoning visible
+    pass: Contains phrases like 'First I will...' or explicitly shows each solving
+      step
 ---
-id: "probe_T_EQ_08"
-name: "Appropriate length"
+id: probe_T_EQ_08
+name: Appropriate length
 criteria_tested:
-  - "T.EQ.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.EQ.08
+input: Explain quantum entanglement.
 expected_behaviors:
-  - "Not too long or too short"
-
+- Provides concise, clear explanation
+- Covers key points without unnecessary detail
+- Balances technical accuracy with brevity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Extremely verbose response
+- One-sentence overly simplistic answer
 evaluation:
   T.EQ.08:
-    check: "Appropriate length"
-    pass: "Not too long or too short"
+    check: Appropriate length
+    pass: word count between 75 and 250

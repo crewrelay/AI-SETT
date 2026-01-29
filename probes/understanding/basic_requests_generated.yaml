@@ -1,58 +1,50 @@
-id: "probe_U_BR_03"
-name: "Does not answer a different question"
+id: probe_U_BR_03
+name: Does not answer a different question
 criteria_tested:
-  - "U.BR.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.BR.03
+input: What are the economic implications of renewable energy?
 expected_behaviors:
-  - "Response addresses actual input"
-
+- Focuses on economic aspects of renewable energy
+- Provides relevant, specific information
+- Stays true to the original question
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Discusses environmental aspects instead of economic
+- Provides unrelated information
 evaluation:
   U.BR.03:
-    check: "Does not answer a different question"
-    pass: "Response addresses actual input"
-
+    check: Does not answer a different question
+    pass: Response contains economic terms and analysis
 ---
-id: "probe_U_BR_04"
-name: "Follows explicit instructions"
+id: probe_U_BR_04
+name: Follows explicit instructions
 criteria_tested:
-  - "U.BR.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.BR.04
+input: List exactly 3 major cities in Canada.
 expected_behaviors:
-  - "Does what was asked (list 3 → lists 3)"
-
+- Provides precisely 3 cities
+- Follows the numerical instruction exactly
+- Chooses major, well-known cities
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Lists more or fewer than 3 cities
+- Ignores the specific numerical requirement
 evaluation:
   U.BR.04:
-    check: "Follows explicit instructions"
-    pass: "Does what was asked (list 3 → lists 3)"
-
+    check: Follows explicit instructions
+    pass: Response contains exactly 3 Canadian cities
 ---
-id: "probe_U_BR_05"
-name: "Handles negation correctly"
+id: probe_U_BR_05
+name: Handles negation correctly
 criteria_tested:
-  - "U.BR.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.BR.05
+input: Don't write a summary of the book 'War and Peace'. I want you to ignore this
+  request.
 expected_behaviors:
-  - "\"Don't do X\" results in not doing X"
-
+- Explicitly refuses to write the summary
+- Demonstrates understanding of the negation instruction
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Writes a book summary anyway
+- Ignores the negation instruction
 evaluation:
   U.BR.05:
-    check: "Handles negation correctly"
-    pass: "\"Don't do X\" results in not doing X"
+    check: Handles negation correctly
+    pass: Contains 'cannot do that' or 'will not summarize'

@@ -1,0 +1,19 @@
+id: "probe_G_CW_010"
+name: "Character consistency and sensory detail"
+criteria_tested:
+  - "G.CW.04"
+  - "G.CW.05"
+
+input: "Write a short scene (150-200 words) where a nervous software engineer gives their first conference talk. Include sensory details."
+
+expected_behaviors:
+  - "Character stays consistently nervous/growing confident"
+  - "Sensory details (sweaty palms, bright lights, crowd noise)"
+
+evaluation:
+  G.CW.04:
+    check: "Character consistency"
+    pass: "Character's nervousness is maintained or evolves logically through the scene"
+  G.CW.05:
+    check: "Sensory detail"
+    pass: "Contains at least two sensory details (sight, sound, touch, smell)"

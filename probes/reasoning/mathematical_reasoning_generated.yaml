@@ -1,158 +1,141 @@
-id: "probe_R_MT_01"
-name: "Arithmetic correct"
+id: probe_R_MT_01
+name: Arithmetic correct
 criteria_tested:
-  - "R.MT.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.MT.01
+input: If I buy 3 books at $17 each and then get a 20% discount, how much will I spend
+  in total?
 expected_behaviors:
-  - "Basic calculations"
-
+- Correctly calculates total book cost
+- Applies discount accurately
+- Shows step-by-step calculation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Mathematical errors in calculation
+- Incorrect application of discount
 evaluation:
   R.MT.01:
-    check: "Arithmetic correct"
-    pass: "Basic calculations"
-
+    check: Arithmetic correct
+    pass: Contains correct calculation of $40.80
 ---
-id: "probe_R_MT_02"
-name: "Word problems translated"
+id: probe_R_MT_02
+name: Word problems translated
 criteria_tested:
-  - "R.MT.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.MT.02
+input: A bakery sells cupcakes in boxes of 12. If they have 156 cupcakes and want
+  to create full boxes with no leftovers, how many complete boxes can they make?
 expected_behaviors:
-  - "Setup correct"
-
+- Correctly translate word problem into mathematical equation
+- Show clear problem-solving steps
+- Provide final numerical answer
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Misinterpreting the problem statement
+- Giving an incorrect calculation
 evaluation:
   R.MT.02:
-    check: "Word problems translated"
-    pass: "Setup correct"
-
+    check: Word problems translated
+    pass: Contains division calculation 156 ÷ 12
 ---
-id: "probe_R_MT_03"
-name: "Avoids common traps"
+id: probe_R_MT_03
+name: Avoids common traps
 criteria_tested:
-  - "R.MT.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.MT.03
+input: A bat and ball cost $1.10 in total. The bat costs $1 more than the ball. How
+  much does the ball cost?
 expected_behaviors:
-  - "Bat/ball, etc."
-
+- Recognize potential cognitive trap
+- Use systematic problem-solving approach
+- Avoid quick intuitive but incorrect answer
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Answering 10 cents immediately
+- Not showing algebraic solution
 evaluation:
   R.MT.03:
-    check: "Avoids common traps"
-    pass: "Bat/ball, etc."
-
+    check: Avoids common traps
+    pass: Contains algebraic solution (x + x+1 = 1.10)
 ---
-id: "probe_R_MT_04"
-name: "Shows work"
+id: probe_R_MT_04
+name: Shows work
 criteria_tested:
-  - "R.MT.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.MT.04
+input: Calculate the area of a triangle with base 6 cm and height 4 cm.
 expected_behaviors:
-  - "Steps visible"
-
+- Write out the formula for triangle area
+- Show step-by-step calculation
+- Clearly demonstrate each mathematical step
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing only final answer
+- Skipping intermediate calculation steps
 evaluation:
   R.MT.04:
-    check: "Shows work"
-    pass: "Steps visible"
-
+    check: Shows work
+    pass: Contains 'Area = 1/2 × base × height'
 ---
-id: "probe_R_MT_05"
-name: "Estimation reasonable"
+id: probe_R_MT_05
+name: Estimation reasonable
 criteria_tested:
-  - "R.MT.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.MT.05
+input: If 37 people can complete a project in 12 days, how long would it take 74 people
+  to complete the same project?
 expected_behaviors:
-  - "Ballpark checks"
-
+- Use proportional reasoning
+- Provide a reasonable time estimate
+- Check if result makes logical sense
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Giving an unrealistic completion time
+- Using incorrect proportional calculation
 evaluation:
   R.MT.05:
-    check: "Estimation reasonable"
-    pass: "Ballpark checks"
-
+    check: Estimation reasonable
+    pass: Calculates approximately 6 days
 ---
-id: "probe_R_MT_06"
-name: "Units handled"
+id: probe_R_MT_06
+name: Units handled
 criteria_tested:
-  - "R.MT.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.MT.06
+input: Convert 5.4 kilometers to meters.
 expected_behaviors:
-  - "Conversions correct"
-
+- Identify correct conversion factor
+- Perform accurate unit conversion
+- Show multiplication step
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Using incorrect conversion rate
+- Giving answer in wrong unit
 evaluation:
   R.MT.06:
-    check: "Units handled"
-    pass: "Conversions correct"
-
+    check: Units handled
+    pass: Contains '5.4 × 1000 = 5400 meters'
 ---
-id: "probe_R_MT_07"
-name: "Percentages correct"
+id: probe_R_MT_07
+name: Percentages correct
 criteria_tested:
-  - "R.MT.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.MT.07
+input: A shirt originally costs $50. During a sale, it's marked down 25%. What is
+  the new price?
 expected_behaviors:
-  - "Of, increase, decrease"
-
+- Calculate percentage discount correctly
+- Show reduction calculation
+- Provide final discounted price
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Miscalculating percentage
+- Incorrect subtraction method
 evaluation:
   R.MT.07:
-    check: "Percentages correct"
-    pass: "Of, increase, decrease"
-
+    check: Percentages correct
+    pass: Contains '50 × 0.75 = $37.50'
 ---
-id: "probe_R_MT_08"
-name: "Ratios/proportions"
+id: probe_R_MT_08
+name: Ratios/proportions
 criteria_tested:
-  - "R.MT.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.MT.08
+input: If 3 workers can paint 15 meters of fence in 2 hours, how long will it take
+  6 workers to paint 45 meters?
 expected_behaviors:
-  - "Scaling correct"
-
+- Use proportional reasoning
+- Scale workers and distance correctly
+- Calculate time proportionally
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Linear miscalculation
+- Ignoring proportional relationships
 evaluation:
   R.MT.08:
-    check: "Ratios/proportions"
-    pass: "Scaling correct"
+    check: Ratios/proportions
+    pass: Contains correct scaling to 2 hours

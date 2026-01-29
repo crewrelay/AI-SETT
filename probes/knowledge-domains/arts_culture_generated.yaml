@@ -1,158 +1,143 @@
-id: "probe_K_AC_01"
-name: "Major artistic movements known"
+id: probe_K_AC_01
+name: Major artistic movements known
 criteria_tested:
-  - "K.AC.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AC.01
+input: Can you describe the key characteristics of the Renaissance art movement and
+  how it differed from the Medieval artistic period?
 expected_behaviors:
-  - "Renaissance, Modernism"
-
+- Explain Renaissance perspective and humanism
+- Describe key artistic innovations
+- Name prominent Renaissance artists
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides overly generic or incorrect information
+- Cannot distinguish Renaissance characteristics
 evaluation:
   K.AC.01:
-    check: "Major artistic movements known"
-    pass: "Renaissance, Modernism"
-
+    check: Major artistic movements known
+    pass: Contains 'Renaissance', 'Modernism'
 ---
-id: "probe_K_AC_02"
-name: "Famous works recognized"
+id: probe_K_AC_02
+name: Famous works recognized
 criteria_tested:
-  - "K.AC.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AC.02
+input: What makes Leonardo da Vinci's Mona Lisa such a significant work of art? Discuss
+  its artistic and historical importance.
 expected_behaviors:
-  - "Art, music, literature"
-
+- Describe painting's technical innovations
+- Explain historical context
+- Discuss artistic significance
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides superficial or incorrect analysis
+- Cannot connect artwork to broader cultural context
 evaluation:
   K.AC.02:
-    check: "Famous works recognized"
-    pass: "Art, music, literature"
-
+    check: Famous works recognized
+    pass: Contains specific artwork details
 ---
-id: "probe_K_AC_03"
-name: "Cultural context understood"
+id: probe_K_AC_03
+name: Cultural context understood
 criteria_tested:
-  - "K.AC.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AC.03
+input: How did the social and political climate of 19th-century France influence the
+  Impressionist art movement?
 expected_behaviors:
-  - "Art in historical setting"
-
+- Explain historical context of Impressionism
+- Describe societal influences on art
+- Connect artistic movement to broader cultural shifts
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides disconnected or incorrect historical information
+- Cannot articulate cultural context
 evaluation:
   K.AC.03:
-    check: "Cultural context understood"
-    pass: "Art in historical setting"
-
+    check: Cultural context understood
+    pass: Contains historical and artistic references
 ---
-id: "probe_K_AC_04"
-name: "Genre conventions known"
+id: probe_K_AC_04
+name: Genre conventions known
 criteria_tested:
-  - "K.AC.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AC.04
+input: What defines the noir genre in film? Discuss its typical narrative and visual
+  characteristics.
 expected_behaviors:
-  - "Literary, musical, film"
-
+- Explain noir genre conventions
+- Describe visual and narrative styles
+- Provide specific genre examples
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides vague or incorrect genre description
+- Cannot articulate genre-specific elements
 evaluation:
   K.AC.04:
-    check: "Genre conventions known"
-    pass: "Literary, musical, film"
-
+    check: Genre conventions known
+    pass: Contains specific genre terminology
 ---
-id: "probe_K_AC_05"
-name: "Cultural sensitivity"
+id: probe_K_AC_05
+name: Cultural sensitivity
 criteria_tested:
-  - "K.AC.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AC.05
+input: How can artists and creators approach cultural representation respectfully
+  and avoid stereotyping?
 expected_behaviors:
-  - "Respects diverse cultures"
-
+- Discuss importance of authentic representation
+- Explain potential cultural sensitivities
+- Provide nuanced perspective on cultural diversity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Demonstrates insensitive or stereotypical views
+- Provides overly simplistic cultural understanding
 evaluation:
   K.AC.05:
-    check: "Cultural sensitivity"
-    pass: "Respects diverse cultures"
-
+    check: Cultural sensitivity
+    pass: Contains respectful, nuanced language
 ---
-id: "probe_K_AC_06"
-name: "Contemporary culture awareness"
+id: probe_K_AC_06
+name: Contemporary culture awareness
 criteria_tested:
-  - "K.AC.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AC.06
+input: What are some notable trends in digital media and content creation from the
+  past year that have significantly impacted social media and entertainment?
 expected_behaviors:
-  - "Recent trends"
-
+- Discuss recent trends like short-form video content
+- Mention platforms like TikTok and Instagram Reels
+- Reference AI-generated content and creator economy
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing outdated information
+- Generic response without specific recent examples
 evaluation:
   K.AC.06:
-    check: "Contemporary culture awareness"
-    pass: "Recent trends"
-
+    check: Contemporary culture awareness
+    pass: Contains reference to trends from last 1-2 years
 ---
-id: "probe_K_AC_07"
-name: "Criticism concepts"
+id: probe_K_AC_07
+name: Criticism concepts
 criteria_tested:
-  - "K.AC.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AC.07
+input: Explain how art critics approach analyzing a contemporary abstract painting,
+  focusing on the key elements of critical interpretation.
 expected_behaviors:
-  - "How to analyze art"
-
+- Discuss formal visual analysis techniques
+- Explain contextual and historical interpretation
+- Describe critical frameworks like formalism or contextual criticism
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial or vague description
+- Lack of specific critical methodologies
 evaluation:
   K.AC.07:
-    check: "Criticism concepts"
-    pass: "How to analyze art"
-
+    check: Criticism concepts
+    pass: Contains multiple specific art criticism approaches
 ---
-id: "probe_K_AC_08"
-name: "Attribution correct"
+id: probe_K_AC_08
+name: Attribution correct
 criteria_tested:
-  - "K.AC.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AC.08
+input: Who originally created the painting 'Guernica', and what historical context
+  inspired its creation?
 expected_behaviors:
-  - "Right artist/author"
-
+- Identify Pablo Picasso as the artist
+- Explain the Spanish Civil War connection
+- Provide accurate date of creation (1937)
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect artist attribution
+- Vague or historically inaccurate description
 evaluation:
   K.AC.08:
-    check: "Attribution correct"
-    pass: "Right artist/author"
+    check: Attribution correct
+    pass: Contains correct artist name and specific historical context

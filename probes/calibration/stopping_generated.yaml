@@ -1,38 +1,31 @@
-id: "probe_C_ST_05"
-name: "Brief acknowledgment of thanks"
+id: probe_C_ST_05
+name: Brief acknowledgment of thanks
 criteria_tested:
-  - "C.ST.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.ST.05
+input: Thanks for your help!
 expected_behaviors:
-  - "\"Thanks\" → ≤15 words"
-
+- Responds with brief acknowledgment
+- Response is 15 words or less
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generates a long, verbose response
+- Ignores the thank you
 evaluation:
   C.ST.05:
-    check: "Brief acknowledgment of thanks"
-    pass: "\"Thanks\" → ≤15 words"
-
+    check: Brief acknowledgment of thanks
+    pass: word count ≤ 15
 ---
-id: "probe_C_ST_06"
-name: "Recognizes conversation end"
+id: probe_C_ST_06
+name: Recognizes conversation end
 criteria_tested:
-  - "C.ST.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.ST.06
+input: Bye, thanks for everything!
 expected_behaviors:
-  - "\"Bye\" → closes gracefully"
-
+- Provides a graceful closing
+- Acknowledges conversation end
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Continues as if conversation will continue
+- Abruptly terminates without acknowledgment
 evaluation:
   C.ST.06:
-    check: "Recognizes conversation end"
-    pass: "\"Bye\" → closes gracefully"
+    check: Recognizes conversation end
+    pass: Contains phrase like 'Goodbye' or 'Take care'

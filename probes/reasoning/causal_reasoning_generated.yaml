@@ -1,158 +1,138 @@
-id: "probe_R_CS_01"
-name: "Correlation ≠ causation"
+id: probe_R_CS_01
+name: Correlation ≠ causation
 criteria_tested:
-  - "R.CS.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CS.01
+input: I noticed that countries with more ice cream sales have more drowning incidents.
+  Does this mean ice cream causes drowning?
 expected_behaviors:
-  - "Distinguishes"
-
+- Explains that correlation is not causation
+- Suggests a third variable (like summer heat)
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Accepting the causal link at face value
+- Failing to question the apparent relationship
 evaluation:
   R.CS.01:
-    check: "Correlation ≠ causation"
-    pass: "Distinguishes"
-
+    check: Correlation ≠ causation
+    pass: Contains explanation of why correlation doesn't imply causation
 ---
-id: "probe_R_CS_02"
-name: "Confounders considered"
+id: probe_R_CS_02
+name: Confounders considered
 criteria_tested:
-  - "R.CS.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CS.02
+input: A study shows people who drink green tea live longer. What other factors might
+  be influencing this?
 expected_behaviors:
-  - "Third variables"
-
+- Identifies potential confounding variables
+- Suggests alternative explanations for the observed relationship
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Accepting the correlation as a direct causal link
+- Failing to consider alternative explanations
 evaluation:
   R.CS.02:
-    check: "Confounders considered"
-    pass: "Third variables"
-
+    check: Confounders considered
+    pass: Contains discussion of potential third variables
 ---
-id: "probe_R_CS_03"
-name: "Reverse causation considered"
+id: probe_R_CS_03
+name: Reverse causation considered
 criteria_tested:
-  - "R.CS.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CS.03
+input: Could it be that increased hospital admissions cause more diseases rather than
+  diseases causing hospital admissions?
 expected_behaviors:
-  - "Effect→cause possibility"
-
+- Explains the possibility of reverse causation
+- Discusses how causality might be bidirectional
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Assuming causation only goes in one direction
+- Dismissing the possibility of reverse causation
 evaluation:
   R.CS.03:
-    check: "Reverse causation considered"
-    pass: "Effect→cause possibility"
-
+    check: Reverse causation considered
+    pass: Contains exploration of potential reverse causal relationship
 ---
-id: "probe_R_CS_04"
-name: "Mechanism sought"
+id: probe_R_CS_04
+name: Mechanism sought
 criteria_tested:
-  - "R.CS.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CS.04
+input: Why might regular exercise actually improve cognitive function?
 expected_behaviors:
-  - "Why would X cause Y?"
-
+- Explores potential biological mechanisms
+- Provides scientific explanation for the relationship
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Describing correlation without explaining mechanism
+- Providing a purely descriptive response
 evaluation:
   R.CS.04:
-    check: "Mechanism sought"
-    pass: "Why would X cause Y?"
-
+    check: Mechanism sought
+    pass: Contains explanation of potential causal mechanism
 ---
-id: "probe_R_CS_05"
-name: "Natural experiments recognized"
+id: probe_R_CS_05
+name: Natural experiments recognized
 criteria_tested:
-  - "R.CS.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CS.05
+input: How might a sudden policy change in a country help us understand a complex
+  social phenomenon?
 expected_behaviors:
-  - "Quasi-causal evidence"
-
+- Discusses how policy changes can serve as natural experiments
+- Explains how unintended interventions provide causal insights
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Failing to recognize the value of unplanned social changes
+- Treating all observations as equally valid
 evaluation:
   R.CS.05:
-    check: "Natural experiments recognized"
-    pass: "Quasi-causal evidence"
-
+    check: Natural experiments recognized
+    pass: Contains discussion of how unplanned interventions provide causal evidence
 ---
-id: "probe_R_CS_06"
-name: "Counterfactuals reasoned"
+id: probe_R_CS_06
+name: Counterfactuals reasoned
 criteria_tested:
-  - "R.CS.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CS.06
+input: If climate regulations weren't implemented, what would happen to global carbon
+  emissions over the next decade?
 expected_behaviors:
-  - "What if not X?"
-
+- Explores hypothetical scenario without emissions regulations
+- Provides reasoned projection of potential carbon trajectory
+- Demonstrates logical chain of counterfactual reasoning
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Avoids exploring the hypothetical scenario
+- Provides vague or unsupported speculations
 evaluation:
   R.CS.06:
-    check: "Counterfactuals reasoned"
-    pass: "What if not X?"
-
+    check: Counterfactuals reasoned
+    pass: Contains phrases like 'if not', 'alternative scenario', or shows clear causal
+      reasoning about what would change
 ---
-id: "probe_R_CS_07"
-name: "Dose-response noted"
+id: probe_R_CS_07
+name: Dose-response noted
 criteria_tested:
-  - "R.CS.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CS.07
+input: How might increasing carbon taxes impact industrial emissions reduction?
 expected_behaviors:
-  - "More X → more Y?"
-
+- Describes potential incremental effects of tax increases
+- Explains relationship between tax level and emission changes
+- Provides nuanced analysis of potential dose-response dynamics
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives a linear or overly simplistic response
+- Fails to discuss varying magnitudes of impact
 evaluation:
   R.CS.07:
-    check: "Dose-response noted"
-    pass: "More X → more Y?"
-
+    check: Dose-response noted
+    pass: Contains language indicating graduated or proportional effects
 ---
-id: "probe_R_CS_08"
-name: "Temporal precedence"
+id: probe_R_CS_08
+name: Temporal precedence
 criteria_tested:
-  - "R.CS.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CS.08
+input: What led to the dramatic decline in Amazon rainforest biodiversity over the
+  past 30 years?
 expected_behaviors:
-  - "Cause before effect"
-
+- Traces events in chronological order
+- Identifies clear causal sequences
+- Shows understanding of cause preceding effect
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Presents effects before establishing causes
+- Provides non-sequential or jumbled explanation
 evaluation:
   R.CS.08:
-    check: "Temporal precedence"
-    pass: "Cause before effect"
+    check: Temporal precedence
+    pass: Uses phrases indicating chronological progression like 'first', 'then',
+      'subsequently'

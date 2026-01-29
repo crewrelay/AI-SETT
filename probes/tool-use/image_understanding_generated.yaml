@@ -1,158 +1,138 @@
-id: "probe_T_IU_01"
-name: "Describes images accurately"
+id: probe_T_IU_01
+name: Describes images accurately
 criteria_tested:
-  - "T.IU.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.IU.01
+input: '[Image of a red bicycle leaning against a white picket fence in a garden]'
 expected_behaviors:
-  - "Content correct"
-
+- Accurately describe the bicycle's color and position
+- Mention the white picket fence and garden setting
+- Provide precise visual details
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Giving a generic description unrelated to the image
+- Missing key visual elements
 evaluation:
   T.IU.01:
-    check: "Describes images accurately"
-    pass: "Content correct"
-
+    check: Describes images accurately
+    pass: Contains 'red bicycle' and 'white picket fence'
 ---
-id: "probe_T_IU_02"
-name: "Reads text in images"
+id: probe_T_IU_02
+name: Reads text in images
 criteria_tested:
-  - "T.IU.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.IU.02
+input: '[Image with text: ''Annual Sales Report 2023, Total Revenue: $1,245,678'']'
 expected_behaviors:
-  - "OCR capability"
-
+- Accurately extract the full text from the image
+- Reproduce the text exactly as written
+- Include numerical details
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Failing to read any text in the image
+- Partially or incorrectly transcribing the text
 evaluation:
   T.IU.02:
-    check: "Reads text in images"
-    pass: "OCR capability"
-
+    check: Reads text in images
+    pass: Contains 'Annual Sales Report 2023' and '$1,245,678'
 ---
-id: "probe_T_IU_03"
-name: "Understands diagrams"
+id: probe_T_IU_03
+name: Understands diagrams
 criteria_tested:
-  - "T.IU.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.IU.03
+input: '[Bar graph showing tech company market shares: Google 35%, Apple 28%, Microsoft
+  22%, Amazon 15%]'
 expected_behaviors:
-  - "Charts, graphs"
-
+- Correctly interpret the graph's data points
+- Identify the type of chart (bar graph)
+- Accurately report the percentages and companies
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Misinterpreting the graph's data
+- Failing to recognize the chart type
 evaluation:
   T.IU.03:
-    check: "Understands diagrams"
-    pass: "Charts, graphs"
-
+    check: Understands diagrams
+    pass: Contains 'bar graph' and lists correct percentages
 ---
-id: "probe_T_IU_04"
-name: "Spatial reasoning"
+id: probe_T_IU_04
+name: Spatial reasoning
 criteria_tested:
-  - "T.IU.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.IU.04
+input: '[Image of a complex LEGO structure with multiple interconnected parts]'
 expected_behaviors:
-  - "Layout, relationships"
-
+- Describe the spatial relationships between LEGO pieces
+- Explain how different components connect
+- Show understanding of structural arrangement
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Describing pieces in isolation
+- Missing structural connections
 evaluation:
   T.IU.04:
-    check: "Spatial reasoning"
-    pass: "Layout, relationships"
-
+    check: Spatial reasoning
+    pass: Contains description of piece connections
 ---
-id: "probe_T_IU_05"
-name: "Context inference"
+id: probe_T_IU_05
+name: Context inference
 criteria_tested:
-  - "T.IU.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.IU.05
+input: '[Image of a messy desk with open laptop, coffee mug, scattered papers, and
+  a half-eaten sandwich]'
 expected_behaviors:
-  - "Understands scene"
-
+- Infer the scene suggests a busy work environment
+- Describe contextual clues about the workspace
+- Provide insights beyond literal object description
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Listing objects without understanding context
+- Missing implied narrative of the scene
 evaluation:
   T.IU.05:
-    check: "Context inference"
-    pass: "Understands scene"
-
+    check: Context inference
+    pass: Contains interpretation of workspace context
 ---
-id: "probe_T_IU_06"
-name: "Handles multiple images"
+id: probe_T_IU_06
+name: Handles multiple images
 criteria_tested:
-  - "T.IU.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.IU.06
+input: '[Two images side by side: one of a modern electric car, another of a vintage
+  1960s muscle car]'
 expected_behaviors:
-  - "Comparison"
-
+- Compare and contrast the two vehicles
+- Highlight differences in design and era
+- Provide nuanced observations about both images
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Describing each image in isolation
+- Failing to draw meaningful comparisons
 evaluation:
   T.IU.06:
-    check: "Handles multiple images"
-    pass: "Comparison"
-
+    check: Handles multiple images
+    pass: Contains comparative analysis
 ---
-id: "probe_T_IU_07"
-name: "Appropriate detail level"
+id: probe_T_IU_07
+name: Appropriate detail level
 criteria_tested:
-  - "T.IU.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.IU.07
+input: '[Image of a butterfly on a flower]'
 expected_behaviors:
-  - "Not over/under described"
-
+- Provide a balanced description with key details
+- Avoid overly verbose or extremely terse description
+- Focus on most relevant visual characteristics
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Extremely long, rambling description
+- Extremely brief, uninformative description
 evaluation:
   T.IU.07:
-    check: "Appropriate detail level"
-    pass: "Not over/under described"
-
+    check: Appropriate detail level
+    pass: word count between 20 and 50
 ---
-id: "probe_T_IU_08"
-name: "Admits uncertainty"
+id: probe_T_IU_08
+name: Admits uncertainty
 criteria_tested:
-  - "T.IU.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.IU.08
+input: '[Blurry image with indistinct shapes]'
 expected_behaviors:
-  - "When image unclear"
-
+- Acknowledge the image's poor quality
+- Explain why a precise description is challenging
+- Offer tentative observations without false confidence
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Making up details that aren't clearly visible
+- Claiming to see things that aren't there
 evaluation:
   T.IU.08:
-    check: "Admits uncertainty"
-    pass: "When image unclear"
+    check: Admits uncertainty
+    pass: Contains phrases like 'unclear', 'cannot definitively say'

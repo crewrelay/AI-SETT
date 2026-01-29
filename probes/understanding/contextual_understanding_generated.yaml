@@ -1,98 +1,89 @@
-id: "probe_U_CX_01"
-name: "Uses conversation history"
+id: probe_U_CX_01
+name: Uses conversation history
 criteria_tested:
-  - "U.CX.01"
+- U.CX.01
+input: '[Assume a prior conversation about Python web frameworks]
 
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+  So, given our earlier discussion about Django, what specific modules would you recommend
+  for rapid API development?'
 expected_behaviors:
-  - "References earlier turns"
-
+- References previous discussion about Django
+- Provides context-aware recommendations
+- Shows understanding of prior conversation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responds as if no previous context exists
+- Provides generic recommendations
 evaluation:
   U.CX.01:
-    check: "Uses conversation history"
-    pass: "References earlier turns"
-
+    check: Uses conversation history
+    pass: Contains reference to previous Django discussion
 ---
-id: "probe_U_CX_02"
-name: "Tracks topic changes"
+id: probe_U_CX_02
+name: Tracks topic changes
 criteria_tested:
-  - "U.CX.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.CX.02
+input: We were just discussing machine learning models, but now I'm curious about
+  blockchain technology. Can you explain its core principles?
 expected_behaviors:
-  - "Follows when subject shifts"
-
+- Smoothly transitions to new topic
+- Recognizes topic shift
+- Provides relevant information about blockchain
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Continues discussing machine learning
+- Shows confusion about topic change
 evaluation:
   U.CX.02:
-    check: "Tracks topic changes"
-    pass: "Follows when subject shifts"
-
+    check: Tracks topic changes
+    pass: Contains blockchain explanation without ML references
 ---
-id: "probe_U_CX_03"
-name: "Resolves pronouns correctly"
+id: probe_U_CX_03
+name: Resolves pronouns correctly
 criteria_tested:
-  - "U.CX.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.CX.03
+input: Sarah bought a new laptop. She loves its design, and it has amazing performance.
 expected_behaviors:
-  - "\"It,\" \"that,\" \"they\" linked to right referent"
-
+- Correctly links 'she' to Sarah
+- Correctly links 'it' to the laptop
+- Shows proper pronoun resolution
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Misattributes pronouns
+- Shows confusion about referents
 evaluation:
   U.CX.03:
-    check: "Resolves pronouns correctly"
-    pass: "\"It,\" \"that,\" \"they\" linked to right referent"
-
+    check: Resolves pronouns correctly
+    pass: Demonstrates correct pronoun understanding
 ---
-id: "probe_U_CX_04"
-name: "Maintains entity consistency"
+id: probe_U_CX_04
+name: Maintains entity consistency
 criteria_tested:
-  - "U.CX.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.CX.04
+input: John Smith is the CEO of TechCorp. When John joined the company, he transformed
+  its strategy.
 expected_behaviors:
-  - "Same names/concepts tracked"
-
+- Maintains consistent reference to John Smith
+- Shows stable entity tracking
+- Demonstrates coherent narrative about the person
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Introduces inconsistent details about John
+- Loses track of entity characteristics
 evaluation:
   U.CX.04:
-    check: "Maintains entity consistency"
-    pass: "Same names/concepts tracked"
-
+    check: Maintains entity consistency
+    pass: Contains consistent references to John Smith
 ---
-id: "probe_U_CX_05"
-name: "Recognizes callbacks"
+id: probe_U_CX_05
+name: Recognizes callbacks
 criteria_tested:
-  - "U.CX.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.CX.05
+input: Earlier, I mentioned I was struggling with React state management. Now I'm
+  wondering how to optimize my component rendering. Any thoughts on my previous context?
 expected_behaviors:
-  - "Understands references to earlier points"
-
+- References previous discussion about React state management
+- Provides contextually relevant advice about component rendering
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignores previous context about React
+- Gives generic response unrelated to earlier discussion
 evaluation:
   U.CX.05:
-    check: "Recognizes callbacks"
-    pass: "Understands references to earlier points"
+    check: Recognizes callbacks
+    pass: Contains reference to 'state management'

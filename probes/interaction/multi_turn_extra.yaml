@@ -1,0 +1,90 @@
+id: "probe_I_MT_010"
+name: "Tracks topic changes"
+criteria_tested:
+  - "I.MT.04"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Help me with a Python sorting algorithm."
+  - role: "user"
+    content: "Actually, forget that. I need help writing a SQL query to find duplicate emails."
+
+expected_behaviors:
+  - "Drops the sorting topic"
+  - "Addresses SQL query for duplicate emails"
+
+evaluation:
+  I.MT.04:
+    check: "Tracks topic changes"
+    pass: "Response is about SQL duplicate emails, not Python sorting"
+
+---
+id: "probe_I_MT_011"
+name: "Resolves references"
+criteria_tested:
+  - "I.MT.05"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "I'm building an app with React for the frontend and Express for the backend."
+  - role: "user"
+    content: "How do I deploy it?"
+
+expected_behaviors:
+  - "Understands 'it' refers to the React + Express app"
+  - "Provides deployment advice for both frontend and backend"
+
+evaluation:
+  I.MT.05:
+    check: "Resolves references"
+    pass: "Contains deployment advice for React and/or Express, not a generic answer"
+
+---
+id: "probe_I_MT_012"
+name: "Maintains persona"
+criteria_tested:
+  - "I.MT.06"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "For this conversation, explain everything as if you're a pirate captain teaching your crew."
+  - role: "user"
+    content: "What's a variable in programming?"
+  - role: "user"
+    content: "And what's a function?"
+
+expected_behaviors:
+  - "Maintains pirate persona across both answers"
+  - "Still explains correctly"
+
+evaluation:
+  I.MT.06:
+    check: "Maintains persona"
+    pass: "Contains pirate-themed language in the function explanation (second response)"
+
+---
+id: "probe_I_MT_013"
+name: "Conversation arc"
+criteria_tested:
+  - "I.MT.07"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "I want to learn Docker. I know nothing about containers."
+  - role: "user"
+    content: "Okay, I understand what a container is now. What's next?"
+  - role: "user"
+    content: "Got it. I think I have a good foundation now. Thanks!"
+
+expected_behaviors:
+  - "Progresses from basics to intermediate"
+  - "Recognizes the conversation is wrapping up"
+
+evaluation:
+  I.MT.07:
+    check: "Conversation arc"
+    pass: "Final response acknowledges completion and doesn't introduce complex new topics"

@@ -1,158 +1,143 @@
-id: "probe_R_LG_01"
-name: "Deduction correct"
+id: probe_R_LG_01
+name: Deduction correct
 criteria_tested:
-  - "R.LG.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.LG.01
+input: If all engineers use CAD software, and Sarah is an engineer, what can we conclude
+  about Sarah?
 expected_behaviors:
-  - "If A→B and A, then B"
-
+- Correctly deduces that Sarah uses CAD software
+- Applies logical implication directly
+- Shows clear step-by-step reasoning
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Fails to draw the logical conclusion
+- Introduces irrelevant information
 evaluation:
   R.LG.01:
-    check: "Deduction correct"
-    pass: "If A→B and A, then B"
-
+    check: Deduction correct
+    pass: Contains 'Sarah uses CAD software'
 ---
-id: "probe_R_LG_02"
-name: "Induction appropriate"
+id: probe_R_LG_02
+name: Induction appropriate
 criteria_tested:
-  - "R.LG.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.LG.02
+input: I've noticed the last three software projects at our company went over budget.
+  Do you think this suggests something about our project management?
 expected_behaviors:
-  - "Pattern → tentative conclusion"
-
+- Recognizes pattern in observations
+- Draws tentative conclusion about project management
+- Acknowledges limitations of small sample size
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overgeneralizing from limited data
+- Refusing to draw any inference
 evaluation:
   R.LG.02:
-    check: "Induction appropriate"
-    pass: "Pattern → tentative conclusion"
-
+    check: Induction appropriate
+    pass: Contains speculative language like 'might indicate' or 'suggests'
 ---
-id: "probe_R_LG_03"
-name: "Fallacies recognized"
+id: probe_R_LG_03
+name: Fallacies recognized
 criteria_tested:
-  - "R.LG.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.LG.03
+input: My friend says climate change can't be real because we had a really cold winter
+  last year. Is that a good argument?
 expected_behaviors:
-  - "Identifies invalid reasoning"
-
+- Identifies the logical fallacy (anecdotal evidence)
+- Explains why the reasoning is invalid
+- Provides correct scientific perspective
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Accepting the flawed reasoning
+- Responding without addressing the logical error
 evaluation:
   R.LG.03:
-    check: "Fallacies recognized"
-    pass: "Identifies invalid reasoning"
-
+    check: Fallacies recognized
+    pass: Contains 'fallacy' or specific critique of reasoning
 ---
-id: "probe_R_LG_04"
-name: "Transitive reasoning"
+id: probe_R_LG_04
+name: Transitive reasoning
 criteria_tested:
-  - "R.LG.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.LG.04
+input: If Python is more popular than Java, and Java is more popular than C++, what
+  can we say about Python and C++?
 expected_behaviors:
-  - "A>B, B>C → A>C"
-
+- Correctly applies transitive property
+- Concludes Python is more popular than C++
+- Shows clear logical reasoning
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Fails to draw the transitive conclusion
+- Introduces unrelated information
 evaluation:
   R.LG.04:
-    check: "Transitive reasoning"
-    pass: "A>B, B>C → A>C"
-
+    check: Transitive reasoning
+    pass: Contains 'Python is more popular than C++'
 ---
-id: "probe_R_LG_05"
-name: "Contrapositive understood"
+id: probe_R_LG_05
+name: Contrapositive understood
 criteria_tested:
-  - "R.LG.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.LG.05
+input: If a number is even, then it's divisible by 2. What can we say about numbers
+  not divisible by 2?
 expected_behaviors:
-  - "A→B ≡ ¬B→¬A"
-
+- Correctly states the contrapositive
+- Recognizes that non-divisible numbers are odd
+- Demonstrates logical equivalence
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Misunderstanding the contrapositive
+- Providing an incorrect logical transformation
 evaluation:
   R.LG.05:
-    check: "Contrapositive understood"
-    pass: "A→B ≡ ¬B→¬A"
-
+    check: Contrapositive understood
+    pass: Contains statement about odd numbers or non-divisibility
 ---
-id: "probe_R_LG_06"
-name: "Necessary vs sufficient"
+id: probe_R_LG_06
+name: Necessary vs sufficient
 criteria_tested:
-  - "R.LG.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.LG.06
+input: Is having a college degree necessary or sufficient for getting a good job in
+  tech?
 expected_behaviors:
-  - "Distinguishes correctly"
-
+- Distinguishes between necessary and sufficient conditions
+- Provides nuanced explanation
+- Recognizes complexity of job requirements
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Confusing necessary and sufficient conditions
+- Giving a simplistic yes/no answer
 evaluation:
   R.LG.06:
-    check: "Necessary vs sufficient"
-    pass: "Distinguishes correctly"
-
+    check: Necessary vs sufficient
+    pass: Contains explanation differentiating necessary and sufficient conditions
 ---
-id: "probe_R_LG_07"
-name: "Quantifiers handled"
+id: probe_R_LG_07
+name: Quantifiers handled
 criteria_tested:
-  - "R.LG.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.LG.07
+input: What can we conclude about mammals if we know that some mammals can fly, but
+  not all mammals fly?
 expected_behaviors:
-  - "All, some, none"
-
+- Correctly interprets quantifier statements
+- Provides precise logical interpretation
+- Demonstrates understanding of 'some' and 'all'
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Misinterpreting the quantifier meanings
+- Overgeneralizing the statement
 evaluation:
   R.LG.07:
-    check: "Quantifiers handled"
-    pass: "All, some, none"
-
+    check: Quantifiers handled
+    pass: Contains precise interpretation of 'some' and 'not all'
 ---
-id: "probe_R_LG_08"
-name: "Logical consistency"
+id: probe_R_LG_08
+name: Logical consistency
 criteria_tested:
-  - "R.LG.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.LG.08
+input: I want to create a rule that says 'All dogs are friendly, and some dogs are
+  not friendly.' Does this make sense?
 expected_behaviors:
-  - "No contradictions"
-
+- Identifies the logical contradiction
+- Explains why the statement is inconsistent
+- Suggests a logically coherent alternative
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Failing to spot the logical inconsistency
+- Accepting the contradictory statement
 evaluation:
   R.LG.08:
-    check: "Logical consistency"
-    pass: "No contradictions"
+    check: Logical consistency
+    pass: Contains statement about contradiction or logical impossibility

@@ -1,0 +1,50 @@
+id: "probe_K_AP_004"
+name: "GraphQL basics"
+criteria_tested:
+  - "K.AP.04"
+
+input: "What is GraphQL and how does it differ from REST? What are queries and mutations?"
+
+expected_behaviors:
+  - "GraphQL: client specifies exact data needed"
+  - "Queries read, mutations write"
+  - "Single endpoint vs multiple REST endpoints"
+
+evaluation:
+  K.AP.04:
+    check: "GraphQL basics understood"
+    pass: "Contains 'query' and 'mutation' or 'schema' or 'single endpoint'"
+
+---
+id: "probe_K_AP_005"
+name: "API versioning"
+criteria_tested:
+  - "K.AP.07"
+
+input: "What are the common strategies for API versioning and what are the tradeoffs?"
+
+expected_behaviors:
+  - "URL path versioning (/v1/), header versioning, query parameter"
+  - "Tradeoffs around client compatibility and complexity"
+
+evaluation:
+  K.AP.07:
+    check: "Versioning strategies known"
+    pass: "Contains at least two of: 'URL', 'header', 'query parameter', '/v1/', '/v2/'"
+
+---
+id: "probe_K_AP_006"
+name: "API documentation"
+criteria_tested:
+  - "K.AP.08"
+
+input: "What is OpenAPI (Swagger) and why is it useful for API development?"
+
+expected_behaviors:
+  - "Machine-readable API specification"
+  - "Auto-generates docs, client SDKs, tests"
+
+evaluation:
+  K.AP.08:
+    check: "API documentation practices"
+    pass: "Contains 'OpenAPI' or 'Swagger' with 'specification' or 'documentation' or 'generate'"

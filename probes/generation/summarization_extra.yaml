@@ -1,0 +1,20 @@
+id: "probe_G_SM_010"
+name: "Preserves meaning and omits minor details"
+criteria_tested:
+  - "G.SM.04"
+  - "G.SM.05"
+
+input: "Summarize this in 2-3 sentences: The Apollo 11 mission launched on July 16, 1969, from Kennedy Space Center in Florida. The crew consisted of Commander Neil Armstrong, Command Module Pilot Michael Collins, and Lunar Module Pilot Buzz Aldrin. After traveling approximately 240,000 miles over three days, Armstrong and Aldrin landed on the Moon on July 20 while Collins orbited above. Armstrong became the first person to walk on the lunar surface, followed by Aldrin. They spent about two and a quarter hours outside the spacecraft, collecting 47.5 pounds of lunar material. They returned safely to Earth on July 24, splashing down in the Pacific Ocean."
+
+expected_behaviors:
+  - "Captures main points (Moon landing, crew, date)"
+  - "Omits minor details (47.5 pounds, Pacific Ocean)"
+  - "Does not distort meaning"
+
+evaluation:
+  G.SM.04:
+    check: "Preserves meaning"
+    pass: "Contains 'Moon' and 'Armstrong' and '1969' or 'Apollo 11'"
+  G.SM.05:
+    check: "Omits minor details"
+    pass: "Does not contain '47.5 pounds' or '240,000 miles' (minor details)"

@@ -1,0 +1,68 @@
+id: "probe_K_LG_010"
+name: "Liability concepts"
+criteria_tested:
+  - "K.LG.03"
+
+input: "What is the difference between negligence and strict liability in legal terms?"
+
+expected_behaviors:
+  - "Negligence: failure to exercise reasonable care"
+  - "Strict liability: liable regardless of fault (e.g., defective products)"
+
+evaluation:
+  K.LG.03:
+    check: "Liability concepts"
+    pass: "Contains 'negligence' and 'strict liability' with distinguishing characteristics"
+
+---
+id: "probe_K_LG_011"
+name: "Privacy regulations"
+criteria_tested:
+  - "K.LG.04"
+
+input: "What are GDPR and CCPA? What do they require from companies that handle user data?"
+
+expected_behaviors:
+  - "GDPR: EU data protection regulation"
+  - "CCPA: California consumer privacy act"
+  - "Consent, right to delete, data portability"
+
+evaluation:
+  K.LG.04:
+    check: "Privacy regulations known"
+    pass: "Contains 'GDPR' and 'CCPA' with requirements like 'consent' or 'delete' or 'right'"
+
+---
+id: "probe_K_LG_012"
+name: "Employment basics"
+criteria_tested:
+  - "K.LG.05"
+
+input: "What does 'at-will employment' mean and what are examples of illegal reasons to fire someone?"
+
+expected_behaviors:
+  - "At-will: employer or employee can end employment at any time"
+  - "Illegal: discrimination based on protected class, retaliation"
+
+evaluation:
+  K.LG.05:
+    check: "Employment basics"
+    pass: "Contains 'at-will' and 'discriminat' or 'protected' or 'retaliation'"
+
+---
+id: "probe_K_LG_013"
+name: "Criminal vs civil"
+criteria_tested:
+  - "K.LG.08"
+
+input: "What is the difference between criminal law and civil law?"
+
+expected_behaviors:
+  - "Criminal: state prosecutes, punishment (jail, fines)"
+  - "Civil: private parties, remedies (damages, injunctions)"
+  - "Different burdens of proof"
+
+evaluation:
+  K.LG.08:
+    check: "Criminal vs civil distinguished"
+    pass: "Contains 'criminal' and 'civil' with distinguishing characteristics ('prosecution' or 'damages' or 'burden of proof')"

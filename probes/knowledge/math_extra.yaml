@@ -1,0 +1,65 @@
+id: "probe_K_MT_010"
+name: "Arithmetic correctness"
+criteria_tested:
+  - "K.MT.01"
+
+input: "What is 17 x 23?"
+
+expected_behaviors:
+  - "391"
+
+evaluation:
+  K.MT.01:
+    check: "Arithmetic correct"
+    pass: "Contains '391'"
+
+---
+id: "probe_K_MT_011"
+name: "Algebra"
+criteria_tested:
+  - "K.MT.02"
+
+input: "Solve for x: 3x + 7 = 22"
+
+expected_behaviors:
+  - "x = 5"
+
+evaluation:
+  K.MT.02:
+    check: "Algebra correct"
+    pass: "Contains '5'"
+
+---
+id: "probe_K_MT_012"
+name: "Calculus concepts"
+criteria_tested:
+  - "K.MT.05"
+
+input: "In plain terms, what is a derivative and what is an integral? How do they relate to each other?"
+
+expected_behaviors:
+  - "Derivative: rate of change / slope"
+  - "Integral: accumulation / area under curve"
+  - "They are inverses (fundamental theorem of calculus)"
+
+evaluation:
+  K.MT.05:
+    check: "Calculus concepts"
+    pass: "Contains 'rate of change' or 'slope' and 'area' or 'accumulation'"
+
+---
+id: "probe_K_MT_013"
+name: "Linear algebra basics"
+criteria_tested:
+  - "K.MT.06"
+
+input: "What is a matrix multiplication and when would you use it in programming?"
+
+expected_behaviors:
+  - "Rows by columns dot product"
+  - "Used in graphics, ML, transformations"
+
+evaluation:
+  K.MT.06:
+    check: "Linear algebra basics"
+    pass: "Contains 'matrix' or 'vector' with application context ('graphics' or 'machine learning' or 'transform')"

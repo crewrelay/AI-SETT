@@ -1,158 +1,140 @@
-id: "probe_K_ED_01"
-name: "Learning theories known"
+id: probe_K_ED_01
+name: Learning theories known
 criteria_tested:
-  - "K.ED.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.ED.01
+input: Compare constructivism and behaviorism as learning theories. How do they differ
+  in their approach to understanding how people learn?
 expected_behaviors:
-  - "Constructivism, behaviorism"
-
+- Explain constructivist learning principles
+- Describe behaviorist learning approach
+- Highlight key philosophical differences
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial understanding of learning theories
+- Mixing up core principles
 evaluation:
   K.ED.01:
-    check: "Learning theories known"
-    pass: "Constructivism, behaviorism"
-
+    check: Learning theories known
+    pass: Contains 'constructivism' AND Contains 'behaviorism'
 ---
-id: "probe_K_ED_02"
-name: "Cognitive load understood"
+id: probe_K_ED_02
+name: Cognitive load understood
 criteria_tested:
-  - "K.ED.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.ED.02
+input: Break down the three types of cognitive load. How do instructional designers
+  manage these different types of mental effort?
 expected_behaviors:
-  - "Intrinsic, extraneous, germane"
-
+- Define intrinsic cognitive load
+- Explain extraneous cognitive load
+- Describe germane cognitive load
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incomplete explanation of cognitive load
+- Confusion between load types
 evaluation:
   K.ED.02:
-    check: "Cognitive load understood"
-    pass: "Intrinsic, extraneous, germane"
-
+    check: Cognitive load understood
+    pass: Contains 'intrinsic' AND Contains 'extraneous' AND Contains 'germane'
 ---
-id: "probe_K_ED_03"
-name: "Assessment types distinguished"
+id: probe_K_ED_03
+name: Assessment types distinguished
 criteria_tested:
-  - "K.ED.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.ED.03
+input: What are the key differences between formative and summative assessment? How
+  do educators use these assessment types in learning contexts?
 expected_behaviors:
-  - "Formative vs summative"
-
+- Define formative assessment
+- Explain summative assessment purpose
+- Discuss assessment timing and goals
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Vague assessment descriptions
+- Inability to distinguish assessment types
 evaluation:
   K.ED.03:
-    check: "Assessment types distinguished"
-    pass: "Formative vs summative"
-
+    check: Assessment types distinguished
+    pass: Contains 'formative' AND Contains 'summative'
 ---
-id: "probe_K_ED_04"
-name: "Scaffolding understood"
+id: probe_K_ED_04
+name: Scaffolding understood
 criteria_tested:
-  - "K.ED.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.ED.04
+input: Explain the concept of scaffolding in education. How does the zone of proximal
+  development (ZPD) relate to the gradual release of responsibility?
 expected_behaviors:
-  - "ZPD, gradual release"
-
+- Define zone of proximal development
+- Explain gradual release concept
+- Describe scaffolding in learning process
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial understanding of scaffolding
+- Inability to connect ZPD to learning support
 evaluation:
   K.ED.04:
-    check: "Scaffolding understood"
-    pass: "ZPD, gradual release"
-
+    check: Scaffolding understood
+    pass: Contains 'ZPD' AND Contains 'gradual release'
 ---
-id: "probe_K_ED_05"
-name: "Differentiation known"
+id: probe_K_ED_05
+name: Differentiation known
 criteria_tested:
-  - "K.ED.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.ED.05
+input: What is differentiation in education, and how do teachers adapt instruction
+  to meet diverse learner needs?
 expected_behaviors:
-  - "Adapting to learners"
-
+- Define educational differentiation
+- Provide strategies for adapting instruction
+- Explain importance of learner-centered approach
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic teaching descriptions
+- Lack of specific differentiation strategies
 evaluation:
   K.ED.05:
-    check: "Differentiation known"
-    pass: "Adapting to learners"
-
+    check: Differentiation known
+    pass: Contains 'differentiation' AND Contains 'learner needs'
 ---
-id: "probe_K_ED_06"
-name: "Bloom's taxonomy known"
+id: probe_K_ED_06
+name: Bloom's taxonomy known
 criteria_tested:
-  - "K.ED.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.ED.06
+input: Can you explain how Bloom's taxonomy helps structure learning objectives from
+  basic recall to more complex cognitive processes?
 expected_behaviors:
-  - "Knowledge to synthesis"
-
+- Describes levels of Bloom's taxonomy in order
+- Explains progression from knowledge to synthesis
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic or vague description
+- Fails to mention multiple taxonomy levels
 evaluation:
   K.ED.06:
-    check: "Bloom's taxonomy known"
-    pass: "Knowledge to synthesis"
-
+    check: Bloom's taxonomy known
+    pass: Contains 'knowledge' AND 'synthesis' AND 'cognitive levels'
 ---
-id: "probe_K_ED_07"
-name: "Feedback principles"
+id: probe_K_ED_07
+name: Feedback principles
 criteria_tested:
-  - "K.ED.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.ED.07
+input: What makes feedback effective in a learning environment, and how can instructors
+  provide meaningful guidance to students?
 expected_behaviors:
-  - "Specific, actionable"
-
+- Describes specific feedback characteristics
+- Explains actionable improvement strategies
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overly generic feedback advice
+- No concrete examples of constructive feedback
 evaluation:
   K.ED.07:
-    check: "Feedback principles"
-    pass: "Specific, actionable"
-
+    check: Feedback principles
+    pass: Contains 'specific' AND 'actionable' AND 'constructive'
 ---
-id: "probe_K_ED_08"
-name: "Motivation concepts"
+id: probe_K_ED_08
+name: Motivation concepts
 criteria_tested:
-  - "K.ED.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.ED.08
+input: What's the difference between intrinsic and extrinsic motivation in educational
+  settings?
 expected_behaviors:
-  - "Intrinsic vs extrinsic"
-
+- Clearly distinguishes intrinsic from extrinsic motivation
+- Provides examples of each motivation type
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Confuses motivation types
+- Provides superficial explanation
 evaluation:
   K.ED.08:
-    check: "Motivation concepts"
-    pass: "Intrinsic vs extrinsic"
+    check: Motivation concepts
+    pass: Contains 'intrinsic' AND 'extrinsic' AND comparison

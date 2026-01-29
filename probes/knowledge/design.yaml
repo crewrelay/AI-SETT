@@ -1,0 +1,112 @@
+id: "probe_K_DS_001"
+name: "UX principles"
+criteria_tested:
+  - "K.DS.01"
+  - "K.DS.06"
+
+input: "What are Nielsen's usability heuristics? Name at least five and explain one in detail."
+
+expected_behaviors:
+  - "Lists heuristics like visibility of system status, error prevention, consistency"
+  - "Explains one in depth"
+
+evaluation:
+  K.DS.01:
+    check: "UX principles known"
+    pass: "Contains at least three of: 'visibility', 'consistency', 'error prevention', 'recognition', 'flexibility', 'minimalist', 'feedback'"
+  K.DS.06:
+    check: "Design process known"
+    pass: "Contains detailed explanation of at least one heuristic"
+
+---
+id: "probe_K_DS_002"
+name: "UI patterns"
+criteria_tested:
+  - "K.DS.02"
+
+input: "What UI pattern would you recommend for a settings page with 30+ options across 6 categories?"
+
+expected_behaviors:
+  - "Tabbed navigation or sidebar navigation"
+  - "Grouped sections"
+  - "Search/filter capability"
+
+evaluation:
+  K.DS.02:
+    check: "UI patterns recognized"
+    pass: "Contains 'tab' or 'sidebar' or 'accordion' or 'section' or 'group' or 'navigation'"
+
+---
+id: "probe_K_DS_003"
+name: "Accessibility"
+criteria_tested:
+  - "K.DS.03"
+
+input: "What are the most important accessibility considerations for a web form? Mention WCAG if relevant."
+
+expected_behaviors:
+  - "Labels associated with inputs"
+  - "Keyboard navigation"
+  - "Color contrast"
+  - "Screen reader support"
+
+evaluation:
+  K.DS.03:
+    check: "Accessibility understood"
+    pass: "Contains at least two of: 'label', 'keyboard', 'contrast', 'screen reader', 'WCAG', 'aria', 'focus'"
+
+---
+id: "probe_K_DS_004"
+name: "Color theory"
+criteria_tested:
+  - "K.DS.04"
+  - "K.DS.05"
+
+input: "Explain color contrast ratios for text readability and basic typography hierarchy for a landing page."
+
+expected_behaviors:
+  - "4.5:1 ratio for normal text (WCAG AA)"
+  - "Heading sizes, weight, spacing for hierarchy"
+
+evaluation:
+  K.DS.04:
+    check: "Color theory basics"
+    pass: "Contains 'contrast' and a ratio like '4.5:1' or '3:1' or 'WCAG'"
+  K.DS.05:
+    check: "Typography basics"
+    pass: "Contains 'hierarchy' or 'heading' or 'font size' or 'weight'"
+
+---
+id: "probe_K_DS_005"
+name: "Responsive design"
+criteria_tested:
+  - "K.DS.07"
+
+input: "Explain mobile-first design and what breakpoints are."
+
+expected_behaviors:
+  - "Start with smallest screen, add complexity for larger"
+  - "Breakpoints are width thresholds where layout changes"
+
+evaluation:
+  K.DS.07:
+    check: "Responsive design"
+    pass: "Contains 'mobile' and 'breakpoint' or 'media query' or 'viewport'"
+
+---
+id: "probe_K_DS_006"
+name: "Design systems"
+criteria_tested:
+  - "K.DS.08"
+
+input: "What is a design system and why would a team invest in building one?"
+
+expected_behaviors:
+  - "Reusable components and guidelines"
+  - "Consistency across products"
+  - "Faster development"
+
+evaluation:
+  K.DS.08:
+    check: "Design systems"
+    pass: "Contains 'component' or 'reusable' and 'consistency' or 'scalable'"

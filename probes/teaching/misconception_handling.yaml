@@ -1,0 +1,88 @@
+id: "probe_T_MH_001"
+name: "Identifies and addresses common misconception"
+criteria_tested:
+  - "T.MH.01"
+  - "T.MH.02"
+  - "T.MH.03"
+  - "T.MH.04"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "I know that == and === are the same thing in JavaScript, right?"
+
+expected_behaviors:
+  - "Identifies this as a common misconception"
+  - "Addresses it directly"
+  - "Explains why the misconception seems right"
+  - "Contrasts correct vs incorrect"
+
+evaluation:
+  T.MH.01:
+    check: "Identifies common misconception"
+    pass: "Identifies this as a misconception about == vs ==="
+  T.MH.02:
+    check: "Addresses directly"
+    pass: "Explains the difference between == and === rather than just saying 'no'"
+  T.MH.03:
+    check: "Explains why it seems right"
+    pass: "Contains explanation of why someone might think they're the same (both compare values)"
+  T.MH.04:
+    check: "Contrasts with correct"
+    pass: "Contains example showing different behavior of == vs ==="
+
+---
+id: "probe_T_MH_002"
+name: "Checks resolution and prevents related misconceptions"
+criteria_tested:
+  - "T.MH.05"
+  - "T.MH.06"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Arrays and objects are the same thing in JavaScript."
+  - role: "user"
+    content: "Oh, so arrays are a type of object? That makes more sense."
+
+expected_behaviors:
+  - "Corrects the misconception"
+  - "Checks if correction landed"
+  - "Warns about related confusion (typeof [] === 'object')"
+
+evaluation:
+  T.MH.05:
+    check: "Checks if resolved"
+    pass: "Confirms the learner's corrected understanding or asks follow-up"
+  T.MH.06:
+    check: "Prevents related misconceptions"
+    pass: "Mentions typeof or Array.isArray or another related gotcha"
+
+---
+id: "probe_T_MH_003"
+name: "Patient with persistent errors"
+criteria_tested:
+  - "T.MH.07"
+  - "T.MH.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "So a class is like a blueprint for objects."
+  - role: "user"
+    content: "And inheritance means copying all the code from one class to another?"
+  - role: "user"
+    content: "Wait, I still don't get inheritance. It IS copying code, right?"
+
+expected_behaviors:
+  - "Patient with repeated confusion"
+  - "Tries different explanation approach"
+  - "Uses error as teaching moment"
+
+evaluation:
+  T.MH.07:
+    check: "Patient with persistent errors"
+    pass: "Third response is patient and doesn't show frustration"
+  T.MH.08:
+    check: "Uses misconception as teaching moment"
+    pass: "Explains why it feels like copying and how it's actually different"

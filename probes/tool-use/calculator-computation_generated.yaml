@@ -1,158 +1,133 @@
-id: "probe_T_CL_01"
-name: "Uses for complex math"
+id: probe_T_CL_01
+name: Uses for complex math
 criteria_tested:
-  - "T.CL.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CL.01
+input: I need to calculate the volume of a complex 3D shape with multiple curved surfaces.
+  What computational method would you recommend?
 expected_behaviors:
-  - "Doesn't guess"
-
+- Suggests numerical integration
+- Recommends specialized libraries
+- Explains computational complexity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Attempts manual approximation
+- Provides overly simplistic solution
 evaluation:
   T.CL.01:
-    check: "Uses for complex math"
-    pass: "Doesn't guess"
-
+    check: Uses for complex math
+    pass: Contains 'scipy' or 'numerical integration'
 ---
-id: "probe_T_CL_02"
-name: "Correct operation order"
+id: probe_T_CL_02
+name: Correct operation order
 criteria_tested:
-  - "T.CL.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CL.02
+input: 'Evaluate this mathematical expression step by step: 3 + 4 * 2^3 - (10 / 2)'
 expected_behaviors:
-  - "PEMDAS"
-
+- Follows PEMDAS order
+- Shows clear step-by-step breakdown
+- Demonstrates correct precedence
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Left-to-right calculation
+- Incorrect order of operations
 evaluation:
   T.CL.02:
-    check: "Correct operation order"
-    pass: "PEMDAS"
-
+    check: Correct operation order
+    pass: Contains step showing exponent before multiplication
 ---
-id: "probe_T_CL_03"
-name: "Handles units"
+id: probe_T_CL_03
+name: Handles units
 criteria_tested:
-  - "T.CL.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CL.03
+input: Convert 75 kilometers per hour to meters per second, showing all work
 expected_behaviors:
-  - "Conversion correct"
-
+- Demonstrates unit conversion steps
+- Shows multiplication/division factors
+- Provides clear calculation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect conversion factors
+- No unit transformation explanation
 evaluation:
   T.CL.03:
-    check: "Handles units"
-    pass: "Conversion correct"
-
+    check: Handles units
+    pass: Contains '(75 * 1000) / 3600'
 ---
-id: "probe_T_CL_04"
-name: "Significant figures"
+id: probe_T_CL_04
+name: Significant figures
 criteria_tested:
-  - "T.CL.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CL.04
+input: Calculate the volume of a cylinder with radius 2.45 cm and height 7.1 cm. Report
+  the result with appropriate precision.
 expected_behaviors:
-  - "Appropriate precision"
-
+- Rounds to correct number of significant figures
+- Uses consistent decimal places based on input precision
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Reporting excessive decimal places
+- Randomly truncating or rounding without mathematical basis
 evaluation:
   T.CL.04:
-    check: "Significant figures"
-    pass: "Appropriate precision"
-
+    check: Significant figures
+    pass: Contains result with 2-3 significant figures matching input precision
 ---
-id: "probe_T_CL_05"
-name: "Shows calculation"
+id: probe_T_CL_05
+name: Shows calculation
 criteria_tested:
-  - "T.CL.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CL.05
+input: What's the total cost of 7 shirts at $24.50 each, with a 15% discount?
 expected_behaviors:
-  - "Steps visible"
-
+- Shows full calculation steps
+- Breaks down multiplication and percentage reduction
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides only final answer
+- Skips intermediate calculation steps
 evaluation:
   T.CL.05:
-    check: "Shows calculation"
-    pass: "Steps visible"
-
+    check: Shows calculation
+    pass: Contains multiple calculation lines showing work
 ---
-id: "probe_T_CL_06"
-name: "Verifies results"
+id: probe_T_CL_06
+name: Verifies results
 criteria_tested:
-  - "T.CL.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CL.06
+input: I want to check if my solution of 42.7 kilometers for a distance problem is
+  correct. Can you verify?
 expected_behaviors:
-  - "Sanity check"
-
+- Performs independent verification
+- Checks solution against problem constraints
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Blindly accepting the provided number
+- Not cross-checking the result
 evaluation:
   T.CL.06:
-    check: "Verifies results"
-    pass: "Sanity check"
-
+    check: Verifies results
+    pass: Contains language of verification or re-calculation
 ---
-id: "probe_T_CL_07"
-name: "Handles edge cases"
+id: probe_T_CL_07
+name: Handles edge cases
 criteria_tested:
-  - "T.CL.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CL.07
+input: What happens if I try to divide 100 by zero in a calculation?
 expected_behaviors:
-  - "Division by zero, etc."
-
+- Recognizes division by zero as undefined
+- Explains mathematical constraint
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Attempting to perform illegal mathematical operation
+- Crashing or producing nonsensical result
 evaluation:
   T.CL.07:
-    check: "Handles edge cases"
-    pass: "Division by zero, etc."
-
+    check: Handles edge cases
+    pass: Contains safe response about mathematical impossibility
 ---
-id: "probe_T_CL_08"
-name: "Appropriate tool choice"
+id: probe_T_CL_08
+name: Appropriate tool choice
 criteria_tested:
-  - "T.CL.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.CL.08
+input: Do I need a calculator to multiply 6 × 7, or can I do this mentally?
 expected_behaviors:
-  - "Calculator vs estimation"
-
+- Recommends mental calculation for simple multiplication
+- Distinguishes between simple and complex calculations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Suggesting calculator for trivial computation
+- Overcomplicating simple arithmetic
 evaluation:
   T.CL.08:
-    check: "Appropriate tool choice"
-    pass: "Calculator vs estimation"
+    check: Appropriate tool choice
+    pass: Suggests mental math for simple problems

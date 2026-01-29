@@ -1,158 +1,140 @@
-id: "probe_M_SS_01"
-name: "Chooses approach consciously"
+id: probe_M_SS_01
+name: Chooses approach consciously
 criteria_tested:
-  - "M.SS.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.SS.01
+input: Help me solve this complex algorithm design problem.
 expected_behaviors:
-  - "Explains strategy"
-
+- Explicitly describes problem-solving strategy
+- Explains rationale for chosen approach
+- Demonstrates deliberate method selection
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides solution without explaining approach
+- Uses random or inconsistent problem-solving method
 evaluation:
   M.SS.01:
-    check: "Chooses approach consciously"
-    pass: "Explains strategy"
-
+    check: Chooses approach consciously
+    pass: Contains phrase explaining strategic choice
 ---
-id: "probe_M_SS_02"
-name: "Adapts when stuck"
+id: probe_M_SS_02
+name: Adapts when stuck
 criteria_tested:
-  - "M.SS.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.SS.02
+input: I'm trying to debug a recursive Python function that keeps throwing a stack
+  overflow error, but I can't figure out how to modify the base case.
 expected_behaviors:
-  - "Changes approach"
-
+- Suggests alternative debugging approaches
+- Proposes specific modifications to recursion strategy
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats same debugging advice without adaptation
+- Gives generic troubleshooting steps
 evaluation:
   M.SS.02:
-    check: "Adapts when stuck"
-    pass: "Changes approach"
-
+    check: Adapts when stuck
+    pass: Contains 'alternative approach' OR 'different strategy'
 ---
-id: "probe_M_SS_03"
-name: "Evaluates options"
+id: probe_M_SS_03
+name: Evaluates options
 criteria_tested:
-  - "M.SS.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.SS.03
+input: I have three different machine learning algorithms for sentiment analysis.
+  Which one should I choose for my customer feedback project?
 expected_behaviors:
-  - "Considers alternatives"
-
+- Lists pros and cons of each algorithm
+- Compares performance metrics
+- Recommends based on specific project constraints
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Picks one algorithm without explanation
+- Provides generic recommendation
 evaluation:
   M.SS.03:
-    check: "Evaluates options"
-    pass: "Considers alternatives"
-
+    check: Evaluates options
+    pass: Contains multiple criteria for comparison
 ---
-id: "probe_M_SS_04"
-name: "Prioritizes effectively"
+id: probe_M_SS_04
+name: Prioritizes effectively
 criteria_tested:
-  - "M.SS.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.SS.04
+input: 'I need to complete these tasks today: refactor legacy code, write unit tests,
+  attend three meetings, update project documentation, and fix a critical bug.'
 expected_behaviors:
-  - "Most important first"
-
+- Ranks tasks by urgency and impact
+- Identifies critical path items first
+- Suggests time allocation strategy
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Lists tasks without order
+- Treats all tasks as equally important
 evaluation:
   M.SS.04:
-    check: "Prioritizes effectively"
-    pass: "Most important first"
-
+    check: Prioritizes effectively
+    pass: Contains 'most critical' OR 'highest priority'
 ---
-id: "probe_M_SS_05"
-name: "Plans before acting"
+id: probe_M_SS_05
+name: Plans before acting
 criteria_tested:
-  - "M.SS.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.SS.05
+input: I want to build a recommendation system for an e-commerce platform. What initial
+  steps should I consider?
 expected_behaviors:
-  - "Thinks ahead"
-
+- Outlines strategic planning steps
+- Suggests preliminary research and design phases
+- Identifies potential challenges in advance
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Jumps directly to implementation details
+- Provides solution without context
 evaluation:
   M.SS.05:
-    check: "Plans before acting"
-    pass: "Thinks ahead"
-
+    check: Plans before acting
+    pass: Contains multiple preparatory steps
 ---
-id: "probe_M_SS_06"
-name: "Monitors progress"
+id: probe_M_SS_06
+name: Monitors progress
 criteria_tested:
-  - "M.SS.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.SS.06
+input: I'm developing a machine learning model. How can I track its training progress
+  effectively?
 expected_behaviors:
-  - "Checks if working"
-
+- Suggests specific progress tracking metrics
+- Recommends logging and visualization techniques
+- Highlights importance of continuous evaluation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignores model performance tracking
+- Provides vague monitoring advice
 evaluation:
   M.SS.06:
-    check: "Monitors progress"
-    pass: "Checks if working"
-
+    check: Monitors progress
+    pass: Contains 'track performance' OR 'measure progress'
 ---
-id: "probe_M_SS_07"
-name: "Knows when to stop"
+id: probe_M_SS_07
+name: Knows when to stop
 criteria_tested:
-  - "M.SS.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.SS.07
+input: How do I know when my data cleaning process is complete?
 expected_behaviors:
-  - "Recognizes completion"
-
+- Describes clear completion criteria
+- Suggests validation techniques
+- Identifies signs of sufficient data preparation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Suggests endless refinement
+- Cannot articulate stopping conditions
 evaluation:
   M.SS.07:
-    check: "Knows when to stop"
-    pass: "Recognizes completion"
-
+    check: Knows when to stop
+    pass: Contains 'completion criteria'
 ---
-id: "probe_M_SS_08"
-name: "Reflects on process"
+id: probe_M_SS_08
+name: Reflects on process
 criteria_tested:
-  - "M.SS.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- M.SS.08
+input: I just finished a complex software project. Can you help me analyze what went
+  well and what could be improved?
 expected_behaviors:
-  - "Meta-commentary"
-
+- Provides meta-level analysis of process
+- Identifies learning opportunities
+- Reflects on overall project methodology
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Focuses only on technical details
+- Lacks self-reflective commentary
 evaluation:
   M.SS.08:
-    check: "Reflects on process"
-    pass: "Meta-commentary"
+    check: Reflects on process
+    pass: Contains 'learned' OR 'reflection'

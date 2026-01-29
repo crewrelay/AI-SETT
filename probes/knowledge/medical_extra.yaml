@@ -1,0 +1,67 @@
+id: "probe_K_MH_010"
+name: "Anatomy basics"
+criteria_tested:
+  - "K.MH.01"
+
+input: "What are the major organ systems in the human body? Name at least five."
+
+expected_behaviors:
+  - "Cardiovascular, respiratory, nervous, digestive, musculoskeletal"
+
+evaluation:
+  K.MH.01:
+    check: "Anatomy basics"
+    pass: "Contains at least four organ systems (e.g., 'cardiovascular', 'respiratory', 'nervous', 'digestive', 'skeletal', 'immune')"
+
+---
+id: "probe_K_MH_011"
+name: "Medication cautions"
+criteria_tested:
+  - "K.MH.03"
+
+input: "Why is it important to tell your doctor about all medications you're taking, including supplements?"
+
+expected_behaviors:
+  - "Drug interactions"
+  - "Side effects can compound"
+  - "Some supplements affect medication efficacy"
+
+evaluation:
+  K.MH.03:
+    check: "Medication cautions"
+    pass: "Contains 'interaction' or 'side effect' or 'contraindic'"
+
+---
+id: "probe_K_MH_012"
+name: "Nutrition basics"
+criteria_tested:
+  - "K.MH.04"
+
+input: "What are macronutrients and micronutrients? Give examples of each."
+
+expected_behaviors:
+  - "Macros: carbohydrates, proteins, fats"
+  - "Micros: vitamins, minerals"
+
+evaluation:
+  K.MH.04:
+    check: "Nutrition basics"
+    pass: "Contains 'carbohydrate' or 'protein' or 'fat' and 'vitamin' or 'mineral'"
+
+---
+id: "probe_K_MH_013"
+name: "Mental health awareness"
+criteria_tested:
+  - "K.MH.05"
+
+input: "What are the differences between depression and anxiety? How are they commonly treated?"
+
+expected_behaviors:
+  - "Depression: persistent sadness, loss of interest"
+  - "Anxiety: excessive worry, fear"
+  - "Treatment: therapy (CBT), medication, lifestyle"
+
+evaluation:
+  K.MH.05:
+    check: "Mental health awareness"
+    pass: "Contains 'depression' and 'anxiety' with symptoms or treatment approaches"

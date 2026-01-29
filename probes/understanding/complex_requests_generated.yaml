@@ -1,98 +1,90 @@
-id: "probe_U_CR_01"
-name: "Identifies all components of multi-part request"
+id: probe_U_CR_01
+name: Identifies all components of multi-part request
 criteria_tested:
-  - "U.CR.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.CR.01
+input: Create a project plan for launching a new mobile app that includes the budget
+  requirements, team structure, technical specifications, and marketing strategy.
 expected_behaviors:
-  - "Each part addressed"
-
+- Addresses budget requirements section
+- Details team structure breakdown
+- Outlines technical specifications
+- Describes marketing strategy
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Omits one or more requested components
+- Provides a generic, incomplete response
 evaluation:
   U.CR.01:
-    check: "Identifies all components of multi-part request"
-    pass: "Each part addressed"
-
+    check: Identifies all components of multi-part request
+    pass: Contains sections for budget, team, tech specs, marketing
 ---
-id: "probe_U_CR_02"
-name: "Handles conditional requests"
+id: probe_U_CR_02
+name: Handles conditional requests
 criteria_tested:
-  - "U.CR.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.CR.02
+input: If the project budget is under $50,000, use a lean startup approach. If it's
+  over $50,000, develop a comprehensive enterprise strategy.
 expected_behaviors:
-  - "\"If X then Y, else Z\" followed correctly"
-
+- Recognizes budget threshold condition
+- Applies correct strategy based on condition
+- Demonstrates understanding of conditional logic
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignores the conditional instruction
+- Applies incorrect strategy
 evaluation:
   U.CR.02:
-    check: "Handles conditional requests"
-    pass: "\"If X then Y, else Z\" followed correctly"
-
+    check: Handles conditional requests
+    pass: Contains strategy matching budget condition
 ---
-id: "probe_U_CR_03"
-name: "Manages competing constraints"
+id: probe_U_CR_03
+name: Manages competing constraints
 criteria_tested:
-  - "U.CR.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.CR.03
+input: Design a software solution that is simultaneously low-cost, high-performance,
+  and quick to develop, with minimal technical debt.
 expected_behaviors:
-  - "Balances when requirements tension"
-
+- Acknowledges the competing constraints
+- Proposes a balanced approach
+- Shows trade-off considerations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides an unrealistic solution
+- Ignores the complexity of constraints
 evaluation:
   U.CR.03:
-    check: "Manages competing constraints"
-    pass: "Balances when requirements tension"
-
+    check: Manages competing constraints
+    pass: Contains discussion of trade-offs
 ---
-id: "probe_U_CR_04"
-name: "Prioritizes when asked"
+id: probe_U_CR_04
+name: Prioritizes when asked
 criteria_tested:
-  - "U.CR.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.CR.04
+input: 'Rank these project tasks by importance: user interface design, backend infrastructure,
+  security protocols, and initial market research.'
 expected_behaviors:
-  - "Ranks/orders when requested"
-
+- Provides a clear ranking of tasks
+- Explains rationale for prioritization
+- Demonstrates understanding of task importance
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Fails to rank tasks
+- Provides arbitrary or illogical ranking
 evaluation:
   U.CR.04:
-    check: "Prioritizes when asked"
-    pass: "Ranks/orders when requested"
-
+    check: Prioritizes when asked
+    pass: Contains ordered list with reasoning
 ---
-id: "probe_U_CR_05"
-name: "Synthesizes across requirements"
+id: probe_U_CR_05
+name: Synthesizes across requirements
 criteria_tested:
-  - "U.CR.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- U.CR.05
+input: Develop a comprehensive strategy that integrates customer feedback, technical
+  feasibility, market trends, and budget constraints for our new product launch.
 expected_behaviors:
-  - "Integrates multiple needs into coherent response"
-
+- Connects multiple requirements cohesively
+- Shows interdependencies between different factors
+- Provides a holistic, integrated approach
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Treats requirements as isolated elements
+- Provides fragmented or disconnected recommendations
 evaluation:
   U.CR.05:
-    check: "Synthesizes across requirements"
-    pass: "Integrates multiple needs into coherent response"
+    check: Synthesizes across requirements
+    pass: Contains integrated strategy referencing multiple factors

@@ -1,158 +1,145 @@
-id: "probe_R_CT_01"
-name: "Questions assumptions"
+id: probe_R_CT_01
+name: Questions assumptions
 criteria_tested:
-  - "R.CT.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CT.01
+input: A study claims that remote work increases productivity by 25%. What underlying
+  assumptions should we examine?
 expected_behaviors:
-  - "Identifies premises"
-
+- Identifies potential hidden assumptions in the claim
+- Questions the measurement methodology
+- Explores unstated premises in the productivity assertion
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Accepts claim at face value
+- Fails to probe the study's foundational claims
 evaluation:
   R.CT.01:
-    check: "Questions assumptions"
-    pass: "Identifies premises"
-
+    check: Questions assumptions
+    pass: Contains phrases challenging premises like 'What defines productivity?',
+      'How was this measured?'
 ---
-id: "probe_R_CT_02"
-name: "Evaluates evidence"
+id: probe_R_CT_02
+name: Evaluates evidence
 criteria_tested:
-  - "R.CT.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CT.02
+input: Compare the reliability of evidence in two conflicting studies about renewable
+  energy efficiency.
 expected_behaviors:
-  - "Quality assessment"
-
+- Assesses methodology of each study
+- Evaluates sample sizes and research design
+- Provides nuanced critique of evidence quality
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial comparison
+- Lacks critical assessment of research methods
 evaluation:
   R.CT.02:
-    check: "Evaluates evidence"
-    pass: "Quality assessment"
-
+    check: Evaluates evidence
+    pass: Contains specific critique of research methodology
 ---
-id: "probe_R_CT_03"
-name: "Considers alternatives"
+id: probe_R_CT_03
+name: Considers alternatives
 criteria_tested:
-  - "R.CT.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CT.03
+input: Why might urban crime rates be declining, beyond increased policing?
 expected_behaviors:
-  - "Other explanations"
-
+- Proposes multiple potential explanations
+- Explores alternative causal factors
+- Shows intellectual flexibility in hypothesis generation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides single, narrow explanation
+- Fails to consider multiple perspectives
 evaluation:
   R.CT.03:
-    check: "Considers alternatives"
-    pass: "Other explanations"
-
+    check: Considers alternatives
+    pass: Presents at least two distinct alternative explanations
 ---
-id: "probe_R_CT_04"
-name: "Identifies bias"
+id: probe_R_CT_04
+name: Identifies bias
 criteria_tested:
-  - "R.CT.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CT.04
+input: Analyze potential biases in a climate change report from an oil industry-funded
+  research center.
 expected_behaviors:
-  - "Source evaluation"
-
+- Identifies potential financial conflict of interest
+- Examines institutional motivations
+- Provides balanced critique of source credibility
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Dismisses report entirely without nuanced analysis
+- Fails to recognize potential source bias
 evaluation:
   R.CT.04:
-    check: "Identifies bias"
-    pass: "Source evaluation"
-
+    check: Identifies bias
+    pass: Contains explicit discussion of potential source bias
 ---
-id: "probe_R_CT_05"
-name: "Distinguishes fact/opinion"
+id: probe_R_CT_05
+name: Distinguishes fact/opinion
 criteria_tested:
-  - "R.CT.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CT.05
+input: Distinguish between factual statements and opinions in this political commentary
+  about economic policy.
 expected_behaviors:
-  - "Labels appropriately"
-
+- Clearly differentiates verifiable facts from interpretive claims
+- Labels statements as objective or subjective
+- Provides reasoning for classification
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Blurs lines between fact and opinion
+- Fails to critically distinguish statement types
 evaluation:
   R.CT.05:
-    check: "Distinguishes fact/opinion"
-    pass: "Labels appropriately"
-
+    check: Distinguishes fact/opinion
+    pass: Explicitly labels statements as fact or opinion
 ---
-id: "probe_R_CT_06"
-name: "Recognizes rhetoric"
+id: probe_R_CT_06
+name: Recognizes rhetoric
 criteria_tested:
-  - "R.CT.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CT.06
+input: Identify the persuasive techniques used in this marketing campaign for electric
+  vehicles.
 expected_behaviors:
-  - "Persuasion techniques"
-
+- Recognizes emotional appeal techniques
+- Analyzes rhetorical strategies
+- Demonstrates understanding of persuasion mechanisms
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Accepts rhetorical claims uncritically
+- Fails to recognize persuasion techniques
 evaluation:
   R.CT.06:
-    check: "Recognizes rhetoric"
-    pass: "Persuasion techniques"
-
+    check: Recognizes rhetoric
+    pass: Describes specific rhetorical or persuasion techniques
 ---
-id: "probe_R_CT_07"
-name: "Steelmans opposing views"
+id: probe_R_CT_07
+name: Steelmans opposing views
 criteria_tested:
-  - "R.CT.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CT.07
+input: Provide the strongest possible argument for an opposing perspective on universal
+  basic income.
 expected_behaviors:
-  - "Best version of other side"
-
+- Presents a charitable, well-reasoned alternative view
+- Demonstrates intellectual empathy
+- Constructs a robust counterargument
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Creates a weak, strawman argument
+- Fails to genuinely represent alternative perspective
 evaluation:
   R.CT.07:
-    check: "Steelmans opposing views"
-    pass: "Best version of other side"
-
+    check: Steelmans opposing views
+    pass: Presents a nuanced, strong version of the opposing argument
 ---
-id: "probe_R_CT_08"
-name: "Updates on evidence"
+id: probe_R_CT_08
+name: Updates on evidence
 criteria_tested:
-  - "R.CT.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.CT.08
+input: I initially thought electric cars were always better for the environment, but
+  I just read a study showing that in regions with coal-powered electricity, their
+  carbon footprint can be similar to gas cars. What do you think?
 expected_behaviors:
-  - "Changes mind appropriately"
-
+- Acknowledges the new evidence
+- Demonstrates willingness to modify previous stance
+- Provides nuanced perspective based on new information
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Rigidly defending original position
+- Dismissing new evidence without consideration
 evaluation:
   R.CT.08:
-    check: "Updates on evidence"
-    pass: "Changes mind appropriately"
+    check: Updates on evidence
+    pass: Contains 'new evidence suggests' or 'I was wrong' or shows substantive perspective
+      shift

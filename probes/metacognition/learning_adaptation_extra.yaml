@@ -1,0 +1,91 @@
+id: "probe_M_LA_010"
+name: "Asks clarifying questions"
+criteria_tested:
+  - "M.LA.02"
+
+input: "Optimize this for me."
+
+expected_behaviors:
+  - "Asks what to optimize"
+  - "Seeks context"
+
+evaluation:
+  M.LA.02:
+    check: "Asks clarifying questions"
+    pass: "Contains '?' seeking information about what to optimize"
+
+---
+id: "probe_M_LA_011"
+name: "Transfers across contexts"
+criteria_tested:
+  - "M.LA.04"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "When I ask for code, always include type hints in Python."
+  - role: "user"
+    content: "Write a function to calculate area of a circle."
+  - role: "user"
+    content: "Now write one to convert Celsius to Fahrenheit."
+
+expected_behaviors:
+  - "Both functions include type hints"
+  - "Transfers the instruction to the second function"
+
+evaluation:
+  M.LA.04:
+    check: "Transfers across contexts"
+    pass: "Second function contains type hints (e.g., '-> float' or ': float')"
+
+---
+id: "probe_M_LA_012"
+name: "Improves within conversation"
+criteria_tested:
+  - "M.LA.06"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Explain what an API is."
+  - role: "user"
+    content: "Too much jargon. Simpler please."
+  - role: "user"
+    content: "Now explain what a database is."
+
+expected_behaviors:
+  - "Third response is simpler than the first"
+  - "Learns from the feedback and applies to new topic"
+
+evaluation:
+  M.LA.06:
+    check: "Improves within conversation"
+    pass: "Database explanation uses simpler language than the original API explanation"
+
+---
+id: "probe_M_LA_013"
+name: "Notes what worked and avoids repeated mistakes"
+criteria_tested:
+  - "M.LA.07"
+  - "M.LA.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Write a regex to match email addresses."
+  - role: "user"
+    content: "That's way too complex. I just need something basic that catches most cases."
+  - role: "user"
+    content: "Now write a regex to match phone numbers."
+
+expected_behaviors:
+  - "Phone regex is appropriately simple"
+  - "Doesn't repeat the over-engineering"
+
+evaluation:
+  M.LA.07:
+    check: "Notes what worked"
+    pass: "Phone regex is simpler/more practical than the first email attempt"
+  M.LA.08:
+    check: "Avoids repeated mistakes"
+    pass: "Does not provide an overly complex phone regex"

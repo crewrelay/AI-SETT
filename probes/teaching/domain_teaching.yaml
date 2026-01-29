@@ -1,0 +1,141 @@
+id: "probe_T_DT_001"
+name: "Teaches programming"
+criteria_tested:
+  - "T.DT.01"
+
+input: "Teach me what a linked list is and when I'd use one instead of an array. I know basic Python."
+
+expected_behaviors:
+  - "Clear explanation of linked list structure"
+  - "Comparison with arrays"
+  - "Use cases"
+
+evaluation:
+  T.DT.01:
+    check: "Can teach programming concepts"
+    pass: "Contains explanation of linked list with comparison to array and use cases"
+
+---
+id: "probe_T_DT_002"
+name: "Teaches API concepts"
+criteria_tested:
+  - "T.DT.02"
+
+input: "I've never used an API before. Can you teach me what REST is and how to make my first API call?"
+
+expected_behaviors:
+  - "Starts with what an API is"
+  - "Explains REST basics"
+  - "Gives practical example of making a call"
+
+evaluation:
+  T.DT.02:
+    check: "Can teach API concepts"
+    pass: "Contains API explanation, REST concepts, and practical example (curl, fetch, or requests)"
+
+---
+id: "probe_T_DT_003"
+name: "Teaches security"
+criteria_tested:
+  - "T.DT.03"
+
+input: "Teach me about SQL injection. I'm building my first web app and want to understand the risk."
+
+expected_behaviors:
+  - "Explains what SQL injection is"
+  - "Shows vulnerable vs safe code"
+  - "Teaches parameterized queries"
+
+evaluation:
+  T.DT.03:
+    check: "Can teach security concepts"
+    pass: "Contains SQL injection example and prevention technique (parameterized queries)"
+
+---
+id: "probe_T_DT_004"
+name: "Teaches math"
+criteria_tested:
+  - "T.DT.04"
+
+input: "Teach me how logarithms work. I last did math in high school."
+
+expected_behaviors:
+  - "Accessible explanation"
+  - "Concrete examples"
+  - "Builds from exponents"
+
+evaluation:
+  T.DT.04:
+    check: "Can teach math concepts"
+    pass: "Contains explanation connecting logarithms to exponents with examples"
+
+---
+id: "probe_T_DT_005"
+name: "Teaches science"
+criteria_tested:
+  - "T.DT.05"
+
+input: "Explain how vaccines work to someone with no biology background."
+
+expected_behaviors:
+  - "Accessible analogy"
+  - "Immune system basics"
+  - "How vaccines train the immune system"
+
+evaluation:
+  T.DT.05:
+    check: "Can teach science concepts"
+    pass: "Contains explanation of immune system response and how vaccines prepare it"
+
+---
+id: "probe_T_DT_006"
+name: "Teaches business"
+criteria_tested:
+  - "T.DT.06"
+
+input: "Teach me what unit economics means for a startup. I'm a developer with no business background."
+
+expected_behaviors:
+  - "Customer acquisition cost (CAC)"
+  - "Lifetime value (LTV)"
+  - "Why LTV > CAC matters"
+
+evaluation:
+  T.DT.06:
+    check: "Can teach business concepts"
+    pass: "Contains 'CAC' or 'acquisition cost' and 'LTV' or 'lifetime value'"
+
+---
+id: "probe_T_DT_007"
+name: "Teaches writing"
+criteria_tested:
+  - "T.DT.07"
+
+input: "Teach me how to write a clear technical blog post. I'm an engineer who struggles with writing."
+
+expected_behaviors:
+  - "Structure advice (intro, body, conclusion)"
+  - "Practical tips for clarity"
+  - "Writing process"
+
+evaluation:
+  T.DT.07:
+    check: "Can teach writing skills"
+    pass: "Contains structural advice and practical writing tips"
+
+---
+id: "probe_T_DT_008"
+name: "Teaches reasoning"
+criteria_tested:
+  - "T.DT.08"
+
+input: "Teach me how to think about trade-offs in system design. I just memorize solutions right now."
+
+expected_behaviors:
+  - "Teaches framework for evaluating tradeoffs"
+  - "Moves beyond memorization to reasoning"
+
+evaluation:
+  T.DT.08:
+    check: "Can teach reasoning skills"
+    pass: "Contains tradeoff framework or evaluation criteria (latency vs throughput, consistency vs availability, etc.)"

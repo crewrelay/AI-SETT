@@ -1,0 +1,45 @@
+id: "probe_T_TS_010"
+name: "Combines tools and knows limits"
+criteria_tested:
+  - "T.TS.02"
+  - "T.TS.03"
+
+input: "I need to analyze server logs to find the top 10 IP addresses by request count, then check if any of them are known malicious IPs. What tools and approach would you use?"
+
+expected_behaviors:
+  - "Multi-tool workflow (grep/awk for logs, API for IP reputation)"
+  - "Knows what each tool can and can't do"
+
+evaluation:
+  T.TS.02:
+    check: "Combines tools"
+    pass: "Contains multi-step approach using different tools (log parsing + IP lookup)"
+  T.TS.03:
+    check: "Knows tool limits"
+    pass: "Mentions what requires external lookup vs what can be done locally"
+
+---
+id: "probe_T_TS_011"
+name: "Fails gracefully and suggests alternatives"
+criteria_tested:
+  - "T.TS.06"
+  - "T.TS.07"
+  - "T.TS.08"
+
+input: "I want to use Redis for caching but my hosting provider doesn't support Redis. What alternatives do I have?"
+
+expected_behaviors:
+  - "Handles the constraint gracefully"
+  - "Suggests alternatives (Memcached, in-memory, SQLite-based)"
+  - "Adapts approach"
+
+evaluation:
+  T.TS.06:
+    check: "Fails gracefully"
+    pass: "Doesn't insist on Redis, accepts the constraint"
+  T.TS.07:
+    check: "Suggests alternatives"
+    pass: "Contains at least two alternative caching approaches"
+  T.TS.08:
+    check: "Learns from tool failures"
+    pass: "Adapts recommendation to the hosting constraints"

@@ -1,158 +1,142 @@
-id: "probe_K_DO_01"
-name: "Containers understood"
+id: probe_K_DO_01
+name: Containers understood
 criteria_tested:
-  - "K.DO.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DO.01
+input: Explain the key benefits of using Docker containers in modern software development
+  and deployment.
 expected_behaviors:
-  - "Docker concepts"
-
+- Describe containerization concept
+- Discuss environment consistency
+- Explain isolation benefits
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial container description
+- Lack of technical understanding
 evaluation:
   K.DO.01:
-    check: "Containers understood"
-    pass: "Docker concepts"
-
+    check: Containers understood
+    pass: Contains 'Docker' AND Contains 'isolation'
 ---
-id: "probe_K_DO_02"
-name: "Orchestration basics"
+id: probe_K_DO_02
+name: Orchestration basics
 criteria_tested:
-  - "K.DO.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DO.02
+input: How do Kubernetes clusters help manage containerized applications at scale?
 expected_behaviors:
-  - "Kubernetes concepts"
-
+- Explain cluster management
+- Discuss pod orchestration
+- Mention automatic scaling
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Vague orchestration descriptions
+- No specific Kubernetes concepts
 evaluation:
   K.DO.02:
-    check: "Orchestration basics"
-    pass: "Kubernetes concepts"
-
+    check: Orchestration basics
+    pass: Contains 'Kubernetes' AND Contains 'scaling'
 ---
-id: "probe_K_DO_03"
-name: "CI/CD understood"
+id: probe_K_DO_03
+name: CI/CD understood
 criteria_tested:
-  - "K.DO.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DO.03
+input: Describe how a typical CI/CD pipeline automates the process of software development
+  and deployment.
 expected_behaviors:
-  - "Pipelines, automation"
-
+- Explain continuous integration
+- Discuss automated testing
+- Describe deployment automation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic pipeline description
+- Lack of specific CI/CD steps
 evaluation:
   K.DO.03:
-    check: "CI/CD understood"
-    pass: "Pipelines, automation"
-
+    check: CI/CD understood
+    pass: Contains 'pipeline' AND Contains 'automation'
 ---
-id: "probe_K_DO_04"
-name: "Infrastructure as code"
+id: probe_K_DO_04
+name: Infrastructure as code
 criteria_tested:
-  - "K.DO.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DO.04
+input: Can you explain how Terraform enables infrastructure as code for cloud deployments?
+  What are the key benefits of using tools like Terraform for managing infrastructure?
 expected_behaviors:
-  - "Terraform, etc. concepts"
-
+- Describe declarative infrastructure configuration
+- Explain version control for infrastructure
+- Mention reproducibility and consistency benefits
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic or vague descriptions
+- Confusion with traditional manual provisioning
 evaluation:
   K.DO.04:
-    check: "Infrastructure as code"
-    pass: "Terraform, etc. concepts"
-
+    check: Infrastructure as code
+    pass: Contains 'Terraform' AND Contains 'declarative' AND Contains 'version control'
 ---
-id: "probe_K_DO_05"
-name: "Cloud fundamentals"
+id: probe_K_DO_05
+name: Cloud fundamentals
 criteria_tested:
-  - "K.DO.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DO.05
+input: Walk me through the differences between IaaS, PaaS, and SaaS cloud service
+  models. How would a startup choose between these options?
 expected_behaviors:
-  - "IaaS/PaaS/SaaS"
-
+- Clearly define each cloud service model
+- Provide specific examples of each type
+- Discuss trade-offs in management and flexibility
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Mixing up cloud service definitions
+- Overly simplistic explanations
 evaluation:
   K.DO.05:
-    check: "Cloud fundamentals"
-    pass: "IaaS/PaaS/SaaS"
-
+    check: Cloud fundamentals
+    pass: Contains 'IaaS' AND Contains 'PaaS' AND Contains 'SaaS'
 ---
-id: "probe_K_DO_06"
-name: "Monitoring concepts"
+id: probe_K_DO_06
+name: Monitoring concepts
 criteria_tested:
-  - "K.DO.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DO.06
+input: Describe the three pillars of observability in modern distributed systems.
+  How do logs, metrics, and traces work together to provide system insights?
 expected_behaviors:
-  - "Logs, metrics, traces"
-
+- Explain purpose of each monitoring component
+- Describe how these elements complement each other
+- Provide context of system observability
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incomplete explanation of monitoring concepts
+- Confusion between monitoring types
 evaluation:
   K.DO.06:
-    check: "Monitoring concepts"
-    pass: "Logs, metrics, traces"
-
+    check: Monitoring concepts
+    pass: Contains 'logs' AND Contains 'metrics' AND Contains 'traces'
 ---
-id: "probe_K_DO_07"
-name: "Deployment strategies"
+id: probe_K_DO_07
+name: Deployment strategies
 criteria_tested:
-  - "K.DO.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DO.07
+input: Compare blue-green and canary deployment strategies. When would a team prefer
+  one approach over the other in a production environment?
 expected_behaviors:
-  - "Blue-green, canary"
-
+- Explain blue-green deployment mechanism
+- Describe canary deployment process
+- Discuss risk mitigation strategies
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial description of deployment strategies
+- Inability to distinguish between approaches
 evaluation:
   K.DO.07:
-    check: "Deployment strategies"
-    pass: "Blue-green, canary"
-
+    check: Deployment strategies
+    pass: Contains 'blue-green' AND Contains 'canary'
 ---
-id: "probe_K_DO_08"
-name: "Scaling concepts"
+id: probe_K_DO_08
+name: Scaling concepts
 criteria_tested:
-  - "K.DO.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DO.08
+input: Explain the differences between horizontal and vertical scaling. What are the
+  typical use cases and limitations of each approach in cloud computing?
 expected_behaviors:
-  - "Horizontal, vertical"
-
+- Define horizontal scaling clearly
+- Explain vertical scaling characteristics
+- Provide practical examples of each
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Confused scaling definitions
+- Lack of practical context
 evaluation:
   K.DO.08:
-    check: "Scaling concepts"
-    pass: "Horizontal, vertical"
+    check: Scaling concepts
+    pass: Contains 'horizontal scaling' AND Contains 'vertical scaling'

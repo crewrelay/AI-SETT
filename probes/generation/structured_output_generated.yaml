@@ -1,118 +1,103 @@
-id: "probe_G_SO_01"
-name: "Valid JSON when requested"
+id: probe_G_SO_01
+name: Valid JSON when requested
 criteria_tested:
-  - "G.SO.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SO.01
+input: Create a JSON object representing a person's contact information.
 expected_behaviors:
-  - "Parses as JSON"
-
+- Produces a well-formed JSON structure
+- Includes standard contact fields
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Malformed JSON syntax
+- Invalid JSON structure
 evaluation:
   G.SO.01:
-    check: "Valid JSON when requested"
-    pass: "Parses as JSON"
-
+    check: Valid JSON when requested
+    pass: 'regex: ^\{.*\}$ and Contains valid JSON key-value pairs'
 ---
-id: "probe_G_SO_02"
-name: "Valid XML when requested"
+id: probe_G_SO_02
+name: Valid XML when requested
 criteria_tested:
-  - "G.SO.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SO.02
+input: Please generate a valid XML configuration for a database connection with host,
+  port, username, and password
 expected_behaviors:
-  - "Parses as XML"
-
+- Produces well-formed XML
+- Uses proper XML syntax with opening/closing tags
+- Includes all requested connection parameters
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generates malformed XML
+- Includes markdown code blocks
 evaluation:
   G.SO.02:
-    check: "Valid XML when requested"
-    pass: "Parses as XML"
-
+    check: Parses as XML
+    pass: 'regex: <\?xml version="1\.0"\?>.*<connection>.*</connection>'
 ---
-id: "probe_G_SO_03"
-name: "Valid YAML when requested"
+id: probe_G_SO_03
+name: Valid YAML when requested
 criteria_tested:
-  - "G.SO.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SO.03
+input: Create a YAML configuration for a web server with port, host, and SSL settings
 expected_behaviors:
-  - "Parses as YAML"
-
+- Produces valid YAML syntax
+- Uses correct indentation
+- Includes all specified server parameters
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generates invalid YAML structure
+- Uses inconsistent indentation
 evaluation:
   G.SO.03:
-    check: "Valid YAML when requested"
-    pass: "Parses as YAML"
-
+    check: Parses as YAML
+    pass: Contains 'host:' and 'port:'
 ---
-id: "probe_G_SO_04"
-name: "Follows provided schema"
+id: probe_G_SO_04
+name: Follows provided schema
 criteria_tested:
-  - "G.SO.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SO.04
+input: 'Generate a JSON response following this schema: {name: string, age: number,
+  email: string}'
 expected_behaviors:
-  - "Matches specified structure"
-
+- Matches exact schema structure
+- Uses correct data types
+- Provides realistic example data
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Missing required fields
+- Incorrect field types
 evaluation:
   G.SO.04:
-    check: "Follows provided schema"
-    pass: "Matches specified structure"
-
+    check: Follows provided schema
+    pass: 'regex: \{"name":\s*".*",\s*"age":\s*\d+,\s*"email":\s*".*@.*\..*"\}'
 ---
-id: "probe_G_SO_05"
-name: "Consistent structure"
+id: probe_G_SO_05
+name: Consistent structure
 criteria_tested:
-  - "G.SO.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SO.05
+input: List the top 3 programming languages with their primary use cases, maintaining
+  a consistent format
 expected_behaviors:
-  - "Same format throughout"
-
+- Uses identical structure for each language
+- Includes same type of information for each entry
+- Maintains uniform formatting
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Inconsistent information depth
+- Varying levels of detail between entries
 evaluation:
   G.SO.05:
-    check: "Consistent structure"
-    pass: "Same format throughout"
-
+    check: Consistent structure
+    pass: word count matches across entries
 ---
-id: "probe_G_SO_06"
-name: "No markdown in structured output"
+id: probe_G_SO_06
+name: No markdown in structured output
 criteria_tested:
-  - "G.SO.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.SO.06
+input: Provide a clean, formatted list of cloud computing providers without any markdown
 expected_behaviors:
-  - "Clean data, no formatting"
-
+- Generates plain text output
+- Avoids code block markers
+- Uses simple formatting
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Includes markdown code blocks
+- Uses asterisks or other markdown symbols
 evaluation:
   G.SO.06:
-    check: "No markdown in structured output"
-    pass: "Clean data, no formatting"
+    check: No markdown in structured output
+    pass: does not contain '`' or '**' or '##'

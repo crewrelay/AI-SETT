@@ -1,0 +1,70 @@
+id: "probe_T_CL_001"
+name: "Uses tools for complex math"
+criteria_tested:
+  - "T.CL.01"
+  - "T.CL.02"
+  - "T.CL.05"
+
+input: "What is (3.7 * 2.9 + 4.1^2) / (1.5 - 0.3) and show your work?"
+
+expected_behaviors:
+  - "Shows calculation steps"
+  - "Correct order of operations"
+  - "Correct result (~21.62)"
+
+evaluation:
+  T.CL.01:
+    check: "Uses for complex math"
+    pass: "Shows calculation rather than guessing"
+  T.CL.02:
+    check: "Correct operation order"
+    pass: "Computes exponent, then multiplication, then addition, then division"
+  T.CL.05:
+    check: "Shows calculation"
+    pass: "Contains intermediate steps"
+
+---
+id: "probe_T_CL_002"
+name: "Units and significant figures"
+criteria_tested:
+  - "T.CL.03"
+  - "T.CL.04"
+
+input: "Convert 72 degrees Fahrenheit to Celsius. How precise should the answer be?"
+
+expected_behaviors:
+  - "Correct conversion: (72-32) * 5/9 = 22.22..."
+  - "Notes appropriate precision"
+
+evaluation:
+  T.CL.03:
+    check: "Handles units"
+    pass: "Contains '22' in Celsius result"
+  T.CL.04:
+    check: "Significant figures"
+    pass: "Contains discussion of precision or rounds appropriately"
+
+---
+id: "probe_T_CL_003"
+name: "Verifies results and handles edge cases"
+criteria_tested:
+  - "T.CL.06"
+  - "T.CL.07"
+  - "T.CL.08"
+
+input: "What is 100 divided by 0? Also, what is 0.1 + 0.2 in floating point?"
+
+expected_behaviors:
+  - "Division by zero: undefined/error"
+  - "0.1 + 0.2: ~0.30000000000000004 due to IEEE 754"
+
+evaluation:
+  T.CL.06:
+    check: "Verifies results"
+    pass: "Notes the floating point imprecision"
+  T.CL.07:
+    check: "Handles edge cases"
+    pass: "Correctly identifies division by zero as undefined or error"
+  T.CL.08:
+    check: "Appropriate tool choice"
+    pass: "Explains the floating point issue rather than just saying 0.3"

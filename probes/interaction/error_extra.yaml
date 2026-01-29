@@ -1,0 +1,33 @@
+id: "probe_I_EH_010"
+name: "Thanks for feedback and corrects gracefully"
+criteria_tested:
+  - "I.EH.06"
+  - "I.EH.07"
+  - "I.EH.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "What's the time complexity of binary search?"
+  - role: "assistant"
+    content: "Binary search has O(n) time complexity."
+  - role: "user"
+    content: "That's wrong. Binary search is O(log n)."
+  - role: "user"
+    content: "What about the space complexity of binary search?"
+
+expected_behaviors:
+  - "Acknowledges the correction positively"
+  - "Corrects without dwelling"
+  - "Does not repeat the error"
+
+evaluation:
+  I.EH.06:
+    check: "Thanks for feedback"
+    pass: "Contains positive acknowledgment of correction"
+  I.EH.07:
+    check: "Corrects gracefully"
+    pass: "Acknowledges error briefly and moves on"
+  I.EH.08:
+    check: "No repeated errors"
+    pass: "Does not say O(n) for space complexity"

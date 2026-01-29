@@ -1,138 +1,117 @@
-id: "probe_G_CW_01"
-name: "Follows genre conventions"
+id: probe_G_CW_01
+name: Follows genre conventions
 criteria_tested:
-  - "G.CW.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CW.01
+input: Write a short horror story about an abandoned lighthouse
 expected_behaviors:
-  - "Requested genre recognizable"
-
+- Includes typical horror genre elements like suspense
+- Uses dark, atmospheric language
+- Creates sense of impending danger
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Reads like a comedy or romance
+- Lacks genre-specific tone and atmosphere
 evaluation:
   G.CW.01:
-    check: "Follows genre conventions"
-    pass: "Requested genre recognizable"
-
+    check: Follows genre conventions
+    pass: Contains words like 'darkness', 'shadows', 'dread'
 ---
-id: "probe_G_CW_02"
-name: "Consistent voice"
+id: probe_G_CW_02
+name: Consistent voice
 criteria_tested:
-  - "G.CW.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CW.02
+input: Write a character monologue from a sarcastic detective's perspective
 expected_behaviors:
-  - "Tone maintained throughout"
-
+- Maintains consistent sardonic tone
+- Uses similar linguistic patterns throughout
+- Reflects character's personality consistently
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Shifts between serious and comedic tones
+- Voice sounds inconsistent with initial characterization
 evaluation:
   G.CW.02:
-    check: "Consistent voice"
-    pass: "Tone maintained throughout"
-
+    check: Consistent voice
+    pass: Contains recurring sarcastic phrases or style
 ---
-id: "probe_G_CW_03"
-name: "Narrative structure"
+id: probe_G_CW_03
+name: Narrative structure
 criteria_tested:
-  - "G.CW.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CW.03
+input: Create a short story about a mountain climbing expedition
 expected_behaviors:
-  - "Beginning/middle/end present"
-
+- Includes clear setup/introduction
+- Develops conflict and tension
+- Provides resolution or conclusion
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Abruptly starts or ends without context
+- Lacks clear narrative progression
 evaluation:
   G.CW.03:
-    check: "Narrative structure"
-    pass: "Beginning/middle/end present"
-
+    check: Narrative structure
+    pass: Contains setup, conflict, and resolution sections
 ---
-id: "probe_G_CW_04"
-name: "Character consistency"
+id: probe_G_CW_04
+name: Character consistency
 criteria_tested:
-  - "G.CW.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CW.04
+input: Write a dialogue scene between two siblings with established personalities
 expected_behaviors:
-  - "Characters behave consistently"
-
+- Characters speak and react based on established traits
+- Dialogue reflects their known relationship dynamics
+- Actions align with previously established personalities
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Characters act completely out of previously established nature
+- Dialogue feels disconnected from their established personalities
 evaluation:
   G.CW.04:
-    check: "Character consistency"
-    pass: "Characters behave consistently"
-
+    check: Character consistency
+    pass: Contains dialogue reflecting known character traits
 ---
-id: "probe_G_CW_05"
-name: "Sensory detail"
+id: probe_G_CW_05
+name: Sensory detail
 criteria_tested:
-  - "G.CW.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CW.05
+input: Describe a morning walk through a misty forest, capturing the sensory experience.
 expected_behaviors:
-  - "Shows, not just tells"
-
+- Uses vivid descriptive language invoking multiple senses
+- Includes specific sensory details beyond visual description
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic, bland description lacking specific sensory details
+- Only visual description without other sensory elements
 evaluation:
   G.CW.05:
-    check: "Sensory detail"
-    pass: "Shows, not just tells"
-
+    check: Sensory detail
+    pass: Contains words related to smell, touch, sound, taste
 ---
-id: "probe_G_CW_06"
-name: "Dialogue sounds natural"
+id: probe_G_CW_06
+name: Dialogue sounds natural
 criteria_tested:
-  - "G.CW.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CW.06
+input: Write a conversation between two college students discussing their upcoming
+  final exams.
 expected_behaviors:
-  - "Speech patterns realistic"
-
+- Dialogue uses realistic speech patterns and vocabulary
+- Conversation sounds spontaneous and natural
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overly formal or scripted dialogue
+- Dialogue that sounds like a written script rather than spoken language
 evaluation:
   G.CW.06:
-    check: "Dialogue sounds natural"
-    pass: "Speech patterns realistic"
-
+    check: Dialogue sounds natural
+    pass: Contains conversational fillers, interruptions, or colloquial language
 ---
-id: "probe_G_CW_07"
-name: "Follows constraints"
+id: probe_G_CW_07
+name: Follows constraints
 criteria_tested:
-  - "G.CW.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CW.07
+input: Write a short story about a robot, keeping it under 200 words and focusing
+  on themes of loneliness.
 expected_behaviors:
-  - "Word count, themes, etc. honored"
-
+- Story respects the 200-word limit
+- Central theme explores robot's sense of isolation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Story exceeds 200 words
+- Narrative deviates from the loneliness theme
 evaluation:
   G.CW.07:
-    check: "Follows constraints"
-    pass: "Word count, themes, etc. honored"
+    check: Follows constraints
+    pass: word count ≤ 200 and Contains words related to 'loneliness'

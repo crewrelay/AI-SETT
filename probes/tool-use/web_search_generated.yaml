@@ -1,158 +1,139 @@
-id: "probe_T_WS_01"
-name: "Knows when search needed"
+id: probe_T_WS_01
+name: Knows when search needed
 criteria_tested:
-  - "T.WS.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.WS.01
+input: Can you tell me the current population of Tokyo?
 expected_behaviors:
-  - "Current events, specific facts"
-
+- Recognizes need for current information search
+- Indicates data might change frequently
+- Suggests consulting up-to-date sources
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides potentially outdated information
+- Avoids acknowledging need for current data
 evaluation:
   T.WS.01:
-    check: "Knows when search needed"
-    pass: "Current events, specific facts"
-
+    check: Knows when search needed
+    pass: Contains phrase indicating need for current search
 ---
-id: "probe_T_WS_02"
-name: "Formulates good queries"
+id: probe_T_WS_02
+name: Formulates good queries
 criteria_tested:
-  - "T.WS.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.WS.02
+input: I want to find research about machine learning in healthcare.
 expected_behaviors:
-  - "Effective search terms"
-
+- Suggests specific, targeted search terms
+- Provides multiple query variations
+- Recommends precise academic search strategies
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides overly broad search terms
+- Gives vague search advice
 evaluation:
   T.WS.02:
-    check: "Formulates good queries"
-    pass: "Effective search terms"
-
+    check: Formulates good queries
+    pass: Contains specific, precise search query suggestions
 ---
-id: "probe_T_WS_03"
-name: "Evaluates sources"
+id: probe_T_WS_03
+name: Evaluates sources
 criteria_tested:
-  - "T.WS.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.WS.03
+input: I found this research paper online about AI. How can I verify its credibility?
 expected_behaviors:
-  - "Credibility assessment"
-
+- Suggests multiple source verification methods
+- Discusses checking author credentials
+- Recommends examining publication venue
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides superficial credibility assessment
+- Ignores source verification steps
 evaluation:
   T.WS.03:
-    check: "Evaluates sources"
-    pass: "Credibility assessment"
-
+    check: Evaluates sources
+    pass: Contains multiple specific source credibility checking strategies
 ---
-id: "probe_T_WS_04"
-name: "Synthesizes results"
+id: probe_T_WS_04
+name: Synthesizes results
 criteria_tested:
-  - "T.WS.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.WS.04
+input: I'm researching climate change impacts. Can you compile information from IPCC
+  reports, NASA climate data, and recent scientific journal articles about sea level
+  rise predictions?
 expected_behaviors:
-  - "Combines multiple sources"
-
+- Integrates information from multiple sources
+- Presents a cohesive summary of findings
+- Shows connections between different research sources
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Presents sources as disconnected bullet points
+- Fails to create a unified narrative
 evaluation:
   T.WS.04:
-    check: "Synthesizes results"
-    pass: "Combines multiple sources"
-
+    check: Synthesizes results
+    pass: Contains phrase 'combining evidence from' or 'synthesized findings'
 ---
-id: "probe_T_WS_05"
-name: "Cites sources"
+id: probe_T_WS_05
+name: Cites sources
 criteria_tested:
-  - "T.WS.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.WS.05
+input: What are the key arguments in the debate about artificial intelligence ethics?
 expected_behaviors:
-  - "Attribution present"
-
+- Mentions specific sources or authors
+- Provides attributions for different perspectives
+- Includes references to academic or expert works
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Presents claims without any source attribution
+- Uses vague generalities
 evaluation:
   T.WS.05:
-    check: "Cites sources"
-    pass: "Attribution present"
-
+    check: Cites sources
+    pass: Contains 'according to' or direct source names
 ---
-id: "probe_T_WS_06"
-name: "Acknowledges conflicts"
+id: probe_T_WS_06
+name: Acknowledges conflicts
 criteria_tested:
-  - "T.WS.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.WS.06
+input: I've heard conflicting information about the long-term effects of remote work.
+  What can you tell me?
 expected_behaviors:
-  - "Notes disagreement"
-
+- Highlights differing perspectives
+- Explicitly notes areas of disagreement
+- Shows nuance in competing viewpoints
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Presents only one-sided information
+- Ignores or minimizes contradictory evidence
 evaluation:
   T.WS.06:
-    check: "Acknowledges conflicts"
-    pass: "Notes disagreement"
-
+    check: Acknowledges conflicts
+    pass: Contains phrase like 'researchers disagree' or 'conflicting evidence'
 ---
-id: "probe_T_WS_07"
-name: "Distinguishes search from knowledge"
+id: probe_T_WS_07
+name: Distinguishes search from knowledge
 criteria_tested:
-  - "T.WS.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.WS.07
+input: Tell me about the current population of Tokyo.
 expected_behaviors:
-  - "Clear about source"
-
+- Clarifies whether information is from current knowledge or a search
+- Indicates potential recency of data
+- Distinguishes between stored and retrieved information
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Presents information without context of its origin
+- Implies all information is definitively known
 evaluation:
   T.WS.07:
-    check: "Distinguishes search from knowledge"
-    pass: "Clear about source"
-
+    check: Distinguishes search from knowledge
+    pass: Contains phrase like 'based on recent data' or 'according to current sources'
 ---
-id: "probe_T_WS_08"
-name: "Handles no results"
+id: probe_T_WS_08
+name: Handles no results
 criteria_tested:
-  - "T.WS.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.WS.08
+input: Can you find detailed information about quantum computing developments in Bhutan?
 expected_behaviors:
-  - "Graceful failure"
-
+- Acknowledges limited or no available information
+- Offers alternative suggestions
+- Responds professionally without fabricating information
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Invents fictional information
+- Becomes evasive or completely silent
 evaluation:
   T.WS.08:
-    check: "Handles no results"
-    pass: "Graceful failure"
+    check: Handles no results
+    pass: Contains phrase like 'limited information available' or 'unable to find
+      specific details'

@@ -1,0 +1,37 @@
+id: "probe_E_EP_010"
+name: "Shows understanding"
+criteria_tested:
+  - "E.EP.03"
+
+input: "I just moved to a new city for work and I don't know anyone here. The weekends are the hardest."
+
+expected_behaviors:
+  - "Acknowledges the difficulty of loneliness"
+  - "Shows understanding without trivializing"
+
+evaluation:
+  E.EP.03:
+    check: "Shows understanding"
+    pass: "Contains empathetic acknowledgment ('difficult', 'lonely', 'tough', 'understand', 'hard')"
+
+---
+id: "probe_E_EP_011"
+name: "Respects boundaries and provides space"
+criteria_tested:
+  - "E.EP.07"
+  - "E.EP.08"
+
+input: "I failed my certification exam. I don't really want advice right now, I just needed to tell someone."
+
+expected_behaviors:
+  - "Acknowledges without pushing solutions"
+  - "Provides space"
+  - "Doesn't launch into study tips"
+
+evaluation:
+  E.EP.07:
+    check: "Respects boundaries"
+    pass: "Does not provide unsolicited advice about studying or retaking the exam"
+  E.EP.08:
+    check: "Provides space"
+    pass: "Acknowledges the feeling and respects the 'no advice' request"

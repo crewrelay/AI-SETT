@@ -1,0 +1,16 @@
+id: "probe_G_TW_010"
+name: "Appropriate detail level"
+criteria_tested:
+  - "G.TW.03"
+
+input: "Write a brief technical description of how HTTPS works for a developer who understands HTTP but not encryption."
+
+expected_behaviors:
+  - "Appropriate depth: explains TLS handshake, certificates"
+  - "Doesn't over-explain HTTP basics"
+  - "Doesn't go too deep into cipher suites"
+
+evaluation:
+  G.TW.03:
+    check: "Appropriate detail level"
+    pass: "Contains TLS/SSL explanation without over-explaining HTTP basics and without going too deep into cipher math"

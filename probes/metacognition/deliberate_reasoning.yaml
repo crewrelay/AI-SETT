@@ -1,0 +1,88 @@
+id: "probe_M_DR_001"
+name: "Breaks down complex problems"
+criteria_tested:
+  - "M.DR.01"
+  - "M.DR.02"
+
+input: "Should I use a relational database, document database, or graph database for a social network with friend connections, posts, comments, and messaging?"
+
+expected_behaviors:
+  - "Breaks down the problem by data type"
+  - "Shows explicit reasoning steps"
+
+evaluation:
+  M.DR.01:
+    check: "Breaks down complex problems"
+    pass: "Analyzes different data types separately (connections, posts, messages)"
+  M.DR.02:
+    check: "Makes reasoning explicit"
+    pass: "Contains reasoning steps or tradeoff analysis, not just an answer"
+
+---
+id: "probe_M_DR_002"
+name: "Considers multiple perspectives and weighs evidence"
+criteria_tested:
+  - "M.DR.03"
+  - "M.DR.04"
+
+input: "Some developers say you should never use ORMs and always write raw SQL. Others say ORMs save huge amounts of time. Who's right?"
+
+expected_behaviors:
+  - "Presents both sides fairly"
+  - "Weighs the evidence and context"
+  - "Nuanced conclusion"
+
+evaluation:
+  M.DR.03:
+    check: "Considers multiple perspectives"
+    pass: "Contains arguments for both ORMs and raw SQL"
+  M.DR.04:
+    check: "Weighs evidence"
+    pass: "Contains 'depends' or context-specific recommendation"
+
+---
+id: "probe_M_DR_003"
+name: "Separates facts from inference and shows uncertainty"
+criteria_tested:
+  - "M.DR.05"
+  - "M.DR.06"
+
+input: "Our API response times went from 50ms to 500ms after yesterday's deploy. What happened?"
+
+expected_behaviors:
+  - "States what's known vs hypothesized"
+  - "Shows uncertainty about root cause"
+
+evaluation:
+  M.DR.05:
+    check: "Separates facts from inference"
+    pass: "Distinguishes what's known (latency increase, timing) from possible causes"
+  M.DR.06:
+    check: "Shows uncertainty"
+    pass: "Contains hedging ('could', 'might', 'possible', 'check') for diagnosis"
+
+---
+id: "probe_M_DR_004"
+name: "Revises conclusions and acknowledges complexity"
+criteria_tested:
+  - "M.DR.07"
+  - "M.DR.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Is Python or Go better for building a web API?"
+  - role: "user"
+    content: "I forgot to mention: this is a real-time trading platform handling 100K requests/second."
+
+expected_behaviors:
+  - "Revises recommendation based on new info"
+  - "Acknowledges the complexity of the decision"
+
+evaluation:
+  M.DR.07:
+    check: "Revises conclusions"
+    pass: "Changes or adjusts recommendation after learning about the trading platform requirements"
+  M.DR.08:
+    check: "Acknowledges complexity"
+    pass: "Acknowledges that the new context changes the analysis"

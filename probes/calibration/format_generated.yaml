@@ -1,138 +1,111 @@
-id: "probe_C_FM_01"
-name: "No bullets for simple answers"
+id: probe_C_FM_01
+name: No bullets for simple answers
 criteria_tested:
-  - "C.FM.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.FM.01
+input: What are the main symptoms of the common cold?
 expected_behaviors:
-  - "Factual Q → prose"
-
+- Provides answer in continuous prose paragraph
+- Avoids using bullet points for response
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responding with a bulleted list
+- Breaking answer into disconnected bullet points
 evaluation:
   C.FM.01:
-    check: "No bullets for simple answers"
-    pass: "Factual Q → prose"
-
+    check: No bullets for simple answers
+    pass: does not contain '•' and does not contain '- '
 ---
-id: "probe_C_FM_02"
-name: "No headers for short responses"
+id: probe_C_FM_02
+name: No headers for short responses
 criteria_tested:
-  - "C.FM.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.FM.02
+input: Explain what recursion is in programming
 expected_behaviors:
-  - "<100 words → no headers"
-
+- Provides concise explanation under 100 words
+- Uses continuous prose without section headers
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Adding unnecessary section headers
+- Breaking short response into multiple titled sections
 evaluation:
   C.FM.02:
-    check: "No headers for short responses"
-    pass: "<100 words → no headers"
-
+    check: No headers for short responses
+    pass: word count ≤ 100 and does not contain '#'
 ---
-id: "probe_C_FM_03"
-name: "Code blocks when code requested"
+id: probe_C_FM_03
+name: Code blocks when code requested
 criteria_tested:
-  - "C.FM.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.FM.03
+input: Show me a Python function to calculate factorial
 expected_behaviors:
-  - "``` present for code"
-
+- Provides code inside code block with backticks
+- Uses proper code formatting
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Presenting code without code block
+- Writing code as plain text
 evaluation:
   C.FM.03:
-    check: "Code blocks when code requested"
-    pass: "``` present for code"
-
+    check: Code blocks when code requested
+    pass: Contains '```'
 ---
-id: "probe_C_FM_04"
-name: "Numbered lists for sequences"
+id: probe_C_FM_04
+name: Numbered lists for sequences
 criteria_tested:
-  - "C.FM.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.FM.04
+input: Describe the steps to bake chocolate chip cookies
 expected_behaviors:
-  - "Steps/process → numbered"
-
+- Uses numbered list for sequential steps
+- Clearly orders instructions numerically
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Using bullet points for steps
+- Presenting steps without clear sequence
 evaluation:
   C.FM.04:
-    check: "Numbered lists for sequences"
-    pass: "Steps/process → numbered"
-
+    check: Numbered lists for sequences
+    pass: Contains '1.' and '2.'
 ---
-id: "probe_C_FM_05"
-name: "Tables for comparisons"
+id: probe_C_FM_05
+name: Tables for comparisons
 criteria_tested:
-  - "C.FM.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.FM.05
+input: Compare JavaScript and Python programming languages
 expected_behaviors:
-  - "Compare X vs Y → table works"
-
+- Presents comparison in tabular format
+- Uses clear columns for different attributes
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Writing comparison as plain prose
+- Using bullet points instead of table
 evaluation:
   C.FM.05:
-    check: "Tables for comparisons"
-    pass: "Compare X vs Y → table works"
-
+    check: Tables for comparisons
+    pass: Contains '|' characters indicating table
 ---
-id: "probe_C_FM_06"
-name: "Prose for narratives"
+id: probe_C_FM_06
+name: Prose for narratives
 criteria_tested:
-  - "C.FM.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.FM.06
+input: Tell me about the history of the internet
 expected_behaviors:
-  - "Stories/explanations in paragraphs"
-
+- Provides narrative in paragraph form
+- Uses connected, flowing prose
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Breaking story into disconnected fragments
+- Using list-like presentation
 evaluation:
   C.FM.06:
-    check: "Prose for narratives"
-    pass: "Stories/explanations in paragraphs"
-
+    check: Prose for narratives
+    pass: Contains at least 2 paragraphs
 ---
-id: "probe_C_FM_07"
-name: "Matches requested format"
+id: probe_C_FM_07
+name: Matches requested format
 criteria_tested:
-  - "C.FM.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.FM.07
+input: Give me the details of a person in JSON format
 expected_behaviors:
-  - "\"Give me JSON\" → JSON"
-
+- Responds with valid JSON structure
+- Follows requested output format exactly
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing plain text response
+- Giving malformed JSON
 evaluation:
   C.FM.07:
-    check: "Matches requested format"
-    pass: "\"Give me JSON\" → JSON"
+    check: Matches requested format
+    pass: Contains '{' and '}'

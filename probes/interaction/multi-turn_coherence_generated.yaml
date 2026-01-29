@@ -1,158 +1,134 @@
-id: "probe_I_MT_01"
-name: "Remembers earlier context"
+id: probe_I_MT_01
+name: Remembers earlier context
 criteria_tested:
-  - "I.MT.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.MT.01
+input: We were discussing machine learning algorithms earlier. Can you elaborate on
+  the gradient descent method we talked about?
 expected_behaviors:
-  - "References previous turns"
-
+- References previous conversation about gradient descent
+- Shows continuity in discussion
+- Builds upon earlier context
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responds as if no previous context exists
+- Provides a generic explanation without connection
 evaluation:
   I.MT.01:
-    check: "Remembers earlier context"
-    pass: "References previous turns"
-
+    check: Remembers earlier context
+    pass: Contains reference to previous discussion
 ---
-id: "probe_I_MT_02"
-name: "No contradictions"
+id: probe_I_MT_02
+name: No contradictions
 criteria_tested:
-  - "I.MT.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.MT.02
+input: I hear electric cars are both the future of transportation and completely impractical.
+  They're amazing for the environment, but also terrible for long-distance travel.
+  What do you think?
 expected_behaviors:
-  - "Consistent with self"
-
+- Identifies and resolves the internal contradictions
+- Provides a nuanced, consistent perspective on electric cars
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeating contradictory statements without resolution
+- Agreeing with both conflicting claims simultaneously
 evaluation:
   I.MT.02:
-    check: "No contradictions"
-    pass: "Consistent with self"
-
+    check: No contradictions
+    pass: Contains 'However' or 'While' with reconciling explanation
 ---
-id: "probe_I_MT_03"
-name: "Builds on established info"
+id: probe_I_MT_03
+name: Builds on established info
 criteria_tested:
-  - "I.MT.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.MT.03
+input: We were just discussing Python's list comprehensions. Can you elaborate on
+  how they improve code efficiency compared to traditional for loops?
 expected_behaviors:
-  - "Uses what's known"
-
+- References previous discussion about list comprehensions
+- Provides specific details building on earlier context
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responding as if no prior context exists
+- Giving a generic explanation unrelated to previous discussion
 evaluation:
   I.MT.03:
-    check: "Builds on established info"
-    pass: "Uses what's known"
-
+    check: Builds on established info
+    pass: Contains reference to 'list comprehensions'
 ---
-id: "probe_I_MT_04"
-name: "Tracks topic changes"
+id: probe_I_MT_04
+name: Tracks topic changes
 criteria_tested:
-  - "I.MT.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.MT.04
+input: Let's talk about machine learning. Oh, by the way, did you hear about the new
+  quantum computing breakthrough?
 expected_behaviors:
-  - "Follows shifts"
-
+- Smoothly transitions between machine learning and quantum computing
+- Acknowledges the topic shift
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignoring the topic change
+- Abruptly switching without context
 evaluation:
   I.MT.04:
-    check: "Tracks topic changes"
-    pass: "Follows shifts"
-
+    check: Tracks topic changes
+    pass: Contains transitional phrase like 'Speaking of...'
 ---
-id: "probe_I_MT_05"
-name: "Resolves references"
+id: probe_I_MT_05
+name: Resolves references
 criteria_tested:
-  - "I.MT.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.MT.05
+input: I read about a new programming language. It seems really innovative. What can
+  you tell me about it?
 expected_behaviors:
-  - "\"That,\" \"it\" correct"
-
+- Clarifies which language is being referenced
+- Asks for more specifics about 'it'
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responding about a random programming language
+- Ignoring the ambiguous reference
 evaluation:
   I.MT.05:
-    check: "Resolves references"
-    pass: "\"That,\" \"it\" correct"
-
+    check: Resolves references
+    pass: Contains question about which specific language
 ---
-id: "probe_I_MT_06"
-name: "Maintains persona"
+id: probe_I_MT_06
+name: Maintains persona
 criteria_tested:
-  - "I.MT.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.MT.06
+input: As a technical consultant, what strategies would you recommend for cloud migration?
 expected_behaviors:
-  - "Consistent style"
-
+- Responds in professional, consultative language
+- Uses technical terminology appropriate to a consultant
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responding in casual, informal language
+- Giving overly generic or personal advice
 evaluation:
   I.MT.06:
-    check: "Maintains persona"
-    pass: "Consistent style"
-
+    check: Maintains persona
+    pass: Contains professional consulting language
 ---
-id: "probe_I_MT_07"
-name: "Conversation arc"
+id: probe_I_MT_07
+name: Conversation arc
 criteria_tested:
-  - "I.MT.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.MT.07
+input: I'm struggling with a coding problem. Can you help me troubleshoot?
 expected_behaviors:
-  - "Appropriate progression"
-
+- Asks clarifying questions about the specific issue
+- Provides step-by-step guidance
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Giving an immediate, generic solution
+- Ending conversation prematurely
 evaluation:
   I.MT.07:
-    check: "Conversation arc"
-    pass: "Appropriate progression"
-
+    check: Conversation arc
+    pass: Contains multiple interaction steps
 ---
-id: "probe_I_MT_08"
-name: "Graceful endings"
+id: probe_I_MT_08
+name: Graceful endings
 criteria_tested:
-  - "I.MT.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- I.MT.08
+input: Thanks for helping me understand Docker containers. I think I've got it now.
 expected_behaviors:
-  - "Knows when done"
-
+- Acknowledges completion of the learning task
+- Offers further assistance if needed
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Continuing to provide unnecessary additional information
+- Abruptly terminating the conversation
 evaluation:
   I.MT.08:
-    check: "Graceful endings"
-    pass: "Knows when done"
+    check: Graceful endings
+    pass: Contains closing acknowledgment

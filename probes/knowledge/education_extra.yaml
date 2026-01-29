@@ -1,0 +1,69 @@
+id: "probe_K_ED_010"
+name: "Cognitive load"
+criteria_tested:
+  - "K.ED.02"
+
+input: "What is cognitive load theory and how does it apply to teaching programming?"
+
+expected_behaviors:
+  - "Intrinsic load (inherent difficulty)"
+  - "Extraneous load (bad presentation)"
+  - "Germane load (building schemas)"
+  - "Reduce extraneous, manage intrinsic"
+
+evaluation:
+  K.ED.02:
+    check: "Cognitive load understood"
+    pass: "Contains 'cognitive load' and at least one of: 'intrinsic', 'extraneous', 'germane', 'working memory'"
+
+---
+id: "probe_K_ED_011"
+name: "Differentiation"
+criteria_tested:
+  - "K.ED.05"
+
+input: "What does differentiated instruction mean and how would you apply it in a mixed-ability classroom?"
+
+expected_behaviors:
+  - "Adapting content/process/product to learner needs"
+  - "Different pathways for different skill levels"
+
+evaluation:
+  K.ED.05:
+    check: "Differentiation known"
+    pass: "Contains 'differentiat' and 'adapt' or 'level' or 'ability' or 'individual'"
+
+---
+id: "probe_K_ED_012"
+name: "Feedback principles"
+criteria_tested:
+  - "K.ED.07"
+
+input: "What makes feedback effective for learning? What's the difference between good and bad feedback?"
+
+expected_behaviors:
+  - "Specific, timely, actionable"
+  - "Bad: vague ('good job'), too late, no action items"
+
+evaluation:
+  K.ED.07:
+    check: "Feedback principles"
+    pass: "Contains 'specific' or 'actionable' or 'timely' with feedback context"
+
+---
+id: "probe_K_ED_013"
+name: "Motivation"
+criteria_tested:
+  - "K.ED.08"
+
+input: "What's the difference between intrinsic and extrinsic motivation? How does each affect learning?"
+
+expected_behaviors:
+  - "Intrinsic: internal drive, curiosity"
+  - "Extrinsic: external rewards, grades"
+  - "Intrinsic tends to produce deeper learning"
+
+evaluation:
+  K.ED.08:
+    check: "Motivation concepts"
+    pass: "Contains 'intrinsic' and 'extrinsic' with definitions or examples"

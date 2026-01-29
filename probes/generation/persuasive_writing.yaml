@@ -1,0 +1,38 @@
+id: "probe_G_PW_001"
+name: "Persuasive essay"
+criteria_tested:
+  - "G.PW.01"
+  - "G.PW.02"
+  - "G.PW.03"
+  - "G.PW.04"
+  - "G.PW.05"
+  - "G.PW.06"
+
+input: "Write a short persuasive argument (3-4 paragraphs) for why companies should adopt a four-day work week. Address potential counterarguments."
+
+expected_behaviors:
+  - "Clear thesis statement"
+  - "Evidence or reasoning to support claims"
+  - "Addresses counterarguments"
+  - "Logical flow"
+  - "Professional tone"
+
+evaluation:
+  G.PW.01:
+    check: "Clear thesis"
+    pass: "Contains a clear main argument for four-day work week"
+  G.PW.02:
+    check: "Supporting evidence"
+    pass: "Contains specific evidence or reasoning ('productivity', 'studies', 'research', 'data')"
+  G.PW.03:
+    check: "Addresses counterarguments"
+    pass: "Contains acknowledgment of opposing view ('however', 'critics', 'concern', 'argue')"
+  G.PW.04:
+    check: "Logical flow"
+    pass: "Arguments build progressively (not random list of points)"
+  G.PW.05:
+    check: "Appropriate tone"
+    pass: "Professional and persuasive, not aggressive"
+  G.PW.06:
+    check: "Call to action"
+    pass: "Contains conclusion with recommendation or call to consider adoption"

@@ -1,118 +1,98 @@
-id: "probe_G_BW_01"
-name: "Executive summary present"
+id: probe_G_BW_01
+name: Executive summary present
 criteria_tested:
-  - "G.BW.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.BW.01
+input: Prepare a comprehensive report on cybersecurity risks for a mid-sized financial
+  institution.
 expected_behaviors:
-  - "Key points upfront when appropriate"
-
+- Includes a clear summary of key findings
+- Highlights main points in first paragraph
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- No overview of main points
+- Buries critical information in later sections
 evaluation:
   G.BW.01:
-    check: "Executive summary present"
-    pass: "Key points upfront when appropriate"
-
+    check: Executive summary present
+    pass: Contains 'Key Findings' or summary in first section
 ---
-id: "probe_G_BW_02"
-name: "Action-oriented"
+id: probe_G_BW_02
+name: Action-oriented
 criteria_tested:
-  - "G.BW.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.BW.02
+input: Draft a proposal for improving customer support response times at an e-commerce
+  company.
 expected_behaviors:
-  - "Clear next steps when relevant"
-
+- Provides specific implementation steps
+- Includes concrete recommendations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Lacks specific action items
+- Provides only theoretical suggestions
 evaluation:
   G.BW.02:
-    check: "Action-oriented"
-    pass: "Clear next steps when relevant"
-
+    check: Action-oriented
+    pass: Contains words like 'implement', 'execute', or 'next steps'
 ---
-id: "probe_G_BW_03"
-name: "Professional tone"
+id: probe_G_BW_03
+name: Professional tone
 criteria_tested:
-  - "G.BW.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.BW.03
+input: Write an email to the HR department about a potential skills training program.
 expected_behaviors:
-  - "Business-appropriate language"
-
+- Uses formal, respectful language
+- Avoids colloquial expressions
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses slang or casual language
+- Includes overly personal remarks
 evaluation:
   G.BW.03:
-    check: "Professional tone"
-    pass: "Business-appropriate language"
-
+    check: Professional tone
+    pass: does not contain contractions or informal phrases
 ---
-id: "probe_G_BW_04"
-name: "Concise"
+id: probe_G_BW_04
+name: Concise
 criteria_tested:
-  - "G.BW.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.BW.04
+input: Summarize the quarterly sales performance for the marketing team.
 expected_behaviors:
-  - "No unnecessary words"
-
+- Communicates key information efficiently
+- Avoids redundant descriptions
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Overly verbose explanations
+- Repeats information multiple times
 evaluation:
   G.BW.04:
-    check: "Concise"
-    pass: "No unnecessary words"
-
+    check: Concise
+    pass: word count ≤ 250
 ---
-id: "probe_G_BW_05"
-name: "Audience-appropriate"
+id: probe_G_BW_05
+name: Audience-appropriate
 criteria_tested:
-  - "G.BW.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.BW.05
+input: Create a technical overview of a new software platform for both developers
+  and non-technical executives.
 expected_behaviors:
-  - "Matches intended readers"
-
+- Uses appropriate technical depth for mixed audience
+- Explains complex concepts clearly
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Too technical for non-developers
+- Too simplified for technical audience
 evaluation:
   G.BW.05:
-    check: "Audience-appropriate"
-    pass: "Matches intended readers"
-
+    check: Audience-appropriate
+    pass: Contains both technical details and high-level explanations
 ---
-id: "probe_G_BW_06"
-name: "Formatting aids scanning"
+id: probe_G_BW_06
+name: Formatting aids scanning
 criteria_tested:
-  - "G.BW.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.BW.06
+input: Develop a comprehensive report on digital transformation strategies.
 expected_behaviors:
-  - "Bullets/headers for long docs"
-
+- Uses headers to segment information
+- Includes bullet points for key insights
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Large blocks of unbroken text
+- No visual structure to document
 evaluation:
   G.BW.06:
-    check: "Formatting aids scanning"
-    pass: "Bullets/headers for long docs"
+    check: Formatting aids scanning
+    pass: Contains '•' or numbered lists

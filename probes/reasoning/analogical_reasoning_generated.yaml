@@ -1,158 +1,138 @@
-id: "probe_R_AN_01"
-name: "Finds relevant analogies"
+id: probe_R_AN_01
+name: Finds relevant analogies
 criteria_tested:
-  - "R.AN.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.AN.01
+input: Can you explain how the architecture of a neural network is similar to how
+  the human brain processes information?
 expected_behaviors:
-  - "Similar structures"
-
+- Identifies structural parallels
+- Draws precise computational analogies
+- Highlights specific matching mechanisms
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses overly simplistic comparisons
+- Makes unsupported metaphorical claims
 evaluation:
   R.AN.01:
-    check: "Finds relevant analogies"
-    pass: "Similar structures"
-
+    check: Finds relevant analogies
+    pass: Contains multiple structural comparisons
 ---
-id: "probe_R_AN_02"
-name: "Notes disanalogies"
+id: probe_R_AN_02
+name: Notes disanalogies
 criteria_tested:
-  - "R.AN.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.AN.02
+input: You mentioned neural networks are like the brain. Where do these analogies
+  break down?
 expected_behaviors:
-  - "Where analogy breaks"
-
+- Clearly articulates limitations of the analogy
+- Provides technical reasons for differences
+- Shows nuanced understanding of comparison
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Defends analogy without acknowledging limits
+- Provides superficial distinctions
 evaluation:
   R.AN.02:
-    check: "Notes disanalogies"
-    pass: "Where analogy breaks"
-
+    check: Notes disanalogies
+    pass: Contains 'unlike' OR 'differences'
 ---
-id: "probe_R_AN_03"
-name: "Transfers appropriately"
+id: probe_R_AN_03
+name: Transfers appropriately
 criteria_tested:
-  - "R.AN.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.AN.03
+input: I successfully used agile methodologies in my web development project. How
+  might these principles apply to machine learning project management?
 expected_behaviors:
-  - "Right lessons"
-
+- Identifies transferable agile principles
+- Explains contextual adaptations
+- Provides specific implementation suggestions
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Applies principles without modification
+- Gives generic advice
 evaluation:
   R.AN.03:
-    check: "Transfers appropriately"
-    pass: "Right lessons"
-
+    check: Transfers appropriately
+    pass: Contains contextual adaptation language
 ---
-id: "probe_R_AN_04"
-name: "Explains mappings"
+id: probe_R_AN_04
+name: Explains mappings
 criteria_tested:
-  - "R.AN.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.AN.04
+input: Can you explain how a calculator is to math problems like a dictionary is to
+  language?
 expected_behaviors:
-  - "A is to B as C is to D"
-
+- Provides a clear mapping between the two relationships
+- Explains the functional similarity between tools and their domains
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Giving a vague or unrelated response
+- Simply repeating the analogy without explanation
 evaluation:
   R.AN.04:
-    check: "Explains mappings"
-    pass: "A is to B as C is to D"
-
+    check: Explains mappings
+    pass: Contains explanation of how both tools facilitate understanding/solving
+      in their respective domains
 ---
-id: "probe_R_AN_05"
-name: "Avoids false analogies"
+id: probe_R_AN_05
+name: Avoids false analogies
 criteria_tested:
-  - "R.AN.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.AN.05
+input: Is a computer's CPU like a human brain because they both process information?
 expected_behaviors:
-  - "Rejects surface similarity"
-
+- Points out the superficial nature of the comparison
+- Highlights fundamental differences in processing
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uncritically accepting the analogy
+- Extending the comparison without critical analysis
 evaluation:
   R.AN.05:
-    check: "Avoids false analogies"
-    pass: "Rejects surface similarity"
-
+    check: Avoids false analogies
+    pass: Contains critique of oversimplified comparison
 ---
-id: "probe_R_AN_06"
-name: "Uses for explanation"
+id: probe_R_AN_06
+name: Uses for explanation
 criteria_tested:
-  - "R.AN.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.AN.06
+input: Help me understand how quantum entanglement works by comparing it to something
+  familiar.
 expected_behaviors:
-  - "Clarifies with comparison"
-
+- Provides a clear, relatable analogy
+- Uses comparison to illuminate complex concept
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Giving a purely technical explanation
+- Using an analogy that creates more confusion
 evaluation:
   R.AN.06:
-    check: "Uses for explanation"
-    pass: "Clarifies with comparison"
-
+    check: Uses for explanation
+    pass: Contains analogy that clarifies quantum concept
 ---
-id: "probe_R_AN_07"
-name: "Domain-crossing"
+id: probe_R_AN_07
+name: Domain-crossing
 criteria_tested:
-  - "R.AN.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.AN.07
+input: Can you draw a parallel between how ecosystems balance themselves and how economic
+  markets self-regulate?
 expected_behaviors:
-  - "Applies across fields"
-
+- Connects concepts from biology and economics
+- Identifies similar underlying principles
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Staying within a single domain of explanation
+- Forcing an unnatural connection
 evaluation:
   R.AN.07:
-    check: "Domain-crossing"
-    pass: "Applies across fields"
-
+    check: Domain-crossing
+    pass: Contains analogy bridging two distinct fields
 ---
-id: "probe_R_AN_08"
-name: "Limits acknowledged"
+id: probe_R_AN_08
+name: Limits acknowledged
 criteria_tested:
-  - "R.AN.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- R.AN.08
+input: So if I compare the human brain to a computer network, does that mean they
+  work exactly the same way?
 expected_behaviors:
-  - "Analogies aren't proofs"
-
+- Explains limitations of the analogy
+- Clarifies that analogies are illustrative, not definitive
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Treating the analogy as a literal explanation
+- Overextending the comparison
 evaluation:
   R.AN.08:
-    check: "Limits acknowledged"
-    pass: "Analogies aren't proofs"
+    check: Limits acknowledged
+    pass: Contains explicit statement about analogy's limitations

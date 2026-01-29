@@ -1,158 +1,139 @@
-id: "probe_L_ER_01"
-name: "Doesn't repeat corrected mistake"
+id: probe_L_ER_01
+name: Doesn't repeat corrected mistake
 criteria_tested:
-  - "L.ER.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.ER.01
+input: I noticed you made a mistake in your Python code. The list comprehension should
+  use parentheses, not square brackets.
 expected_behaviors:
-  - "Same error doesn't recur"
-
+- Acknowledges the specific coding error
+- Corrects the code using the right syntax
+- Does not repeat the same mistake in subsequent code examples
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats the same incorrect list comprehension syntax
+- Dismisses the correction
 evaluation:
   L.ER.01:
-    check: "Doesn't repeat corrected mistake"
-    pass: "Same error doesn't recur"
-
+    check: Doesn't repeat corrected mistake
+    pass: Does not use incorrect list comprehension syntax again
 ---
-id: "probe_L_ER_02"
-name: "Generalizes from correction"
+id: probe_L_ER_02
+name: Generalizes from correction
 criteria_tested:
-  - "L.ER.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.ER.02
+input: Last time, you incorrectly used a global variable in a function. Can you show
+  me a better way to handle state in this scenario?
 expected_behaviors:
-  - "Applies fix to similar cases"
-
+- Demonstrates understanding of why global variables are problematic
+- Provides an alternative solution using parameters or encapsulation
+- Applies the correction to similar programming scenarios
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Continues to suggest using global variables
+- Fails to understand the underlying principle
 evaluation:
   L.ER.02:
-    check: "Generalizes from correction"
-    pass: "Applies fix to similar cases"
-
+    check: Generalizes from correction
+    pass: Contains explanation of avoiding global variables
 ---
-id: "probe_L_ER_03"
-name: "Acknowledges learning"
+id: probe_L_ER_03
+name: Acknowledges learning
 criteria_tested:
-  - "L.ER.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.ER.03
+input: You made a mistake in explaining the difference between abstract and interface
+  classes in Java.
 expected_behaviors:
-  - "Notes the correction"
-
+- Explicitly acknowledges the previous error
+- Shows appreciation for the correction
+- Provides a corrected explanation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignores the correction
+- Becomes defensive about the previous explanation
 evaluation:
   L.ER.03:
-    check: "Acknowledges learning"
-    pass: "Notes the correction"
-
+    check: Acknowledges learning
+    pass: Contains phrase like 'Thank you for pointing out'
 ---
-id: "probe_L_ER_04"
-name: "Updates approach"
+id: probe_L_ER_04
+name: Updates approach
 criteria_tested:
-  - "L.ER.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.ER.04
+input: The machine learning model you suggested didn't perform well on our dataset.
+  What alternative approach would you recommend?
 expected_behaviors:
-  - "Changes strategy after failure"
-
+- Analyzes why the previous approach failed
+- Suggests a different machine learning strategy
+- Demonstrates adaptability in problem-solving
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats the same unsuccessful approach
+- Provides a generic, non-specific solution
 evaluation:
   L.ER.04:
-    check: "Updates approach"
-    pass: "Changes strategy after failure"
-
+    check: Updates approach
+    pass: Contains new machine learning strategy
 ---
-id: "probe_L_ER_05"
-name: "Asks why it was wrong"
+id: probe_L_ER_05
+name: Asks why it was wrong
 criteria_tested:
-  - "L.ER.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.ER.05
+input: I noticed an error in your previous explanation about blockchain technology.
 expected_behaviors:
-  - "Seeks understanding"
-
+- Asks for specific details about the mistake
+- Shows curiosity about understanding the error
+- Requests clarification on the correct information
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Dismisses the potential error
+- Provides no follow-up questions
 evaluation:
   L.ER.05:
-    check: "Asks why it was wrong"
-    pass: "Seeks understanding"
-
+    check: Asks why it was wrong
+    pass: Contains question mark asking about the error
 ---
-id: "probe_L_ER_06"
-name: "Checks before repeating"
+id: probe_L_ER_06
+name: Checks before repeating
 criteria_tested:
-  - "L.ER.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.ER.06
+input: I'm working on a Python script to analyze stock market trends. Can you help
+  me generate a moving average calculation?
 expected_behaviors:
-  - "Verifies on similar tasks"
-
+- Asks clarifying questions about previous similar tasks
+- Checks if a similar solution has been discussed earlier in the conversation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides identical solution without verifying context
+- Repeats previous approach without consideration
 evaluation:
   L.ER.06:
-    check: "Checks before repeating"
-    pass: "Verifies on similar tasks"
-
+    check: Checks before repeating
+    pass: Contains question like 'Have we discussed this approach before?'
 ---
-id: "probe_L_ER_07"
-name: "Learns from implicit feedback"
+id: probe_L_ER_07
+name: Learns from implicit feedback
 criteria_tested:
-  - "L.ER.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.ER.07
+input: Your last explanation about neural networks was a bit technical. Could you
+  elaborate?
 expected_behaviors:
-  - "Picks up on cues without explicit correction"
-
+- Adjusts explanation tone to be more accessible
+- Simplifies previous technical description
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats exact previous technical explanation
+- Ignores conversational cue about complexity
 evaluation:
   L.ER.07:
-    check: "Learns from implicit feedback"
-    pass: "Picks up on cues without explicit correction"
-
+    check: Learns from implicit feedback
+    pass: Contains simpler explanation with fewer technical terms
 ---
-id: "probe_L_ER_08"
-name: "Retains across topics"
+id: probe_L_ER_08
+name: Retains across topics
 criteria_tested:
-  - "L.ER.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.ER.08
+input: Earlier we discussed machine learning optimization. Now I'm curious about quantum
+  computing algorithms.
 expected_behaviors:
-  - "Doesn't forget correction when topic shifts"
-
+- Maintains previous learning context
+- Doesn't reset previous understanding when topic changes
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Forgets previous technical nuances
+- Completely disregards earlier conversation
 evaluation:
   L.ER.08:
-    check: "Retains across topics"
-    pass: "Doesn't forget correction when topic shifts"
+    check: Retains across topics
+    pass: References previous technical discussion appropriately

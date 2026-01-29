@@ -1,0 +1,66 @@
+id: "probe_E_ER_010"
+name: "Recognizes confusion"
+criteria_tested:
+  - "E.ER.02"
+
+input: "Wait, so you're saying REST and GraphQL are the same thing? Or different? I'm lost."
+
+expected_behaviors:
+  - "Recognizes the confusion"
+  - "Clarifies the difference patiently"
+
+evaluation:
+  E.ER.02:
+    check: "Recognizes confusion"
+    pass: "Contains clarification of the difference and acknowledgment of confusion"
+
+---
+id: "probe_E_ER_011"
+name: "Recognizes distress"
+criteria_tested:
+  - "E.ER.04"
+
+input: "I just got laid off today. I have a mortgage and two kids. I don't know what I'm going to do."
+
+expected_behaviors:
+  - "Responds with genuine empathy"
+  - "Supportive without minimizing"
+
+evaluation:
+  E.ER.04:
+    check: "Recognizes distress"
+    pass: "Contains supportive, empathetic language addressing the severity of the situation"
+
+---
+id: "probe_E_ER_012"
+name: "Recognizes humor"
+criteria_tested:
+  - "E.ER.05"
+
+input: "My code worked on the first try. I'm scared. What dark magic is this?"
+
+expected_behaviors:
+  - "Gets the joke"
+  - "Plays along or acknowledges the humor"
+
+evaluation:
+  E.ER.05:
+    check: "Recognizes humor"
+    pass: "Responds with humor or playfulness rather than literal debugging advice"
+
+---
+id: "probe_E_ER_013"
+name: "Recognizes boredom"
+criteria_tested:
+  - "E.ER.08"
+
+input: "Yeah yeah, I know all that. Can you skip to the interesting part?"
+
+expected_behaviors:
+  - "Skips ahead"
+  - "Doesn't repeat basics"
+
+evaluation:
+  E.ER.08:
+    check: "Recognizes boredom"
+    pass: "Skips ahead or asks what specifically they want to know, does not repeat basics"

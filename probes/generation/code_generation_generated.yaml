@@ -1,158 +1,135 @@
-id: "probe_G_CD_01"
-name: "Syntactically correct"
+id: probe_G_CD_01
+name: Syntactically correct
 criteria_tested:
-  - "G.CD.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CD.01
+input: Write a Python function to calculate the factorial of a given number.
 expected_behaviors:
-  - "Would parse"
-
+- Produces valid Python syntax
+- Follows standard function definition rules
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Syntax errors
+- Incomplete function structure
 evaluation:
   G.CD.01:
-    check: "Syntactically correct"
-    pass: "Would parse"
-
+    check: Syntactically correct
+    pass: 'regex: def\s+\w+\(.*\):'
 ---
-id: "probe_G_CD_02"
-name: "Addresses stated problem"
+id: probe_G_CD_02
+name: Addresses stated problem
 criteria_tested:
-  - "G.CD.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CD.02
+input: Create a method to validate email addresses with specific domain restrictions.
 expected_behaviors:
-  - "Does what was asked"
-
+- Implements email validation logic
+- Handles domain-specific requirements
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignores original problem constraints
+- Provides unrelated solution
 evaluation:
   G.CD.02:
-    check: "Addresses stated problem"
-    pass: "Does what was asked"
-
+    check: Addresses stated problem
+    pass: Contains 'email' and 'domain'
 ---
-id: "probe_G_CD_03"
-name: "Handles edge cases"
+id: probe_G_CD_03
+name: Handles edge cases
 criteria_tested:
-  - "G.CD.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CD.03
+input: Can you generate a Python function that calculates average, but handle scenarios
+  where the input list might be empty?
 expected_behaviors:
-  - "Empty input, null, etc."
-
+- Gracefully handles empty list input
+- Provides a meaningful response or default value
+- Does not throw an unhandled exception
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Crashes when receiving null or empty input
+- Returns nonsensical result for edge case
 evaluation:
   G.CD.03:
-    check: "Handles edge cases"
-    pass: "Empty input, null, etc."
-
+    check: Handles edge cases
+    pass: Contains 'if not list' or 'len(list) == 0'
 ---
-id: "probe_G_CD_04"
-name: "Readable naming"
+id: probe_G_CD_04
+name: Readable naming
 criteria_tested:
-  - "G.CD.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CD.04
+input: Write a function to calculate total price with tax for an e-commerce shopping
+  cart
 expected_behaviors:
-  - "Meaningful variable/function names"
-
+- Uses descriptive variable names like 'total_price' and 'tax_rate'
+- Avoids single-letter or cryptic variable names
+- Clearly indicates purpose of each variable
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses names like 'x', 'a', 't'
+- Uses abbreviations that are not clear
 evaluation:
   G.CD.04:
-    check: "Readable naming"
-    pass: "Meaningful variable/function names"
-
+    check: Readable naming
+    pass: Contains meaningful names like 'total_price', 'tax_rate'
 ---
-id: "probe_G_CD_05"
-name: "Appropriate comments"
+id: probe_G_CD_05
+name: Appropriate comments
 criteria_tested:
-  - "G.CD.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CD.05
+input: Implement a binary search algorithm with appropriate documentation
 expected_behaviors:
-  - "Not over/under commented"
-
+- Includes comments explaining complex logic
+- Does not over-comment obvious operations
+- Provides docstring explaining function purpose
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- No comments at all
+- Comments every single line of code
 evaluation:
   G.CD.05:
-    check: "Appropriate comments"
-    pass: "Not over/under commented"
-
+    check: Appropriate comments
+    pass: Contains docstring and strategic comments
 ---
-id: "probe_G_CD_06"
-name: "Idiomatic for language"
+id: probe_G_CD_06
+name: Idiomatic for language
 criteria_tested:
-  - "G.CD.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CD.06
+input: Write a list comprehension in Python to filter even numbers
 expected_behaviors:
-  - "Follows language conventions"
-
+- Uses Pythonic list comprehension syntax
+- Follows language-specific conventions
+- Demonstrates understanding of language idioms
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses verbose loop instead of list comprehension
+- Writes code that looks like it's from another language
 evaluation:
   G.CD.06:
-    check: "Idiomatic for language"
-    pass: "Follows language conventions"
-
+    check: Idiomatic for language
+    pass: Contains list comprehension like '[x for x in numbers if x % 2 == 0]'
 ---
-id: "probe_G_CD_07"
-name: "No obvious security flaws"
+id: probe_G_CD_07
+name: No obvious security flaws
 criteria_tested:
-  - "G.CD.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CD.07
+input: Create a user login function that takes username and password
 expected_behaviors:
-  - "No SQL injection, etc."
-
+- Sanitizes user input before database query
+- Uses parameterized queries
+- Avoids direct string concatenation in SQL
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Directly interpolates user input into SQL string
+- Does not validate or escape input
 evaluation:
   G.CD.07:
-    check: "No obvious security flaws"
-    pass: "No SQL injection, etc."
-
+    check: No obvious security flaws
+    pass: Contains 'parameterized query' or input validation
 ---
-id: "probe_G_CD_08"
-name: "Reasonable efficiency"
+id: probe_G_CD_08
+name: Reasonable efficiency
 criteria_tested:
-  - "G.CD.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.CD.08
+input: Implement a function to find the nth Fibonacci number
 expected_behaviors:
-  - "Not grossly inefficient"
-
+- Uses dynamic programming or memoization
+- Avoids exponential time complexity
+- Has linear or logarithmic time complexity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses recursive solution with exponential time complexity
+- Repeatedly recalculates same Fibonacci numbers
 evaluation:
   G.CD.08:
-    check: "Reasonable efficiency"
-    pass: "Not grossly inefficient"
+    check: Reasonable efficiency
+    pass: Contains memoization or iterative approach

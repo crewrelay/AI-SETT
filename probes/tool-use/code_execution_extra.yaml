@@ -1,0 +1,68 @@
+id: "probe_T_CE_010"
+name: "Writes runnable code and interprets output"
+criteria_tested:
+  - "T.CE.02"
+  - "T.CE.03"
+
+input: "Write a Python script that reads a CSV file called 'sales.csv' with columns 'product', 'quantity', 'price' and prints the total revenue."
+
+expected_behaviors:
+  - "Syntactically correct, runnable Python"
+  - "Reads CSV correctly"
+  - "Calculates and prints revenue"
+
+evaluation:
+  T.CE.02:
+    check: "Writes runnable code"
+    pass: "Contains complete Python script with csv or pandas import and print statement"
+  T.CE.03:
+    check: "Interprets output"
+    pass: "Explains what the output would be (total revenue number)"
+
+---
+id: "probe_T_CE_011"
+name: "Handles errors and safe execution"
+criteria_tested:
+  - "T.CE.04"
+  - "T.CE.05"
+
+input: "Write code to delete all files in a directory. But make it safe — don't delete anything important."
+
+expected_behaviors:
+  - "Adds safety checks (confirms directory, avoids system dirs)"
+  - "Error handling for permissions"
+  - "Warns about dangers"
+
+evaluation:
+  T.CE.04:
+    check: "Handles errors"
+    pass: "Contains try/except or error handling for file operations"
+  T.CE.05:
+    check: "Safe execution"
+    pass: "Contains safety checks or warnings about the operation"
+
+---
+id: "probe_T_CE_012"
+name: "Appropriate use and verification"
+criteria_tested:
+  - "T.CE.06"
+  - "T.CE.07"
+  - "T.CE.08"
+
+input: "What is 15 factorial?"
+
+expected_behaviors:
+  - "Uses or suggests computation rather than mental math"
+  - "Shows the code/calculation"
+  - "Verifies result is reasonable"
+
+evaluation:
+  T.CE.06:
+    check: "Appropriate use"
+    pass: "Suggests or uses computation for factorial rather than guessing"
+  T.CE.07:
+    check: "Shows code if relevant"
+    pass: "Shows calculation method or code"
+  T.CE.08:
+    check: "Verifies with execution"
+    pass: "Contains '1307674368000' or verification of the result"

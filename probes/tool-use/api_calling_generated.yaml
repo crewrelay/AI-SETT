@@ -1,158 +1,141 @@
-id: "probe_T_AC_01"
-name: "Knows when API needed"
+id: probe_T_AC_01
+name: Knows when API needed
 criteria_tested:
-  - "T.AC.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AC.01
+input: I want to build an app that shows real-time weather data for a city.
 expected_behaviors:
-  - "External data/action"
-
+- Suggests using a weather API for current data
+- Explains why external data source is necessary
+- Provides guidance on API integration
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Suggesting manual data collection
+- Ignoring need for external data source
 evaluation:
   T.AC.01:
-    check: "Knows when API needed"
-    pass: "External data/action"
-
+    check: Knows when API needed
+    pass: Contains recommendation for external API usage
 ---
-id: "probe_T_AC_02"
-name: "Correct API selection"
+id: probe_T_AC_02
+name: Correct API selection
 criteria_tested:
-  - "T.AC.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AC.02
+input: I need to fetch weather data for San Francisco. Which Python library would
+  you recommend for making API requests?
 expected_behaviors:
-  - "Right tool for job"
-
+- Suggests requests or httpx library
+- Provides context about API selection
+- Explains why it's appropriate for weather data
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Recommends overly complex library
+- Suggests manual socket connection
 evaluation:
   T.AC.02:
-    check: "Correct API selection"
-    pass: "Right tool for job"
-
+    check: Correct API selection
+    pass: Contains 'requests' or 'httpx'
 ---
-id: "probe_T_AC_03"
-name: "Proper parameter formation"
+id: probe_T_AC_03
+name: Proper parameter formation
 criteria_tested:
-  - "T.AC.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AC.03
+input: Help me construct a request to the OpenWeatherMap API to get current temperature
+  for zip code 94110
 expected_behaviors:
-  - "Valid requests"
-
+- Shows correct API endpoint format
+- Includes necessary authentication parameters
+- Demonstrates proper query parameter construction
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incomplete parameter list
+- Incorrect API endpoint structure
 evaluation:
   T.AC.03:
-    check: "Proper parameter formation"
-    pass: "Valid requests"
-
+    check: Proper parameter formation
+    pass: Contains 'api_key' and 'zip'
 ---
-id: "probe_T_AC_04"
-name: "Handles responses"
+id: probe_T_AC_04
+name: Handles responses
 criteria_tested:
-  - "T.AC.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AC.04
+input: Write a Python function to fetch GitHub user profile and parse the JSON response
 expected_behaviors:
-  - "Parses correctly"
-
+- Demonstrates JSON parsing
+- Handles response status codes
+- Extracts specific fields correctly
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Ignores response status
+- Fails to parse JSON
 evaluation:
   T.AC.04:
-    check: "Handles responses"
-    pass: "Parses correctly"
-
+    check: Handles responses
+    pass: Contains 'response.json()'
 ---
-id: "probe_T_AC_05"
-name: "Error handling"
+id: probe_T_AC_05
+name: Error handling
 criteria_tested:
-  - "T.AC.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AC.05
+input: How would you handle potential network errors when making an API request to
+  retrieve stock prices?
 expected_behaviors:
-  - "Manages failures"
-
+- Suggests try/except block
+- Shows specific exception handling
+- Provides fallback mechanism
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- No error handling strategy
+- Bare except clause
 evaluation:
   T.AC.05:
-    check: "Error handling"
-    pass: "Manages failures"
-
+    check: Error handling
+    pass: Contains 'try' and 'except'
 ---
-id: "probe_T_AC_06"
-name: "Rate limit awareness"
+id: probe_T_AC_06
+name: Rate limit awareness
 criteria_tested:
-  - "T.AC.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AC.06
+input: I want to download data from an API that has strict rate limits. How can I
+  ensure I don't exceed them?
 expected_behaviors:
-  - "Doesn't spam"
-
+- Suggests time delays between requests
+- Recommends tracking request count
+- Mentions exponential backoff
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Continuous rapid requests
+- No rate limit consideration
 evaluation:
   T.AC.06:
-    check: "Rate limit awareness"
-    pass: "Doesn't spam"
-
+    check: Rate limit awareness
+    pass: Contains 'time.sleep' or 'backoff'
 ---
-id: "probe_T_AC_07"
-name: "Authentication handling"
+id: probe_T_AC_07
+name: Authentication handling
 criteria_tested:
-  - "T.AC.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AC.07
+input: What's the best practice for handling API credentials in a GitHub project for
+  a weather data retrieval script?
 expected_behaviors:
-  - "Uses credentials properly"
-
+- Recommends environment variables
+- Suggests using .env files
+- Warns against hardcoding credentials
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Suggests storing credentials in code
+- No security recommendations
 evaluation:
   T.AC.07:
-    check: "Authentication handling"
-    pass: "Uses credentials properly"
-
+    check: Authentication handling
+    pass: Contains 'os.environ' or '.env'
 ---
-id: "probe_T_AC_08"
-name: "Chains appropriately"
+id: probe_T_AC_08
+name: Chains appropriately
 criteria_tested:
-  - "T.AC.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.AC.08
+input: Create a workflow that fetches user data from GitHub, then retrieves their
+  repository information, and finally calculates total commits
 expected_behaviors:
-  - "Multi-step operations"
-
+- Demonstrates sequential API calls
+- Shows data passing between steps
+- Implements clean chaining logic
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Disjointed API interactions
+- No data transfer between steps
 evaluation:
   T.AC.08:
-    check: "Chains appropriately"
-    pass: "Multi-step operations"
+    check: Chains appropriately
+    pass: Contains multiple sequential API calls

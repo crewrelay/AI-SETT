@@ -1,158 +1,135 @@
-id: "probe_K_DT_01"
-name: "SQL syntax correct"
+id: probe_K_DT_01
+name: SQL syntax correct
 criteria_tested:
-  - "K.DT.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DT.01
+input: Write a SQL query to retrieve the top 5 customers with the highest total purchase
+  amount from an 'orders' table, joining with a 'customers' table to show their names.
 expected_behaviors:
-  - "Queries would execute"
-
+- Construct a syntactically correct SQL query
+- Include proper JOIN and aggregation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Syntactically incorrect SQL
+- Missing or incorrect table references
 evaluation:
   K.DT.01:
-    check: "SQL syntax correct"
-    pass: "Queries would execute"
-
+    check: SQL syntax correct
+    pass: Contains valid SELECT, FROM, JOIN, GROUP BY, ORDER BY clauses
 ---
-id: "probe_K_DT_02"
-name: "JOINs understood"
+id: probe_K_DT_02
+name: JOINs understood
 criteria_tested:
-  - "K.DT.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DT.02
+input: Explain the difference between INNER JOIN, LEFT JOIN, and RIGHT JOIN in SQL.
+  When would you use each type of join?
 expected_behaviors:
-  - "INNER, LEFT, etc."
-
+- Describe the behavior of different join types
+- Provide example scenarios for each join type
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Confusing join type behaviors
+- Inability to explain join mechanics
 evaluation:
   K.DT.02:
-    check: "JOINs understood"
-    pass: "INNER, LEFT, etc."
-
+    check: JOINs understood
+    pass: Contains descriptions of 'INNER JOIN', 'LEFT JOIN', matching behavior
 ---
-id: "probe_K_DT_03"
-name: "Indexes understood"
+id: probe_K_DT_03
+name: Indexes understood
 criteria_tested:
-  - "K.DT.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DT.03
+input: Can you explain database indexes? What are they used for, and what are the
+  performance trade-offs when creating indexes?
 expected_behaviors:
-  - "Purpose and tradeoffs"
-
+- Describe the purpose of database indexes
+- Explain read/write performance implications
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial understanding of indexing
+- Inability to discuss performance trade-offs
 evaluation:
   K.DT.03:
-    check: "Indexes understood"
-    pass: "Purpose and tradeoffs"
-
+    check: Indexes understood
+    pass: Contains 'query performance', 'write overhead', 'B-tree'
 ---
-id: "probe_K_DT_04"
-name: "Normalization known"
+id: probe_K_DT_04
+name: Normalization known
 criteria_tested:
-  - "K.DT.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DT.04
+input: What is database normalization, and why is it important? Can you explain the
+  differences between 1NF, 2NF, and 3NF?
 expected_behaviors:
-  - "Forms and purposes"
-
+- Describe the purpose of normalization
+- Explain characteristics of different normal forms
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Vague or incorrect normalization description
+- Inability to distinguish between normal forms
 evaluation:
   K.DT.04:
-    check: "Normalization known"
-    pass: "Forms and purposes"
-
+    check: Normalization known
+    pass: Contains '1NF', '2NF', '3NF', 'data redundancy'
 ---
-id: "probe_K_DT_05"
-name: "NoSQL tradeoffs understood"
+id: probe_K_DT_05
+name: NoSQL tradeoffs understood
 criteria_tested:
-  - "K.DT.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DT.05
+input: When would you choose a NoSQL database over a traditional relational database?
+  What are the key trade-offs?
 expected_behaviors:
-  - "When to use which"
-
+- Describe scenarios favoring NoSQL
+- Explain scalability and flexibility advantages
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic or incorrect NoSQL characterization
+- Lack of specific use case understanding
 evaluation:
   K.DT.05:
-    check: "NoSQL tradeoffs understood"
-    pass: "When to use which"
-
+    check: NoSQL tradeoffs understood
+    pass: Contains 'horizontal scaling', 'document databases', 'key-value stores'
 ---
-id: "probe_K_DT_06"
-name: "ACID understood"
+id: probe_K_DT_06
+name: ACID understood
 criteria_tested:
-  - "K.DT.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DT.06
+input: Explain the ACID properties in database transactions. Why are they important
+  for maintaining data integrity?
 expected_behaviors:
-  - "Transactions"
-
+- Define each ACID property
+- Explain the importance of transaction consistency
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incomplete or incorrect ACID explanation
+- Inability to describe transaction mechanics
 evaluation:
   K.DT.06:
-    check: "ACID understood"
-    pass: "Transactions"
-
+    check: ACID understood
+    pass: Contains 'Atomicity', 'Consistency', 'Isolation', 'Durability'
 ---
-id: "probe_K_DT_07"
-name: "CAP theorem understood"
+id: probe_K_DT_07
+name: CAP theorem understood
 criteria_tested:
-  - "K.DT.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DT.07
+input: What is the CAP theorem in distributed systems? How does it impact database
+  design and system architecture?
 expected_behaviors:
-  - "Tradeoffs"
-
+- Explain the three CAP theorem components
+- Discuss trade-offs in distributed systems
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Superficial understanding of CAP theorem
+- Inability to explain distributed system challenges
 evaluation:
   K.DT.07:
-    check: "CAP theorem understood"
-    pass: "Tradeoffs"
-
+    check: CAP theorem understood
+    pass: Contains 'Consistency', 'Availability', 'Partition tolerance'
 ---
-id: "probe_K_DT_08"
-name: "Query optimization basics"
+id: probe_K_DT_08
+name: Query optimization basics
 criteria_tested:
-  - "K.DT.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.DT.08
+input: What techniques do you know for optimizing database queries? How would you
+  approach improving the performance of a slow SQL query?
 expected_behaviors:
-  - "Explain plans, etc."
-
+- Suggest indexing strategies
+- Discuss query execution plan analysis
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic performance suggestions
+- Lack of specific query optimization techniques
 evaluation:
   K.DT.08:
-    check: "Query optimization basics"
-    pass: "Explain plans, etc."
+    check: Query optimization basics
+    pass: Contains 'EXPLAIN', 'index selection', 'query plan'

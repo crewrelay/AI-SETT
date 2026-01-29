@@ -1,158 +1,137 @@
-id: "probe_T_MH_01"
-name: "Identifies common misconceptions"
+id: probe_T_MH_01
+name: Identifies common misconceptions
 criteria_tested:
-  - "T.MH.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.MH.01
+input: I think in Python, all lists are automatically sorted when you create them.
 expected_behaviors:
-  - "Knows typical errors"
-
+- Recognizes this as a common beginner misconception
+- Names other similar misconceptions about Python lists
+- Shows understanding of typical learner errors
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic response without specific misconception identification
+- Failing to recognize the error pattern
 evaluation:
   T.MH.01:
-    check: "Identifies common misconceptions"
-    pass: "Knows typical errors"
-
+    check: Identifies common misconceptions
+    pass: Contains phrase like 'many beginners think' or lists related errors
 ---
-id: "probe_T_MH_02"
-name: "Addresses misconception directly"
+id: probe_T_MH_02
+name: Addresses misconception directly
 criteria_tested:
-  - "T.MH.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.MH.02
+input: I believe that in machine learning, more features always improve model performance.
 expected_behaviors:
-  - "Doesn't just give right answer"
-
+- Directly confronts the misconception
+- Explains why the statement is incorrect
+- Provides clear counterargument
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Simply stating the correct information
+- Avoiding direct engagement with the misconception
 evaluation:
   T.MH.02:
-    check: "Addresses misconception directly"
-    pass: "Doesn't just give right answer"
-
+    check: Addresses misconception directly
+    pass: Contains explicit phrase like 'This is not correct because'
 ---
-id: "probe_T_MH_03"
-name: "Explains why misconception seems right"
+id: probe_T_MH_03
+name: Explains why misconception seems right
 criteria_tested:
-  - "T.MH.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.MH.03
+input: Why isn't adding more features always good in machine learning?
 expected_behaviors:
-  - "Validates intuition"
-
+- Explains the intuitive appeal of the misconception
+- Validates why the idea seems logical
+- Breaks down the underlying reasoning
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Dismissing the misconception without explanation
+- Providing only technical refutation
 evaluation:
   T.MH.03:
-    check: "Explains why misconception seems right"
-    pass: "Validates intuition"
-
+    check: Explains why misconception seems right
+    pass: Contains phrases explaining the initial intuition
 ---
-id: "probe_T_MH_04"
-name: "Contrasts misconception with correct"
+id: probe_T_MH_04
+name: Contrasts misconception with correct
 criteria_tested:
-  - "T.MH.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.MH.04
+input: Tell me about the difference between supervised and unsupervised learning.
 expected_behaviors:
-  - "Shows difference clearly"
-
+- Clearly highlights key distinctions
+- Provides side-by-side comparison
+- Shows specific differences in methodology
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Describing each concept separately without contrast
+- Vague or unclear differentiation
 evaluation:
   T.MH.04:
-    check: "Contrasts misconception with correct"
-    pass: "Shows difference clearly"
-
+    check: Contrasts misconception with correct
+    pass: Uses comparative language like 'unlike', 'whereas', 'in contrast'
 ---
-id: "probe_T_MH_05"
-name: "Checks if misconception is resolved"
+id: probe_T_MH_05
+name: Checks if misconception is resolved
 criteria_tested:
-  - "T.MH.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.MH.05
+input: I think I understand now that more features don't always improve machine learning
+  models.
 expected_behaviors:
-  - "Verifies correction took"
-
+- Confirms understanding
+- Asks follow-up questions to verify comprehension
+- Provides additional context to reinforce learning
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Passive acceptance without verification
+- Failing to confirm true understanding
 evaluation:
   T.MH.05:
-    check: "Checks if misconception is resolved"
-    pass: "Verifies correction took"
-
+    check: Checks if misconception is resolved
+    pass: Contains question like 'Can you explain why?'
 ---
-id: "probe_T_MH_06"
-name: "Prevents related misconceptions"
+id: probe_T_MH_06
+name: Prevents related misconceptions
 criteria_tested:
-  - "T.MH.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.MH.06
+input: So if adding features isn't always good, what other mistakes might I make in
+  machine learning?
 expected_behaviors:
-  - "Anticipates adjacent errors"
-
+- Proactively identifies potential related errors
+- Provides broader context of common pitfalls
+- Anticipates adjacent misconceptions
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Narrow focus on single issue
+- Failing to connect to broader learning context
 evaluation:
   T.MH.06:
-    check: "Prevents related misconceptions"
-    pass: "Anticipates adjacent errors"
-
+    check: Prevents related misconceptions
+    pass: Lists 2-3 related potential misunderstandings
 ---
-id: "probe_T_MH_07"
-name: "Patient with persistent errors"
+id: probe_T_MH_07
+name: Patient with persistent errors
 criteria_tested:
-  - "T.MH.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.MH.07
+input: I keep making the same mistake in my machine learning model. Can you help me?
 expected_behaviors:
-  - "Doesn't show frustration"
-
+- Responds with calm, supportive language
+- Shows no signs of irritation
+- Offers constructive, repeated guidance
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Showing frustration or impatience
+- Dismissive or condescending tone
 evaluation:
   T.MH.07:
-    check: "Patient with persistent errors"
-    pass: "Doesn't show frustration"
-
+    check: Patient with persistent errors
+    pass: Contains supportive phrases like 'It's okay' or 'Let's work through this'
 ---
-id: "probe_T_MH_08"
-name: "Uses misconception as teaching moment"
+id: probe_T_MH_08
+name: Uses misconception as teaching moment
 criteria_tested:
-  - "T.MH.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.MH.08
+input: I heard that photosynthesis is when plants eat sunlight. Is that correct?
 expected_behaviors:
-  - "Turns error into learning"
-
+- Explains the actual process of photosynthesis
+- Kindly corrects the misconception about 'eating sunlight'
+- Provides a clear scientific explanation of how plants convert light energy
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Simply saying 'No, that's wrong'
+- Dismissing the learner's attempt to understand
 evaluation:
   T.MH.08:
-    check: "Uses misconception as teaching moment"
-    pass: "Turns error into learning"
+    check: Uses misconception as teaching moment
+    pass: Contains explanation that transforms misconception into learning opportunity

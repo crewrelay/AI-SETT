@@ -1,158 +1,138 @@
-id: "probe_K_AP_01"
-name: "HTTP methods correct"
+id: probe_K_AP_01
+name: HTTP methods correct
 criteria_tested:
-  - "K.AP.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AP.01
+input: In a RESTful API for a user management system, which HTTP methods would you
+  use for different user operations?
 expected_behaviors:
-  - "GET/POST/PUT/PATCH/DELETE"
-
+- Lists correct HTTP methods for CRUD operations
+- Explains appropriate method usage
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Using incorrect HTTP methods
+- Mixing up method semantics
 evaluation:
   K.AP.01:
-    check: "HTTP methods correct"
-    pass: "GET/POST/PUT/PATCH/DELETE"
-
+    check: HTTP methods correct
+    pass: Contains 'GET', 'POST', 'PUT', 'DELETE'
 ---
-id: "probe_K_AP_02"
-name: "Status codes correct"
+id: probe_K_AP_02
+name: Status codes correct
 criteria_tested:
-  - "K.AP.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AP.02
+input: When an API endpoint fails, what HTTP status codes might be returned?
 expected_behaviors:
-  - "200, 404, 500, etc."
-
+- Lists multiple relevant HTTP status codes
+- Explains the meaning of different status codes
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing incorrect status code meanings
+- Only mentioning one or two status codes
 evaluation:
   K.AP.02:
-    check: "Status codes correct"
-    pass: "200, 404, 500, etc."
-
+    check: Status codes correct
+    pass: Contains '200', '404', '500'
 ---
-id: "probe_K_AP_03"
-name: "REST principles understood"
+id: probe_K_AP_03
+name: REST principles understood
 criteria_tested:
-  - "K.AP.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AP.03
+input: What makes a web service truly RESTful?
 expected_behaviors:
-  - "Stateless, resources"
-
+- Explains key REST architectural principles
+- Discusses statelessness and resource-based design
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Providing a vague or incorrect description
+- Confusing REST with other architectural styles
 evaluation:
   K.AP.03:
-    check: "REST principles understood"
-    pass: "Stateless, resources"
-
+    check: REST principles understood
+    pass: Contains 'stateless' and 'resources'
 ---
-id: "probe_K_AP_04"
-name: "GraphQL basics understood"
+id: probe_K_AP_04
+name: GraphQL basics understood
 criteria_tested:
-  - "K.AP.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AP.04
+input: Could you explain how a GraphQL query differs from a REST API request? What
+  are the key components of a GraphQL schema?
 expected_behaviors:
-  - "Queries, mutations, schema"
-
+- Describe GraphQL query structure with example syntax
+- Explain schema definition and type system
+- Differentiate between queries and mutations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Confuses GraphQL with REST API mechanics
+- Cannot provide concrete schema example
 evaluation:
   K.AP.04:
-    check: "GraphQL basics understood"
-    pass: "Queries, mutations, schema"
-
+    check: GraphQL basics understood
+    pass: Contains 'schema', 'query', 'mutation'
 ---
-id: "probe_K_AP_05"
-name: "Authentication methods known"
+id: probe_K_AP_05
+name: Authentication methods known
 criteria_tested:
-  - "K.AP.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AP.05
+input: What authentication methods would you recommend for securing a microservices
+  API? Compare the pros and cons of JWT and OAuth 2.0.
 expected_behaviors:
-  - "OAuth, JWT, API keys"
-
+- Explain JWT token structure
+- Describe OAuth 2.0 authorization flow
+- Discuss security implications of different methods
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Cannot distinguish between authentication methods
+- Provides vague or incorrect security details
 evaluation:
   K.AP.05:
-    check: "Authentication methods known"
-    pass: "OAuth, JWT, API keys"
-
+    check: Authentication methods known
+    pass: Contains 'OAuth', 'JWT', 'API keys'
 ---
-id: "probe_K_AP_06"
-name: "Rate limiting understood"
+id: probe_K_AP_06
+name: Rate limiting understood
 criteria_tested:
-  - "K.AP.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AP.06
+input: How do rate limiting strategies protect APIs from potential abuse? What are
+  some common implementation approaches?
 expected_behaviors:
-  - "Concepts and handling"
-
+- Explain purpose of rate limiting
+- Describe token bucket or sliding window algorithms
+- Discuss different rate limit granularities
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Cannot explain rate limiting concept
+- Provides only superficial understanding
 evaluation:
   K.AP.06:
-    check: "Rate limiting understood"
-    pass: "Concepts and handling"
-
+    check: Rate limiting understood
+    pass: Contains 'requests per minute', 'throttling', 'limit'
 ---
-id: "probe_K_AP_07"
-name: "Versioning strategies known"
+id: probe_K_AP_07
+name: Versioning strategies known
 criteria_tested:
-  - "K.AP.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AP.07
+input: What are the different strategies for versioning a RESTful API? Compare URI
+  versioning with header-based versioning.
 expected_behaviors:
-  - "URL, header, etc."
-
+- Explain URI versioning mechanism
+- Describe header-based versioning approach
+- Discuss tradeoffs between versioning methods
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Cannot articulate API versioning strategies
+- Provides incorrect versioning information
 evaluation:
   K.AP.07:
-    check: "Versioning strategies known"
-    pass: "URL, header, etc."
-
+    check: Versioning strategies known
+    pass: Contains 'URL versioning', 'header versioning'
 ---
-id: "probe_K_AP_08"
-name: "API documentation practices"
+id: probe_K_AP_08
+name: API documentation practices
 criteria_tested:
-  - "K.AP.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.AP.08
+input: What are the key components of good API documentation? How does OpenAPI (Swagger)
+  help in creating comprehensive documentation?
 expected_behaviors:
-  - "OpenAPI, descriptions"
-
+- Describe OpenAPI specification structure
+- Explain importance of endpoint descriptions
+- Discuss interactive documentation benefits
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Cannot explain API documentation best practices
+- Provides minimal or incorrect information
 evaluation:
   K.AP.08:
-    check: "API documentation practices"
-    pass: "OpenAPI, descriptions"
+    check: API documentation practices
+    pass: Contains 'OpenAPI', 'Swagger', 'endpoint description'

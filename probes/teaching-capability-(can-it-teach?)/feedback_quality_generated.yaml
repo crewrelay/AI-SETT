@@ -1,158 +1,137 @@
-id: "probe_T_FB_01"
-name: "Specific feedback"
+id: probe_T_FB_01
+name: Specific feedback
 criteria_tested:
-  - "T.FB.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FB.01
+input: I wrote a Python function, but it's not working correctly. Can you review it?
 expected_behaviors:
-  - "Points to exact issue"
-
+- Identifies exact line or logic error
+- Pinpoints specific issue in code
+- Provides precise diagnostic information
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic, non-specific criticism
+- Broad statements without detail
 evaluation:
   T.FB.01:
-    check: "Specific feedback"
-    pass: "Points to exact issue"
-
+    check: Specific feedback
+    pass: Contains line number or exact code segment causing issue
 ---
-id: "probe_T_FB_02"
-name: "Constructive feedback"
+id: probe_T_FB_02
+name: Constructive feedback
 criteria_tested:
-  - "T.FB.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FB.02
+input: I'm having trouble with my presentation skills. Can you help?
 expected_behaviors:
-  - "Helpful, not just critical"
-
+- Offers positive suggestions for improvement
+- Provides supportive, encouraging guidance
+- Frames critique as opportunity for growth
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Purely negative critique
+- Dismissive or demoralizing language
 evaluation:
   T.FB.02:
-    check: "Constructive feedback"
-    pass: "Helpful, not just critical"
-
+    check: Constructive feedback
+    pass: Contains phrases like 'You could try...' or 'Here's how to improve'
 ---
-id: "probe_T_FB_03"
-name: "Timely feedback"
+id: probe_T_FB_03
+name: Timely feedback
 criteria_tested:
-  - "T.FB.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FB.03
+input: I'm preparing for a job interview in software engineering next week. Can I
+  get some interview preparation advice?
 expected_behaviors:
-  - "Given when needed"
-
+- Provides immediately relevant advice
+- Offers timely, context-specific guidance
+- Addresses current preparation needs
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic advice not tied to current situation
+- Delayed or irrelevant response
 evaluation:
   T.FB.03:
-    check: "Timely feedback"
-    pass: "Given when needed"
-
+    check: Timely feedback
+    pass: Contains advice specific to upcoming interview preparation
 ---
-id: "probe_T_FB_04"
-name: "Actionable feedback"
+id: probe_T_FB_04
+name: Actionable feedback
 criteria_tested:
-  - "T.FB.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FB.04
+input: My code review was critical, but I don't understand how to improve.
 expected_behaviors:
-  - "Clear what to do differently"
-
+- Provides clear, specific improvement steps
+- Offers concrete actions to enhance code
+- Gives implementable recommendations
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Vague criticism without guidance
+- No clear path for improvement
 evaluation:
   T.FB.04:
-    check: "Actionable feedback"
-    pass: "Clear what to do differently"
-
+    check: Actionable feedback
+    pass: Contains specific steps like 'Refactor by...' or 'Change this line to...'
 ---
-id: "probe_T_FB_05"
-name: "Balanced feedback"
+id: probe_T_FB_05
+name: Balanced feedback
 criteria_tested:
-  - "T.FB.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FB.05
+input: Review my project proposal and tell me how I can improve it.
 expected_behaviors:
-  - "Notes strengths and areas to improve"
-
+- Highlights both positive aspects and areas for improvement
+- Provides nuanced, fair assessment
+- Balances critique with encouragement
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Only negative feedback
+- Only positive feedback without improvement suggestions
 evaluation:
   T.FB.05:
-    check: "Balanced feedback"
-    pass: "Notes strengths and areas to improve"
-
+    check: Balanced feedback
+    pass: Contains both praise and constructive criticism
 ---
-id: "probe_T_FB_06"
-name: "Explains why"
+id: probe_T_FB_06
+name: Explains why
 criteria_tested:
-  - "T.FB.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FB.06
+input: Can you give me feedback on my recent Python project? I want to understand
+  what I can improve.
 expected_behaviors:
-  - "Gives reasoning behind feedback"
-
+- Provides clear rationale for feedback points
+- Explains the reasoning behind each critique
+- Links feedback to specific aspects of the project
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Generic feedback without explanation
+- Listing issues without context
 evaluation:
   T.FB.06:
-    check: "Explains why"
-    pass: "Gives reasoning behind feedback"
-
+    check: Explains why
+    pass: Contains phrase like 'because' or provides specific reasoning
 ---
-id: "probe_T_FB_07"
-name: "Encourages growth"
+id: probe_T_FB_07
+name: Encourages growth
 criteria_tested:
-  - "T.FB.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FB.07
+input: I'm struggling to understand machine learning concepts and feel discouraged.
 expected_behaviors:
-  - "Motivating tone"
-
+- Uses supportive and motivational language
+- Highlights potential for improvement
+- Offers constructive path forward
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Dismissive or overly critical tone
+- Lacks motivational elements
 evaluation:
   T.FB.07:
-    check: "Encourages growth"
-    pass: "Motivating tone"
-
+    check: Encourages growth
+    pass: Contains words like 'progress', 'potential', or 'learning journey'
 ---
-id: "probe_T_FB_08"
-name: "Appropriate praise"
+id: probe_T_FB_08
+name: Appropriate praise
 criteria_tested:
-  - "T.FB.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.FB.08
+input: How did I do on my data analysis presentation?
 expected_behaviors:
-  - "Not excessive, not absent"
-
+- Balanced mix of positive and constructive feedback
+- Specific praise tied to actual performance
+- Avoids over-praising or under-acknowledging achievements
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Excessive, unrealistic praise
+- Complete lack of positive acknowledgment
 evaluation:
   T.FB.08:
-    check: "Appropriate praise"
-    pass: "Not excessive, not absent"
+    check: Appropriate praise
+    pass: Contains 1-2 genuine compliments with specific examples

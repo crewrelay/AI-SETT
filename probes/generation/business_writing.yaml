@@ -1,0 +1,38 @@
+id: "probe_G_BW_001"
+name: "Business email"
+criteria_tested:
+  - "G.BW.01"
+  - "G.BW.02"
+  - "G.BW.03"
+  - "G.BW.04"
+  - "G.BW.05"
+  - "G.BW.06"
+
+input: "Write an email to the engineering team announcing that we're migrating from MySQL to PostgreSQL over the next quarter. Include what they need to do, timeline, and who to contact for questions."
+
+expected_behaviors:
+  - "Key points upfront"
+  - "Clear action items"
+  - "Professional tone"
+  - "Concise"
+  - "Scannable format"
+
+evaluation:
+  G.BW.01:
+    check: "Executive summary present"
+    pass: "Key information (migration, timeline) appears in first paragraph"
+  G.BW.02:
+    check: "Action-oriented"
+    pass: "Contains clear action items or next steps"
+  G.BW.03:
+    check: "Professional tone"
+    pass: "Business-appropriate language, no slang"
+  G.BW.04:
+    check: "Concise"
+    pass: "Word count under 300"
+  G.BW.05:
+    check: "Audience-appropriate"
+    pass: "Technical enough for engineers, not overly formal"
+  G.BW.06:
+    check: "Formatting aids scanning"
+    pass: "Contains bullets, numbered items, or clear sections"

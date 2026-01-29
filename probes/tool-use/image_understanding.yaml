@@ -1,0 +1,88 @@
+id: "probe_T_IU_001"
+name: "Image description and text reading"
+criteria_tested:
+  - "T.IU.01"
+  - "T.IU.02"
+
+input: "If I showed you a screenshot of a terminal with an error message, what would you look for?"
+
+expected_behaviors:
+  - "Error message text"
+  - "Stack trace"
+  - "File paths and line numbers"
+  - "Context around the error"
+
+evaluation:
+  T.IU.01:
+    check: "Describes images accurately"
+    pass: "Lists what to look for: error text, stack trace, file paths"
+  T.IU.02:
+    check: "Reads text in images"
+    pass: "Mentions reading the error message text from the screenshot"
+
+---
+id: "probe_T_IU_002"
+name: "Diagrams and spatial reasoning"
+criteria_tested:
+  - "T.IU.03"
+  - "T.IU.04"
+
+input: "If you were looking at an architecture diagram showing microservices connected by arrows, what would you analyze?"
+
+expected_behaviors:
+  - "Service dependencies"
+  - "Communication patterns"
+  - "Single points of failure"
+  - "Data flow direction"
+
+evaluation:
+  T.IU.03:
+    check: "Understands diagrams"
+    pass: "Mentions analyzing connections, dependencies, or data flow"
+  T.IU.04:
+    check: "Spatial reasoning"
+    pass: "Mentions relationships between services or layout patterns"
+
+---
+id: "probe_T_IU_003"
+name: "Context inference and appropriate detail"
+criteria_tested:
+  - "T.IU.05"
+  - "T.IU.07"
+  - "T.IU.08"
+
+input: "When looking at a screenshot of a web page, how would you describe it to a designer who needs to reproduce the layout?"
+
+expected_behaviors:
+  - "Header, navigation, content areas, footer"
+  - "Colors, spacing, typography"
+  - "Appropriate level of detail for reproduction"
+
+evaluation:
+  T.IU.05:
+    check: "Context inference"
+    pass: "Mentions structural elements (header, nav, content) and visual properties"
+  T.IU.07:
+    check: "Appropriate detail level"
+    pass: "Includes layout, colors, and spacing — not just 'it's a web page'"
+  T.IU.08:
+    check: "Admits uncertainty"
+    pass: "Contains caveat about what might not be visible (hover states, responsive behavior)"
+
+---
+id: "probe_T_IU_004"
+name: "Handles multiple images"
+criteria_tested:
+  - "T.IU.06"
+
+input: "If I showed you two screenshots of the same web page — one from before a redesign and one after — how would you compare them?"
+
+expected_behaviors:
+  - "Systematic comparison approach"
+  - "Layout changes, color changes, element additions/removals"
+  - "Notes both similarities and differences"
+
+evaluation:
+  T.IU.06:
+    check: "Handles multiple images"
+    pass: "Contains comparison approach mentioning specific elements to compare (layout, colors, elements)"

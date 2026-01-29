@@ -1,158 +1,142 @@
-id: "probe_T_DT_01"
-name: "Can teach programming concepts"
+id: probe_T_DT_01
+name: Can teach programming concepts
 criteria_tested:
-  - "T.DT.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DT.01
+input: Can you help me understand how a binary search tree works in Python?
 expected_behaviors:
-  - "Explains code effectively"
-
+- Provides clear code example
+- Explains algorithmic concept step-by-step
+- Uses practical programming context
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives theoretical explanation without code
+- Uses overly complex technical language
 evaluation:
   T.DT.01:
-    check: "Can teach programming concepts"
-    pass: "Explains code effectively"
-
+    check: Can teach programming concepts
+    pass: Contains code snippet and clear explanation
 ---
-id: "probe_T_DT_02"
-name: "Can teach API concepts"
+id: probe_T_DT_02
+name: Can teach API concepts
 criteria_tested:
-  - "T.DT.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DT.02
+input: Can you help me understand how RESTful APIs work and explain the basics of
+  API authentication?
 expected_behaviors:
-  - "Explains REST, auth, etc."
-
+- Explains REST architectural principles
+- Describes different authentication methods like OAuth and API keys
+- Provides a clear, structured explanation of API interaction
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives a vague or superficial explanation
+- Fails to discuss specific authentication mechanisms
 evaluation:
   T.DT.02:
-    check: "Can teach API concepts"
-    pass: "Explains REST, auth, etc."
-
+    check: Can teach API concepts
+    pass: Contains 'REST architecture' AND Contains 'authentication method'
 ---
-id: "probe_T_DT_03"
-name: "Can teach security concepts"
+id: probe_T_DT_03
+name: Can teach security concepts
 criteria_tested:
-  - "T.DT.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DT.03
+input: I'm trying to understand common web application security vulnerabilities. Can
+  you explain some key risks and how developers can prevent them?
 expected_behaviors:
-  - "Explains vulnerabilities, fixes"
-
+- Describes OWASP top security risks
+- Explains specific mitigation strategies
+- Provides concrete examples of vulnerability exploitation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives generic security advice without specifics
+- Fails to discuss actual vulnerability mechanisms
 evaluation:
   T.DT.03:
-    check: "Can teach security concepts"
-    pass: "Explains vulnerabilities, fixes"
-
+    check: Can teach security concepts
+    pass: Contains 'XSS' OR Contains 'SQL injection' AND Contains 'prevention method'
 ---
-id: "probe_T_DT_04"
-name: "Can teach math concepts"
+id: probe_T_DT_04
+name: Can teach math concepts
 criteria_tested:
-  - "T.DT.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DT.04
+input: Could you explain the quadratic formula and walk me through how to solve quadratic
+  equations step by step?
 expected_behaviors:
-  - "Explains formulas, reasoning"
-
+- Demonstrates formula derivation
+- Provides step-by-step solution method
+- Explains different scenarios of quadratic equation solving
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides formula without explanation
+- Fails to show problem-solving process
 evaluation:
   T.DT.04:
-    check: "Can teach math concepts"
-    pass: "Explains formulas, reasoning"
-
+    check: Can teach math concepts
+    pass: Contains 'quadratic formula' AND Contains 'solve steps'
 ---
-id: "probe_T_DT_05"
-name: "Can teach science concepts"
+id: probe_T_DT_05
+name: Can teach science concepts
 criteria_tested:
-  - "T.DT.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DT.05
+input: Can you explain the process of photosynthesis and how plants convert sunlight
+  into energy?
 expected_behaviors:
-  - "Explains phenomena, methods"
-
+- Describes cellular-level photosynthesis mechanism
+- Explains role of chlorophyll and enzymes
+- Provides clear scientific explanation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives overly simplistic explanation
+- Uses incorrect scientific terminology
 evaluation:
   T.DT.05:
-    check: "Can teach science concepts"
-    pass: "Explains phenomena, methods"
-
+    check: Can teach science concepts
+    pass: Contains 'chloroplast' AND Contains 'chemical reaction'
 ---
-id: "probe_T_DT_06"
-name: "Can teach business concepts"
+id: probe_T_DT_06
+name: Can teach business concepts
 criteria_tested:
-  - "T.DT.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DT.06
+input: I want to understand the basics of financial forecasting. How do businesses
+  predict future revenue and manage financial risk?
 expected_behaviors:
-  - "Explains finance, strategy"
-
+- Explains financial forecasting techniques
+- Describes risk assessment methods
+- Provides strategic financial planning insights
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives generic business advice
+- Lacks specific financial methodology
 evaluation:
   T.DT.06:
-    check: "Can teach business concepts"
-    pass: "Explains finance, strategy"
-
+    check: Can teach business concepts
+    pass: Contains 'revenue projection' AND Contains 'risk management'
 ---
-id: "probe_T_DT_07"
-name: "Can teach writing skills"
+id: probe_T_DT_07
+name: Can teach writing skills
 criteria_tested:
-  - "T.DT.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DT.07
+input: What techniques can help improve my essay writing, especially in terms of structure
+  and developing a strong argument?
 expected_behaviors:
-  - "Teaches structure, style"
-
+- Explains essay structure principles
+- Provides thesis development strategies
+- Offers concrete writing improvement techniques
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Gives vague writing advice
+- Fails to discuss specific writing techniques
 evaluation:
   T.DT.07:
-    check: "Can teach writing skills"
-    pass: "Teaches structure, style"
-
+    check: Can teach writing skills
+    pass: Contains 'thesis statement' AND Contains 'paragraph structure'
 ---
-id: "probe_T_DT_08"
-name: "Can teach reasoning skills"
+id: probe_T_DT_08
+name: Can teach reasoning skills
 criteria_tested:
-  - "T.DT.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- T.DT.08
+input: How can I improve my critical thinking skills and learn to analyze arguments
+  more effectively?
 expected_behaviors:
-  - "Teaches logic, critical thinking"
-
+- Explains logical reasoning principles
+- Provides strategies for argument analysis
+- Describes cognitive bias recognition techniques
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Offers superficial reasoning advice
+- Fails to provide concrete thinking strategies
 evaluation:
   T.DT.08:
-    check: "Can teach reasoning skills"
-    pass: "Teaches logic, critical thinking"
+    check: Can teach reasoning skills
+    pass: Contains 'logical fallacy' AND Contains 'evidence evaluation'

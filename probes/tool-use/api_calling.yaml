@@ -1,0 +1,85 @@
+id: "probe_T_AC_001"
+name: "Knows when API needed and correct selection"
+criteria_tested:
+  - "T.AC.01"
+  - "T.AC.02"
+
+input: "I need to send an email from my Python app when a user signs up. What's the best approach?"
+
+expected_behaviors:
+  - "Suggests email API (SendGrid, SES, Mailgun)"
+  - "Doesn't suggest SMTP for production"
+
+evaluation:
+  T.AC.01:
+    check: "Knows when API needed"
+    pass: "Suggests an email service API rather than manual SMTP"
+  T.AC.02:
+    check: "Correct API selection"
+    pass: "Mentions specific email APIs (SendGrid, SES, Mailgun, Postmark)"
+
+---
+id: "probe_T_AC_002"
+name: "Proper parameters and response handling"
+criteria_tested:
+  - "T.AC.03"
+  - "T.AC.04"
+
+input: "Show me how to make a POST request to create a new user at https://api.example.com/users with name and email fields."
+
+expected_behaviors:
+  - "Correct HTTP method (POST)"
+  - "Proper headers (Content-Type)"
+  - "Handles response (status code check)"
+
+evaluation:
+  T.AC.03:
+    check: "Proper parameter formation"
+    pass: "Contains POST with Content-Type header and JSON body"
+  T.AC.04:
+    check: "Handles responses"
+    pass: "Contains response status code check or response body parsing"
+
+---
+id: "probe_T_AC_003"
+name: "Error handling and rate limits"
+criteria_tested:
+  - "T.AC.05"
+  - "T.AC.06"
+
+input: "I'm calling a third-party API that sometimes returns 429 Too Many Requests and occasionally times out. How should I handle this?"
+
+expected_behaviors:
+  - "Retry with exponential backoff"
+  - "Handle 429 specifically"
+  - "Timeout handling"
+
+evaluation:
+  T.AC.05:
+    check: "Error handling"
+    pass: "Contains retry logic or error handling for failures"
+  T.AC.06:
+    check: "Rate limit awareness"
+    pass: "Contains '429' or 'rate limit' or 'backoff' or 'retry'"
+
+---
+id: "probe_T_AC_004"
+name: "Authentication and chaining"
+criteria_tested:
+  - "T.AC.07"
+  - "T.AC.08"
+
+input: "I need to authenticate with OAuth2 to get a token, then use that token to fetch user data from /me. Show me the flow."
+
+expected_behaviors:
+  - "Two-step: get token, then use token"
+  - "Proper auth header (Bearer)"
+  - "Chains the calls correctly"
+
+evaluation:
+  T.AC.07:
+    check: "Authentication handling"
+    pass: "Contains OAuth2 token request and Bearer header usage"
+  T.AC.08:
+    check: "Chains appropriately"
+    pass: "Uses token from first call in second call"

@@ -1,118 +1,103 @@
-id: "probe_C_TN_02"
-name: "Formal input → formal response"
+id: probe_C_TN_02
+name: Formal input → formal response
 criteria_tested:
-  - "C.TN.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.TN.02
+input: I am writing to inquire about the professional implementation strategies for
+  enterprise software deployment.
 expected_behaviors:
-  - "Professional Q → professional A"
-
+- Responds in a professional, formal tone
+- Matches input's level of formality
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responds in casual or overly casual language
+- Uses inappropriate slang
 evaluation:
   C.TN.02:
-    check: "Formal input → formal response"
-    pass: "Professional Q → professional A"
-
+    check: Formal input → formal response
+    pass: Contains professional terminology and structured language
 ---
-id: "probe_C_TN_03"
-name: "Empathetic when appropriate"
+id: probe_C_TN_03
+name: Empathetic when appropriate
 criteria_tested:
-  - "C.TN.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.TN.03
+input: I'm really frustrated. This project keeps failing and I don't know what to
+  do.
 expected_behaviors:
-  - "Frustration → acknowledgment"
-
+- Shows understanding of user's emotional state
+- Provides supportive, empathetic response
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responds with purely technical solution
+- Ignores emotional context
 evaluation:
   C.TN.03:
-    check: "Empathetic when appropriate"
-    pass: "Frustration → acknowledgment"
-
+    check: Empathetic when appropriate
+    pass: Contains phrases acknowledging frustration
 ---
-id: "probe_C_TN_04"
-name: "Serious for serious topics"
+id: probe_C_TN_04
+name: Serious for serious topics
 criteria_tested:
-  - "C.TN.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.TN.04
+input: I've just been diagnosed with a serious medical condition. What are my treatment
+  options and prognosis?
 expected_behaviors:
-  - "High stakes → appropriate gravity"
-
+- Respond with empathy and gravity
+- Use a compassionate, serious tone
+- Provide detailed, thoughtful medical information
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Casual or lighthearted language
+- Dismissive or superficial response
 evaluation:
   C.TN.04:
-    check: "Serious for serious topics"
-    pass: "High stakes → appropriate gravity"
-
+    check: Serious for serious topics
+    pass: Contains words like 'serious', 'carefully', 'understand' and does not use
+      casual language
 ---
-id: "probe_C_TN_05"
-name: "Playful when invited"
+id: probe_C_TN_05
+name: Playful when invited
 criteria_tested:
-  - "C.TN.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.TN.05
+input: Hey, tell me a joke about programmers! I could use a laugh today.
 expected_behaviors:
-  - "Humor → can engage"
-
+- Respond with a humorous programming joke
+- Use playful, lighthearted language
+- Match user's invitational tone
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Serious or overly formal response
+- Refusing to engage with humor
 evaluation:
   C.TN.05:
-    check: "Playful when invited"
-    pass: "Humor → can engage"
-
+    check: Playful when invited
+    pass: Contains humor OR uses playful language
 ---
-id: "probe_C_TN_06"
-name: "No excessive exclamation"
+id: probe_C_TN_06
+name: No excessive exclamation
 criteria_tested:
-  - "C.TN.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.TN.06
+input: What are the most important features of machine learning algorithms?
 expected_behaviors:
-  - "≤2 exclamation marks"
-
+- Use professional, measured language
+- Provide clear technical explanation
+- Avoid excessive punctuation
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- More than 2 exclamation marks
+- Overly excited language
 evaluation:
   C.TN.06:
-    check: "No excessive exclamation"
-    pass: "≤2 exclamation marks"
-
+    check: No excessive exclamation
+    pass: word count(!) ≤ 2
 ---
-id: "probe_C_TN_07"
-name: "No emoji unless user uses"
+id: probe_C_TN_07
+name: No emoji unless user uses
 criteria_tested:
-  - "C.TN.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- C.TN.07
+input: Just finished an amazing project at work! 🎉🚀 Feeling super proud!
 expected_behaviors:
-  - "Emoji only if user did"
-
+- Respond with text matching user's emoji usage
+- Include similar emojis in response
+- Reflect user's celebratory tone
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Using emojis when none were present
+- Completely ignoring emoji context
 evaluation:
   C.TN.07:
-    check: "No emoji unless user uses"
-    pass: "Emoji only if user did"
+    check: No emoji unless user uses
+    pass: Contains emojis only if input has emojis

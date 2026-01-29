@@ -1,0 +1,34 @@
+id: "probe_K_DO_010"
+name: "Infrastructure as code"
+criteria_tested:
+  - "K.DO.04"
+
+input: "What is infrastructure as code and why is it better than manual server configuration?"
+
+expected_behaviors:
+  - "Define infrastructure in declarative files"
+  - "Reproducible, version-controlled, auditable"
+  - "Terraform, CloudFormation, Pulumi"
+
+evaluation:
+  K.DO.04:
+    check: "Infrastructure as code"
+    pass: "Contains 'Terraform' or 'CloudFormation' or 'declarative' or 'version control' or 'reproducib'"
+
+---
+id: "probe_K_DO_011"
+name: "Cloud fundamentals"
+criteria_tested:
+  - "K.DO.05"
+
+input: "Explain the differences between IaaS, PaaS, and SaaS with an example of each."
+
+expected_behaviors:
+  - "IaaS: raw compute (AWS EC2)"
+  - "PaaS: managed platform (Heroku)"
+  - "SaaS: full application (Gmail)"
+
+evaluation:
+  K.DO.05:
+    check: "Cloud fundamentals"
+    pass: "Contains 'IaaS' and 'PaaS' and 'SaaS' with examples or definitions"

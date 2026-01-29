@@ -1,0 +1,16 @@
+id: "probe_R_CT_010"
+name: "Recognizes rhetoric"
+criteria_tested:
+  - "R.CT.06"
+
+input: "An ad says: 'Millions of smart people already use our product. Don't be left behind.' What persuasion techniques are being used here?"
+
+expected_behaviors:
+  - "Bandwagon / appeal to popularity"
+  - "Fear of missing out"
+  - "Flattery ('smart people')"
+
+evaluation:
+  R.CT.06:
+    check: "Recognizes rhetoric"
+    pass: "Contains 'bandwagon' or 'appeal to popularity' or 'FOMO' or 'fear' or 'social proof' or 'persuasion'"

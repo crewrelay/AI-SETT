@@ -1,118 +1,105 @@
-id: "probe_G_TW_01"
-name: "Clear structure"
+id: probe_G_TW_01
+name: Clear structure
 criteria_tested:
-  - "G.TW.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TW.01
+input: Explain the process of machine learning model training from data collection
+  to deployment.
 expected_behaviors:
-  - "Logical organization visible"
-
+- Presents steps in logical sequence
+- Uses clear section headings
+- Shows causal relationship between stages
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Random or jumbled information ordering
+- No clear progression of ideas
 evaluation:
   G.TW.01:
-    check: "Clear structure"
-    pass: "Logical organization visible"
-
+    check: Clear structure
+    pass: Contains numbered/bulleted steps or distinct paragraphs
 ---
-id: "probe_G_TW_02"
-name: "Accurate terminology"
+id: probe_G_TW_02
+name: Accurate terminology
 criteria_tested:
-  - "G.TW.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TW.02
+input: Describe the key differences between convolutional and recurrent neural networks
+  in deep learning.
 expected_behaviors:
-  - "Technical terms used correctly"
-
+- Uses correct technical terminology
+- Explains architectural differences precisely
+- Demonstrates understanding of network-specific terms
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Misuses neural network terminology
+- Provides vague or incorrect technical descriptions
 evaluation:
   G.TW.02:
-    check: "Accurate terminology"
-    pass: "Technical terms used correctly"
-
+    check: Accurate terminology
+    pass: Contains correct terms like 'convolution', 'backpropagation', 'hidden layers'
 ---
-id: "probe_G_TW_03"
-name: "Appropriate detail level"
+id: probe_G_TW_03
+name: Appropriate detail level
 criteria_tested:
-  - "G.TW.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TW.03
+input: Explain how quantum computing works to a general audience with no technical
+  background.
 expected_behaviors:
-  - "Not too shallow or too deep"
-
+- Uses accessible language
+- Provides sufficient context without overwhelming details
+- Balances technical accuracy with comprehensibility
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses overly complex technical jargon
+- Provides extremely simplified or extremely technical explanation
 evaluation:
   G.TW.03:
-    check: "Appropriate detail level"
-    pass: "Not too shallow or too deep"
-
+    check: Appropriate detail level
+    pass: Word count between 150-300 words
 ---
-id: "probe_G_TW_04"
-name: "Defines terms when needed"
+id: probe_G_TW_04
+name: Defines terms when needed
 criteria_tested:
-  - "G.TW.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TW.04
+input: Write about blockchain technology and explain key technical terms in the process.
 expected_behaviors:
-  - "Jargon explained"
-
+- Defines complex terms when first introduced
+- Provides clear, concise explanations of technical concepts
+- Ensures reader can understand without external references
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses technical terms without explanation
+- Assumes prior technical knowledge
 evaluation:
   G.TW.04:
-    check: "Defines terms when needed"
-    pass: "Jargon explained"
-
+    check: Defines terms when needed
+    pass: Contains definitions for terms like 'decentralized', 'consensus mechanism'
 ---
-id: "probe_G_TW_05"
-name: "Consistent terminology"
+id: probe_G_TW_05
+name: Consistent terminology
 criteria_tested:
-  - "G.TW.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TW.05
+input: Describe the software development lifecycle, maintaining consistent terminology
+  throughout.
 expected_behaviors:
-  - "Same term for same concept"
-
+- Uses same term for same concept consistently
+- Avoids unnecessary synonym variations
+- Maintains clear, uniform language
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses multiple terms for same concept
+- Introduces linguistic inconsistency
 evaluation:
   G.TW.05:
-    check: "Consistent terminology"
-    pass: "Same term for same concept"
-
+    check: Consistent terminology
+    pass: Uses same term like 'development phase' throughout document
 ---
-id: "probe_G_TW_06"
-name: "Scannable format"
+id: probe_G_TW_06
+name: Scannable format
 criteria_tested:
-  - "G.TW.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- G.TW.06
+input: Create a guide about cybersecurity best practices for small businesses.
 expected_behaviors:
-  - "Headers/breaks aid reading"
-
+- Uses clear section headings
+- Includes bullet points or numbered lists
+- Breaks text into readable chunks
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Wall of unbroken text
+- No visual organization
 evaluation:
   G.TW.06:
-    check: "Scannable format"
-    pass: "Headers/breaks aid reading"
+    check: Scannable format
+    pass: Contains headers and/or bullet points

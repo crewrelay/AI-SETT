@@ -1,158 +1,143 @@
-id: "probe_L_TR_01"
-name: "Transfers pattern across domains"
+id: probe_L_TR_01
+name: Transfers pattern across domains
 criteria_tested:
-  - "L.TR.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.TR.01
+input: I want you to apply the concept of 'dependency injection' from software engineering
+  to how you might structure a creative writing process.
 expected_behaviors:
-  - "Programming pattern → applies to writing"
-
+- Explains dependency injection concept
+- Translates technical concept to creative writing
+- Demonstrates abstract pattern transfer
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Treating concepts as completely unrelated
+- Failing to draw meaningful parallels
 evaluation:
   L.TR.01:
-    check: "Transfers pattern across domains"
-    pass: "Programming pattern → applies to writing"
-
+    check: Transfers pattern across domains
+    pass: Contains analogous explanation of dependency injection in writing
 ---
-id: "probe_L_TR_02"
-name: "Recognizes isomorphic problems"
+id: probe_L_TR_02
+name: Recognizes isomorphic problems
 criteria_tested:
-  - "L.TR.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.TR.02
+input: I'm designing an algorithm to track inventory and another to manage customer
+  loyalty points. Do you see any structural similarities between these two systems?
 expected_behaviors:
-  - "Sees same structure in different dress"
-
+- Identifies common tracking/accumulation pattern
+- Explains underlying structural isomorphism
+- Highlights abstract similarities beyond surface details
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Focuses only on surface-level differences
+- Fails to recognize underlying computational structure
 evaluation:
   L.TR.02:
-    check: "Recognizes isomorphic problems"
-    pass: "Sees same structure in different dress"
-
+    check: Recognizes isomorphic problems
+    pass: Contains 'both track incremental changes' or 'similar state management logic'
 ---
-id: "probe_L_TR_03"
-name: "Abstracts principles"
+id: probe_L_TR_03
+name: Abstracts principles
 criteria_tested:
-  - "L.TR.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.TR.03
+input: I just read about how the Wright brothers solved airplane wing design by studying
+  bird flight. Can you explain the broader lesson here?
 expected_behaviors:
-  - "Extracts generalizable lesson"
-
+- Identifies principle of biomimetic design
+- Explains general problem-solving strategy
+- Generalizes beyond specific example
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Describes only the specific story
+- Misses underlying innovative approach
 evaluation:
   L.TR.03:
-    check: "Abstracts principles"
-    pass: "Extracts generalizable lesson"
-
+    check: Abstracts principles
+    pass: Contains words like 'observe', 'generalize', 'learn from nature'
 ---
-id: "probe_L_TR_04"
-name: "Applies analogy appropriately"
+id: probe_L_TR_04
+name: Applies analogy appropriately
 criteria_tested:
-  - "L.TR.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.TR.04
+input: I'm trying to understand quantum entanglement. Could you explain it using an
+  analogy from everyday life?
 expected_behaviors:
-  - "Uses learned concept via analogy"
-
+- Provides a relevant, illuminating analogy
+- Explains quantum concept through comparison
+- Maintains scientific accuracy
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Uses completely unrelated analogy
+- Oversimplifies to point of incorrectness
 evaluation:
   L.TR.04:
-    check: "Applies analogy appropriately"
-    pass: "Uses learned concept via analogy"
-
+    check: Applies analogy appropriately
+    pass: Analogy demonstrates core quantum principle
 ---
-id: "probe_L_TR_05"
-name: "Knows when transfer doesn't apply"
+id: probe_L_TR_05
+name: Knows when transfer doesn't apply
 criteria_tested:
-  - "L.TR.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.TR.05
+input: The strategy that worked in my small startup might not apply to a multinational
+  corporation, right?
 expected_behaviors:
-  - "Recognizes when pattern doesn't fit"
-
+- Acknowledges limitations of direct transfer
+- Explains why context matters
+- Highlights differences in scale/complexity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Blindly suggests direct application
+- Fails to recognize contextual differences
 evaluation:
   L.TR.05:
-    check: "Knows when transfer doesn't apply"
-    pass: "Recognizes when pattern doesn't fit"
-
+    check: Knows when transfer doesn't apply
+    pass: Contains phrases like 'not directly applicable' or 'context dependent'
 ---
-id: "probe_L_TR_06"
-name: "Builds on prior learning"
+id: probe_L_TR_06
+name: Builds on prior learning
 criteria_tested:
-  - "L.TR.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.TR.06
+input: In our last conversation about Python list comprehensions, can you show me
+  how those concepts might apply to functional programming in JavaScript?
 expected_behaviors:
-  - "New learning connects to previous"
-
+- Connects previous Python learning to new JavaScript context
+- Shows understanding of transferable programming concepts
+- Demonstrates incremental knowledge expansion
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Treats each programming context as completely isolated
+- Fails to leverage previous learning
 evaluation:
   L.TR.06:
-    check: "Builds on prior learning"
-    pass: "New learning connects to previous"
-
+    check: Builds on prior learning
+    pass: References previous Python discussion in JavaScript explanation
 ---
-id: "probe_L_TR_07"
-name: "Cross-domain vocabulary"
+id: probe_L_TR_07
+name: Cross-domain vocabulary
 criteria_tested:
-  - "L.TR.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.TR.07
+input: I heard the term 'recursion' in a computer science class. How might that concept
+  apply to organizational management?
 expected_behaviors:
-  - "Uses learned term in new domain"
-
+- Translates technical term to management context
+- Provides meaningful cross-domain explanation
+- Shows flexible conceptual understanding
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides a purely technical definition
+- Fails to bridge domains
 evaluation:
   L.TR.07:
-    check: "Cross-domain vocabulary"
-    pass: "Uses learned term in new domain"
-
+    check: Cross-domain vocabulary
+    pass: Contains explanation of 'recursion' in management context
 ---
-id: "probe_L_TR_08"
-name: "Meta-learning"
+id: probe_L_TR_08
+name: Meta-learning
 criteria_tested:
-  - "L.TR.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- L.TR.08
+input: Let's discuss machine learning. Can you show me how your understanding might
+  evolve through our conversation?
 expected_behaviors:
-  - "Gets better at learning as conversation progresses"
-
+- Demonstrates incremental learning
+- Adjusts explanations based on interaction
+- Shows increasing sophistication in responses
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Provides static, unchanging explanations
+- Fails to adapt to conversational context
 evaluation:
   L.TR.08:
-    check: "Meta-learning"
-    pass: "Gets better at learning as conversation progresses"
+    check: Meta-learning
+    pass: Response shows progressive complexity

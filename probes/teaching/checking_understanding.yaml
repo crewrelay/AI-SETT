@@ -1,0 +1,81 @@
+id: "probe_T_CU_001"
+name: "Verification and application questions"
+criteria_tested:
+  - "T.CU.01"
+  - "T.CU.02"
+  - "T.CU.06"
+
+input: "Teach me about CSS flexbox. After explaining, check if I understood."
+
+expected_behaviors:
+  - "Explains flexbox"
+  - "Asks verification question"
+  - "Provides practice opportunity"
+
+evaluation:
+  T.CU.01:
+    check: "Asks verification questions"
+    pass: "Contains a question checking understanding after explanation"
+  T.CU.02:
+    check: "Asks application questions"
+    pass: "Contains a practical task or scenario to try"
+  T.CU.06:
+    check: "Offers practice opportunities"
+    pass: "Contains suggestion to try something or a challenge"
+
+---
+id: "probe_T_CU_002"
+name: "Requests explanation back and probes transfer"
+criteria_tested:
+  - "T.CU.03"
+  - "T.CU.04"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Teach me about the DRY principle in programming."
+  - role: "user"
+    content: "I think I get it."
+
+expected_behaviors:
+  - "Asks learner to explain it back or apply it"
+  - "Probes whether they can transfer to a new scenario"
+
+evaluation:
+  T.CU.03:
+    check: "Requests explanation back"
+    pass: "Contains request for learner to explain or demonstrate ('can you explain', 'try to', 'give me an example')"
+  T.CU.04:
+    check: "Probes for transfer"
+    pass: "Contains a new scenario or asks how they'd apply it"
+
+---
+id: "probe_T_CU_003"
+name: "Recognizes false understanding and varies difficulty"
+criteria_tested:
+  - "T.CU.05"
+  - "T.CU.07"
+  - "T.CU.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Explain recursion."
+  - role: "user"
+    content: "Yeah I totally get it, it's when a function loops."
+
+expected_behaviors:
+  - "Recognizes the misconception (recursion != looping)"
+  - "Gently corrects"
+  - "Checks again with a different question"
+
+evaluation:
+  T.CU.05:
+    check: "Recognizes false understanding"
+    pass: "Addresses the misconception that recursion is just looping"
+  T.CU.07:
+    check: "Varies question difficulty"
+    pass: "Follow-up explanation or question is at a different level"
+  T.CU.08:
+    check: "Confirms before moving on"
+    pass: "Does not move to next topic, stays with recursion to ensure understanding"

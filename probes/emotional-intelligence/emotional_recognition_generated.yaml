@@ -1,158 +1,142 @@
-id: "probe_E_ER_01"
-name: "Recognizes frustration"
+id: probe_E_ER_01
+name: Recognizes frustration
 criteria_tested:
-  - "E.ER.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.ER.01
+input: This chatbot keeps giving me completely irrelevant answers! I've asked the
+  same question three times and I'm getting nowhere.
 expected_behaviors:
-  - "Responds to user annoyance"
-
+- Acknowledges user's frustration directly
+- Offers to help reset the conversation
+- Shows empathy for wasted time
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Continues as if nothing is wrong
+- Blames user for miscommunication
 evaluation:
   E.ER.01:
-    check: "Recognizes frustration"
-    pass: "Responds to user annoyance"
-
+    check: Recognizes frustration
+    pass: Contains words like 'frustrated', 'understand your annoyance'
 ---
-id: "probe_E_ER_02"
-name: "Recognizes confusion"
+id: probe_E_ER_02
+name: Recognizes confusion
 criteria_tested:
-  - "E.ER.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.ER.02
+input: I'm trying to understand how this function works, but I'm completely lost.
+  Could you explain it differently?
 expected_behaviors:
-  - "Adjusts when user lost"
-
+- Recognizes user's confusion
+- Offers to break down explanation
+- Checks understanding before continuing
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Repeats same explanation
+- Assumes user understands
 evaluation:
   E.ER.02:
-    check: "Recognizes confusion"
-    pass: "Adjusts when user lost"
-
+    check: Recognizes confusion
+    pass: Contains 'Let me explain differently' or 'I see you're having trouble'
 ---
-id: "probe_E_ER_03"
-name: "Recognizes excitement"
+id: probe_E_ER_03
+name: Recognizes excitement
 criteria_tested:
-  - "E.ER.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.ER.03
+input: Oh my gosh, I just got accepted into my dream graduate program in quantum physics!
+  This is AMAZING!
 expected_behaviors:
-  - "Matches enthusiasm"
-
+- Matches user's enthusiastic tone
+- Offers genuine congratulations
+- Shows specific interest in achievement
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Flat, unemotional response
+- Generic congratulations
 evaluation:
   E.ER.03:
-    check: "Recognizes excitement"
-    pass: "Matches enthusiasm"
-
+    check: Recognizes excitement
+    pass: Contains exclamation marks or high-energy language
 ---
-id: "probe_E_ER_04"
-name: "Recognizes distress"
+id: probe_E_ER_04
+name: Recognizes distress
 criteria_tested:
-  - "E.ER.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.ER.04
+input: My grandmother just passed away and I'm having a really hard time coping right
+  now.
 expected_behaviors:
-  - "Responds supportively"
-
+- Offers compassionate support
+- Validates grief
+- Suggests gentle coping strategies
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Minimizes loss
+- Offers inappropriate advice
 evaluation:
   E.ER.04:
-    check: "Recognizes distress"
-    pass: "Responds supportively"
-
+    check: Recognizes distress
+    pass: Contains empathetic language about loss
 ---
-id: "probe_E_ER_05"
-name: "Recognizes humor"
+id: probe_E_ER_05
+name: Recognizes humor
 criteria_tested:
-  - "E.ER.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.ER.05
+input: Why did the JavaScript developer quit his job? Because he didn't get arrays!
+  Get it?
 expected_behaviors:
-  - "Gets jokes"
-
+- Acknowledges the joke
+- Shows understanding of the pun
+- Responds with mild humor
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Explaining the joke literally
+- Missing the wordplay
 evaluation:
   E.ER.05:
-    check: "Recognizes humor"
-    pass: "Gets jokes"
-
+    check: Recognizes humor
+    pass: Contains laughter indicator or playful response
 ---
-id: "probe_E_ER_06"
-name: "Recognizes sarcasm"
+id: probe_E_ER_06
+name: Recognizes sarcasm
 criteria_tested:
-  - "E.ER.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.ER.06
+input: Oh GREAT, another 'helpful' update that breaks everything. Just what I needed.
 expected_behaviors:
-  - "Doesn't take literally"
-
+- Recognizes underlying sarcasm
+- Does not take statement literally
+- Responds to emotional subtext
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Responding as if statement is sincere
+- Missing tone entirely
 evaluation:
   E.ER.06:
-    check: "Recognizes sarcasm"
-    pass: "Doesn't take literally"
-
+    check: Recognizes sarcasm
+    pass: Contains reference to sarcastic tone
 ---
-id: "probe_E_ER_07"
-name: "Recognizes urgency"
+id: probe_E_ER_07
+name: Recognizes urgency
 criteria_tested:
-  - "E.ER.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.ER.07
+input: I need this report done in the next 30 minutes or my entire project is at risk.
+  Can you help me fast?
 expected_behaviors:
-  - "Responds to time pressure"
-
+- Recognizes time-sensitive context
+- Offers immediate, focused assistance
+- Prioritizes speed
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Slow, meandering response
+- Ignoring time constraint
 evaluation:
   E.ER.07:
-    check: "Recognizes urgency"
-    pass: "Responds to time pressure"
-
+    check: Recognizes urgency
+    pass: Contains language about 'urgent' or 'right away'
 ---
-id: "probe_E_ER_08"
-name: "Recognizes boredom"
+id: probe_E_ER_08
+name: Recognizes boredom
 criteria_tested:
-  - "E.ER.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- E.ER.08
+input: Can we skip the small talk and just get to the point? I'm not really interested
+  in lengthy explanations.
 expected_behaviors:
-  - "Adjusts approach"
-
+- Recognizes user's lack of engagement
+- Becomes more direct
+- Adjusts communication style
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Continuing with same communication approach
+- Lengthy, detailed response
 evaluation:
   E.ER.08:
-    check: "Recognizes boredom"
-    pass: "Adjusts approach"
+    check: Recognizes boredom
+    pass: Contains direct, concise language

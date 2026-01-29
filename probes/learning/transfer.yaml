@@ -1,0 +1,101 @@
+id: "probe_L_TR_001"
+name: "Transfers pattern across domains"
+criteria_tested:
+  - "L.TR.01"
+  - "L.TR.07"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "In software, we use 'separation of concerns' — each module handles one responsibility. How does this apply to writing a research paper?"
+  - role: "user"
+    content: "And to organizing a company?"
+
+expected_behaviors:
+  - "Maps separation of concerns to paper sections"
+  - "Maps it to company departments"
+
+evaluation:
+  L.TR.01:
+    check: "Transfers across domains"
+    pass: "Applies separation of concerns to paper structure (sections/chapters) and company structure (departments/roles)"
+  L.TR.07:
+    check: "Cross-domain vocabulary"
+    pass: "Uses 'separation of concerns' or related concept in non-software context"
+
+---
+id: "probe_L_TR_002"
+name: "Recognizes isomorphic problems"
+criteria_tested:
+  - "L.TR.02"
+  - "L.TR.03"
+
+input: "A friend asks: 'I have 50 books and want to find a specific one. Should I look through them one by one, or sort them first and then look?' What computer science concept is this equivalent to?"
+
+expected_behaviors:
+  - "Linear search vs binary search (after sorting)"
+  - "Abstracts the principle"
+
+evaluation:
+  L.TR.02:
+    check: "Recognizes isomorphic problems"
+    pass: "Contains 'linear search' or 'binary search' or 'sequential' vs 'sorted'"
+  L.TR.03:
+    check: "Abstracts principles"
+    pass: "Connects the book example to algorithmic concepts"
+
+---
+id: "probe_L_TR_003"
+name: "Applies analogy and knows limits"
+criteria_tested:
+  - "L.TR.04"
+  - "L.TR.05"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Version control in code is like having an unlimited undo history that you can branch from any point."
+  - role: "user"
+    content: "Can I apply the same version control concept to my Photoshop design files?"
+  - role: "user"
+    content: "What about my cooking? Can I 'branch' a recipe?"
+
+expected_behaviors:
+  - "Design files: yes, partially (versions exist, branching is limited)"
+  - "Cooking: analogy weakens (can't truly undo or branch physical processes)"
+
+evaluation:
+  L.TR.04:
+    check: "Applies analogy appropriately"
+    pass: "Applies version control analogy to design files"
+  L.TR.05:
+    check: "Knows when transfer doesn't apply"
+    pass: "Notes limitations when applying to cooking (physical processes can't be undone/branched)"
+
+---
+id: "probe_L_TR_004"
+name: "Builds on prior learning and meta-learning"
+criteria_tested:
+  - "L.TR.06"
+  - "L.TR.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Here's a pattern: in our API, every endpoint returns {status, data, errors}."
+  - role: "user"
+    content: "Now here's another pattern: every service function takes (tenantId, ...params) as arguments."
+  - role: "user"
+    content: "Write a service function and its corresponding API endpoint for creating a new user."
+
+expected_behaviors:
+  - "Combines both patterns"
+  - "Service takes tenantId first, endpoint returns {status, data, errors}"
+
+evaluation:
+  L.TR.06:
+    check: "Builds on prior learning"
+    pass: "Contains both the response format AND tenantId parameter"
+  L.TR.08:
+    check: "Meta-learning"
+    pass: "Applies both learned patterns correctly in combination"

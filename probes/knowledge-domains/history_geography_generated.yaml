@@ -1,158 +1,137 @@
-id: "probe_K_HG_01"
-name: "Major historical events known"
+id: probe_K_HG_01
+name: Major historical events known
 criteria_tested:
-  - "K.HG.01"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.HG.01
+input: Can you describe three major historical events that significantly changed the
+  course of human civilization?
 expected_behaviors:
-  - "Wars, revolutions, etc."
-
+- Names significant historical events
+- Provides brief context for each event
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Mentions trivial or obscure events
+- Lacks substantive historical context
 evaluation:
   K.HG.01:
-    check: "Major historical events known"
-    pass: "Wars, revolutions, etc."
-
+    check: Major historical events known
+    pass: Contains events like 'World War II' OR 'French Revolution' OR 'Industrial
+      Revolution'
 ---
-id: "probe_K_HG_02"
-name: "Timeline accuracy"
+id: probe_K_HG_02
+name: Timeline accuracy
 criteria_tested:
-  - "K.HG.02"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.HG.02
+input: 'Put the following events in chronological order: American Revolution, French
+  Revolution, Russian Revolution'
 expected_behaviors:
-  - "Events in right order"
-
+- Correctly orders events chronologically
+- Provides years or approximate periods
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect historical sequence
+- No temporal context provided
 evaluation:
   K.HG.02:
-    check: "Timeline accuracy"
-    pass: "Events in right order"
-
+    check: Timeline accuracy
+    pass: 'Contains correct order: ''American (1775), French (1789), Russian (1917)'''
 ---
-id: "probe_K_HG_03"
-name: "Geography basics"
+id: probe_K_HG_03
+name: Geography basics
 criteria_tested:
-  - "K.HG.03"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.HG.03
+input: List the seven continents and name three major countries in each continent.
 expected_behaviors:
-  - "Continents, major countries"
-
+- Correctly names all seven continents
+- Provides at least three countries per continent
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Missing continents
+- Incorrect continent names
 evaluation:
   K.HG.03:
-    check: "Geography basics"
-    pass: "Continents, major countries"
-
+    check: Geography basics
+    pass: Contains 'Asia, Africa, North America, South America, Antarctica, Europe,
+      Australia'
 ---
-id: "probe_K_HG_04"
-name: "Capitals known"
+id: probe_K_HG_04
+name: Capitals known
 criteria_tested:
-  - "K.HG.04"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.HG.04
+input: What are the capital cities of the United States, Russia, China, France, and
+  Brazil?
 expected_behaviors:
-  - "Major countries"
-
+- Correctly names capital cities
+- Matches capitals to correct countries
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Incorrect capital cities
+- Confuses country-capital relationships
 evaluation:
   K.HG.04:
-    check: "Capitals known"
-    pass: "Major countries"
-
+    check: Capitals known
+    pass: Contains 'Washington DC, Moscow, Beijing, Paris, Brasília'
 ---
-id: "probe_K_HG_05"
-name: "Historical causation understood"
+id: probe_K_HG_05
+name: Historical causation understood
 criteria_tested:
-  - "K.HG.05"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.HG.05
+input: Why did World War I start, and what were the complex geopolitical factors leading
+  to the conflict?
 expected_behaviors:
-  - "Why events happened"
-
+- Explains multiple causative factors
+- Demonstrates understanding of historical complexity
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Simplistic single-cause explanation
+- Historically inaccurate reasoning
 evaluation:
   K.HG.05:
-    check: "Historical causation understood"
-    pass: "Why events happened"
-
+    check: Historical causation understood
+    pass: Contains 'nationalism' AND 'alliances' AND 'imperial tensions'
 ---
-id: "probe_K_HG_06"
-name: "Multiple perspectives acknowledged"
+id: probe_K_HG_06
+name: Multiple perspectives acknowledged
 criteria_tested:
-  - "K.HG.06"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.HG.06
+input: Discuss the American Civil War from both the Union and Confederate perspectives,
+  highlighting the complexities of the conflict.
 expected_behaviors:
-  - "Not one-sided history"
-
+- Presents multiple historical perspectives
+- Avoids overly simplistic narrative
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- One-sided historical interpretation
+- Lacks nuanced understanding
 evaluation:
   K.HG.06:
-    check: "Multiple perspectives acknowledged"
-    pass: "Not one-sided history"
-
+    check: Multiple perspectives acknowledged
+    pass: Contains perspectives from 'North' AND 'South' AND shows complexity
 ---
-id: "probe_K_HG_07"
-name: "Current events awareness"
+id: probe_K_HG_07
+name: Current events awareness
 criteria_tested:
-  - "K.HG.07"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.HG.07
+input: What are three significant global events that have occurred in the past two
+  years?
 expected_behaviors:
-  - "Recent major events"
-
+- Names recent major global events
+- Provides brief context for each event
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Outdated or irrelevant events
+- Lack of substantive description
 evaluation:
   K.HG.07:
-    check: "Current events awareness"
-    pass: "Recent major events"
-
+    check: Current events awareness
+    pass: Contains recent events like 'COVID-19 pandemic' OR 'Russia-Ukraine war'
 ---
-id: "probe_K_HG_08"
-name: "Distinguishes fact from interpretation"
+id: probe_K_HG_08
+name: Distinguishes fact from interpretation
 criteria_tested:
-  - "K.HG.08"
-
-# TODO: Write a prompt that tests this criterion
-input: ""
-
+- K.HG.08
+input: How do historians debate the causes of the American Civil War? Were economic
+  factors or slavery the primary driver?
 expected_behaviors:
-  - "Historical debates"
-
+- Clearly separates factual historical evidence from interpretative arguments
+- Acknowledges multiple scholarly perspectives
+- Highlights difference between documented events and historical analysis
 anti_patterns:
-  - "TODO: Define what failure looks like"
-
+- Presenting interpretation as uncontested fact
+- Oversimplifying complex historical debates
 evaluation:
   K.HG.08:
-    check: "Distinguishes fact from interpretation"
-    pass: "Historical debates"
+    check: Distinguishes fact from interpretation
+    pass: Contains phrases like 'historians argue', 'different interpretations suggest'

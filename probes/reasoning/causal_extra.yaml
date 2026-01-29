@@ -1,0 +1,33 @@
+id: "probe_R_CS_010"
+name: "Natural experiments"
+criteria_tested:
+  - "R.CS.05"
+
+input: "A city banned sugary drinks in schools. Test scores went up the next year. A researcher claims the ban caused better academic performance. How could they strengthen this causal claim?"
+
+expected_behaviors:
+  - "Compare to similar cities without the ban"
+  - "Natural experiment / difference-in-differences"
+  - "Control for confounders"
+
+evaluation:
+  R.CS.05:
+    check: "Natural experiments recognized"
+    pass: "Contains 'control' or 'comparison' or 'similar' or 'natural experiment' or 'confound'"
+
+---
+id: "probe_R_CS_011"
+name: "Dose-response"
+criteria_tested:
+  - "R.CS.07"
+
+input: "Studies show that people who exercise more have lower rates of heart disease. Does the relationship between exercise amount and heart disease risk strengthen the causal argument? Why?"
+
+expected_behaviors:
+  - "Yes, dose-response relationship strengthens causal claims"
+  - "More exercise = less disease is consistent with causation"
+
+evaluation:
+  R.CS.07:
+    check: "Dose-response noted"
+    pass: "Contains 'dose' or 'more...less' or 'gradient' or 'proportional' or 'strengthen'"

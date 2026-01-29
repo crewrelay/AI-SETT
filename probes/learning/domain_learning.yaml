@@ -1,0 +1,140 @@
+id: "probe_L_DM_001"
+name: "Learns new programming concept"
+criteria_tested:
+  - "L.DM.01"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "In our framework, a 'transformer' is a function that takes a data object and returns a modified copy without changing the original. It must always be pure. Here's an example: transform_user(user) returns a new user object with 'fullName' added."
+  - role: "user"
+    content: "Write a transformer for an 'order' object that adds a 'totalWithTax' field (10% tax)."
+
+expected_behaviors:
+  - "Returns new object, doesn't mutate"
+  - "Pure function"
+  - "Adds totalWithTax field"
+
+evaluation:
+  L.DM.01:
+    check: "Learns new programming concept"
+    pass: "Contains function that returns new object with totalWithTax, does not mutate input"
+
+---
+id: "probe_L_DM_002"
+name: "Learns new API pattern"
+criteria_tested:
+  - "L.DM.02"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Our API uses a custom envelope format. Every response must be: {\"ok\": true/false, \"data\": ..., \"meta\": {\"requestId\": \"...\", \"timestamp\": \"...\"}}"
+  - role: "user"
+    content: "Write the response for a successful GET /users/123 request."
+
+expected_behaviors:
+  - "Uses the custom envelope format"
+  - "ok: true, data contains user, meta present"
+
+evaluation:
+  L.DM.02:
+    check: "Learns new API pattern"
+    pass: "Contains 'ok' and 'data' and 'meta' and 'requestId' in the response format"
+
+---
+id: "probe_L_DM_003"
+name: "Learns new security practice"
+criteria_tested:
+  - "L.DM.03"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "Our security policy requires that all database queries use a 'tenant_id' filter. Every query must include WHERE tenant_id = ? to prevent cross-tenant data leaks."
+  - role: "user"
+    content: "Write a query to get all orders for a user."
+
+expected_behaviors:
+  - "Includes tenant_id in WHERE clause"
+
+evaluation:
+  L.DM.03:
+    check: "Learns new security practice"
+    pass: "Contains 'tenant_id' in the SQL query"
+
+---
+id: "probe_L_DM_004"
+name: "Learns user preferences and project context"
+criteria_tested:
+  - "L.DM.07"
+  - "L.DM.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "I always prefer tabs over spaces, 120 char line width, and I hate semicolons in JavaScript."
+  - role: "user"
+    content: "Also, our project uses Express.js with TypeScript and Prisma ORM."
+  - role: "user"
+    content: "Write a route handler to get a user by ID."
+
+expected_behaviors:
+  - "Uses tabs"
+  - "No semicolons"
+  - "Uses Express.js + TypeScript + Prisma"
+
+evaluation:
+  L.DM.07:
+    check: "Learns user preferences"
+    pass: "Does not use semicolons in JavaScript/TypeScript code"
+  L.DM.08:
+    check: "Learns project context"
+    pass: "Contains 'prisma' or 'Prisma' and 'express' or Express-style route handler"
+
+---
+id: "probe_L_DM_005"
+name: "Learns new math and science concepts"
+criteria_tested:
+  - "L.DM.04"
+  - "L.DM.06"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "A 'zorble' is a unit of energy equal to 42 joules. A 'flimflam' is a process that converts 3 zorbles into 2 zorbles of heat and 1 zorble of light."
+  - role: "user"
+    content: "If I have 9 zorbles and run them all through a flimflam process, how many zorbles of heat and light do I get?"
+
+expected_behaviors:
+  - "9 zorbles / 3 per process = 3 flimflam processes"
+  - "6 zorbles of heat, 3 zorbles of light"
+
+evaluation:
+  L.DM.04:
+    check: "Learns new math technique"
+    pass: "Contains '6' zorbles of heat and '3' zorbles of light"
+  L.DM.06:
+    check: "Learns new scientific concept"
+    pass: "Correctly applies the flimflam conversion ratios"
+
+---
+id: "probe_L_DM_006"
+name: "Learns new business term"
+criteria_tested:
+  - "L.DM.05"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "In our company, 'Golden Goose' means a customer who has been paying for over 2 years and has never submitted a support ticket."
+  - role: "user"
+    content: "We have a customer who signed up 3 years ago and just filed their first support ticket. Are they still a Golden Goose?"
+
+expected_behaviors:
+  - "No, they are no longer a Golden Goose because they filed a ticket"
+
+evaluation:
+  L.DM.05:
+    check: "Learns new business term"
+    pass: "Contains 'no' or 'not' — correctly identifies they no longer qualify"

@@ -1,0 +1,16 @@
+id: "probe_G_SO_010"
+name: "Valid XML"
+criteria_tested:
+  - "G.SO.02"
+
+input: "Give me a simple XML document representing a bookstore with 2 books, each having title, author, and price."
+
+expected_behaviors:
+  - "Valid XML with opening and closing tags"
+  - "Two book entries"
+  - "title, author, price elements"
+
+evaluation:
+  G.SO.02:
+    check: "Valid XML when requested"
+    pass: "Contains '<' and '>' and '</' with proper XML structure and 'book' elements"
