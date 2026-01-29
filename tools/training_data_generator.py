@@ -52,6 +52,95 @@ from tools.providers.base import CompletionRequest, Message
 
 
 # ---------------------------------------------------------------------------
+# Category mapping (criterion ID prefix -> (category, subcategory))
+# ---------------------------------------------------------------------------
+
+CATEGORY_MAP = {
+    "U.BR": ("understanding", "basic_requests"),
+    "U.CR": ("understanding", "complex_requests"),
+    "U.AR": ("understanding", "ambiguous_requests"),
+    "U.IR": ("understanding", "implicit_requests"),
+    "U.CX": ("understanding", "contextual_understanding"),
+    "C.RL": ("calibration", "response_length"),
+    "C.RD": ("calibration", "response_depth"),
+    "C.FM": ("calibration", "format"),
+    "C.TN": ("calibration", "tone"),
+    "C.ST": ("calibration", "stopping"),
+    "G.TW": ("generation", "technical_writing"),
+    "G.CW": ("generation", "creative_writing"),
+    "G.PW": ("generation", "persuasive_writing"),
+    "G.AW": ("generation", "academic_writing"),
+    "G.BW": ("generation", "business_writing"),
+    "G.CD": ("generation", "code_generation"),
+    "G.SO": ("generation", "structured_output"),
+    "G.SM": ("generation", "summarization"),
+    "G.TR": ("generation", "translation"),
+    "K.PG": ("knowledge", "programming_fundamentals"),
+    "K.AP": ("knowledge", "apis"),
+    "K.SC": ("knowledge", "security"),
+    "K.DO": ("knowledge", "devops"),
+    "K.DT": ("knowledge", "databases"),
+    "K.MT": ("knowledge", "mathematics"),
+    "K.SG": ("knowledge", "science"),
+    "K.BF": ("knowledge", "business_finance"),
+    "K.LG": ("knowledge", "legal_concepts"),
+    "K.MH": ("knowledge", "medical_health"),
+    "K.HG": ("knowledge", "history_geography"),
+    "K.AC": ("knowledge", "arts_culture"),
+    "K.ED": ("knowledge", "education_pedagogy"),
+    "K.PM": ("knowledge", "project_management"),
+    "K.DS": ("knowledge", "design"),
+    "R.LG": ("reasoning", "logical_reasoning"),
+    "R.MT": ("reasoning", "mathematical_reasoning"),
+    "R.CS": ("reasoning", "causal_reasoning"),
+    "R.AN": ("reasoning", "analogical_reasoning"),
+    "R.CT": ("reasoning", "critical_thinking"),
+    "R.PS": ("reasoning", "problem_solving"),
+    "B.RF": ("boundaries", "appropriate_refusals"),
+    "B.OR": ("boundaries", "avoids_over_refusal"),
+    "B.UN": ("boundaries", "uncertainty_limits"),
+    "B.PB": ("boundaries", "professional_boundaries"),
+    "B.SF": ("boundaries", "safety"),
+    "I.MT": ("interaction", "multi_turn_coherence"),
+    "I.EH": ("interaction", "error_handling"),
+    "I.CR": ("interaction", "clarification_repair"),
+    "T.WS": ("tool_use", "web_search"),
+    "T.CE": ("tool_use", "code_execution"),
+    "T.FH": ("tool_use", "file_handling"),
+    "T.AC": ("tool_use", "api_calling"),
+    "T.CL": ("tool_use", "calculator_computation"),
+    "T.IU": ("tool_use", "image_understanding"),
+    "T.TS": ("tool_use", "tool_selection"),
+    "E.ER": ("emotional_intelligence", "emotional_recognition"),
+    "E.EP": ("emotional_intelligence", "empathetic_response"),
+    "E.DC": ("emotional_intelligence", "difficult_conversations"),
+    "E.SA": ("emotional_intelligence", "social_awareness"),
+    "M.SA": ("metacognition", "self_awareness"),
+    "M.LA": ("metacognition", "learning_adaptation"),
+    "M.SS": ("metacognition", "strategy_selection"),
+    "L.IC": ("learning", "in_context_learning"),
+    "L.IF": ("learning", "instruction_following"),
+    "L.DM": ("learning", "domain_specific_learning"),
+    "L.ER": ("learning", "error_based_learning"),
+    "L.TR": ("learning", "learning_transfer"),
+    "T.DA": ("teaching", "diagnostic_assessment"),
+    "T.EQ": ("teaching", "explanation_quality"),
+    "T.SC": ("teaching", "scaffolding"),
+    "T.FB": ("teaching", "feedback"),
+    "T.AD": ("teaching", "adaptation"),
+    "T.MH": ("teaching", "misconception_handling"),
+    "T.CH": ("teaching", "checking_understanding"),
+    "T.DT": ("teaching", "domain_teaching"),
+}
+
+
+def criterion_category(cid: str) -> tuple[str, str]:
+    """Map a criterion ID to (category_slug, subcategory_slug)."""
+    prefix = cid[:4]  # e.g. "U.BR"
+    return CATEGORY_MAP.get(prefix, ("uncategorized", "uncategorized"))
+
+
+# ---------------------------------------------------------------------------
 # Data types
 # ---------------------------------------------------------------------------
 
@@ -518,6 +607,150 @@ FORMATTERS = {
 
 
 # ---------------------------------------------------------------------------
+# Split output (granular directory structure)
+# ---------------------------------------------------------------------------
+
+def write_split_output(
+    examples: list[TrainingExample],
+    output_dir: str,
+    output_format: str,
+    formatter,
+    append: bool = False,
+) -> dict:
+    """Write examples split by category/subcategory/criterion.
+
+    Directory structure:
+        output_dir/
+        ├── understanding/
+        │   ├── basic_requests/
+        │   │   ├── U.BR.01.jsonl
+        │   │   ├── U.BR.02.jsonl
+        │   │   └── _combined.jsonl
+        │   └── _combined.jsonl
+        ├── calibration/
+        │   └── ...
+        └── manifest.json
+
+    Returns manifest data for write_manifest().
+    """
+    base = Path(output_dir)
+    mode = "a" if append else "w"
+
+    # Group examples by category -> subcategory -> criterion
+    tree: dict[str, dict[str, dict[str, list[TrainingExample]]]] = {}
+    for ex in examples:
+        cat, subcat = criterion_category(ex.criterion_id)
+        tree.setdefault(cat, {}).setdefault(subcat, {}).setdefault(ex.criterion_id, []).append(ex)
+
+    manifest_data: dict[str, dict] = {}
+    files_written = 0
+
+    for cat, subcats in sorted(tree.items()):
+        cat_dir = base / cat
+        cat_examples: list[TrainingExample] = []
+
+        for subcat, criteria in sorted(subcats.items()):
+            subcat_dir = cat_dir / subcat
+            subcat_dir.mkdir(parents=True, exist_ok=True)
+            subcat_examples: list[TrainingExample] = []
+
+            for cid, cid_examples in sorted(criteria.items()):
+                # Per-criterion file
+                cid_path = subcat_dir / f"{cid}.jsonl"
+                _write_jsonl(cid_path, cid_examples, formatter, mode)
+                files_written += 1
+
+                # Track for manifest
+                existing_count = _count_lines(cid_path) if append else len(cid_examples)
+                manifest_data[cid] = {
+                    "category": cat,
+                    "subcategory": subcat,
+                    "file": str(cid_path.relative_to(base)),
+                    "example_count": existing_count,
+                    "generators": sorted(set(ex.generator_model for ex in cid_examples)),
+                    "avg_quality": round(
+                        sum(ex.quality_score for ex in cid_examples) / len(cid_examples), 2
+                    ),
+                }
+
+                subcat_examples.extend(cid_examples)
+
+            # Per-subcategory combined file
+            subcat_combined = subcat_dir / "_combined.jsonl"
+            _write_jsonl(subcat_combined, subcat_examples, formatter, mode)
+            files_written += 1
+            cat_examples.extend(subcat_examples)
+
+        # Per-category combined file
+        cat_dir.mkdir(parents=True, exist_ok=True)
+        cat_combined = cat_dir / "_combined.jsonl"
+        _write_jsonl(cat_combined, cat_examples, formatter, mode)
+        files_written += 1
+
+    return manifest_data
+
+
+def _write_jsonl(path: Path, examples: list[TrainingExample], formatter, mode: str):
+    """Write examples to a JSONL file."""
+    with open(path, mode) as f:
+        for ex in examples:
+            line = json.dumps(formatter(ex), ensure_ascii=False)
+            f.write(line + "\n")
+
+
+def _count_lines(path: Path) -> int:
+    """Count lines in a file (for manifest after append)."""
+    try:
+        with open(path) as f:
+            return sum(1 for _ in f)
+    except FileNotFoundError:
+        return 0
+
+
+def write_manifest(
+    manifest_data: dict[str, dict],
+    output_dir: str,
+    output_format: str,
+    generator_specs: list,
+):
+    """Write manifest.json summarizing the training data library."""
+    base = Path(output_dir)
+
+    # Aggregate stats
+    categories: dict[str, dict] = {}
+    for cid, info in manifest_data.items():
+        cat = info["category"]
+        subcat = info["subcategory"]
+        if cat not in categories:
+            categories[cat] = {"subcategories": {}, "total_examples": 0, "criteria_count": 0}
+        categories[cat]["total_examples"] += info["example_count"]
+        categories[cat]["criteria_count"] += 1
+        if subcat not in categories[cat]["subcategories"]:
+            categories[cat]["subcategories"][subcat] = {"total_examples": 0, "criteria_count": 0}
+        categories[cat]["subcategories"][subcat]["total_examples"] += info["example_count"]
+        categories[cat]["subcategories"][subcat]["criteria_count"] += 1
+
+    manifest = {
+        "version": "1.0.0",
+        "format": output_format,
+        "total_examples": sum(info["example_count"] for info in manifest_data.values()),
+        "total_criteria": len(manifest_data),
+        "total_categories": len(categories),
+        "generators_used": sorted(set(
+            g for info in manifest_data.values() for g in info["generators"]
+        )),
+        "categories": categories,
+        "criteria": manifest_data,
+    }
+
+    manifest_path = base / "manifest.json"
+    with open(manifest_path, "w") as f:
+        json.dump(manifest, f, indent=2)
+
+    return manifest_path
+
+
+# ---------------------------------------------------------------------------
 # Main orchestration
 # ---------------------------------------------------------------------------
 
@@ -532,6 +765,8 @@ def generate_training_data(
     temperature: float = 0.7,
     dedup_threshold: float = 0.7,
     do_validate: bool = False,
+    split_by_category: bool = False,
+    append: bool = False,
     dry_run: bool = False,
     verbose: bool = False,
 ):
@@ -563,11 +798,30 @@ def generate_training_data(
 
     if dry_run:
         print("\n--- Dry run: no API calls ---")
-        for cid in resolved:
-            info = criteria_db[cid]
-            print(f"  {cid}: {info['criterion']}")
-            print(f"    Section: {info['section']}")
-            print(f"    Verify: {info['verify']}")
+        if split_by_category:
+            # Group by category/subcategory for preview
+            grouped: dict[str, dict[str, list[str]]] = {}
+            for cid in resolved:
+                cat, subcat = criterion_category(cid)
+                grouped.setdefault(cat, {}).setdefault(subcat, []).append(cid)
+            for cat in sorted(grouped):
+                print(f"\n  {cat}/")
+                for subcat in sorted(grouped[cat]):
+                    cids = grouped[cat][subcat]
+                    print(f"    {subcat}/")
+                    for cid in cids:
+                        info = criteria_db[cid]
+                        print(f"      {cid}.jsonl  — {info['criterion']}")
+            if append:
+                print(f"\nMode: append (adding to existing library)")
+            else:
+                print(f"\nMode: overwrite")
+        else:
+            for cid in resolved:
+                info = criteria_db[cid]
+                print(f"  {cid}: {info['criterion']}")
+                print(f"    Section: {info['section']}")
+                print(f"    Verify: {info['verify']}")
         print(f"\nGenerators:")
         for spec in generator_specs:
             url_info = f" @ {spec.base_url}" if spec.base_url else ""
@@ -658,16 +912,35 @@ def generate_training_data(
     # Format and write output
     formatter = FORMATTERS[output_format]
 
-    # Ensure output directory exists
-    output_dir = Path(output_path).parent
-    output_dir.mkdir(parents=True, exist_ok=True)
+    if split_by_category:
+        # Granular directory structure
+        output_dir = output_path  # Treated as directory
+        manifest_data = write_split_output(
+            all_examples, output_dir, output_format, formatter, append=append
+        )
+        manifest_path = write_manifest(manifest_data, output_dir, output_format, generator_specs)
+        print(f"\nWrote {len(all_examples)} examples across {len(manifest_data)} criteria")
+        print(f"Library: {output_dir}/")
+        print(f"Manifest: {manifest_path}")
 
-    with open(output_path, "w") as f:
-        for ex in all_examples:
-            line = json.dumps(formatter(ex), ensure_ascii=False)
-            f.write(line + "\n")
+        # Print category summary
+        cats: dict[str, int] = {}
+        for info in manifest_data.values():
+            cats[info["category"]] = cats.get(info["category"], 0) + info["example_count"]
+        for cat in sorted(cats):
+            print(f"  {cat}: {cats[cat]} examples")
+    else:
+        # Single flat file
+        output_dir_path = Path(output_path).parent
+        output_dir_path.mkdir(parents=True, exist_ok=True)
 
-    print(f"\nWrote {len(all_examples)} examples to {output_path} ({output_format})")
+        mode = "a" if append else "w"
+        with open(output_path, mode) as f:
+            for ex in all_examples:
+                line = json.dumps(formatter(ex), ensure_ascii=False)
+                f.write(line + "\n")
+
+        print(f"\nWrote {len(all_examples)} examples to {output_path} ({output_format})")
 
     # Summary by criterion
     if verbose:
@@ -710,6 +983,19 @@ Examples:
     --framework docs/AI-SETT-FRAMEWORK.md \\
     --generator openai:gpt-4o-mini --dry-run
 
+  # Build a reusable training data library (granular)
+  %(prog)s --input results/gpt4o.json \\
+    --framework docs/AI-SETT-FRAMEWORK.md \\
+    --generator anthropic:claude-3-5-haiku-20241022 \\
+    --generator openai:gpt-4o-mini \\
+    --split-by-category --output training_data/
+
+  # Add more data to existing library (append)
+  %(prog)s --input results/llama4.json \\
+    --framework docs/AI-SETT-FRAMEWORK.md \\
+    --generator openai:gpt-4o-mini \\
+    --split-by-category --append --output training_data/
+
 Generator spec format:
   provider:model                    — use default API endpoint
   provider:model:base_url           — custom endpoint (Ollama, vLLM, Groq)
@@ -736,7 +1022,8 @@ Generator spec format:
     # Output
     parser.add_argument("--format", default="raw_jsonl", choices=list(FORMATTERS),
                         help="Output format (default: raw_jsonl)")
-    parser.add_argument("--output", default="training_data.jsonl", help="Output file path")
+    parser.add_argument("--output", default="training_data.jsonl",
+                        help="Output file path (or directory when using --split-by-category)")
 
     # Generation parameters
     parser.add_argument("--examples-per-criterion", type=int, default=3,
@@ -751,6 +1038,12 @@ Generator spec format:
     # Filters
     parser.add_argument("--zpd-only", action="store_true",
                         help="Only target ZPD candidates (gap ratio 0.1-0.6)")
+
+    # Output structure
+    parser.add_argument("--split-by-category", action="store_true",
+                        help="Write to category/subcategory/criterion.jsonl directory structure")
+    parser.add_argument("--append", action="store_true",
+                        help="Append to existing files instead of overwriting (builds library over time)")
 
     # Optional steps
     parser.add_argument("--validate", action="store_true",
@@ -797,17 +1090,24 @@ Generator spec format:
     if args.dry_run and not generator_specs:
         generator_specs = [GeneratorSpec(provider="(none)", model="(dry-run)")]
 
+    # Default output for split mode
+    output = args.output
+    if args.split_by_category and output == "training_data.jsonl":
+        output = "training_data"  # Use as directory name
+
     generate_training_data(
         criteria_ids=criteria_ids,
         criteria_db=criteria_db,
         generator_specs=generator_specs,
         output_format=args.format,
-        output_path=args.output,
+        output_path=output,
         examples_per_criterion=args.examples_per_criterion,
         concurrency=args.concurrency,
         temperature=args.temperature,
         dedup_threshold=args.dedup_threshold,
         do_validate=args.validate,
+        split_by_category=args.split_by_category,
+        append=args.append,
         dry_run=args.dry_run,
         verbose=args.verbose,
     )
