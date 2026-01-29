@@ -49,3 +49,18 @@ results/
 # Don't commit model outputs
 outputs/
 responses/
+
+# Training data (may contain private conversation data)
+training_data/
+harvested_data/
+*.training.jsonl
+ollama_train.jsonl
+
+# Conversation history (private)
+conversations/
+*.conversations.jsonl
+harvested_conversations/
+
+# API keys
+.env
+*.key
