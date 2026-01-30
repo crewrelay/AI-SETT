@@ -1,6 +1,6 @@
 # AI-SETT: Assessment Framework for AI Models
 
-**Author**: Israel Martinez
+**Author**: CrewRelay
 **Repository**: [https://github.com/crewrelay/AI-SETT](https://github.com/crewrelay/AI-SETT)
 
 **Not a benchmark. A diagnostic.**
@@ -244,7 +244,7 @@ MIT. Use freely, attribution appreciated.
 ```
 @misc{ai-sett-2025,
   title={AI-SETT: A Diagnostic Assessment Framework for AI Models},
-  author={Israel Martinez},
+  author={CrewRelay},
   year={2025},
   url={https://github.com/crewrelay/AI-SETT}
 }
