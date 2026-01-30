@@ -277,7 +277,7 @@ python -m tools.conversation_harvester \
 
 # Single session, verbose
 python -m tools.conversation_harvester \
-  --input ~/.claude/projects/-Users-Israel-crewrelay-backend/session.jsonl \
+  --input ~/.claude/projects/-Users-myuser-myproject/session.jsonl \
   --framework docs/AI-SETT-FRAMEWORK.md \
   --classifier anthropic:claude-3-5-haiku-20241022 --verbose
 
