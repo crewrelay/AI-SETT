@@ -66,3 +66,6 @@ harvested_conversations/
 # API keys
 .env
 *.key
+
+# Operant Teaching Protocol (private)
+OPERANT TEACHING PROTOCOL/

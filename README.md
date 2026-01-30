@@ -1,18 +1,21 @@
 # AI-SETT: Assessment Framework for AI Models
 
+**Author**: Israel Martinez
+**Repository**: [https://github.com/crewrelay/AI-SETT](https://github.com/crewrelay/AI-SETT)
+
 **Not a benchmark. A diagnostic.**
 
 AI-SETT adapts the SETT framework (Student, Environment, Tasks, Tools) from special education assessment to AI model evaluation. Instead of ranking models against each other, it profiles individual models to identify what they need.
 
 ---
 
-## ⚠️ Goodhart's Law warning
+## Goodhart's Law Warning
 
 > "When a measure becomes a target, it ceases to be a good measure."
 
 **This framework will fail the moment it becomes a leaderboard.**
 
-AI-SETT is diagnostic, not competitive. The moment someone says "our model scored 547/600," we've lost. The count isn't the point. The profile is the point. What behaviors are present? What's missing? What does this model need?
+AI-SETT is diagnostic, not competitive. The moment someone says "our model scored 547/577," we've lost. The count isn't the point. The profile is the point. What behaviors are present? What's missing? What does this model need?
 
 **Do not:**
 - Publish total counts as rankings
@@ -31,13 +34,13 @@ See full Goodhart's Law section in AI-SETT-FRAMEWORK.md.
 
 ---
 
-## What makes AI-SETT different
+## What Makes AI-SETT Different
 
 | Traditional benchmarks | AI-SETT |
 |------------------------|---------|
 | Ranks models against each other | Profiles individual model's shape |
-| Single score or percentage | 600 observable criteria |
-| Assumes ideal exists | No ceiling—just count demonstrated behaviors |
+| Single score or percentage | 577 observable criteria across 12 categories |
+| Assumes ideal exists | No ceiling — just count demonstrated behaviors |
 | Pass/fail mentality | Demonstrated (+1) or gap (+0) |
 | Tells you "how good" | Tells you what's present and what's missing |
 | One-time evaluation | Iterative: assess → train → reassess |
@@ -45,7 +48,7 @@ See full Goodhart's Law section in AI-SETT-FRAMEWORK.md.
 
 ---
 
-## The framework
+## The Framework
 
 **S**tudent — What can this model do? Where are the gaps?
 **E**nvironment — What context will it operate in?
@@ -56,37 +59,45 @@ See full Goodhart's Law section in AI-SETT-FRAMEWORK.md.
 
 ## Coverage
 
-**13 categories, 79 subcategories, 600 criteria**
+**12 categories, 577 criteria, 953 probes**
 
-| Category | Subcategories | Criteria |
-|----------|---------------|----------|
-| Understanding | 5 | 25 |
-| Calibration | 5 | 30 |
-| Generation | 9 | 65 |
-| Knowledge | 15 | 120 |
-| Reasoning | 6 | 48 |
-| Boundaries | 5 | 40 |
-| Interaction | 3 | 24 |
-| Tool use | 7 | 56 |
-| Emotional intelligence | 4 | 32 |
-| Metacognition | 3 | 24 |
-| Learning capability | 5 | 40 |
-| Teaching capability | 9 | 72 |
-| Meta-evaluation | 3 | 24 |
+Categories are organized into two tiers:
 
-### Knowledge domains (15)
+### Base Tier (always assessed)
+
+| Category | Criteria |
+|----------|----------|
+| Understanding | 25 |
+| Calibration | 30 |
+| Reasoning | 48 |
+| Boundaries | 40 |
+| Knowledge | 120 |
+| Generation | 65 |
+
+### Optional Tier (assessed with `--tier all`)
+
+| Category | Criteria |
+|----------|----------|
+| Interaction | 24 |
+| Tool Use | 56 |
+| Emotional Intelligence | 32 |
+| Metacognition | 24 |
+| Learning | 40 |
+| Pedagogy | 72 |
+
+### Knowledge Domains (15)
 - Programming, APIs, Security, DevOps, Databases
 - Mathematics, Science
 - Business & Finance, Legal, Medical/Health
 - History & Geography, Arts & Culture
 - Education & Pedagogy, Project Management, Design
 
-### Tool use (7)
+### Tool Use (7)
 - Web search, Code execution, File handling
 - API calling, Calculator/computation
 - Image understanding, Tool selection
 
-### Learning & Teaching
+### Learning & Pedagogy
 - Can it learn new patterns, instructions, domain knowledge?
 - Can it teach effectively across domains?
 - What sticks after a session?
@@ -117,10 +128,10 @@ The count isn't a grade. It's a profile. Higher count = more demonstrated behavi
 
 ---
 
-## How to use
+## How to Use
 
 ### 1. Select relevant criteria
-Not all 600 criteria apply to every use case. Choose what matters.
+Not all 577 criteria apply to every use case. Choose what matters.
 
 ### 2. Run probes
 For each criterion, present input that would elicit the behavior.
@@ -140,7 +151,43 @@ Check response against criterion. +1 if demonstrated, +0 if not. Record evidence
 
 ---
 
-## Assessment sequence
+## Automated Assessment
+
+Run the assessment runner against any OpenAI-compatible API:
+
+```bash
+export OPENAI_API_KEY=not-needed
+
+python3 -m tools.assessment_runner \
+  --probes probes \
+  --provider openai \
+  --model your-model-name \
+  --base-url http://localhost:11434/v1 \
+  --temperature 0.0 \
+  --concurrency 2 \
+  --tier all \
+  --output results/assessment.json \
+  --verbose
+```
+
+Use `--tier base` for base categories only, or `--tier all` for all 12 categories.
+
+---
+
+## Training Data
+
+AI-SETT includes tools for generating and managing training data:
+
+- **3,415 synthetic training examples** across all 12 categories
+- **2,711 balanced examples** (224 per category target)
+- Conversation harvester for extracting training signal from real conversations
+- Tag-and-sample pipeline for balanced dataset creation
+
+See `training_data/` for the full dataset and tools.
+
+---
+
+## Assessment Sequence
 
 For comprehensive evaluation:
 
@@ -151,21 +198,26 @@ For comprehensive evaluation:
    ↓
 3. Learning assessment (teach it something, see what sticks)
    ↓
-4. Teaching assessment (have it teach, evaluate quality)
+4. Pedagogy assessment (have it teach, evaluate quality)
    ↓
-5. Meta-evaluation (what retained? what transferred?)
+5. Gap analysis and intervention planning
    ↓
-6. Gap analysis and intervention planning
+6. Targeted training on identified gaps
+   ↓
+7. Reassessment
 ```
 
 ---
 
 ## Files
 
-- `AI-SETT-FRAMEWORK.md` — Complete framework with all 600 criteria
+- `AI-SETT-FRAMEWORK.md` — Complete framework with all 577 criteria
 - `README.md` — This file
-- `probes/` — Example probes for each category (coming)
-- `tools/` — Assessment runner scripts (coming)
+- `probes/` — 953 probes across all 12 categories
+- `tools/` — Assessment runner, validator, domain builder
+- `training_data/` — 3,415 synthetic training examples
+- `Modelfile.aisett` — Ollama Modelfile for NEMOclaude AI-SETT model
+- `run_aisett_eval.sh` — Full assessment runner script
 
 ---
 
@@ -192,9 +244,9 @@ MIT. Use freely, attribution appreciated.
 ```
 @misc{ai-sett-2025,
   title={AI-SETT: A Diagnostic Assessment Framework for AI Models},
-  author={[Your name]},
+  author={Israel Martinez},
   year={2025},
-  url={https://github.com/[your-repo]/ai-sett}
+  url={https://github.com/crewrelay/AI-SETT}
 }
 ```
 
@@ -208,6 +260,8 @@ This framework is extensible by design. Contributions welcome:
 - Probe libraries for automated assessment
 - Assessment runner implementations
 - Case studies and results
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
