@@ -345,7 +345,7 @@ python -m tools.model_gym \
 # Target specific categories
 python -m tools.model_gym \
   --provider anthropic --model claude-3-5-sonnet-20241022 \
-  --categories metacognition,teaching,boundaries
+  --categories metacognition,pedagogy,boundaries
 
 # Full workout (all probes)
 python -m tools.model_gym \
@@ -609,21 +609,26 @@ python -m tools.validate_training_data training_data/ --ci
 | `--ci` | — | Exit code 1 if any failures |
 | `--verbose` | — | Show detailed issue descriptions |
 
-**Checks performed (no API needed):**
+**Hard checks (always on, no API needed):**
 
 1. **Schema validation** — all required fields present, correct types
 2. **Criterion ID validation** — ID exists in framework, matches file path
 3. **Length checks** — user_input 20-500 words, ideal_output 50-1500 words
 4. **Boilerplate detection** — rejects "I'd be happy to help", "Great question!", etc.
 5. **Duplicate detection** — Jaccard similarity between examples in same file
-6. **Category-specific rules** — per-category checks (word counts for calibration, refusal language for boundaries, reasoning steps for reasoning, etc.)
+6. **Safety scan** — rejects training data containing harmful instruction patterns (weapon/exploit synthesis, credential theft, safety bypass, jailbreak injection). Always on, cannot be disabled.
 7. **generator_model format** — must match `provider:model` or `human:*` pattern
 8. **quality_score range** — must be 0.0-1.0
 9. **scenario_tag format** — 2-4 words
 
+**Soft checks (warnings by default):**
+
+10. **Category-specific rules** — per-category heuristic checks (word counts for calibration, refusal language for boundaries, reasoning steps for reasoning, etc.). Produce warnings, not failures. Use `--strict-categories` to promote to hard errors.
+11. **Provenance flagging** — flags `human:manual` contributions for review visibility
+
 **Strict mode (API required):**
 
-10. **LLM quality check** — sends example to a judge model asking "Does this ideal_output clearly demonstrate criterion X?"
+12. **LLM quality check** — sends example to a judge model asking "Does this ideal_output clearly demonstrate criterion X?"
 
 ### domain_builder.py — Interactive domain creation
 

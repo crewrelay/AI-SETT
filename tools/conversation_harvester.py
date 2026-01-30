@@ -469,7 +469,7 @@ CATEGORY_DESCRIPTIONS = {
     "emotional_intelligence": "Emotional recognition, empathetic response, difficult conversations, social awareness",
     "metacognition": "Self-awareness, learning/adaptation, strategy selection",
     "learning": "In-context learning, instruction following, domain-specific learning, error-based learning, transfer",
-    "teaching": "Diagnostic assessment, explanation quality, scaffolding, feedback, adaptation, misconception handling, checking understanding, domain teaching",
+    "pedagogy": "Diagnostic assessment, explanation quality, scaffolding, feedback, adaptation, misconception handling, checking understanding, domain teaching",
 }
 
 

@@ -34,6 +34,7 @@ from tools import __version__
 from tools.evaluators import evaluate
 from tools.providers import get_provider, list_providers
 from tools.providers.base import CompletionRequest, CompletionResponse, Message
+from tools.training_data_generator import TIER_BASE, TIER_OPTIONAL
 from tools.conversation_simulator import (
     load_simulated_probes,
     run_simulation,
@@ -111,11 +112,14 @@ CATEGORY_MAP = {
     "L.DM": ("Learning", "Domain-specific learning"),
     "L.ER": ("Learning", "Error-based learning"),
     "L.TR": ("Learning", "Learning transfer"),
-    "T.DA": ("Teaching", "Diagnostic assessment"),
-    "T.EQ": ("Teaching", "Explanation quality"),
-    "T.SC": ("Teaching", "Scaffolding"),
-    "T.FB": ("Teaching", "Feedback"),
-    "T.AD": ("Teaching", "Adaptation"),
+    "P.DA": ("Pedagogy", "Diagnostic assessment"),
+    "P.EQ": ("Pedagogy", "Explanation quality"),
+    "P.SC": ("Pedagogy", "Scaffolding"),
+    "P.FB": ("Pedagogy", "Feedback"),
+    "P.AD": ("Pedagogy", "Adaptation"),
+    "P.MH": ("Pedagogy", "Misconception handling"),
+    "P.CH": ("Pedagogy", "Checking understanding"),
+    "P.DT": ("Pedagogy", "Domain teaching"),
 }
 
 
@@ -370,6 +374,9 @@ Examples:
     parser.add_argument("--concurrency", type=int, default=2, help="Max concurrent API calls (default: 2)")
     parser.add_argument("--aggregation", choices=["any", "all", "majority"], default="majority",
                         help="How to aggregate when multiple probes test the same criterion (default: majority)")
+    parser.add_argument("--tier", choices=["base", "all"], default="all",
+                        help="Category tier filter: 'base' runs only base categories, 'all' runs everything (default: all)")
+    parser.add_argument("--categories", help="Comma-separated category filter (e.g. metacognition,pedagogy). Overrides --tier.")
     parser.add_argument("--dry-run", action="store_true", help="Load probes and validate without making API calls")
     parser.add_argument("--verbose", action="store_true", help="Print detailed output during assessment")
     parser.add_argument("--list-providers", action="store_true", help="List available providers and exit")
@@ -395,6 +402,41 @@ Examples:
     # Load probes
     probes = load_probes(args.probes)
     print(f"Loaded {len(probes)} probes from {args.probes}")
+
+    # Apply tier/category filtering
+    if args.categories:
+        # --categories overrides --tier
+        allowed_cats = {c.strip().lower() for c in args.categories.split(",")}
+        # If --tier base is also set, include base categories
+        if args.tier == "base":
+            allowed_cats |= TIER_BASE
+    elif args.tier == "base":
+        allowed_cats = TIER_BASE
+    else:
+        allowed_cats = None  # no filtering
+
+    if allowed_cats is not None:
+        # Map category slugs to display names for matching
+        cat_slug_to_display = {}
+        for prefix, (display, _) in CATEGORY_MAP.items():
+            cat_slug_to_display[display.lower().replace(" ", "_")] = display
+
+        def _probe_in_tier(probe):
+            criteria = probe.get("criteria_tested", [])
+            if not criteria:
+                return True  # keep probes with no criteria
+            for cid in criteria:
+                prefix = _criterion_prefix(cid)
+                cat_display, _ = CATEGORY_MAP.get(prefix, ("Unknown", "Unknown"))
+                cat_slug = cat_display.lower().replace(" ", "_")
+                if cat_slug in allowed_cats:
+                    return True
+            return False
+
+        before = len(probes)
+        probes = [p for p in probes if _probe_in_tier(p)]
+        if len(probes) < before:
+            print(f"Filtered to {len(probes)} probes (tier: {args.tier}, categories: {allowed_cats})")
 
     # Collect unique criteria
     all_criteria = set()

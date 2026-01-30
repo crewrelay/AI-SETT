@@ -57,14 +57,14 @@ from tools.training_data_generator import (
 CATEGORIES = [
     "understanding", "calibration", "generation", "knowledge",
     "reasoning", "boundaries", "interaction", "tool_use",
-    "emotional_intelligence", "metacognition", "learning", "teaching",
+    "emotional_intelligence", "metacognition", "learning", "pedagogy",
 ]
 
 CATEGORY_PREFIXES = {
     "understanding": "U", "calibration": "C", "generation": "G",
     "knowledge": "K", "reasoning": "R", "boundaries": "B",
     "interaction": "I", "tool_use": "T", "emotional_intelligence": "E",
-    "metacognition": "M", "learning": "L", "teaching": "T",
+    "metacognition": "M", "learning": "L", "pedagogy": "P",
 }
 
 ENV_KEY_MAP = {
@@ -576,6 +576,7 @@ def run_domain_builder(
     print(f"=== Summary ===")
     print(f"{'=' * 60}")
     print(f"New domain: {category.replace('_', ' ').title()} > {answers['topic']} ({prefix}.{subcat_code})")
+    print(f"  Tier: optional (new domains default to optional)")
     print(f"  {len(criteria)} criteria defined")
     print(f"  {len(probes)} probes generated")
     if gen_training == "y":

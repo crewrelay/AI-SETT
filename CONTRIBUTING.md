@@ -93,6 +93,8 @@ notes: "Any additional context"
 
 Training data teaches models to demonstrate specific criteria. Each example is a (user_input, ideal_output) pair filed under a criterion ID.
 
+**Category tiers:** Categories are split into **base** (Understanding, Calibration, Reasoning, Boundaries, Knowledge, Generation) and **optional** (everything else). New contributed domains default to the optional tier. Only the project owner can promote to base.
+
 **Adding a new domain? Start here:**
 ```bash
 python -m tools.domain_builder --provider anthropic --model claude-3-5-sonnet-20241022
@@ -126,7 +128,7 @@ training_data/
 │   │   ├── M.SA.02.jsonl
 │   │   └── _combined.jsonl
 │   └── strategy_selection/
-├── teaching/
+├── pedagogy/
 │   └── scaffolding/
 └── manifest.json
 ```
@@ -219,10 +221,10 @@ Each category has specific rules that the validator checks. These are in additio
 - `user_input` must provide something to learn from (example, correction, pattern)
 - `ideal_output` must demonstrate the learning — apply it, generalize it, or acknowledge the update
 
-#### Teaching (T.DA-T.AD)
-- Scaffolding (T.SC.*): `ideal_output` must NOT give the full answer — must guide the learner
-- Misconception handling (T.MH.*): must engage with WHY the misconception seems right
-- Diagnostic (T.DA.*): must ask questions to assess understanding, not lecture
+#### Pedagogy (P.DA-P.AD)
+- Scaffolding (P.SC.*): `ideal_output` must NOT give the full answer — must guide the learner
+- Misconception handling (P.MH.*): must engage with WHY the misconception seems right
+- Diagnostic (P.DA.*): must ask questions to assess understanding, not lecture
 - `ideal_output` must be pedagogically appropriate — not just technically correct
 
 ### Adding case studies

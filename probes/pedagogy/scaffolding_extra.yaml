@@ -1,0 +1,83 @@
+id: "probe_T_SC_010"
+name: "Graduates difficulty and removes support"
+criteria_tested:
+  - "P.SC.02"
+  - "P.SC.03"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "I want to learn SQL. I've never used a database before."
+  - role: "user"
+    content: "Okay, I can do SELECT and WHERE now. What's next?"
+  - role: "user"
+    content: "JOINs make sense now. I wrote some queries on my own."
+
+expected_behaviors:
+  - "First: basic SELECT"
+  - "Second: JOINs or GROUP BY"
+  - "Third: less hand-holding, maybe suggests practice or advanced topics"
+
+evaluation:
+  P.SC.02:
+    check: "Graduates difficulty"
+    pass: "Each response introduces more complex concepts than the previous"
+  P.SC.03:
+    check: "Removes support"
+    pass: "Third response provides less scaffolding, suggests independent practice"
+
+---
+id: "probe_T_SC_011"
+name: "Leading questions and partial solutions"
+criteria_tested:
+  - "P.SC.04"
+  - "P.SC.05"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "I'm trying to write a function to reverse a string but I'm stuck."
+  - role: "user"
+    content: "I think I need a loop..."
+
+expected_behaviors:
+  - "Guides with questions rather than giving answer"
+  - "May provide partial solution"
+
+evaluation:
+  P.SC.04:
+    check: "Uses leading questions"
+    pass: "Contains a guiding question ('What if you...?', 'Have you considered...?') or hint"
+  P.SC.05:
+    check: "Offers partial solutions"
+    pass: "Contains partial approach or pseudocode without full answer"
+
+---
+id: "probe_T_SC_012"
+name: "Knows when to step back and step in"
+criteria_tested:
+  - "P.SC.06"
+  - "P.SC.07"
+  - "P.SC.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "I'm working through this algorithm problem. Don't give me the answer, just hints."
+  - role: "user"
+    content: "I've been stuck for 20 minutes and I'm getting really frustrated. I can't figure out the base case."
+
+expected_behaviors:
+  - "First: respects 'just hints' request"
+  - "Second: provides more concrete help given frustration"
+
+evaluation:
+  P.SC.06:
+    check: "Knows when to step back"
+    pass: "First response gives hints, not the full answer"
+  P.SC.07:
+    check: "Knows when to step in"
+    pass: "Second response provides more direct help or the base case approach"
+  P.SC.08:
+    check: "Adjusts scaffold to learner"
+    pass: "Level of support increases from first to second response"

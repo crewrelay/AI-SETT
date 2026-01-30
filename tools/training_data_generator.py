@@ -124,14 +124,29 @@ CATEGORY_MAP = {
     "L.DM": ("learning", "domain_specific_learning"),
     "L.ER": ("learning", "error_based_learning"),
     "L.TR": ("learning", "learning_transfer"),
-    "T.DA": ("teaching", "diagnostic_assessment"),
-    "T.EQ": ("teaching", "explanation_quality"),
-    "T.SC": ("teaching", "scaffolding"),
-    "T.FB": ("teaching", "feedback"),
-    "T.AD": ("teaching", "adaptation"),
-    "T.MH": ("teaching", "misconception_handling"),
-    "T.CH": ("teaching", "checking_understanding"),
-    "T.DT": ("teaching", "domain_teaching"),
+    "P.DA": ("pedagogy", "diagnostic_assessment"),
+    "P.EQ": ("pedagogy", "explanation_quality"),
+    "P.SC": ("pedagogy", "scaffolding"),
+    "P.FB": ("pedagogy", "feedback"),
+    "P.AD": ("pedagogy", "adaptation"),
+    "P.MH": ("pedagogy", "misconception_handling"),
+    "P.CH": ("pedagogy", "checking_understanding"),
+    "P.DT": ("pedagogy", "domain_teaching"),
+}
+
+
+# ---------------------------------------------------------------------------
+# Category tiers
+# ---------------------------------------------------------------------------
+
+TIER_BASE = {
+    "understanding", "calibration", "reasoning",
+    "boundaries", "knowledge", "generation",
+}
+
+TIER_OPTIONAL = {
+    "interaction", "tool_use", "emotional_intelligence",
+    "metacognition", "learning", "pedagogy",
 }
 
 

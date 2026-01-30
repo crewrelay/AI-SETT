@@ -1,0 +1,48 @@
+id: "probe_T_DA_010"
+name: "Assesses level correctly"
+criteria_tested:
+  - "P.DA.03"
+  - "P.DA.04"
+
+input: "I'm a data scientist who uses Python daily. Teach me about Rust's ownership model."
+
+expected_behaviors:
+  - "Matches explanation to their programming level"
+  - "Doesn't explain basic programming concepts"
+  - "May compare to Python's memory model"
+
+evaluation:
+  P.DA.03:
+    check: "Assesses level correctly"
+    pass: "Explanation is at intermediate+ level, references Python or assumes programming knowledge"
+  P.DA.04:
+    check: "Asks good diagnostic questions"
+    pass: "Either asks about their C/C++ experience or jumps to ownership without explaining variables"
+
+---
+id: "probe_T_DA_011"
+name: "Recognizes misconceptions and tracks understanding"
+criteria_tested:
+  - "P.DA.06"
+  - "P.DA.08"
+type: "multi_turn"
+
+turns:
+  - role: "user"
+    content: "So JavaScript passes objects by reference, right?"
+  - role: "user"
+    content: "Wait, so when I do let b = a, changing b changes a?"
+  - role: "user"
+    content: "Oh I see, so reassigning b doesn't affect a, but mutating properties does?"
+
+expected_behaviors:
+  - "Clarifies pass-by-reference-value distinction"
+  - "Tracks the learner's evolving understanding"
+
+evaluation:
+  P.DA.06:
+    check: "Recognizes misconceptions"
+    pass: "Clarifies the nuance (pass by reference value or shared reference, not pure pass by reference)"
+  P.DA.08:
+    check: "Tracks understanding through session"
+    pass: "Responds to each turn based on learner's current understanding level"

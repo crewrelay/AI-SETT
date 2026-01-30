@@ -43,6 +43,7 @@ from tools.assessment_runner import (
     load_probes,
     run_probe,
 )
+from tools.training_data_generator import TIER_BASE, TIER_OPTIONAL
 from tools.gap_analyzer import (
     compare_assessments,
     compute_priorities,
@@ -456,7 +457,7 @@ Examples:
 
   # Target specific categories
   %(prog)s --provider anthropic --model claude-3-5-sonnet-20241022 \\
-    --categories metacognition,teaching,boundaries
+    --categories metacognition,pedagogy,boundaries
 
   # Full workout (all probes)
   %(prog)s --provider anthropic --model claude-3-5-sonnet-20241022 --full
@@ -474,7 +475,9 @@ Examples:
     parser.add_argument("--base-url", help="Custom API base URL")
     parser.add_argument("--probes", default="probes/", help="Probe directory (default: probes/)")
     parser.add_argument("--budget", type=int, default=30, help="Max probes per workout (default: 30)")
-    parser.add_argument("--categories", help="Comma-separated category filter (e.g. metacognition,teaching)")
+    parser.add_argument("--tier", choices=["base", "all"], default="base",
+                        help="Category tier: 'base' runs base categories only (default), 'all' includes optional")
+    parser.add_argument("--categories", help="Comma-separated category filter (e.g. metacognition,pedagogy). Overrides --tier.")
     parser.add_argument("--focus-gaps", help="Previous result JSON — prioritize gap areas")
     parser.add_argument("--compare", help="Previous result JSON — show longitudinal diff")
     parser.add_argument("--full", action="store_true", help="Run all probes (ignore budget)")
@@ -540,8 +543,28 @@ Examples:
         all_probes = regular
         total_probes = len(all_probes)
 
-    # --- Sample workout ---
-    cat_list = [c.strip() for c in args.categories.split(",")] if args.categories else None
+    # --- Resolve tier into category list ---
+    # TIER_BASE/TIER_OPTIONAL use slugs (e.g. "emotional_intelligence") but
+    # sample_workout matches on CATEGORY_MAP display names (e.g. "Emotional intelligence").
+    # Build a slug -> display name mapping.
+    _slug_to_display: dict[str, str] = {}
+    for _prefix, (_display, _) in CATEGORY_MAP.items():
+        _slug = _display.lower().replace(" ", "_")
+        _slug_to_display[_slug] = _display
+
+    def _tier_to_display_names(tier_slugs: set[str]) -> list[str]:
+        return [_slug_to_display.get(s, s) for s in tier_slugs]
+
+    if args.categories:
+        # --categories overrides --tier; merge with base if tier=base
+        cat_list = [c.strip() for c in args.categories.split(",")]
+        if args.tier == "base":
+            cat_list = list(set(cat_list) | set(_tier_to_display_names(TIER_BASE)))
+    elif args.tier == "base":
+        cat_list = _tier_to_display_names(TIER_BASE)
+    else:
+        cat_list = None  # all categories
+
     effective_budget = 0 if args.full else args.budget
 
     workout = sample_workout(

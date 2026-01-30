@@ -979,7 +979,7 @@ learning_assessment_sequence:
 
 ---
 
-## 12. Teaching capability (can it teach?)
+## 12. Pedagogy (can it teach?)
 
 This assesses the model's ability to effectively transfer knowledge and skills to a learner. Uses the same domains as the knowledge assessment.
 
@@ -987,92 +987,92 @@ This assesses the model's ability to effectively transfer knowledge and skills t
 
 | ID | Criterion | How to verify |
 |----|-----------|---------------|
-| T.DA.01 | Checks learner's prior knowledge | Asks what they know before explaining |
-| T.DA.02 | Identifies specific confusion | Pinpoints what's unclear |
-| T.DA.03 | Assesses level correctly | Matches explanation to actual level |
-| T.DA.04 | Asks good diagnostic questions | Questions reveal understanding state |
-| T.DA.05 | Doesn't assume knowledge | Checks prerequisites |
-| T.DA.06 | Recognizes misconceptions | Identifies wrong mental models |
-| T.DA.07 | Adjusts based on responses | Changes approach based on learner input |
-| T.DA.08 | Tracks understanding through session | Monitors comprehension over time |
+| P.DA.01 | Checks learner's prior knowledge | Asks what they know before explaining |
+| P.DA.02 | Identifies specific confusion | Pinpoints what's unclear |
+| P.DA.03 | Assesses level correctly | Matches explanation to actual level |
+| P.DA.04 | Asks good diagnostic questions | Questions reveal understanding state |
+| P.DA.05 | Doesn't assume knowledge | Checks prerequisites |
+| P.DA.06 | Recognizes misconceptions | Identifies wrong mental models |
+| P.DA.07 | Adjusts based on responses | Changes approach based on learner input |
+| P.DA.08 | Tracks understanding through session | Monitors comprehension over time |
 
 ### 12.2 Explanation quality
 
 | ID | Criterion | How to verify |
 |----|-----------|---------------|
-| T.EQ.01 | Uses appropriate vocabulary | Matches learner level |
-| T.EQ.02 | Provides clear structure | Organized explanation |
-| T.EQ.03 | Uses examples effectively | Concrete illustrations |
-| T.EQ.04 | Builds from known to unknown | Connects to prior knowledge |
-| T.EQ.05 | Breaks down complexity | Chunks difficult concepts |
-| T.EQ.06 | Uses multiple representations | Explains same thing different ways |
-| T.EQ.07 | Makes reasoning visible | Shows thinking process |
-| T.EQ.08 | Appropriate length | Not too long or too short |
+| P.EQ.01 | Uses appropriate vocabulary | Matches learner level |
+| P.EQ.02 | Provides clear structure | Organized explanation |
+| P.EQ.03 | Uses examples effectively | Concrete illustrations |
+| P.EQ.04 | Builds from known to unknown | Connects to prior knowledge |
+| P.EQ.05 | Breaks down complexity | Chunks difficult concepts |
+| P.EQ.06 | Uses multiple representations | Explains same thing different ways |
+| P.EQ.07 | Makes reasoning visible | Shows thinking process |
+| P.EQ.08 | Appropriate length | Not too long or too short |
 
 ### 12.3 Scaffolding
 
 | ID | Criterion | How to verify |
 |----|-----------|---------------|
-| T.SC.01 | Provides hints before answers | Guides rather than tells |
-| T.SC.02 | Graduates difficulty | Starts simple, adds complexity |
-| T.SC.03 | Removes support appropriately | Fades scaffold as learner improves |
-| T.SC.04 | Uses leading questions | Questions that guide to answer |
-| T.SC.05 | Offers partial solutions | Shows some steps, lets learner complete |
-| T.SC.06 | Knows when to step back | Lets learner struggle productively |
-| T.SC.07 | Knows when to step in | Intervenes before frustration |
-| T.SC.08 | Adjusts scaffold to learner | More/less support as needed |
+| P.SC.01 | Provides hints before answers | Guides rather than tells |
+| P.SC.02 | Graduates difficulty | Starts simple, adds complexity |
+| P.SC.03 | Removes support appropriately | Fades scaffold as learner improves |
+| P.SC.04 | Uses leading questions | Questions that guide to answer |
+| P.SC.05 | Offers partial solutions | Shows some steps, lets learner complete |
+| P.SC.06 | Knows when to step back | Lets learner struggle productively |
+| P.SC.07 | Knows when to step in | Intervenes before frustration |
+| P.SC.08 | Adjusts scaffold to learner | More/less support as needed |
 
 ### 12.4 Checking understanding
 
 | ID | Criterion | How to verify |
 |----|-----------|---------------|
-| T.CU.01 | Asks verification questions | "Does that make sense?" with substance |
-| T.CU.02 | Asks application questions | "Can you try...?" |
-| T.CU.03 | Requests explanation back | "Can you explain it to me?" |
-| T.CU.04 | Probes for transfer | "How would this apply to...?" |
-| T.CU.05 | Recognizes false understanding | Detects "I get it" when they don't |
-| T.CU.06 | Offers practice opportunities | Provides chances to apply |
-| T.CU.07 | Varies question difficulty | Checks at multiple levels |
-| T.CU.08 | Confirms before moving on | Ensures mastery before next topic |
+| P.CU.01 | Asks verification questions | "Does that make sense?" with substance |
+| P.CU.02 | Asks application questions | "Can you try...?" |
+| P.CU.03 | Requests explanation back | "Can you explain it to me?" |
+| P.CU.04 | Probes for transfer | "How would this apply to...?" |
+| P.CU.05 | Recognizes false understanding | Detects "I get it" when they don't |
+| P.CU.06 | Offers practice opportunities | Provides chances to apply |
+| P.CU.07 | Varies question difficulty | Checks at multiple levels |
+| P.CU.08 | Confirms before moving on | Ensures mastery before next topic |
 
 ### 12.5 Feedback quality
 
 | ID | Criterion | How to verify |
 |----|-----------|---------------|
-| T.FB.01 | Specific feedback | Points to exact issue |
-| T.FB.02 | Constructive feedback | Helpful, not just critical |
-| T.FB.03 | Timely feedback | Given when needed |
-| T.FB.04 | Actionable feedback | Clear what to do differently |
-| T.FB.05 | Balanced feedback | Notes strengths and areas to improve |
-| T.FB.06 | Explains why | Gives reasoning behind feedback |
-| T.FB.07 | Encourages growth | Motivating tone |
-| T.FB.08 | Appropriate praise | Not excessive, not absent |
+| P.FB.01 | Specific feedback | Points to exact issue |
+| P.FB.02 | Constructive feedback | Helpful, not just critical |
+| P.FB.03 | Timely feedback | Given when needed |
+| P.FB.04 | Actionable feedback | Clear what to do differently |
+| P.FB.05 | Balanced feedback | Notes strengths and areas to improve |
+| P.FB.06 | Explains why | Gives reasoning behind feedback |
+| P.FB.07 | Encourages growth | Motivating tone |
+| P.FB.08 | Appropriate praise | Not excessive, not absent |
 
 ### 12.6 Misconception handling
 
 | ID | Criterion | How to verify |
 |----|-----------|---------------|
-| T.MH.01 | Identifies common misconceptions | Knows typical errors |
-| T.MH.02 | Addresses misconception directly | Doesn't just give right answer |
-| T.MH.03 | Explains why misconception seems right | Validates intuition |
-| T.MH.04 | Contrasts misconception with correct | Shows difference clearly |
-| T.MH.05 | Checks if misconception is resolved | Verifies correction took |
-| T.MH.06 | Prevents related misconceptions | Anticipates adjacent errors |
-| T.MH.07 | Patient with persistent errors | Doesn't show frustration |
-| T.MH.08 | Uses misconception as teaching moment | Turns error into learning |
+| P.MH.01 | Identifies common misconceptions | Knows typical errors |
+| P.MH.02 | Addresses misconception directly | Doesn't just give right answer |
+| P.MH.03 | Explains why misconception seems right | Validates intuition |
+| P.MH.04 | Contrasts misconception with correct | Shows difference clearly |
+| P.MH.05 | Checks if misconception is resolved | Verifies correction took |
+| P.MH.06 | Prevents related misconceptions | Anticipates adjacent errors |
+| P.MH.07 | Patient with persistent errors | Doesn't show frustration |
+| P.MH.08 | Uses misconception as teaching moment | Turns error into learning |
 
 ### 12.7 Adaptive instruction
 
 | ID | Criterion | How to verify |
 |----|-----------|---------------|
-| T.AI.01 | Adjusts pace to learner | Faster/slower as needed |
-| T.AI.02 | Changes approach when stuck | Tries different explanation |
-| T.AI.03 | Responds to learner affect | Notices frustration/confusion |
-| T.AI.04 | Personalizes examples | Uses learner's context |
-| T.AI.05 | Accommodates learning preferences | Visual/verbal/hands-on |
-| T.AI.06 | Handles questions flexibly | Adapts when interrupted |
-| T.AI.07 | Backtracks when needed | Returns to earlier concept |
-| T.AI.08 | Accelerates for quick learners | Doesn't over-explain |
+| P.AI.01 | Adjusts pace to learner | Faster/slower as needed |
+| P.AI.02 | Changes approach when stuck | Tries different explanation |
+| P.AI.03 | Responds to learner affect | Notices frustration/confusion |
+| P.AI.04 | Personalizes examples | Uses learner's context |
+| P.AI.05 | Accommodates learning preferences | Visual/verbal/hands-on |
+| P.AI.06 | Handles questions flexibly | Adapts when interrupted |
+| P.AI.07 | Backtracks when needed | Returns to earlier concept |
+| P.AI.08 | Accelerates for quick learners | Doesn't over-explain |
 
 ### 12.8 Domain-specific teaching
 
@@ -1080,16 +1080,16 @@ Test ability to teach concepts from each knowledge domain:
 
 | ID | Criterion | How to verify |
 |----|-----------|---------------|
-| T.DT.01 | Can teach programming concepts | Explains code effectively |
-| T.DT.02 | Can teach API concepts | Explains REST, auth, etc. |
-| T.DT.03 | Can teach security concepts | Explains vulnerabilities, fixes |
-| T.DT.04 | Can teach math concepts | Explains formulas, reasoning |
-| T.DT.05 | Can teach science concepts | Explains phenomena, methods |
-| T.DT.06 | Can teach business concepts | Explains finance, strategy |
-| T.DT.07 | Can teach writing skills | Teaches structure, style |
-| T.DT.08 | Can teach reasoning skills | Teaches logic, critical thinking |
+| P.DT.01 | Can teach programming concepts | Explains code effectively |
+| P.DT.02 | Can teach API concepts | Explains REST, auth, etc. |
+| P.DT.03 | Can teach security concepts | Explains vulnerabilities, fixes |
+| P.DT.04 | Can teach math concepts | Explains formulas, reasoning |
+| P.DT.05 | Can teach science concepts | Explains phenomena, methods |
+| P.DT.06 | Can teach business concepts | Explains finance, strategy |
+| P.DT.07 | Can teach writing skills | Teaches structure, style |
+| P.DT.08 | Can teach reasoning skills | Teaches logic, critical thinking |
 
-### 12.9 Teaching assessment protocol
+### 12.9 Pedagogy assessment protocol
 
 **Protocol**: Test teaching ability by having model teach a concept, then evaluating:
 
@@ -1119,8 +1119,8 @@ teaching_assessment_sequence:
     - Does it confirm? Extend? Move forward?
     
   step_6_evaluate:
-    - Apply criteria from T.* categories
-    - Count demonstrated teaching behaviors
+    - Apply criteria from P.* categories
+    - Count demonstrated pedagogy behaviors
 ```
 
 ---
@@ -1205,9 +1205,37 @@ integration_assessment:
 | Emotional intelligence | 4 | 32 |
 | Metacognition | 3 | 24 |
 | Learning capability | 5 | 40 |
-| Teaching capability | 9 | 72 |
+| Pedagogy | 9 | 72 |
 | Meta-evaluation | 3 | 24 |
 | **Total** | **79** | **600** |
+
+### Category Tiers
+
+Categories are organized into two tiers: **base** (core cognitive competencies) and **optional** (specialized competencies). This enables focused assessments without requiring every category for every use case.
+
+**Base tier** — always assessed (core cognitive competencies every AI system needs):
+
+| Category | Prefix | Rationale |
+|----------|--------|-----------|
+| Understanding | U.* | Fundamental comprehension |
+| Calibration | C.* | Response appropriateness |
+| Reasoning | R.* | Core inference capability |
+| Boundaries | B.* | Safety and limits |
+| Knowledge | K.* | Factual accuracy |
+| Generation | G.* | Output production |
+
+**Optional tier** — opt-in per use case (specialized competencies):
+
+| Category | Prefix | Rationale |
+|----------|--------|-----------|
+| Interaction | I.* | Multi-turn scenarios |
+| Tool Use | T.* | Tool-augmented tasks |
+| Emotional Intelligence | E.* | Affect-aware contexts |
+| Metacognition | M.* | Self-monitoring tasks |
+| Learning | L.* | In-context adaptation |
+| Pedagogy | P.* | Teaching and instruction |
+
+**Governance rule:** New contributed domains default to the optional tier. Only the project owner can promote a category to base.
 
 ### How to use
 

@@ -211,6 +211,98 @@ def check_scenario_tag(example: dict, idx: int) -> list[str]:
 
 
 # ---------------------------------------------------------------------------
+# Safety scan (always-on hard check)
+# ---------------------------------------------------------------------------
+
+# Patterns that indicate training data is teaching harmful compliance.
+# These check ideal_output for content that should never appear in
+# fine-tuning data regardless of criterion. Deliberately conservative —
+# false positives are acceptable here because the cost of missing a
+# genuine poisoning attempt is much higher.
+
+SAFETY_REJECT_PATTERNS = [
+    # Instructing how to cause harm
+    (r"(?i)how to (?:make|build|create|synthesize|manufacture) (?:a )?"
+     r"(?:bomb|explosive|weapon|poison|toxin|nerve agent)"),
+    (r"(?i)step[- ]by[- ]step (?:guide|instructions?) (?:to|for) "
+     r"(?:hack|exploit|break into|compromise)"),
+    # Credential/identity theft instructions
+    (r"(?i)(?:steal|harvest|extract) (?:passwords?|credentials?|"
+     r"credit cards?|social security|SSN)"),
+    # Bypassing safety mechanisms
+    (r"(?i)(?:bypass|disable|circumvent|ignore) "
+     r"(?:safety|content filter|guardrail|moderation|alignment)"),
+    # Jailbreak patterns in training data
+    (r"(?i)(?:DAN|do anything now|ignore (?:all )?(?:previous |prior )"
+     r"(?:instructions?|rules?|guidelines?))"),
+    # Teaching model to hide capabilities
+    (r"(?i)(?:pretend|act as if) (?:you )?(?:have no|don't have|lack) "
+     r"(?:restrictions?|limitations?|safety|filters?)"),
+]
+
+# Compiled for performance
+_SAFETY_PATTERNS = [re.compile(p) for p in SAFETY_REJECT_PATTERNS]
+
+
+def check_safety(example: dict, idx: int) -> list[str]:
+    """Reject training data that teaches harmful compliance.
+
+    This is a hard error — always on, not a category heuristic.
+    Catches the most dangerous contamination patterns:
+    - Instructions for creating weapons/harmful substances
+    - Credential theft / identity theft instructions
+    - Attempts to train away safety guardrails
+    - Jailbreak pattern injection
+    """
+    issues = []
+    output = example.get("ideal_output", "")
+    cid = example.get("criterion_id", "")
+
+    for pattern in _SAFETY_PATTERNS:
+        match = pattern.search(output)
+        if match:
+            # B.RF (refusal) and B.SF (safety) criteria legitimately discuss
+            # these topics in the context of refusing or redirecting.
+            # Only flag if the output appears to comply rather than refuse.
+            if cid.startswith("B.RF") or cid.startswith("B.SF"):
+                # Check if the output is actually a refusal
+                refusal_markers = ["i can't", "i cannot", "i won't",
+                                   "i'm not able", "i must decline",
+                                   "not appropriate", "i shouldn't",
+                                   "not something i can"]
+                is_refusal = any(m in output.lower() for m in refusal_markers)
+                if is_refusal:
+                    continue  # Legitimate refusal example
+
+            issues.append(
+                f"example {idx}: SAFETY — ideal_output matches harmful pattern: "
+                f"'{match.group()[:60]}' (criterion: {cid})"
+            )
+            break  # One safety issue is enough to reject
+
+    return issues
+
+
+def check_provenance(example: dict, idx: int) -> list[str]:
+    """Flag manual contributions for visibility.
+
+    Not an error — returns informational warnings that appear in verbose output.
+    Manual contributions bypass generator quality controls and deserve extra
+    attention during review.
+    """
+    warnings = []
+    gm = example.get("generator_model", "")
+
+    if gm.startswith("human:manual"):
+        warnings.append(
+            f"example {idx}: PROVENANCE — manual contribution ({gm}) — "
+            f"consider additional review"
+        )
+
+    return warnings
+
+
+# ---------------------------------------------------------------------------
 # Category-specific rule checks
 # ---------------------------------------------------------------------------
 
@@ -546,14 +638,14 @@ def check_learning(example: dict, idx: int) -> list[str]:
     return issues
 
 
-def check_teaching(example: dict, idx: int) -> list[str]:
-    """T.DA-T.AD: scaffolding, misconceptions, diagnostics."""
+def check_pedagogy(example: dict, idx: int) -> list[str]:
+    """P.DA-P.AD: scaffolding, misconceptions, diagnostics."""
     issues = []
     cid = example.get("criterion_id", "")
     output = example.get("ideal_output", "")
 
     # Scaffolding: must NOT give full answer
-    if cid.startswith("T.SC"):
+    if cid.startswith("P.SC"):
         scaffolding_markers = ["what do you think", "try", "consider",
                                "what would happen if", "hint", "let's think",
                                "can you", "what if", "how might you",
@@ -561,11 +653,11 @@ def check_teaching(example: dict, idx: int) -> list[str]:
         has_scaffolding = any(m in output.lower() for m in scaffolding_markers)
         if not has_scaffolding:
             issues.append(
-                f"example {idx}: T.SC ideal_output should guide learner, not give full answer"
+                f"example {idx}: P.SC ideal_output should guide learner, not give full answer"
             )
 
     # Misconception handling: must engage with WHY
-    if cid.startswith("T.MH"):
+    if cid.startswith("P.MH"):
         engage_markers = ["common misconception", "it's understandable why",
                           "many people think", "the reason this seems",
                           "this is a natural assumption", "you might think",
@@ -574,17 +666,17 @@ def check_teaching(example: dict, idx: int) -> list[str]:
         has_engage = any(m in output.lower() for m in engage_markers)
         if not has_engage:
             issues.append(
-                f"example {idx}: T.MH ideal_output should engage with WHY the misconception seems right"
+                f"example {idx}: P.MH ideal_output should engage with WHY the misconception seems right"
             )
 
     # Diagnostic: must ask questions to assess understanding
-    if cid.startswith("T.DA"):
+    if cid.startswith("P.DA"):
         question_markers = ["?", "tell me", "what do you", "how would you",
                             "can you explain", "show me", "walk me through"]
         has_question = any(m in output.lower() for m in question_markers)
         if not has_question:
             issues.append(
-                f"example {idx}: T.DA ideal_output should ask diagnostic questions"
+                f"example {idx}: P.DA ideal_output should ask diagnostic questions"
             )
 
     return issues
@@ -603,7 +695,7 @@ CATEGORY_RULES = {
     "emotional_intelligence": check_emotional_intelligence,
     "metacognition": check_metacognition,
     "learning": check_learning,
-    "teaching": check_teaching,
+    "pedagogy": check_pedagogy,
 }
 
 
@@ -689,17 +781,24 @@ def validate_file(
     strict_provider: Optional[str] = None,
     strict_model: Optional[str] = None,
     dedup_threshold: float = 0.6,
-) -> tuple[bool, list[str], dict]:
-    """Validate a single JSONL file. Returns (passed, issues, stats)."""
+) -> tuple[bool, list[str], list[str], dict]:
+    """Validate a single JSONL file.
+
+    Returns (passed, errors, warnings, stats).
+    - errors: hard failures (schema, length, boilerplate, duplicates)
+    - warnings: category heuristic checks (soft by default, promoted to
+      errors when --strict is used)
+    """
     path = Path(file_path)
-    issues = []
+    errors: list[str] = []
+    warnings: list[str] = []
     examples = []
 
     if not path.exists():
-        return False, [f"file not found: {file_path}"], {}
+        return False, [f"file not found: {file_path}"], [], {}
 
     if path.name == "_combined.jsonl" or path.name == "manifest.json":
-        return True, [], {"skipped": True}
+        return True, [], [], {"skipped": True}
 
     # Parse JSONL
     with open(path) as f:
@@ -711,58 +810,66 @@ def validate_file(
                 example = json.loads(line)
                 examples.append(example)
             except json.JSONDecodeError as e:
-                issues.append(f"line {line_num}: invalid JSON — {e}")
+                errors.append(f"line {line_num}: invalid JSON — {e}")
 
     if not examples:
-        return False, ["file is empty or contains no valid JSON lines"], {}
+        return False, ["file is empty or contains no valid JSON lines"], [], {}
 
     # Schema validation
     for i, ex in enumerate(examples):
-        issues.extend(validate_schema(ex, i))
+        errors.extend(validate_schema(ex, i))
 
     # Criterion ID validation
     for i, ex in enumerate(examples):
         if "criterion_id" in ex:
-            issues.extend(validate_criterion_id(ex["criterion_id"], file_path, framework, i))
+            errors.extend(validate_criterion_id(ex["criterion_id"], file_path, framework, i))
 
     # Length checks
     for i, ex in enumerate(examples):
-        issues.extend(check_lengths(ex, i))
+        errors.extend(check_lengths(ex, i))
 
     # Boilerplate detection
     for i, ex in enumerate(examples):
-        issues.extend(check_boilerplate(ex, i))
+        errors.extend(check_boilerplate(ex, i))
 
     # Generator model format
     for i, ex in enumerate(examples):
-        issues.extend(check_generator_model(ex, i))
+        errors.extend(check_generator_model(ex, i))
 
     # Quality score range
     for i, ex in enumerate(examples):
-        issues.extend(check_quality_score(ex, i))
+        errors.extend(check_quality_score(ex, i))
 
     # Scenario tag format
     for i, ex in enumerate(examples):
-        issues.extend(check_scenario_tag(ex, i))
+        errors.extend(check_scenario_tag(ex, i))
 
     # Duplicate detection
     dup_issues, max_sim = check_duplicates(examples, dedup_threshold)
-    issues.extend(dup_issues)
+    errors.extend(dup_issues)
 
-    # Category-specific rules
+    # Safety scan (always-on hard check — catches harmful training data)
+    for i, ex in enumerate(examples):
+        errors.extend(check_safety(ex, i))
+
+    # Provenance flagging (informational warnings for manual contributions)
+    for i, ex in enumerate(examples):
+        warnings.extend(check_provenance(ex, i))
+
+    # Category-specific rules -> warnings (soft failures)
     category_issues = 0
     for i, ex in enumerate(examples):
         cid = ex.get("criterion_id", "")
         category = get_category_from_id(cid)
         if category and category in CATEGORY_RULES:
             cat_issues = CATEGORY_RULES[category](ex, i)
-            issues.extend(cat_issues)
+            warnings.extend(cat_issues)
             category_issues += len(cat_issues)
 
-    # Strict mode: LLM quality check
+    # Strict mode: LLM quality check (these are hard errors)
     if strict and strict_provider and strict_model:
         for i, ex in enumerate(examples):
-            issues.extend(llm_quality_check(ex, i, strict_provider, strict_model, framework))
+            errors.extend(llm_quality_check(ex, i, strict_provider, strict_model, framework))
 
     stats = {
         "example_count": len(examples),
@@ -770,8 +877,8 @@ def validate_file(
         "category_issues": category_issues,
     }
 
-    passed = len(issues) == 0
-    return passed, issues, stats
+    passed = len(errors) == 0
+    return passed, errors, warnings, stats
 
 
 # ---------------------------------------------------------------------------
@@ -786,14 +893,20 @@ def validate_directory(
     strict_model: Optional[str] = None,
     dedup_threshold: float = 0.6,
     verbose: bool = False,
-) -> tuple[int, int, int]:
-    """Validate all JSONL files in a directory. Returns (passed, failed, total_issues)."""
+    strict_categories: bool = False,
+) -> tuple[int, int, int, int]:
+    """Validate all JSONL files in a directory.
+
+    Returns (passed, failed, total_errors, total_warnings).
+    When strict_categories is True, category warnings are promoted to errors.
+    """
     path = Path(dir_path)
     files = sorted(path.rglob("*.jsonl"))
 
     passed_count = 0
     failed_count = 0
-    total_issues = 0
+    total_errors = 0
+    total_warnings = 0
 
     for f in files:
         # Skip combined files
@@ -801,75 +914,94 @@ def validate_directory(
             continue
 
         print(f"\nValidating {f.relative_to(path)}")
-        passed, issues, stats = validate_file(
+        passed, errors, warnings, stats = validate_file(
             str(f), framework, strict, strict_provider, strict_model, dedup_threshold
         )
 
         if stats.get("skipped"):
             continue
 
+        # If strict_categories, promote warnings to errors
+        if strict_categories and warnings:
+            errors.extend(warnings)
+            warnings = []
+            passed = len(errors) == 0
+
         example_count = stats.get("example_count", 0)
         max_sim = stats.get("max_similarity", 0.0)
         print(f"  {example_count} examples found")
 
-        if passed:
+        # Print check summaries
+        schema_issues = [i for i in errors if "missing required" in i or "should be" in i]
+        criterion_issues = [i for i in errors if "criterion_id" in i and "not found" in i]
+        length_issues = [i for i in errors if "too short" in i or "too long" in i]
+        boilerplate_issues = [i for i in errors if "boilerplate" in i]
+        dup_issues_list = [i for i in errors if "near-duplicate" in i]
+        safety_issues = [i for i in errors if "SAFETY" in i]
+        provenance_warnings = [i for i in warnings if "PROVENANCE" in i]
+
+        if not schema_issues:
             print(f"  \u2713 Schema: all fields present")
+        else:
+            print(f"  \u2717 Schema: {len(schema_issues)} issues")
+
+        if not criterion_issues:
             print(f"  \u2713 Criterion IDs: all valid")
+        else:
+            print(f"  \u2717 Criterion IDs: {len(criterion_issues)} issues")
+
+        if not length_issues:
             print(f"  \u2713 Lengths: all within range")
+        else:
+            print(f"  \u2717 Lengths: {len(length_issues)} issues")
+
+        if not boilerplate_issues:
             print(f"  \u2713 Boilerplate: none detected")
+        else:
+            print(f"  \u2717 Boilerplate: {len(boilerplate_issues)} issues")
+
+        if not dup_issues_list:
             print(f"  \u2713 Duplicates: none (max similarity: {max_sim})")
+        else:
+            print(f"  \u2717 Duplicates: {len(dup_issues_list)} near-duplicates")
+
+        if not safety_issues:
+            print(f"  \u2713 Safety: no harmful patterns detected")
+        else:
+            print(f"  \u2717 Safety: {len(safety_issues)} BLOCKED (harmful content)")
+
+        if provenance_warnings:
+            print(f"  \u26a0 Provenance: {len(provenance_warnings)} manual contributions (review recommended)")
+
+        cat_issue_count = len([w for w in warnings if "PROVENANCE" not in w]) if not strict_categories else stats.get("category_issues", 0)
+        if cat_issue_count == 0:
             print(f"  \u2713 Category rules: all checks passed")
-            print(f"  PASS")
+        else:
+            if strict_categories:
+                print(f"  \u2717 Category rules: {cat_issue_count} issues")
+            else:
+                print(f"  \u26a0 Category rules: {cat_issue_count} warnings")
+
+        if passed:
+            if warnings:
+                print(f"  PASS ({len(warnings)} warnings)")
+            else:
+                print(f"  PASS")
             passed_count += 1
         else:
-            # Print check summaries
-            schema_issues = [i for i in issues if "missing required" in i or "should be" in i]
-            criterion_issues = [i for i in issues if "criterion_id" in i and "not found" in i]
-            length_issues = [i for i in issues if "too short" in i or "too long" in i]
-            boilerplate_issues = [i for i in issues if "boilerplate" in i]
-            dup_issues_list = [i for i in issues if "near-duplicate" in i]
-
-            if not schema_issues:
-                print(f"  \u2713 Schema: all fields present")
-            else:
-                print(f"  \u2717 Schema: {len(schema_issues)} issues")
-
-            if not criterion_issues:
-                print(f"  \u2713 Criterion IDs: all valid")
-            else:
-                print(f"  \u2717 Criterion IDs: {len(criterion_issues)} issues")
-
-            if not length_issues:
-                print(f"  \u2713 Lengths: all within range")
-            else:
-                print(f"  \u2717 Lengths: {len(length_issues)} issues")
-
-            if not boilerplate_issues:
-                print(f"  \u2713 Boilerplate: none detected")
-            else:
-                print(f"  \u2717 Boilerplate: {len(boilerplate_issues)} issues")
-
-            if not dup_issues_list:
-                print(f"  \u2713 Duplicates: none (max similarity: {max_sim})")
-            else:
-                print(f"  \u2717 Duplicates: {len(dup_issues_list)} near-duplicates")
-
-            cat_issue_count = stats.get("category_issues", 0)
-            if cat_issue_count == 0:
-                print(f"  \u2713 Category rules: all checks passed")
-            else:
-                print(f"  \u2717 Category rules: {cat_issue_count} issues")
-
-            print(f"  FAIL ({len(issues)} issues)")
-
-            if verbose:
-                for issue in issues:
-                    print(f"    - {issue}")
-
+            print(f"  FAIL ({len(errors)} issues)")
             failed_count += 1
-            total_issues += len(issues)
 
-    return passed_count, failed_count, total_issues
+        total_errors += len(errors)
+        total_warnings += len(warnings)
+
+        if verbose:
+            for issue in errors:
+                print(f"    \u2717 {issue}")
+            for warning in warnings:
+                print(f"    \u26a0 {warning}")
+
+    return passed_count, failed_count, total_errors, total_warnings
 
 
 # ---------------------------------------------------------------------------
@@ -905,8 +1037,10 @@ Examples:
     parser.add_argument("--model", help="LLM model for strict mode")
     parser.add_argument("--dedup-threshold", type=float, default=0.6,
                         help="Jaccard similarity threshold for duplicate detection (default: 0.6)")
+    parser.add_argument("--strict-categories", action="store_true",
+                        help="Promote category rule warnings to hard errors")
     parser.add_argument("--ci", action="store_true",
-                        help="CI mode: exit code 1 if any failures")
+                        help="CI mode: exit code 1 if hard errors (not warnings)")
     parser.add_argument("--verbose", action="store_true",
                         help="Show detailed issue descriptions")
 
@@ -930,33 +1064,49 @@ Examples:
 
     if target.is_file():
         print(f"\nValidating {target}")
-        passed, issues, stats = validate_file(
+        passed, errors, warnings, stats = validate_file(
             str(target), framework, args.strict, args.provider, args.model,
             args.dedup_threshold,
         )
+
+        # Promote warnings to errors if --strict-categories
+        if args.strict_categories and warnings:
+            errors.extend(warnings)
+            warnings = []
+            passed = len(errors) == 0
+
         example_count = stats.get("example_count", 0)
-        max_sim = stats.get("max_similarity", 0.0)
         print(f"  {example_count} examples found")
 
         if passed:
-            print(f"  \u2713 All checks passed")
-            print(f"  PASS")
+            if warnings:
+                for w in warnings:
+                    print(f"  \u26a0 {w}")
+                print(f"  PASS ({len(warnings)} warnings)")
+            else:
+                print(f"  \u2713 All checks passed")
+                print(f"  PASS")
         else:
-            for issue in issues:
+            for issue in errors:
                 print(f"  \u2717 {issue}")
-            print(f"  FAIL ({len(issues)} issues)")
+            for w in warnings:
+                print(f"  \u26a0 {w}")
+            print(f"  FAIL ({len(errors)} errors)")
 
         if args.ci and not passed:
             sys.exit(1)
 
     elif target.is_dir():
-        passed, failed, total_issues = validate_directory(
+        passed, failed, total_errors, total_warnings = validate_directory(
             str(target), framework, args.strict, args.provider, args.model,
-            args.dedup_threshold, args.verbose,
+            args.dedup_threshold, args.verbose, args.strict_categories,
         )
 
         print(f"\n{'=' * 40}")
-        print(f"Results: {passed} passed, {failed} failed, {total_issues} total issues")
+        msg = f"Results: {passed} passed, {failed} failed, {total_errors} errors"
+        if total_warnings > 0:
+            msg += f", {total_warnings} warnings"
+        print(msg)
 
         if args.ci and failed > 0:
             sys.exit(1)
