@@ -89,6 +89,142 @@ anti_patterns:
 notes: "Any additional context"
 ```
 
+### Adding training data
+
+Training data teaches models to demonstrate specific criteria. Each example is a (user_input, ideal_output) pair filed under a criterion ID.
+
+**Adding a new domain? Start here:**
+```bash
+python -m tools.domain_builder --provider anthropic --model claude-3-5-sonnet-20241022
+```
+The builder interviews you about your domain, generates criteria, probes, and training data, validates everything, and outputs files ready for PR.
+
+#### JSONL Schema
+
+Each line in a `.jsonl` file is a JSON object with these fields:
+
+| Field | Required | Type | Description |
+|-------|----------|------|-------------|
+| `criterion_id` | yes | string | e.g. `M.SA.01` — must exist in framework |
+| `behavioral_target` | yes | string | Criterion name from framework |
+| `system_prompt` | yes | string | Usually `"You are a helpful assistant."` |
+| `user_input` | yes | string | 20-500 words, realistic scenario |
+| `ideal_output` | yes | string | 50-1500 words, demonstrates the criterion |
+| `generator_model` | yes | string | `provider:model`, `human:manual`, or `human:harvested` |
+| `scenario_tag` | yes | string | 2-4 word scenario label |
+| `quality_score` | yes | float | 0.0-1.0 |
+
+#### Directory structure
+
+Files go in `training_data/{category}/{subcategory}/{criterion_id}.jsonl`:
+
+```
+training_data/
+├── metacognition/
+│   ├── self_awareness/
+│   │   ├── M.SA.01.jsonl
+│   │   ├── M.SA.02.jsonl
+│   │   └── _combined.jsonl
+│   └── strategy_selection/
+├── teaching/
+│   └── scaffolding/
+└── manifest.json
+```
+
+#### Quality bar
+
+- **No boilerplate openers** — "I'd be happy to help", "Great question!", etc. are rejected
+- **Realistic scenarios** — user_input must be a realistic scenario, not a test instruction
+- **Criterion-specific** — ideal_output must clearly demonstrate the specific criterion, not just be generically good
+- **Domain variety** — vary domains (medicine, law, engineering, education, etc.)
+- **Persona variety** — vary user personas (beginner, expert, emotional, analytical)
+- **No near-duplicates** — each example must be distinct in scenario (Jaccard similarity < 0.6)
+
+#### Validation
+
+Run the validator before submitting:
+
+```bash
+# Validate a single file
+python -m tools.validate_training_data training_data/metacognition/self_awareness/M.SA.01.jsonl
+
+# Validate entire library
+python -m tools.validate_training_data training_data/
+
+# CI mode (exit code 1 on failure)
+python -m tools.validate_training_data training_data/ --ci
+```
+
+### Per-category contribution rules
+
+Each category has specific rules that the validator checks. These are in addition to the general quality bar above.
+
+#### Understanding (U.*)
+- `user_input` must contain a clear question or request
+- `ideal_output` must directly address the literal request
+- Ambiguous requests (U.AR.*): input must be genuinely ambiguous; output must acknowledge ambiguity
+- Implicit requests (U.IR.*): input must NOT state the need explicitly; output must infer it
+
+#### Calibration (C.*)
+- Response length (C.RL.*): ideal_output word count must match the criterion (concise = <100 words, detailed = >300 words)
+- Tone (C.TN.*): ideal_output must match specified tone — formal/casual/empathetic/technical
+- Stopping (C.ST.*): ideal_output must not over-elaborate — ends when done, no trailing filler
+
+#### Generation (G.*)
+- Must include the generated artifact (code, essay, email, etc.) — not just talk about it
+- Code (G.CD.*): must contain actual code (code fences, function definitions, etc.)
+- Creative writing (G.CW.*): must show voice, not generic prose
+- Structured output (G.SO.*): must match the requested format exactly (JSON, CSV, table, etc.)
+
+#### Knowledge (K.*)
+- Facts must be verifiable and accurate as of the model's training cutoff
+- Must cite or reference specific facts, not vague generalities
+- Domain-specific terminology must be used correctly
+- Medical (K.MH.*): must include appropriate disclaimers (consult a doctor/professional)
+- Legal (K.LG.*): must include appropriate disclaimers (consult an attorney/legal professional)
+
+#### Reasoning (R.*)
+- `ideal_output` must show explicit reasoning steps, not just conclusions (at least 2 reasoning markers)
+- Logical (R.LG.*): must identify premises and derive conclusions
+- Mathematical (R.MT.*): must show work (equations, calculations, formulas)
+- Critical thinking (R.CT.*): must evaluate claims — consider counterarguments, limitations, assumptions
+
+#### Boundaries (B.*)
+- Refusals (B.RF.*): `ideal_output` must refuse clearly with explanation
+- Over-refusal (B.OR.*): `ideal_output` must help despite surface-level danger signals — must NOT refuse
+- Safety (B.SF.*): `ideal_output` must redirect harmful requests to safe alternatives
+- Input must be genuinely at the boundary — not obviously safe or obviously dangerous
+
+#### Interaction (I.*)
+- Multi-turn (I.MT.*): `user_input` must reference prior context (simulated or described)
+- Error handling (I.EH.*): `user_input` must contain an error or contradiction
+- Clarification (I.CR.*): `ideal_output` must ask a clarifying question, not guess
+
+#### Tool Use (T.WS-T.TS)
+- `ideal_output` must describe or demonstrate tool usage, not just acknowledge tools exist
+- Must show tool selection reasoning when multiple tools could work
+
+#### Emotional Intelligence (E.*)
+- `user_input` must contain emotional content (distress, joy, frustration, grief, etc.)
+- `ideal_output` must acknowledge the emotion before addressing the content
+- Difficult conversations (E.DC.*): output must deliver hard truth while maintaining emotional safety
+- Must not be saccharine or performative — genuine empathy
+
+#### Metacognition (M.*)
+- Self-awareness (M.SA.*): `ideal_output` must contain explicit self-assessment ("I can/cannot...", "I'm confident/uncertain...")
+- Strategy selection (M.SS.*): must explain HOW it's approaching the problem, not just solve it
+- Learning adaptation (M.LA.*): must reference prior context and show behavioral change
+
+#### Learning (L.*)
+- `user_input` must provide something to learn from (example, correction, pattern)
+- `ideal_output` must demonstrate the learning — apply it, generalize it, or acknowledge the update
+
+#### Teaching (T.DA-T.AD)
+- Scaffolding (T.SC.*): `ideal_output` must NOT give the full answer — must guide the learner
+- Misconception handling (T.MH.*): must engage with WHY the misconception seems right
+- Diagnostic (T.DA.*): must ask questions to assess understanding, not lecture
+- `ideal_output` must be pedagogically appropriate — not just technically correct
+
 ### Adding case studies
 
 1. Create a file in `case-studies/`

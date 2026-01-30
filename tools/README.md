@@ -575,6 +575,108 @@ evaluation:
     pass: "Contains '12'"
 ```
 
+### validate_training_data.py — Validate training data contributions
+
+Checks training data JSONL files against schema, content, and per-category
+rules before merge. Catches missing fields, bad types, boilerplate openers,
+near-duplicates, and category-specific violations.
+
+```bash
+# Validate a single file
+python -m tools.validate_training_data training_data/metacognition/self_awareness/M.SA.01.jsonl
+
+# Validate entire library
+python -m tools.validate_training_data training_data/
+
+# Validate with strict mode (LLM quality check)
+python -m tools.validate_training_data training_data/ \
+  --strict --provider anthropic --model claude-3-5-haiku-20241022
+
+# PR check (exit code 1 if failures)
+python -m tools.validate_training_data training_data/ --ci
+```
+
+**Options:**
+
+| Flag | Default | Description |
+|------|---------|-------------|
+| `path` | (required) | Path to JSONL file or directory |
+| `--framework` | `docs/AI-SETT-FRAMEWORK.md` | Framework file for criterion validation |
+| `--strict` | — | Enable LLM quality checks |
+| `--provider` | — | LLM provider for strict mode |
+| `--model` | — | LLM model for strict mode |
+| `--dedup-threshold` | `0.6` | Jaccard similarity threshold for duplicate detection |
+| `--ci` | — | Exit code 1 if any failures |
+| `--verbose` | — | Show detailed issue descriptions |
+
+**Checks performed (no API needed):**
+
+1. **Schema validation** — all required fields present, correct types
+2. **Criterion ID validation** — ID exists in framework, matches file path
+3. **Length checks** — user_input 20-500 words, ideal_output 50-1500 words
+4. **Boilerplate detection** — rejects "I'd be happy to help", "Great question!", etc.
+5. **Duplicate detection** — Jaccard similarity between examples in same file
+6. **Category-specific rules** — per-category checks (word counts for calibration, refusal language for boundaries, reasoning steps for reasoning, etc.)
+7. **generator_model format** — must match `provider:model` or `human:*` pattern
+8. **quality_score range** — must be 0.0-1.0
+9. **scenario_tag format** — 2-4 words
+
+**Strict mode (API required):**
+
+10. **LLM quality check** — sends example to a judge model asking "Does this ideal_output clearly demonstrate criterion X?"
+
+### domain_builder.py — Interactive domain creation
+
+Walks a contributor through creating a new domain — from idea to criteria to
+probes to training data. Uses an LLM to interview the contributor and generate
+everything.
+
+```bash
+# Interactive mode
+python -m tools.domain_builder \
+  --provider anthropic --model claude-3-5-sonnet-20241022
+
+# Start with a topic
+python -m tools.domain_builder \
+  --provider anthropic --model claude-3-5-sonnet-20241022 \
+  --topic "cybersecurity incident response"
+
+# Generate into existing category
+python -m tools.domain_builder \
+  --provider anthropic --model claude-3-5-sonnet-20241022 \
+  --category knowledge --topic "veterinary medicine"
+
+# Dry run — criteria only, no files
+python -m tools.domain_builder \
+  --provider anthropic --model claude-3-5-sonnet-20241022 \
+  --topic "test domain" --dry-run
+```
+
+**Options:**
+
+| Flag | Default | Description |
+|------|---------|-------------|
+| `--provider` | (required) | LLM provider |
+| `--model` | (required) | Model identifier |
+| `--base-url` | — | Custom API base URL |
+| `--topic` | — | Domain topic (skip first question) |
+| `--category` | — | Target category (skip category selection) |
+| `--framework` | `docs/AI-SETT-FRAMEWORK.md` | Framework file |
+| `--probes-dir` | `probes/` | Output directory for probes |
+| `--training-dir` | `training_data/` | Output directory for training data |
+| `--probes-per-criterion` | `5` | Probes per criterion |
+| `--examples-per-criterion` | `5` | Training examples per criterion |
+| `--dry-run` | — | Generate criteria only |
+
+**Interactive flow:**
+
+1. Interviews the contributor — 4 scoping questions (topic, category, expertise level, sub-areas, boundaries, scenarios)
+2. Generates criteria — sends scoping answers to LLM with framework context
+3. Presents for approval — accept, reject, or edit individual criteria
+4. Generates probes — YAML probes with inputs, expected behaviors, evaluations
+5. Generates training data — reuses `training_data_generator` logic
+6. Validates everything — runs the validator before finishing
+
 ### conversation_simulator.py — Simulated multi-turn conversations
 
 Uses a cheap model (e.g. Haiku) as a simulated user for dynamic multi-turn
