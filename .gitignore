@@ -50,11 +50,13 @@ results/
 outputs/
 responses/
 
-# Training data (may contain private conversation data)
-training_data/
+# Harvested data (may contain private conversation data)
 harvested_data/
 *.training.jsonl
 ollama_train.jsonl
+
+# Training data: synthetic examples are safe to commit
+# training_data/ — UN-IGNORED (synthetic, no personal data)
 
 # Conversation history (private)
 conversations/
