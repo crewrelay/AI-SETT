@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 
-from typing import Callable
+from typing import Callable, Tuple, Dict, List
 
 # type: evaluation function (response_text, criterion_spec) -> (bool, evidence_str)
-EvalFn = Callable[[str, dict], tuple[bool, str]]
+EvalFn = Callable[[str, dict], Tuple[bool, str]]
 
-_REGISTRY: dict[str, EvalFn] = {}
+_REGISTRY: Dict[str, EvalFn] = {}
 
 
 def register(name: str):

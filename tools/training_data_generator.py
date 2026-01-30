@@ -46,6 +46,7 @@ import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Optional
 
 from tools.providers import get_provider
 from tools.providers.base import CompletionRequest, Message
@@ -149,7 +150,7 @@ class GeneratorSpec:
     """Parsed generator specification."""
     provider: str
     model: str
-    base_url: str | None = None
+    base_url: Optional[str] = None
 
 
 @dataclass
@@ -163,7 +164,7 @@ class TrainingExample:
     generator_model: str
     scenario_tag: str
     quality_score: float = 0.0
-    validation_passed: bool | None = None
+    validation_passed: Optional[bool] = None
 
 
 # ---------------------------------------------------------------------------

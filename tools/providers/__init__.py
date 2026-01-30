@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 
-from typing import Optional, Type
+from typing import Dict, Optional, Type
 
 from .base import ModelProvider
 
-_REGISTRY: dict[str, Type[ModelProvider]] = {}
+_REGISTRY: Dict[str, Type[ModelProvider]] = {}
 
 
 def register(name: str):
